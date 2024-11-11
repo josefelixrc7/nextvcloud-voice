@@ -1481,36 +1481,7 @@ if ( (strlen($phone_login)<2) or (strlen($phone_pass)<2) )
 							</div>
 							<p class="p">Bienvenido al registro de tel&eacute;fono</p>
 			
-							<form name="vicidial_form" id="vicidial_form" action="<?=$agcPAGE?>" method="post">
-								
-								<input type="hidden" name="DB" value="<?=$DB?>">
-								<input type="hidden" name="JS_browser_height" id="JS_browser_height" value="">
-								<input type="hidden" name="JS_browser_width" id="JS_browser_width" value="">
-								<input type="hidden" name="LOGINvarONE" id="LOGINvarONE" value="<?=$LOGINvarONE?>">
-								<input type="hidden" name="LOGINvarTWO" id="LOGINvarTWO" value="<?=$LOGINvarTWO?>">
-								<input type="hidden" name="LOGINvarTHREE" id="LOGINvarTHREE" value="<?=$LOGINvarTHREE?>">
-								<input type="hidden" name="LOGINvarFOUR" id="LOGINvarFOUR" value="<?=$LOGINvarFOUR?>">
-								<input type="hidden" name="LOGINvarFIVE" id="LOGINvarFIVE" value="<?=$LOGINvarFIVE?>">
-								<input type="hidden" name="hide_relogin_fields" id="hide_relogin_fields" value="<?=$hide_relogin_fields?>">
-								
-								<table class="table">
-									<tr>
-										<td>Tel&eacute;fono</td>
-										<td><input class="form-control" type="text" name="phone_login" size="10" maxlength="20" value="" /></td>
-									</tr>
-									<tr>
-										<td>Contrasen&ntilde;a del tel&eacute;fono</td>
-										<td><input class="form-control" type="password" name="phone_pass" size="10" maxlength="20" value="" /></td>
-									</tr>
-									<tr>
-										<td>
-											<button class="btn btn-primary" type="submit" name="SUBMIT" value="Enviar"></button>
-											<span id="LogiNReseT"></span>
-										</td>
-									</tr>
-								</table>
-								
-							</form>
+							
 	
 						</div>
 					</section>
