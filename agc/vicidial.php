@@ -1281,7 +1281,7 @@ if ($link_to_grey_version > 0)
 	{$grey_link = "<font class=\"sb_text\"> | </font><a href=\"./vicidial-grey.php?pl=$phone_login&pp=$phone_pass&VD_login=$VD_login&VD_pass=$VD_pass\"> <font class=\"sb_text\">"._QXZ("Old Agent Screen")."</font></a>";}
 
 if ($relogin == 'YES')
-{
+	{
 	echo "<title>"._QXZ("Agent web client: Re-Login")."</title>\n";
 	echo "</head>\n";
     echo "<body onresize=\"browser_dimensions();\" onload=\"browser_dimensions();\" style=\"background-color:white\">\n";
@@ -1346,18 +1346,18 @@ if ($relogin == 'YES')
 	echo "</body>\n\n";
 	echo "</html>\n\n";
 	exit;
-}
+	}
 
 if ($user_login_first == 1)
-{
-	if ( (strlen($VD_login)<1) or (strlen($VD_pass)<1) or (strlen($VD_campaign)<1) )
 	{
+	if ( (strlen($VD_login)<1) or (strlen($VD_pass)<1) or (strlen($VD_campaign)<1) )
+		{
 		echo "<title>"._QXZ("Agent web client: Campaign Login")."</title>\n";
 		echo "</head>\n";
         echo "<body onresize=\"browser_dimensions();\" onload=\"browser_dimensions();\">\n";
 		if ($hide_timeclock_link < 1)
             {echo "<a href=\"./timeclock.php?referrer=agent&amp;pl=$phone_login&amp;pp=$phone_pass&amp;VD_login=$VD_login&amp;VD_pass=$VD_pass\"> <font class=\"sb_text\">"._QXZ("Timeclock")."</font></a>$grey_link<br />\n";}
-        echo "<table width=\"100%\"><tr><td></td>\n";user_login_first
+        echo "<table width=\"100%\"><tr><td></td>\n";
 		echo "<!-- INTERNATIONALIZATION-LINKS-PLACEHOLDER-VICIDIAL -->\n";
         echo "</tr></table>\n";
         echo "<form name=\"vicidial_form\" id=\"vicidial_form\" action=\"$agcPAGE\" method=\"post\">\n";
@@ -1392,11 +1392,11 @@ if ($user_login_first == 1)
 		echo "</body>\n\n";
 		echo "</html>\n\n";
 		exit;
-	}
+		}
 	else
-	{
-		if ( (strlen($phone_login)<2) or (strlen($phone_pass)<2) )
 		{
+		if ( (strlen($phone_login)<2) or (strlen($phone_pass)<2) )
+			{
 			$stmt="SELECT phone_login,phone_pass from vicidial_users where user='$VD_login' and user_level > 0 and active='Y' and api_only_user != '1';";
 			if ($DB) {echo "|$stmt|\n";}
 			$rslt=mysql_to_mysqli($stmt, $link);
@@ -1406,7 +1406,7 @@ if ($user_login_first == 1)
 			$phone_pass=$row[1];
 
 			if ( (strlen($phone_login) < 1) or (strlen($phone_pass) < 1) )
-			{
+				{
 				echo "<title>"._QXZ("Agent web client:  Login")."</title>\n";
 				echo "</head>\n";
                 echo "<body onresize=\"browser_dimensions();\"  onLoad=\"browser_dimensions();\">\n";
@@ -1448,13 +1448,13 @@ if ($user_login_first == 1)
 				echo "</body>\n\n";
 				echo "</html>\n\n";
 				exit;
+				}
 			}
 		}
 	}
-}
 
 if ( (strlen($phone_login)<2) or (strlen($phone_pass)<2) )
-{
+	{
 	echo "<title>"._QXZ("Agent web client:  Phone Login")."</title>\n";
 	echo "</head>\n";
     echo "<body onresize=\"browser_dimensions();\"  onload=\"browser_dimensions();\">\n";
@@ -1490,9 +1490,9 @@ if ( (strlen($phone_login)<2) or (strlen($phone_pass)<2) )
 	echo "</body>\n\n";
 	echo "</html>\n\n";
 	exit;
-}
+	}
 else
-{
+	{
 	if ($WeBRooTWritablE > 0)
 		{$fp = fopen ("./vicidial_auth_entries.txt", "a");}
 	$VDloginDISPLAY=0;
@@ -4279,7 +4279,7 @@ else
 			}
 		##### END vicidial_list FIELD LENGTH LOOKUP #####
 		}
-}
+	}
 
 
 ### SCREEN WIDTH AND HEIGHT CALCULATIONS ###
