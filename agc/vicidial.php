@@ -1563,8 +1563,8 @@ if ( (strlen($phone_login)<2) or (strlen($phone_pass)<2) )
     echo "</table></center>\n";
     echo "</form>\n\n";
 	echo "</body>\n\n";
-	echo "</html>\n\n";
-	exit;*/
+	echo "</html>\n\n";*/
+	exit;
 }
 else
 	{
