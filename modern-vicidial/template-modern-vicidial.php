@@ -27,6 +27,13 @@
 			
 							<form name="vicidial_form" id="vicidial_form" action="<?=$agcPAGE?>" method="post">
 								
+								<div class="mb-3">
+									<span class="text-muted">Accede al reloj:</span>
+								</div>
+								<div class="mb-3">
+									<a href="/agc/timeclock.php" class="d-block btn btn-secondary">Reloj</a>
+								</div>
+								
 								<table class="table">
 									<tr>
 										<td>Usuario</td>

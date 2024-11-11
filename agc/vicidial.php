@@ -1494,23 +1494,26 @@ if ( (strlen($phone_login)<2) or (strlen($phone_pass)<2) )
 							<input type="hidden" name="LOGINvarFIVE" id="LOGINvarFIVE" value="<?=$LOGINvarFIVE?>">
 							<input type="hidden" name="hide_relogin_fields" id="hide_relogin_fields" value="<?=$hide_relogin_fields?>">
 							
-							<table class="table">
-								<tr>
-									<td>Tel&eacute;fono</td>
-									<td><input class="form-control" type="text" name="phone_login" size="10" maxlength="20" value="" /></td>
-								</tr>
-								<tr>
-									<td>Contrasen&ntilde;a del tel&eacute;fono</td>
-									<td><input class="form-control" type="password" name="phone_pass" size="10" maxlength="20" value="" /></td>
-								</tr>
-								<tr>
-									<td>
-										<button class="btn btn-primary" type="submit" name="SUBMIT">Enviar</button>
-										<span id="LogiNReseT"></span>
-									</td>
-								</tr>
-							</table>
-							
+							<section class="mt-2">
+								<div class="mb-3">
+									<span class="text-muted">Tel&eacute;fono</span>
+								</div>
+								<div class="mb-3">
+									<input class="form-control" type="text" name="phone_login" size="10" maxlength="20" value="" />
+								</div>
+							</section>
+							<section class="mt-2">
+								<div class="mb-3">
+									<span class="text-muted">Contrasen&ntilde;a del tel&eacute;fono</span>
+								</div>
+								<div class="mb-3">
+									<input class="form-control" type="password" name="phone_pass" size="10" maxlength="20" value="" />
+								</div>
+							</section>
+							<section class="mt-2">
+								<button class="btn btn-primary" type="submit" name="SUBMIT">Enviar</button>
+								<span id="LogiNReseT"></span>
+							</section>
 						</form>
 
 					</div>
