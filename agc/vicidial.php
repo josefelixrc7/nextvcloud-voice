@@ -1281,7 +1281,7 @@ if ($link_to_grey_version > 0)
 	{$grey_link = "<font class=\"sb_text\"> | </font><a href=\"./vicidial-grey.php?pl=$phone_login&pp=$phone_pass&VD_login=$VD_login&VD_pass=$VD_pass\"> <font class=\"sb_text\">"._QXZ("Old Agent Screen")."</font></a>";}
 
 if ($relogin == 'YES')
-	{
+{
 	echo "<title>"._QXZ("Agent web client: Re-Login")."</title>\n";
 	echo "</head>\n";
     echo "<body onresize=\"browser_dimensions();\" onload=\"browser_dimensions();\" style=\"background-color:white\">\n";
@@ -1346,18 +1346,18 @@ if ($relogin == 'YES')
 	echo "</body>\n\n";
 	echo "</html>\n\n";
 	exit;
-	}
+}
 
 if ($user_login_first == 1)
-	{
+{
 	if ( (strlen($VD_login)<1) or (strlen($VD_pass)<1) or (strlen($VD_campaign)<1) )
-		{
+	{
 		echo "<title>"._QXZ("Agent web client: Campaign Login")."</title>\n";
 		echo "</head>\n";
         echo "<body onresize=\"browser_dimensions();\" onload=\"browser_dimensions();\">\n";
 		if ($hide_timeclock_link < 1)
             {echo "<a href=\"./timeclock.php?referrer=agent&amp;pl=$phone_login&amp;pp=$phone_pass&amp;VD_login=$VD_login&amp;VD_pass=$VD_pass\"> <font class=\"sb_text\">"._QXZ("Timeclock")."</font></a>$grey_link<br />\n";}
-        echo "<table width=\"100%\"><tr><td></td>\n";
+        echo "<table width=\"100%\"><tr><td></td>\n";user_login_first
 		echo "<!-- INTERNATIONALIZATION-LINKS-PLACEHOLDER-VICIDIAL -->\n";
         echo "</tr></table>\n";
         echo "<form name=\"vicidial_form\" id=\"vicidial_form\" action=\"$agcPAGE\" method=\"post\">\n";
@@ -1392,11 +1392,11 @@ if ($user_login_first == 1)
 		echo "</body>\n\n";
 		echo "</html>\n\n";
 		exit;
-		}
+	}
 	else
-		{
+	{
 		if ( (strlen($phone_login)<2) or (strlen($phone_pass)<2) )
-			{
+		{
 			$stmt="SELECT phone_login,phone_pass from vicidial_users where user='$VD_login' and user_level > 0 and active='Y' and api_only_user != '1';";
 			if ($DB) {echo "|$stmt|\n";}
 			$rslt=mysql_to_mysqli($stmt, $link);
@@ -1406,7 +1406,7 @@ if ($user_login_first == 1)
 			$phone_pass=$row[1];
 
 			if ( (strlen($phone_login) < 1) or (strlen($phone_pass) < 1) )
-				{
+			{
 				echo "<title>"._QXZ("Agent web client:  Login")."</title>\n";
 				echo "</head>\n";
                 echo "<body onresize=\"browser_dimensions();\"  onLoad=\"browser_dimensions();\">\n";
@@ -1448,14 +1448,88 @@ if ($user_login_first == 1)
 				echo "</body>\n\n";
 				echo "</html>\n\n";
 				exit;
-				}
 			}
 		}
 	}
+}
 
 if ( (strlen($phone_login)<2) or (strlen($phone_pass)<2) )
-	{
-	echo "<title>"._QXZ("Agent web client:  Phone Login")."</title>\n";
+{
+	/* -- Modern Vicidial: Phone Login -- */
+	?>
+				<meta charset="utf-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+				<title>Agentes: Registro de tel&eacute;fono - ModernVici</title>
+				<link rel="icon" type="image/x-icon" href="../modern-vicidial/images/logo.png">
+	
+				<!-- CSS files -->
+					<link rel="stylesheet" href="../../modern-vicidial/css/libraries/fontawesome-v5.9.0.min.css">
+					<link href="../../modern-vicidial/css/libraries/bootstrap-v5.1.1/bootstrap.min.css" rel="stylesheet">
+					<link href="../../modern-vicidial/css/main.css" rel="stylesheet">
+				<!-- /CSS files -->
+	
+			</head>
+			<body class="position-relative">
+	
+				<div class="row">
+					<section class="col-12 col-md-6 p-5">
+						<div class="p-2 p-md-5">
+	
+							<div class="d-flex justify-content-start align-items-center mb-4">
+								<img width="50px;" src="../../modern-vicidial/images/logo.png" alt="Logo">
+								<h2 class="ms-4">Panel de Agentes: Registro de Tel&eacute;fono</h2>
+							</div>
+							<p class="p">Bienvenido al registro de tel&eacute;fono</p>
+			
+							<form name="vicidial_form" id="vicidial_form" action="<?=$agcPAGE?>" method="post">
+								
+								<input type="hidden" name="DB" value="<?=$DB?>">
+								<input type="hidden" name="JS_browser_height" id="JS_browser_height" value="">
+								<input type="hidden" name="JS_browser_width" id="JS_browser_width" value="">
+								<input type="hidden" name="LOGINvarONE" id="LOGINvarONE" value="<?=$LOGINvarONE?>">
+								<input type="hidden" name="LOGINvarTWO" id="LOGINvarTWO" value="<?=$LOGINvarTWO?>">
+								<input type="hidden" name="LOGINvarTHREE" id="LOGINvarTHREE" value="<?=$LOGINvarTHREE?>">
+								<input type="hidden" name="LOGINvarFOUR" id="LOGINvarFOUR" value="<?=$LOGINvarFOUR?>">
+								<input type="hidden" name="LOGINvarFIVE" id="LOGINvarFIVE" value="<?=$LOGINvarFIVE?>">
+								<input type="hidden" name="hide_relogin_fields" id="hide_relogin_fields" value="<?=$hide_relogin_fields?>">
+								
+								<table class="table">
+									<tr>
+										<td>Tel&eacute;fono</td>
+										<td><input class="form-control" type="text" name="phone_login" size="10" maxlength="20" value="" /></td>
+									</tr>
+									<tr>
+										<td>Contrasen&ntilde;a del tel&eacute;fono</td>
+										<td><input class="form-control" type="password" name="phone_pass" size="10" maxlength="20" value="" /></td>
+									</tr>
+									<tr>
+										<td>
+											<button class="btn btn-primary" type="submit" name="SUBMIT" value="Enviar"></button>
+											<span id="LogiNReseT"></span>
+										</td>
+									</tr>
+								</table>
+								
+							</form>
+	
+						</div>
+					</section>
+					<section class="d-none d-md-block col-12 col-md-6">
+						<img class="w-100 h-100" src="../../modern-vicidial/images/image1.png">
+					</section>
+				</div>
+	
+				<!-- Javascript -->
+					<!-- Libraries -->
+					<script src="../../modern-vicidial/js/libraries/jquery.min-v3.4.1.js"></script>
+					<script src="../../modern-vicidial/js/libraries/bootstrap-v5.1.1/bootstrap.bundle.min.js"></script>
+				<!-- Javascript -->
+			</body>
+		</html>
+	<?php
+	/* -- /Modern Vicidial: Phone Login -- */
+
+	/*echo "<title>"._QXZ("Agent web client:  Phone Login")."</title>\n";
 	echo "</head>\n";
     echo "<body onresize=\"browser_dimensions();\"  onload=\"browser_dimensions();\">\n";
 	if ($hide_timeclock_link < 1)
@@ -1488,11 +1562,11 @@ if ( (strlen($phone_login)<2) or (strlen($phone_pass)<2) )
     echo "</table></center>\n";
     echo "</form>\n\n";
 	echo "</body>\n\n";
-	echo "</html>\n\n";
+	echo "</html>\n\n";*/
 	exit;
-	}
+}
 else
-	{
+{
 	if ($WeBRooTWritablE > 0)
 		{$fp = fopen ("./vicidial_auth_entries.txt", "a");}
 	$VDloginDISPLAY=0;
@@ -4279,7 +4353,7 @@ else
 			}
 		##### END vicidial_list FIELD LENGTH LOOKUP #####
 		}
-	}
+}
 
 
 ### SCREEN WIDTH AND HEIGHT CALCULATIONS ###
