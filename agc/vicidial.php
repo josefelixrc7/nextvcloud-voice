@@ -1459,7 +1459,7 @@ if ($user_login_first == 1)
 if ( (strlen($phone_login)<2) or (strlen($phone_pass)<2) )
 {
 
-	include '../modern-vicidial/agc/vicidial/agentes_registro_telefono.php';
+	include '../modern-vicidial/agc/vicidial/login_telefono.php';
 	
 	/*echo "<title>"._QXZ("Agent web client:  Phone Login")."</title>\n";
 	echo "</head>\n";
@@ -3050,7 +3050,7 @@ else
 		}
 	if ($VDloginDISPLAY)
 	{
-		include '../modern-vicidial/agc/vicidial/agentes_login_campana.php';
+		include '../modern-vicidial/agc/vicidial/login_campana.php';
 		
 		/*echo "<title>"._QXZ("Agent web client: Campaign Login")."</title>\n";
 		echo "</head>\n";
@@ -3158,7 +3158,7 @@ else
 	$authphone=$row[0];
 	if (!$authphone)
 	{
-		include '../modern-vicidial/agc/vicidial/agentes_registro_telefono.php';
+		include '../modern-vicidial/agc/vicidial/login_telefono.php';
 		
 ?>
 		<script>
@@ -20559,12 +20559,12 @@ $zi=2;
 
 <!-- ZZZZZZZZZZZZ  header -->
 <?php
-	include '../modern-vicidial/agc/vicidial/agentes_vicidial_panel_header.php';
+	include '/modern-vicidial/agc/vicidial/panel/header.php';
 ?>
 
 <!-- ZZZZZZZZZZZZ  tabs -->
 <?php
-	include '../modern-vicidial/agc/vicidial/agentes_vicidial_panel_tabs.php';
+	include '/modern-vicidial/agc/vicidial/panel/tabs.php';
 ?>
 
 <!-- BEGIN *********   Here is the main VICIDIAL display panel -->
