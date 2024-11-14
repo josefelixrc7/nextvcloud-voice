@@ -1457,7 +1457,7 @@ if ($user_login_first == 1)
 if ( (strlen($phone_login)<2) or (strlen($phone_pass)<2) )
 {
 
-	include '/modern-vicidial/agc/vicidial/agentes_registro_telefono.php';
+	include '../modern-vicidial/agc/vicidial/agentes_registro_telefono.php';
 
 	/*echo "<title>"._QXZ("Agent web client:  Phone Login")."</title>\n";
 	echo "</head>\n";
@@ -1993,7 +1993,7 @@ else
 
 			if ( (!preg_match("/\s$VD_campaign\s/i",$LOGallowed_campaigns)) and (!preg_match("/ALL-CAMPAIGNS/i",$LOGallowed_campaigns)) )
 			{
-				include '/modern-vicidial/agc/vicidial/agentes_login_campana.php';
+				include '../modern-vicidial/agc/vicidial/agentes_login_campana.php';
 				
 				/*echo "<title>"._QXZ("Agent web client: Campaign Login")."</title>\n";
 				echo "</head>\n";
