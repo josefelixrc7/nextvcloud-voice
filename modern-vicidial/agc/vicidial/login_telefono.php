@@ -68,7 +68,7 @@
                             <button class="btn btn-primary" type="submit" name="SUBMIT">Enviar</button>
                             <span id="LogiNReseT"></span>
                         </section>
-                        <div class="mb-3">
+                        <div class="mt-3 mb-3">
                             <a href="/" class="">Ir a inicio</a>
                         </div>
                     </form>
