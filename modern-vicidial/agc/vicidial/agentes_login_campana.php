@@ -47,10 +47,10 @@
                         </section>
                         <section class="mt-2">
                             <div class="mb-3">
-                                <span class="text-muted">Contrasen&ntilde;a</span>
+                                <span class="text-muted">Contrase&ntilde;a</span>
                             </div>
                             <div class="mb-3">
-                                <inputclass="form-control" type="password" name="VD_pass" size="20" maxlength="100" value="<?=$VD_pass?>" />
+                                <input class="form-control" type="password" name="VD_pass" size="20" maxlength="100" value="<?=$VD_pass?>" />
                             </div>
                         </section>
                         <section class="mt-2">
