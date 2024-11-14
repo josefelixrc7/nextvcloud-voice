@@ -42,7 +42,7 @@
                                 <span class="text-muted">Usuario</span>
                             </div>
                             <div class="mb-3">
-                            <input type="text" name="VD_login" size="20" maxlength="20" value="<?=$VD_login?>"/>
+                            <input class="form-control" type="text" name="VD_login" size="20" maxlength="20" value="<?=$VD_login?>"/>
                             </div>
                         </section>
                         <section class="mt-2">
@@ -50,7 +50,7 @@
                                 <span class="text-muted">Contrasen&ntilde;a</span>
                             </div>
                             <div class="mb-3">
-                                <input type="password" name="VD_pass" size="20" maxlength="100" value="<?=$VD_pass?>" />
+                                <inputclass="form-control" type="password" name="VD_pass" size="20" maxlength="100" value="<?=$VD_pass?>" />
                             </div>
                         </section>
                         <section class="mt-2">
