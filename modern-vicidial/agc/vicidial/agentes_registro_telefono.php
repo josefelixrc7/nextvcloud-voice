@@ -1,7 +1,4 @@
-<?php
-function agentes_registro_telefono($mensaje)
-{
-?>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Agentes: Registro de tel&eacute;fono</title>
@@ -26,15 +23,18 @@ function agentes_registro_telefono($mensaje)
                     </div>
                     <p class="p">Bienvenido al registro de tel&eacute;fono</p>
 
-<?php
-    if($mensaje != "")
-    {
-        echo "
-            <div class=\"alert alert-danger\" role=\"alert\">
-                $mensaje
-            </div>";
-    }
-?>
+                    <div class="notificaciones"></div>
+                    
+                    <script>
+                        function mensaje(texto)
+                        {
+                            $('.notificaciones').append($(`
+                                <div class="alert alert-danger" role="alert">
+                                    ${texto}
+                                </div>";
+                            `))
+                        }
+                    </script>
 
                     <form name="vicidial_form" id="vicidial_form" action="<?=$agcPAGE?>" method="post">
                         
@@ -84,7 +84,3 @@ function agentes_registro_telefono($mensaje)
         <!-- Javascript -->
     </body>
 </html>
-
-<?php
-}
-?>

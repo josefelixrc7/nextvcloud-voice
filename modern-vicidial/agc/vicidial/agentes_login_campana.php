@@ -1,7 +1,4 @@
-<?php
-function agentes_login_campana($mensaje)
-{
-?>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Agentes: Registro de campa&ntilde;a - ModernVici</title>
@@ -26,15 +23,19 @@ function agentes_login_campana($mensaje)
                     </div>
                     <p class="p">Bienvenido al registro de campa&ntilde;a</p>
 
-<?php
-    if($mensaje != "")
-    {
-        echo "
-            <div class=\"alert alert-danger\" role=\"alert\">
-                $mensaje
-            </div>";
-    }
-?>
+                    <div class="notificaciones"></div>
+                    
+                    <script>
+                        function mensaje(texto)
+                        {
+                            $('.notificaciones').append($(`
+                                <div class="alert alert-danger" role="alert">
+                                    ${texto}
+                                </div>";
+                            `))
+                        }
+                    </script>
+
                     <form name="vicidial_form" id="vicidial_form" action="<?=$agcPAGE?>" method="post">
                         
                         <input type="hidden" name="DB" value="<?=$DB?>">
@@ -93,7 +94,3 @@ function agentes_login_campana($mensaje)
         <!-- Javascript -->
     </body>
 </html>
-
-<?php
-}
-?>

@@ -1460,9 +1460,7 @@ if ( (strlen($phone_login)<2) or (strlen($phone_pass)<2) )
 {
 
 	include '../modern-vicidial/agc/vicidial/agentes_registro_telefono.php';
-	agentes_registro_telefono('');
-
-
+	
 	/*echo "<title>"._QXZ("Agent web client:  Phone Login")."</title>\n";
 	echo "</head>\n";
     echo "<body onresize=\"browser_dimensions();\"  onload=\"browser_dimensions();\">\n";
@@ -3053,7 +3051,6 @@ else
 	if ($VDloginDISPLAY)
 	{
 		include '../modern-vicidial/agc/vicidial/agentes_login_campana.php';
-		agentes_login_campana('');
 		
 		/*echo "<title>"._QXZ("Agent web client: Campaign Login")."</title>\n";
 		echo "</head>\n";
@@ -3162,7 +3159,12 @@ else
 	if (!$authphone)
 	{
 		include '../modern-vicidial/agc/vicidial/agentes_registro_telefono.php';
-		agentes_registro_telefono('Tu tel&eacute;fono y contrase&ntilde;a no est&aacute;n activos en el sistema, intenta de nuevo.');
+		
+?>
+		<script>
+			mensaje('Tu tel&eacute;fono y contrase&ntilde;a no est&aacute;n activos en el sistema, intenta de nuevo.');
+		</script>
+<?php
 
 		/*echo "<title>"._QXZ("Agent web client: Phone Login Error")."</title>\n";
 		echo "</head>\n";
