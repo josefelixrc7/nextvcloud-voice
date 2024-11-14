@@ -1543,7 +1543,7 @@ if ( (strlen($phone_login)<2) or (strlen($phone_pass)<2) )
 {
 
 	/* -- Agentes: Registro de telefono -- */
-	include("../modern-vicidial/agc/vicidial/agentes_registro_telefono.php")
+	include '../modern-vicidial/agc/vicidial/agentes_registro_telefono.php';
 	/* -- /Agentes: Registro de telefono -- */
 
 	/*echo "<title>"._QXZ("Agent web client:  Phone Login")."</title>\n";
