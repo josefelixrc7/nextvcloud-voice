@@ -1282,7 +1282,7 @@ if ($link_to_grey_version > 0)
 
 if ($relogin == 'YES')
 {
-	include '/modern-vicidial/agc/vicidial/login_telefono.php';
+	include '../modern-vicidial/agc/vicidial/login_telefono.php';
 
 	/*echo "<title>"._QXZ("Agent web client: Re-Login")."</title>\n";
 	echo "</head>\n";
