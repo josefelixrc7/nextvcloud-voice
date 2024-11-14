@@ -1590,7 +1590,7 @@ if ( (strlen($phone_login)<2) or (strlen($phone_pass)<2) )
 							</section>
 							<section class="mt-2">
 								<div class="mb-3">
-									<span class="text-muted">Contrasen&ntilde;a del tel&eacute;fono</span>
+									<span class="text-muted">Contrase&ntilde;a del tel&eacute;fono</span>
 								</div>
 								<div class="mb-3">
 									<input class="form-control" type="password" name="phone_pass" size="10" maxlength="20" value="" />
