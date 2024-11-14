@@ -28,6 +28,8 @@
                         <input type="hidden" name="DB" value="<?=$DB?>">
                         <input type="hidden" name="JS_browser_height" id="JS_browser_height" value="">
                         <input type="hidden" name="JS_browser_width" id="JS_browser_width" value="">
+                        <input type="hidden" name="phone_login" value="$phone_login">
+                        <input type="hidden" name="phone_pass" value="$phone_pass">
                         <input type="hidden" name="LOGINvarONE" id="LOGINvarONE" value="<?=$LOGINvarONE?>">
                         <input type="hidden" name="LOGINvarTWO" id="LOGINvarTWO" value="<?=$LOGINvarTWO?>">
                         <input type="hidden" name="LOGINvarTHREE" id="LOGINvarTHREE" value="<?=$LOGINvarTHREE?>">

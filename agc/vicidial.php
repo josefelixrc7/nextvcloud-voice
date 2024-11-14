@@ -1353,9 +1353,9 @@ if ($user_login_first == 1)
 	if ( (strlen($VD_login)<1) or (strlen($VD_pass)<1) or (strlen($VD_campaign)<1) )
 	{
 
-		include '../modern-vicidial/agc/vicidial/agentes_login_campana.php';
+		#include '../modern-vicidial/agc/vicidial/agentes_login_campana.php';
 		
-		/*echo "<title>"._QXZ("Agent web client: Campaign Login")."</title>\n";
+		echo "<title>"._QXZ("Agent web client: Campaign Login")."</title>\n";
 		echo "</head>\n";
         echo "<body onresize=\"browser_dimensions();\" onload=\"browser_dimensions();\">\n";
 		if ($hide_timeclock_link < 1)
@@ -1393,7 +1393,7 @@ if ($user_login_first == 1)
         echo "</table>\n";
         echo "</form>\n\n";
 		echo "</body>\n\n";
-		echo "</html>\n\n";*/
+		echo "</html>\n\n";
 		exit;
 	}
 	else
@@ -1995,9 +1995,9 @@ else
 
 			if ( (!preg_match("/\s$VD_campaign\s/i",$LOGallowed_campaigns)) and (!preg_match("/ALL-CAMPAIGNS/i",$LOGallowed_campaigns)) )
 			{
-				include '../modern-vicidial/agc/vicidial/agentes_login_campana.php';
+				#include '../modern-vicidial/agc/vicidial/agentes_login_campana.php';
 				
-				/*echo "<title>"._QXZ("Agent web client: Campaign Login")."</title>\n";
+				echo "<title>"._QXZ("Agent web client: Campaign Login")."</title>\n";
 				echo "</head>\n";
                 echo "<body onresize=\"browser_dimensions();\" onload=\"browser_dimensions();\">\n";
 				if ($hide_timeclock_link < 1)
@@ -2025,7 +2025,7 @@ else
 				echo "<span id=\"LogiNReseT\"></span>\n";
                 echo "</form>\n\n";
 				echo "</body>\n\n";
-				echo "</html>\n\n";*/
+				echo "</html>\n\n";
 				exit;
 			}
 
@@ -3049,8 +3049,10 @@ else
 			}
 		}
 	if ($VDloginDISPLAY)
-		{
-		echo "<title>"._QXZ("Agent web client: Campaign Login")."</title>\n";
+	{
+		include '../modern-vicidial/agc/vicidial/agentes_login_campana.php';
+		
+		/*echo "<title>"._QXZ("Agent web client: Campaign Login")."</title>\n";
 		echo "</head>\n";
         echo "<body onresize=\"browser_dimensions();\"  onload=\"browser_dimensions();\">\n";
 		if ($hide_timeclock_link < 1)
@@ -3088,9 +3090,9 @@ else
         echo "</table>\n";
         echo "</form>\n\n";
 		echo "</body>\n\n";
-		echo "</html>\n\n";
+		echo "</html>\n\n";*/
 		exit;
-		}
+	}
 
 	$original_phone_login = $phone_login;
 
