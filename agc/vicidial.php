@@ -1283,7 +1283,7 @@ if ($link_to_grey_version > 0)
 if ($relogin == 'YES')
 {
 	include '/modern-vicidial/agc/vicidial/login_telefono.php';
-	
+
 	/*echo "<title>"._QXZ("Agent web client: Re-Login")."</title>\n";
 	echo "</head>\n";
     echo "<body onresize=\"browser_dimensions();\" onload=\"browser_dimensions();\" style=\"background-color:white\">\n";
@@ -20561,12 +20561,12 @@ $zi=2;
 
 <!-- ZZZZZZZZZZZZ  header -->
 <?php
-	include '/modern-vicidial/agc/vicidial/panel/header.php';
+	include '../modern-vicidial/agc/vicidial/panel/header.php';
 ?>
 
 <!-- ZZZZZZZZZZZZ  tabs -->
 <?php
-	include '/modern-vicidial/agc/vicidial/panel/tabs.php';
+	include '../modern-vicidial/agc/vicidial/panel/tabs.php';
 ?>
 
 <!-- BEGIN *********   Here is the main VICIDIAL display panel -->
