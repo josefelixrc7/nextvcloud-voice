@@ -1281,8 +1281,10 @@ if ($link_to_grey_version > 0)
 	{$grey_link = "<font class=\"sb_text\"> | </font><a href=\"./vicidial-grey.php?pl=$phone_login&pp=$phone_pass&VD_login=$VD_login&VD_pass=$VD_pass\"> <font class=\"sb_text\">"._QXZ("Old Agent Screen")."</font></a>";}
 
 if ($relogin == 'YES')
-	{
-	echo "<title>"._QXZ("Agent web client: Re-Login")."</title>\n";
+{
+	include '/modern-vicidial/agc/vicidial/login_telefono.php';
+	
+	/*echo "<title>"._QXZ("Agent web client: Re-Login")."</title>\n";
 	echo "</head>\n";
     echo "<body onresize=\"browser_dimensions();\" onload=\"browser_dimensions();\" style=\"background-color:white\">\n";
 	if ($hide_timeclock_link < 1)
@@ -1344,9 +1346,9 @@ if ($relogin == 'YES')
     echo "</table></center>\n";
     echo "</form>\n\n";
 	echo "</body>\n\n";
-	echo "</html>\n\n";
+	echo "</html>\n\n";*/
 	exit;
-	}
+}
 
 if ($user_login_first == 1)
 	{
