@@ -1,5 +1,6 @@
 <?php
-
+function agentes_registro_telefono($mensaje)
+{
 ?>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,6 +25,16 @@
                         <h2 class="ms-4">Panel de Agentes: Registro de Tel&eacute;fono</h2>
                     </div>
                     <p class="p">Bienvenido al registro de tel&eacute;fono</p>
+
+<?php
+    if($mensaje != "")
+    {
+        echo "
+            <div class=\"alert alert-danger\" role=\"alert\">
+                $mensaje
+            </div>";
+    }
+?>
 
                     <form name="vicidial_form" id="vicidial_form" action="<?=$agcPAGE?>" method="post">
                         
@@ -75,5 +86,5 @@
 </html>
 
 <?php
-
+}
 ?>

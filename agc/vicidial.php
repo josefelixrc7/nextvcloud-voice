@@ -1460,6 +1460,8 @@ if ( (strlen($phone_login)<2) or (strlen($phone_pass)<2) )
 {
 
 	include '../modern-vicidial/agc/vicidial/agentes_registro_telefono.php';
+	agentes_registro_telefono('');
+
 
 	/*echo "<title>"._QXZ("Agent web client:  Phone Login")."</title>\n";
 	echo "</head>\n";
@@ -3051,6 +3053,7 @@ else
 	if ($VDloginDISPLAY)
 	{
 		include '../modern-vicidial/agc/vicidial/agentes_login_campana.php';
+		agentes_login_campana('');
 		
 		/*echo "<title>"._QXZ("Agent web client: Campaign Login")."</title>\n";
 		echo "</head>\n";
@@ -3157,8 +3160,11 @@ else
 	$row=mysqli_fetch_row($rslt);
 	$authphone=$row[0];
 	if (!$authphone)
-		{
-		echo "<title>"._QXZ("Agent web client: Phone Login Error")."</title>\n";
+	{
+		include '../modern-vicidial/agc/vicidial/agentes_registro_telefono.php';
+		agentes_registro_telefono('Tu tel&eacute;fono y contrase&ntilde;a no est&aacute;n activos en el sistema, intenta de nuevo.');
+
+		/*echo "<title>"._QXZ("Agent web client: Phone Login Error")."</title>\n";
 		echo "</head>\n";
         echo "<body onresize=\"browser_dimensions();\"  onload=\"browser_dimensions();\">\n";
 		if ($hide_timeclock_link < 1)
@@ -3193,9 +3199,9 @@ else
         echo "</table></center>\n";
         echo "</form>\n\n";
 		echo "</body>\n\n";
-		echo "</html>\n\n";
+		echo "</html>\n\n";*/
 		exit;
-		}
+	}
 	else
 		{
 		##### BEGIN phone login load balancing functions #####
