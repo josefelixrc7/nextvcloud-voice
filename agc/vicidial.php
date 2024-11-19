@@ -20585,7 +20585,9 @@ $zi=2;
 <!-- END *********   Here is the main VICIDIAL display panel -->
 
 <!-- ZZZZZZZZZZZZ  action links -->
-
+<?php
+	include '../modern-vicidial/agc/vicidial/panel/actions.php';
+?>
 </form>
 
 
