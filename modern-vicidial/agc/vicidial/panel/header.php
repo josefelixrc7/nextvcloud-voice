@@ -41,11 +41,17 @@
 		</span>
 
 		<!--DiaLlOgButtonspan-->
-		<span id="AgentViewLinkSpan"><table cellpadding="0" cellspacing="0" border="0" width="91px"><tr><td align="right"><font class="body_small"><span id="AgentViewLink"><a href="#" onclick="AgentsViewOpen('AgentViewSpan','open');return false;"><?php echo _QXZ("Agents View +"); ?></a></span></font></td></tr></table></span>
+		<span id="AgentViewLinkSpan">
+			<span id="AgentViewLink">
+				<a href="#" onclick="AgentsViewOpen('AgentViewSpan','open');return false;">
+					Vista de agentes
+				</a>
+			</span>
+		</span>
 
 		<!--MainCommit-->
 		<span id="MainCommit">
-			<a href="#" onclick="CustomerData_update('YES')"><font class="body_small"><?php echo _QXZ("commit"); ?></font></a>
+			<a href="#" onclick="CustomerData_update('YES')"><font class="body_small">commmit</font></a>
 		</span>
 
 	</div>
