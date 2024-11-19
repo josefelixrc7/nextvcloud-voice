@@ -102,6 +102,20 @@
             <!-- Contents section -->
             <section>
 
+                <!-- ZZZZZZZZZZZZ  header -->
+                <?php
+                    include 'header.php';
+                ?>
+
+                <!-- ZZZZZZZZZZZZ  tabs -->
+                <?php
+                    include 'tabs.php';
+                ?>
+
+                <span style="position:absolute;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="WelcomeBoxA">
+                    <table border="0" bgcolor="#FFFFFF" width="<?php echo $CAwidth ?>px" height="<?php echo $HKwidth ?>px"><tr><td align="center"><br /><span id="WelcomeBoxAt"><?php echo _QXZ("Agent Screen"); ?></span></td></tr></table>
+                </span>
+
                 <span id="MainPanel">
                     <table border="0" width="<?php echo $MNwidth ?>px" id="MainTable">
                     <tr><td colspan="3">

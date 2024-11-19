@@ -20564,20 +20564,6 @@ $zi=2;
     </td></tr></table>
 </span>
 
-<!-- ZZZZZZZZZZZZ  header -->
-<?php
-	include '../modern-vicidial/agc/vicidial/panel/header.php';
-?>
-
-<!-- ZZZZZZZZZZZZ  tabs -->
-<?php
-	include '../modern-vicidial/agc/vicidial/panel/tabs.php';
-?>
-
-<span style="position:absolute;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="WelcomeBoxA">
-    <table border="0" bgcolor="#FFFFFF" width="<?php echo $CAwidth ?>px" height="<?php echo $HKwidth ?>px"><tr><td align="center"><br /><span id="WelcomeBoxAt"><?php echo _QXZ("Agent Screen"); ?></span></td></tr></table>
-</span>
-
 <!-- BEGIN *********   Here is the main VICIDIAL display panel -->
 <?php
 	include '../modern-vicidial/agc/vicidial/panel/main.php';
