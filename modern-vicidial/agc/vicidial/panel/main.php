@@ -241,6 +241,30 @@
                     include '../modern-vicidial/agc/vicidial/panel/customer_info.php';
                 ?>	
 
+                <footer>
+                    <span id="MaiNfooterspan">
+                        <span id="blind_monitor_notice_span"><b><font color="red"> &nbsp; &nbsp; <span id="blind_monitor_notice_span_contents"></span></font></b></span>
+                        <table bgcolor="<?php echo $MAIN_COLOR ?>" id="MaiNfooter"><tr height="32px"><td height="32px"><font face="Arial,Helvetica" size="1"><?php echo _QXZ("VERSION:"); ?> <?php echo $version ?> &nbsp; <?php echo _QXZ("BUILD:"); ?> <?php echo $build ?> &nbsp; &nbsp; <?php echo _QXZ("Server:"); ?> <?php echo $server_ip ?>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</font><br />
+                        <font class="body_small">
+                        <span id="busycallsdisplay"><a href="#"  onclick="conf_channels_detail('SHOW');"><?php echo _QXZ("Show conference call channel information"); ?></a>
+                        <br /><br />&nbsp;</span></font></td><td align="right" height="32px">
+                        </td></tr>
+                        <tr><td colspan="3"><span id="outboundcallsspan"></span></td></tr>
+                        <tr><td colspan="3"><font class="body_small"><span id="AgentAlertSpan">
+                        <?php
+                        if ( (preg_match('/ON/',$VU_alert_enabled)) and ($AgentAlert_allowed > 0) )
+                            {echo "<a href=\"#\" onclick=\"alert_control('OFF');return false;\">"._QXZ("Alert is ON")."</a>";}
+                        else
+                            {echo "<a href=\"#\" onclick=\"alert_control('ON');return false;\">"._QXZ("Alert is OFF")."</a>";}
+                        ?>
+                        </span></font></td></tr>
+                        <tr><td colspan="3">
+                        <font class="body_small">
+                        </font>
+                        </td></tr></table>
+                    </span>
+                </footer>
+
             </section>
             <!-- Contents section -->
         </main>
