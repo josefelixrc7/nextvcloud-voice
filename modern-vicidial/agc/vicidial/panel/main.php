@@ -10,6 +10,14 @@
             include 'header.php';
         ?>
     </div>
+    <div class="text-white">
+        <!--SecondSspan-->
+        <span id="SecondSspan">
+            <font class="body_text"> <?php echo _QXZ("seconds:"); ?> 
+                <span id="SecondSDISP"> &nbsp; &nbsp; </span>
+            </font>
+        </span>
+    </div>
     <div class="navbar-nav">
         <div class="nav-item text-nowrap">
 			<a class="nav-link px-3" href="#" onclick="NormalLogout();return false;needToConfirmExit = false;"><?=_QXZ("LOGOUT");?></a>

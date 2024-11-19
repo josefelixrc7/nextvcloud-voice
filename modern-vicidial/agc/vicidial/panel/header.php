@@ -6,7 +6,7 @@
 
 	<ul class="nav">
 		<li class="nav-item">
-			<font class="queue_text">
+			<font>
 				<?php
 					if ($logged_in_refresh_link > 0)
 					{
@@ -32,14 +32,6 @@
 				<?php if ($INgrpCT > 0) {echo "<a href=\"#\" onclick=\"OpeNGrouPSelectioN();return false;\">"._QXZ("GROUPS")."</a> &nbsp; &nbsp; \n";} ?>
 				<?php	/*echo "<a class=\"btn btn-secondary btn-sm\" href=\"#\" onclick=\"NormalLogout();return false;needToConfirmExit = false;\">"._QXZ("LOGOUT")."</a>\n"; */?>
 			</font>
-		</li>
-		<li class="nav-item">
-			<!--SecondSspan-->
-			<span id="SecondSspan">
-				<font class="body_text"> <?php echo _QXZ("seconds:"); ?> 
-					<span id="SecondSDISP"> &nbsp; &nbsp; </span>
-				</font>
-			</span>
 		</li>
 	</ul>
 </span>
