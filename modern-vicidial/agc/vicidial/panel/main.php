@@ -213,33 +213,10 @@
                     <table border="0" bgcolor="#FFFFFF" width="<?php echo $CAwidth ?>px" height="<?php echo $HKwidth ?>px"><tr><td align="center"><br /><span id="WelcomeBoxAt"><?php echo _QXZ("Agent Screen"); ?></span></td></tr></table>
                 </span>
 
-                <span id="MainPanel">
-                    <table border="0" id="MainTable">
-                    <tr>
-                    <td width="<?php echo $SDwidth ?>px" align="left" valign="top">
-                    <input type="hidden" name="lead_id" id="lead_id" value="" />
-                    <input type="hidden" name="list_id" id="list_id" value="" />
-                    <input type="hidden" name="entry_list_id" id="entry_list_id" value="" />
-                    <input type="hidden" name="list_name" id="list_name" value="" />
-                    <input type="hidden" name="list_description" id="list_description" value="" />
-                    <input type="hidden" name="called_count" id="called_count" value="" />
-                    <input type="hidden" name="rank" id="rank" value="" />
-                    <input type="hidden" name="owner" id="owner" value="" />
-                    <input type="hidden" name="gmt_offset_now" id="gmt_offset_now" value="" />
-                    <input type="hidden" name="gender" id="gender" value="" />
-                    <input type="hidden" name="date_of_birth" id="date_of_birth" value="" />
-                    <input type="hidden" name="country_code" id="country_code" value="" />
-                    <input type="hidden" name="uniqueid" id="uniqueid" value="" />
-                    <input type="hidden" name="callserverip" id="callserverip" value="" />
-                    <input type="hidden" name="SecondS" id="SecondS" value="" />
-                    <input type="hidden" name="email_row_id" id="email_row_id" value="" />
-                    <input type="hidden" name="chat_id" id="chat_id" value="" />
-                    <input type="hidden" name="customer_chat_id" id="customer_chat_id" value="" />
-
-                    <!-- ZZZZZZZZZZZZ  customer info -->
+                <!-- ZZZZZZZZZZZZ  customer info -->
                 <?php
                     include '../modern-vicidial/agc/vicidial/panel/customer_info.php';
-                ?>	
+                ?>
 
                 <footer>
                     <span id="MaiNfooterspan">
