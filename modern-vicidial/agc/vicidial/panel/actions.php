@@ -7,7 +7,7 @@
     <a href="#" onclick="NeWManuaLDiaLCalL('FAST','','','','','YES','YES');return false;"><?php echo _QXZ("FAST DIAL"); ?></a>
     <?php } ?>
     </span>&nbsp; &nbsp; </font>
-    <span id="CallLogButtons"><font class="body_text"><span id="CallLogLinkSpan"><a class="btn btn-secondary btn-sm" href="#" onclick="VieWCalLLoG();return false;"><?php echo _QXZ("VIEW CALL LOG"); ?></a></span><br /></font></span>
+    <span id="CallLogButtons"><font class="body_text"><span id="CallLogLinkSpan"><a href="#" onclick="VieWCalLLoG();return false;"><?php echo _QXZ("VIEW CALL LOG"); ?></a></span><br /></font></span>
 </span>
 
 <span style="position:absolute;left:165px;top:<?php echo $CBheight ?>px;z-index:<?php $zi++; echo $zi ?>;" id="AgentTimeSpan">
@@ -120,7 +120,7 @@ else
 ?>
 
 
-<span style="position:absolute;left:1100px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="AgentViewLinkSpan"><table cellpadding="0" cellspacing="0" border="0" width="91px"><tr><td align="right"><font class="body_small"><span id="AgentViewLink"><a class="btn btn-secondary btn-sm" href="#" onclick="AgentsViewOpen('AgentViewSpan','open');return false;"><?php echo _QXZ("Agents View +"); ?></a></span></font></td></tr></table></span>
+<span style="position:absolute;left:1100px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="AgentViewLinkSpan"><table cellpadding="0" cellspacing="0" border="0" width="91px"><tr><td align="right"><font class="body_small"><span id="AgentViewLink"><a href="#" onclick="AgentsViewOpen('AgentViewSpan','open');return false;"><?php echo _QXZ("Agents View +"); ?></a></span></font></td></tr></table></span>
 
 <?php 
 if ($is_webphone=='Y')
@@ -145,7 +145,7 @@ if ($agent_display_dialable_leads > 0)
 <span style="position:absolute;left:<?php echo $MUwidth ?>px;top:<?php echo $SLheight ?>px;z-index:<?php $zi++; echo $zi ?>;" id="AgentMuteSpan"></span>
 
 <span style="position:absolute;left:<?php echo $AMwidth ?>px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="MainCommit">
-<a class="btn btn-secondary btn-sm" href="#" onclick="CustomerData_update('YES')"><font class="body_small"><?php echo _QXZ("commit"); ?></font></a>
+<a href="#" onclick="CustomerData_update('YES')"><font class="body_small"><?php echo _QXZ("commit"); ?></font></a>
 </span>
 
 <span style="position:absolute;left:154px;top:<?php echo $SFheight ?>px;z-index:<?php $zi++; echo $zi ?>;" id="ScriptPanel">
