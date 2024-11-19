@@ -7,12 +7,13 @@
                 <ul class="nav flex-column">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">
-                            <span data-feather="home"></span>
-                            <span style="background-color: #CCFFCC" id="DiaLControl">
-                                <a href="#" onclick="ManualDialNext('','','','','','0','','','YES');">
-                                    <img src="./images/<?php echo _QXZ("vdc_LB_dialnextnumber_OFF.gif"); ?>" border="0" alt="Dial Next Number" />
-                                </a>
-                            </span>
+                            <div>
+                                <span style="background-color: #CCFFCC" id="DiaLControl">
+                                    <a href="#" onclick="ManualDialNext('','','','','','0','','','YES');">
+                                        <img src="./images/<?php echo _QXZ("vdc_LB_dialnextnumber_OFF.gif"); ?>" border="0" alt="Dial Next Number" />
+                                    </a>
+                                </span>
+                            </div>
                         </a>
                     </li>
                     <li class="nav-item">
