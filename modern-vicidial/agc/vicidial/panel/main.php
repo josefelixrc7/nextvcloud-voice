@@ -6,7 +6,8 @@
             <div class="position-sticky pt-3">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <div>
+                        <div class="nav-link">
+                            <span>Estado:</span>
                             <span style="background-color: #CCFFCC" id="DiaLControl">
                                 <a href="#" onclick="ManualDialNext('','','','','','0','','','YES');">
                                     <img src="./images/<?php echo _QXZ("vdc_LB_dialnextnumber_OFF.gif"); ?>" border="0" alt="Dial Next Number" />
