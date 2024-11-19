@@ -1,5 +1,5 @@
 
-<span style="position:absolute;left:0px;top:46px;z-index:<?php $zi++; echo $zi ?>;" id="MainPanel">
+<span id="MainPanel">
     <table border="0" width="<?php echo $MNwidth ?>px" id="MainTable">
     <tr><td colspan="3">
 	<?php

@@ -1,5 +1,5 @@
 
-<span style="position:absolute;left:0px;top:13px;z-index:<?php $zi++; echo $zi ?>;" id="Tabs">
+<span id="Tabs">
     <table border="0" bgcolor="#FFFFFF" width="<?php echo $MNwidth ?>px" height="30px">
         <tr valign="top" align="left">
             <td align="left" width="115px" bgcolor="#<?php echo $SSstd_row5_background ?>"><a href="#" onclick="MainPanelToFront('NO','YES');"><img src="/modern-vicidial/images/logo.png" alt="MAIN" height="30px" border="0" /></a></td>
@@ -26,8 +26,4 @@
             <td width="109px"><img src="./images/<?php echo _QXZ("agc_live_call_OFF.gif"); ?>" name="livecall" alt="Live Call" width="109px" height="30px" border="0" /></td>
         </tr>
     </table>
-</span>
-
-<span style="position:absolute;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="WelcomeBoxA">
-    <table border="0" bgcolor="#FFFFFF" width="<?php echo $CAwidth ?>px" height="<?php echo $HKwidth ?>px"><tr><td align="center"><br /><span id="WelcomeBoxAt"><?php echo _QXZ("Agent Screen"); ?></span></td></tr></table>
 </span>
