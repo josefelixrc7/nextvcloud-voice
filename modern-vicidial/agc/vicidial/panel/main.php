@@ -4,10 +4,15 @@
     <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+    <div class="w-100">
+        <!-- ZZZZZZZZZZZZ  header -->
+        <?php
+            include 'header.php';
+        ?>
+    </div>
     <div class="navbar-nav">
         <div class="nav-item text-nowrap">
-			<a class="btn btn-secondary btn-sm" href="#" onclick="NormalLogout();return false;needToConfirmExit = false;"><?=_QXZ("LOGOUT");?></a>
-            <a class="nav-link px-3" href="#">Cerrar sesi&oacute;n</a>
+			<a class="nav-link px-3" href="#" onclick="NormalLogout();return false;needToConfirmExit = false;"><?=_QXZ("LOGOUT");?></a>
         </div>
     </div>
 </header>
@@ -98,45 +103,44 @@
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h1 class="h2">Dashboard</h1>
                 <div class="btn-toolbar mb-2 mb-md-0">
-                    <div class="btn-group me-2">
-                        <!--DiaLlOgButtonspan-->
-                        <span id="DiaLlOgButtonspan">
-                            <span id="ManuaLDiaLButtons">
-                                <font class="body_text">
-                                    <span id="MDstatusSpan">
-                                        <a class="btn btn-sm btn-outline-secondary" href="#" onclick="NeWManuaLDiaLCalL('NO','','','','','YES','YES');return false;">
-                                            <?php echo _QXZ("MANUAL DIAL"); ?>
-                                        </a>
-                                    </span>
-                                    <?php if ($agentcall_manual == '1') { ?>
-                                        <a class="btn btn-sm btn-outline-secondary" href="#" onclick="NeWManuaLDiaLCalL('FAST','','','','','YES','YES');return false;">
-                                            <?php echo _QXZ("FAST DIAL"); ?>
-                                        </a>
-                                    <?php } ?>
-                                </font>
-                            </span>
-                            <span id="CallLogButtons">
-                                <font class="body_text">
-                                    <span id="CallLogLinkSpan">
-                                        <a class="btn btn-sm btn-outline-secondary" href="#" onclick="VieWCalLLoG();return false;">
-                                            <?php echo _QXZ("VIEW CALL LOG"); ?>
-                                        </a>
-                                    </span>
-                                </font>
-                            </span>
+
+                    <!--DiaLlOgButtonspan-->
+                    <span id="DiaLlOgButtonspan">
+                        <span id="ManuaLDiaLButtons">
+                            <font class="body_text">
+                                <span id="MDstatusSpan">
+                                    <a class="btn btn-sm btn-outline-secondary" href="#" onclick="NeWManuaLDiaLCalL('NO','','','','','YES','YES');return false;">
+                                        <?php echo _QXZ("MANUAL DIAL"); ?>
+                                    </a>
+                                </span>
+                                <?php if ($agentcall_manual == '1') { ?>
+                                    <a class="btn btn-sm btn-outline-secondary" href="#" onclick="NeWManuaLDiaLCalL('FAST','','','','','YES','YES');return false;">
+                                        <?php echo _QXZ("FAST DIAL"); ?>
+                                    </a>
+                                <?php } ?>
+                            </font>
                         </span>
-                        <!--<button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>-->
-                        
-                        <!--DiaLlOgButtonspan-->
-                        <span id="AgentViewLinkSpan">
-                            <span id="AgentViewLink">
-                                <a class="btn btn-sm btn-outline-secondary" href="#" onclick="AgentsViewOpen('AgentViewSpan','open');return false;">
-                                    <?=_QXZ("Agents View +");?>
-                                </a>
-                            </span>
+                        <span id="CallLogButtons">
+                            <font class="body_text">
+                                <span id="CallLogLinkSpan">
+                                    <a class="btn btn-sm btn-outline-secondary" href="#" onclick="VieWCalLLoG();return false;">
+                                        <?php echo _QXZ("VIEW CALL LOG"); ?>
+                                    </a>
+                                </span>
+                            </font>
                         </span>
-                    </div>
+                    </span>
+                    <!--<button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>-->
+                    
+                    <!--DiaLlOgButtonspan-->
+                    <span id="AgentViewLinkSpan">
+                        <span id="AgentViewLink">
+                            <a class="btn btn-sm btn-outline-secondary" href="#" onclick="AgentsViewOpen('AgentViewSpan','open');return false;">
+                                <?=_QXZ("Agents View +");?>
+                            </a>
+                        </span>
+                    </span>
 
                     <!--MainCommit-->
                     <span id="MainCommit">
@@ -153,11 +157,6 @@
         
             <!-- Contents section -->
             <section>
-
-                <!-- ZZZZZZZZZZZZ  header -->
-                <?php
-                    include 'header.php';
-                ?>
 
                 <!-- ZZZZZZZZZZZZ  tabs -->
                 <?php
