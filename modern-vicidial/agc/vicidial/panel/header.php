@@ -1,6 +1,6 @@
 
 <span id="Header">
-	<div class="p-2"
+	<div class="p-2">
 		<table border="0" cellpadding="0" cellspacing="0" bgcolor="white" width="<?php echo $MNwidth ?>px" marginwidth="0" marginheight="0" leftmargin="0" topmargin="0" valign="top" align="left">
 			<tr valign="top" align="left">
 				<td colspan="3" valign="top" align="left">
@@ -24,6 +24,32 @@
 					<?php if ($INgrpCT > 0) {echo "<a href=\"#\" onclick=\"OpeNGrouPSelectioN();return false;\">"._QXZ("GROUPS")."</a> &nbsp; &nbsp; \n";} ?>
 					<?php	echo "<a class=\"btn btn-secondary btn-sm\" href=\"#\" onclick=\"NormalLogout();return false;needToConfirmExit = false;\">"._QXZ("LOGOUT")."</a>\n"; ?>
 					</font>
+
+					<!--SecondSspan-->
+					<span id="SecondSspan">
+						<font class="body_text"> <?php echo _QXZ("seconds:"); ?> 
+							<span id="SecondSDISP"> &nbsp; &nbsp; </span>
+						</font>
+					</span>
+
+					<!--DiaLlOgButtonspan-->
+					<span id="DiaLlOgButtonspan">
+						<span id="ManuaLDiaLButtons"><font class="body_text"><span id="MDstatusSpan"><a href="#" onclick="NeWManuaLDiaLCalL('NO','','','','','YES','YES');return false;"><?php echo _QXZ("MANUAL DIAL"); ?></a></span>&nbsp; &nbsp; 
+						<?php if ($agentcall_manual == '1') { ?>
+						<a href="#" onclick="NeWManuaLDiaLCalL('FAST','','','','','YES','YES');return false;"><?php echo _QXZ("FAST DIAL"); ?></a>
+						<?php } ?>
+						</span>&nbsp; &nbsp; </font>
+						<span id="CallLogButtons"><font class="body_text"><span id="CallLogLinkSpan"><a href="#" onclick="VieWCalLLoG();return false;"><?php echo _QXZ("VIEW CALL LOG"); ?></a></span><br /></font></span>
+					</span>
+
+					<!--DiaLlOgButtonspan-->
+					<span id="AgentViewLinkSpan"><table cellpadding="0" cellspacing="0" border="0" width="91px"><tr><td align="right"><font class="body_small"><span id="AgentViewLink"><a href="#" onclick="AgentsViewOpen('AgentViewSpan','open');return false;"><?php echo _QXZ("Agents View +"); ?></a></span></font></td></tr></table></span>
+
+					<!--MainCommit-->
+					<span id="MainCommit">
+						<a href="#" onclick="CustomerData_update('YES')"><font class="body_small"><?php echo _QXZ("commit"); ?></font></a>
+					</span>
+
 				</td>
 			</tr>
 		</table>
