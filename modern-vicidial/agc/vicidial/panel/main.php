@@ -13,9 +13,8 @@
     <div class="text-white">
         <!--SecondSspan-->
         <span id="SecondSspan">
-            <font class="body_text"> <?php echo _QXZ("seconds:"); ?> 
-                <span id="SecondSDISP"> &nbsp; &nbsp; </span>
-            </font>
+            <span><?php echo _QXZ("seconds:");?></span>
+            <span id="SecondSDISP"></span>
         </span>
     </div>
     <div class="navbar-nav">

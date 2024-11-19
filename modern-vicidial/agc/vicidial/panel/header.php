@@ -10,11 +10,11 @@
 				<?php
 					if ($logged_in_refresh_link > 0)
 					{
-						echo "<a href=\"#\" onclick=\"start_all_refresh();\"><font class=\"queue_text\">"._QXZ("Logged in as User")."</font></a>";
+						echo "<a href=\"#\" onclick=\"start_all_refresh();\"><span>"._QXZ("Logged in as User")."</span></a>";
 					}
 					else
 					{
-						echo "<font class=\"queue_text\">"._QXZ("Logged in as User")."</font>";
+						echo "<span>"._QXZ("Logged in as User")."</span>";
 					}
 					echo _QXZ(": %1s on Phone: %2s",0,'',$VD_login,$SIP_user); 
 					if ($on_hook_agent == 'Y')
