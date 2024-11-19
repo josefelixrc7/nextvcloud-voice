@@ -5,42 +5,46 @@
         <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
             <div class="position-sticky pt-3">
                 <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">
-                    <span data-feather="home"></span>
-                    Dashboard
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                    <span data-feather="file"></span>
-                    Orders
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                    <span data-feather="shopping-cart"></span>
-                    Products
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                    <span data-feather="users"></span>
-                    Customers
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                    <span data-feather="bar-chart-2"></span>
-                    Reports
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                    <span data-feather="layers"></span>
-                    Integrations
-                    </a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <span data-feather="home"></span>
+                            <span style="background-color: #CCFFCC" id="DiaLControl">
+                                <a href="#" onclick="ManualDialNext('','','','','','0','','','YES');">
+                                    <img src="./images/<?php echo _QXZ("vdc_LB_dialnextnumber_OFF.gif"); ?>" border="0" alt="Dial Next Number" />
+                                </a>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                        <span data-feather="file"></span>
+                        Orders
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                        <span data-feather="shopping-cart"></span>
+                        Products
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                        <span data-feather="users"></span>
+                        Customers
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                        <span data-feather="bar-chart-2"></span>
+                        Reports
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                        <span data-feather="layers"></span>
+                        Integrations
+                        </a>
+                    </li>
                 </ul>
 
                 <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
@@ -97,7 +101,7 @@
         
             <!-- Contents section -->
             <section>
-                
+
                 <span id="MainPanel">
                     <table border="0" width="<?php echo $MNwidth ?>px" id="MainTable">
                     <tr><td colspan="3">
@@ -115,7 +119,7 @@
                     <tr><td colspan="3"><span id="busycallsdebug"></span></td></tr>
                     <tr><td width="150px" align="left" valign="top">
                     <font class="body_text"><center>
-                    <span style="background-color: #CCFFCC" id="DiaLControl"><a href="#" onclick="ManualDialNext('','','','','','0','','','YES');"><img src="./images/<?php echo _QXZ("vdc_LB_dialnextnumber_OFF.gif"); ?>" border="0" alt="Dial Next Number" /></a></span><br />
+                    <!--<span style="background-color: #CCFFCC" id="DiaLControl"><a href="#" onclick="ManualDialNext('','','','','','0','','','YES');"><img src="./images/<?php echo _QXZ("vdc_LB_dialnextnumber_OFF.gif"); ?>" border="0" alt="Dial Next Number" /></a></span><br />-->
                     <span id="ManualQueueNotice"></span>
                     <span id="ManualQueueChoice"></span>
                     <span id="DiaLLeaDPrevieW"><font class="preview_text"> <input type="checkbox" name="LeadPreview" size="1" value="0" /> <?php echo _QXZ("LEAD PREVIEW"); ?><br /></font></span>
