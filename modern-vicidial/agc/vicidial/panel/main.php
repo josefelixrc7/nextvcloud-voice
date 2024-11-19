@@ -129,7 +129,7 @@
                 </span>
 
                 <span id="MainPanel">
-                    <table border="0" width="<?php echo $MNwidth ?>px" id="MainTable">
+                    <table border="0" id="MainTable">
                     <tr><td colspan="3">
                     <?php
                     if ($webphone_location == 'bar')
