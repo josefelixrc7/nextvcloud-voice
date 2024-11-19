@@ -30,7 +30,7 @@
 			<font class="body_text">
 				<?php if ($territoryCT > 0) {echo "<a href=\"#\" onclick=\"OpeNTerritorYSelectioN();return false;\">"._QXZ("TERRITORIES")."</a> &nbsp; &nbsp; \n";} ?>
 				<?php if ($INgrpCT > 0) {echo "<a href=\"#\" onclick=\"OpeNGrouPSelectioN();return false;\">"._QXZ("GROUPS")."</a> &nbsp; &nbsp; \n";} ?>
-				<?php	echo "<a class=\"btn btn-secondary btn-sm\" href=\"#\" onclick=\"NormalLogout();return false;needToConfirmExit = false;\">"._QXZ("LOGOUT")."</a>\n"; ?>
+				<?php	/*echo "<a class=\"btn btn-secondary btn-sm\" href=\"#\" onclick=\"NormalLogout();return false;needToConfirmExit = false;\">"._QXZ("LOGOUT")."</a>\n"; */?>
 			</font>
 		</li>
 		<li class="nav-item">
@@ -39,33 +39,6 @@
 				<font class="body_text"> <?php echo _QXZ("seconds:"); ?> 
 					<span id="SecondSDISP"> &nbsp; &nbsp; </span>
 				</font>
-			</span>
-		</li>
-		<li class="nav-item">
-			<!--DiaLlOgButtonspan-->
-			<span id="DiaLlOgButtonspan">
-				<span id="ManuaLDiaLButtons"><font class="body_text"><span id="MDstatusSpan"><a href="#" onclick="NeWManuaLDiaLCalL('NO','','','','','YES','YES');return false;"><?php echo _QXZ("MANUAL DIAL"); ?></a></span>&nbsp; &nbsp; 
-				<?php if ($agentcall_manual == '1') { ?>
-				<a href="#" onclick="NeWManuaLDiaLCalL('FAST','','','','','YES','YES');return false;"><?php echo _QXZ("FAST DIAL"); ?></a>
-				<?php } ?>
-				</span>&nbsp; &nbsp; </font>
-				<span id="CallLogButtons"><font class="body_text"><span id="CallLogLinkSpan"><a href="#" onclick="VieWCalLLoG();return false;"><?php echo _QXZ("VIEW CALL LOG"); ?></a></span><br /></font></span>
-			</span>
-		</li>
-		<li class="nav-item">
-			<!--DiaLlOgButtonspan-->
-			<span id="AgentViewLinkSpan">
-				<span id="AgentViewLink">
-					<a href="#" onclick="AgentsViewOpen('AgentViewSpan','open');return false;">
-						Vista de agentes
-					</a>
-				</span>
-			</span>
-		</li>
-		<li class="nav-item">
-			<!--MainCommit-->
-			<span id="MainCommit">
-				<a href="#" onclick="CustomerData_update('YES')"><font class="body_small">commmit</font></a>
 			</span>
 		</li>
 	</ul>

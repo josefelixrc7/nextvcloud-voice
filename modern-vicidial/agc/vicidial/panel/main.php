@@ -6,7 +6,8 @@
     </button>
     <div class="navbar-nav">
         <div class="nav-item text-nowrap">
-        <a class="nav-link px-3" href="#">Cerrar sesi&oacute;n</a>
+			<a class="btn btn-secondary btn-sm" href="#" onclick="NormalLogout();return false;needToConfirmExit = false;"><?=_QXZ("LOGOUT");?></a>
+            <a class="nav-link px-3" href="#">Cerrar sesi&oacute;n</a>
         </div>
     </div>
 </header>
@@ -18,7 +19,7 @@
                 <ul class="nav flex-column">
                     <li class="nav-item">
                         <div class="nav-link">
-                            <span>Estado:</span>
+                            <span><?=_QXZ("STATUS:");?></span>
                             <span style="background-color: #CCFFCC" id="DiaLControl">
                                 <a href="#" onclick="ManualDialNext('','','','','','0','','','YES');">
                                     <img src="./images/<?php echo _QXZ("vdc_LB_dialnextnumber_OFF.gif"); ?>" border="0" alt="Dial Next Number" />
@@ -98,13 +99,53 @@
                 <h1 class="h2">Dashboard</h1>
                 <div class="btn-toolbar mb-2 mb-md-0">
                     <div class="btn-group me-2">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+                        <!--DiaLlOgButtonspan-->
+                        <span id="DiaLlOgButtonspan">
+                            <span id="ManuaLDiaLButtons">
+                                <font class="body_text">
+                                    <span id="MDstatusSpan">
+                                        <a class="btn btn-sm btn-outline-secondary" href="#" onclick="NeWManuaLDiaLCalL('NO','','','','','YES','YES');return false;">
+                                            <?php echo _QXZ("MANUAL DIAL"); ?>
+                                        </a>
+                                    </span>
+                                    <?php if ($agentcall_manual == '1') { ?>
+                                        <a class="btn btn-sm btn-outline-secondary" href="#" onclick="NeWManuaLDiaLCalL('FAST','','','','','YES','YES');return false;">
+                                            <?php echo _QXZ("FAST DIAL"); ?>
+                                        </a>
+                                    <?php } ?>
+                                </font>
+                            </span>
+                            <span id="CallLogButtons">
+                                <font class="body_text">
+                                    <span id="CallLogLinkSpan">
+                                        <a class="btn btn-sm btn-outline-secondary" href="#" onclick="VieWCalLLoG();return false;">
+                                            <?php echo _QXZ("VIEW CALL LOG"); ?>
+                                        </a>
+                                    </span>
+                                </font>
+                            </span>
+                        </span>
+                        <!--<button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>-->
+                        
+                        <!--DiaLlOgButtonspan-->
+                        <span id="AgentViewLinkSpan">
+                            <span id="AgentViewLink">
+                                <a class="btn btn-sm btn-outline-secondary" href="#" onclick="AgentsViewOpen('AgentViewSpan','open');return false;">
+                                    <?=_QXZ("Agents View +");?>
+                                </a>
+                            </span>
+                        </span>
                     </div>
-                    <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+
+                    <!--MainCommit-->
+                    <span id="MainCommit">
+                        <a class="btn btn-sm btn-outline-secondary" href="#" onclick="CustomerData_update('YES')"><?=_QXZ("commit");?></a>
+                    </span>
+                    <!--<button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
                         <span data-feather="calendar"></span>
                         This week
-                    </button>
+                    </button>-->
                 </div>
             </div>
 

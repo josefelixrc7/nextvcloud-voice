@@ -5,12 +5,12 @@
 <table class="table">
     <tbody>
         <tr>
-            <td>Tiempo del cliente</td>
+            <td><?=_QXZ("Customer Time:");?></td>
             <td><span name="custdatetime" id="custdatetime" class="log_title"></span></td>
             <td><span name="callchannel" id="callchannel" class="cust_form"></span></td>
         </tr>
         <tr>
-            <td>Informaci&oacute;n del cliente</td>
+            <td><?=_QXZ("Customer Information:");?></td>
             <td>
                 <span id="CusTInfOSpaN"></span>
                 <?php
