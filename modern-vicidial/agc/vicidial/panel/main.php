@@ -109,6 +109,8 @@
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h1 class="h2">Dashboard</h1>
+
+                <!-- Barra de botones -->
                 <div class="btn-toolbar mb-2 mb-md-0">
 
                     <!--DiaLlOgButtonspan-->
@@ -116,12 +118,12 @@
                         <span id="ManuaLDiaLButtons">
                             <font class="body_text">
                                 <span id="MDstatusSpan">
-                                    <a class="btn btn-sm btn-outline-secondary" href="#" onclick="NeWManuaLDiaLCalL('NO','','','','','YES','YES');return false;">
+                                    <a class="btn btn-sm btn-outline-secondary me-2" href="#" onclick="NeWManuaLDiaLCalL('NO','','','','','YES','YES');return false;">
                                         <?php echo _QXZ("MANUAL DIAL"); ?>
                                     </a>
                                 </span>
                                 <?php if ($agentcall_manual == '1') { ?>
-                                    <a class="btn btn-sm btn-outline-secondary" href="#" onclick="NeWManuaLDiaLCalL('FAST','','','','','YES','YES');return false;">
+                                    <a class="btn btn-sm btn-outline-secondary me-2" href="#" onclick="NeWManuaLDiaLCalL('FAST','','','','','YES','YES');return false;">
                                         <?php echo _QXZ("FAST DIAL"); ?>
                                     </a>
                                 <?php } ?>
@@ -130,7 +132,7 @@
                         <span id="CallLogButtons">
                             <font class="body_text">
                                 <span id="CallLogLinkSpan">
-                                    <a class="btn btn-sm btn-outline-secondary" href="#" onclick="VieWCalLLoG();return false;">
+                                    <a class="btn btn-sm btn-outline-secondary me-2" href="#" onclick="VieWCalLLoG();return false;">
                                         <?php echo _QXZ("VIEW CALL LOG"); ?>
                                     </a>
                                 </span>
@@ -143,7 +145,7 @@
                     <!--DiaLlOgButtonspan-->
                     <span id="AgentViewLinkSpan">
                         <span id="AgentViewLink">
-                            <a class="btn btn-sm btn-outline-secondary" href="#" onclick="AgentsViewOpen('AgentViewSpan','open');return false;">
+                            <a class="btn btn-sm btn-outline-secondary me-2" href="#" onclick="AgentsViewOpen('AgentViewSpan','open');return false;">
                                 <?=_QXZ("Agents View +");?>
                             </a>
                         </span>
@@ -151,7 +153,7 @@
 
                     <!--MainCommit-->
                     <span id="MainCommit">
-                        <a class="btn btn-sm btn-outline-secondary" href="#" onclick="CustomerData_update('YES')"><?=_QXZ("commit");?></a>
+                        <a class="btn btn-sm btn-outline-secondary me-2" href="#" onclick="CustomerData_update('YES')"><?=_QXZ("commit");?></a>
                     </span>
                     <!--<button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
                         <span data-feather="calendar"></span>
@@ -159,6 +161,7 @@
                     </button>-->
                 </div>
             </div>
+            <!-- Barra de botones -->
 
             <h2>Section title</h2>
         
