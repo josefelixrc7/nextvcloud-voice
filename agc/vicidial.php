@@ -20536,6 +20536,11 @@ function phone_number_format(formatphone) {
 	div.noscroll_script {height: <?php echo $SSheight ?>px; width: <?php echo $SDwidth ?>px; background: #FFF5EC; overflow: hidden; font-size: 12px;  font-family: sans-serif;}
 -->
 </style>
+
+<?php
+	include '../modern-vicidial/agc/vicidial/main_head.php';
+?>
+
 </head>
 <?php
 
