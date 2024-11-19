@@ -4,7 +4,7 @@
 	<input type="hidden" name="custom_field_values" id="custom_field_values" value="" />
 	<input type="hidden" name="FORM_LOADED" id="FORM_LOADED" value="0" />
 
-	<ul class="nav justify-content-center">
+	<ul class="nav">
 		<li class="nav-item">
 			<font class="queue_text">
 				<?php
