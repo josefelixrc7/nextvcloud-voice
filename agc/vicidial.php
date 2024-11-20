@@ -1053,11 +1053,17 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <link rel="stylesheet" type="text/css" href="css/custom.css" />
-<script language="JavaScript" src="calendar_db.js"></script>
+<!--<script language="JavaScript" src="calendar_db.js"></script>-->
 <link rel="stylesheet" href="calendar.css" />
 ';
 echo "<!-- VERSION: $version     "._QXZ("BUILD:")." $build -->\n";
 echo "<!-- BROWSER: $BROWSER_WIDTH x $BROWSER_HEIGHT     $JS_browser_width x $JS_browser_height -->\n";
+
+/* Mostrar errores */
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
+/* /Mostrar errores */
 
 if ($campaign_login_list > 0)
 	{
