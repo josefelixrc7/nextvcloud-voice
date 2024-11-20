@@ -655,12 +655,6 @@
 # 201201-2015 - Added transfer_button_launch feature
 #
 
-/* Mostrar errores */
-ini_set('display_errors', '1');
-ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);
-/* /Mostrar errores */
-
 $version = '2.14-621c';
 $build = '201201-2015';
 $mel=1;					# Mysql Error Log enabled = 1
