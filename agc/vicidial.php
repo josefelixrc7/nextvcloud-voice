@@ -655,6 +655,12 @@
 # 201201-2015 - Added transfer_button_launch feature
 #
 
+/* Mostrar errores */
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
+/* /Mostrar errores */
+
 $version = '2.14-621c';
 $build = '201201-2015';
 $mel=1;					# Mysql Error Log enabled = 1
@@ -1058,12 +1064,6 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
 ';
 echo "<!-- VERSION: $version     "._QXZ("BUILD:")." $build -->\n";
 echo "<!-- BROWSER: $BROWSER_WIDTH x $BROWSER_HEIGHT     $JS_browser_width x $JS_browser_height -->\n";
-
-/* Mostrar errores */
-ini_set('display_errors', '1');
-ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);
-/* /Mostrar errores */
 
 if ($campaign_login_list > 0)
 	{
