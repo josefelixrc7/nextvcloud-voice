@@ -1053,7 +1053,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <link rel="stylesheet" type="text/css" href="css/custom.css" />
-<!--<script language="JavaScript" src="calendar_db.js"></script>-->
+<script language="JavaScript" src="calendar_db.js"></script>
 <link rel="stylesheet" href="calendar.css" />
 ';
 echo "<!-- VERSION: $version     "._QXZ("BUILD:")." $build -->\n";
