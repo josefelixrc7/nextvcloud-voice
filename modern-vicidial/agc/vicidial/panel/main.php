@@ -113,9 +113,7 @@
                                 {echo "<br />\n";}
                             ?>
 
-                            <span id="SpacerSpanC"><img src="./images/<?php echo _QXZ("blank.gif"); ?>" width="145px" height="16px" border="0" /></span><br />
                             <span style="background-color: #FFCCFF" id="HangupControl"><img src="./images/<?php echo _QXZ("vdc_LB_hangupcustomer_OFF.gif"); ?>" border="0" alt="Hangup Customer" /></span><br />
-                            <span id="SpacerSpanD"><img src="./images/<?php echo _QXZ("blank.gif"); ?>" width="145px" height="16px" border="0" /></span><br />
                             <div class="text_input" id="SendDTMFdiv">
                                 <span style="background-color: <?php echo $MAIN_COLOR ?>" id="SendDTMF">
                                     <a href="#" onclick="SendConfDTMF(session_id,'YES');return false;">
