@@ -62,7 +62,7 @@ $(function()
         </li>
     </ul>
 
-    <table class="mb-4" border="0" bgcolor="#FFFFFF" height="30px">
+    <table class="mb-2" border="0" bgcolor="#FFFFFF" height="30px">
         <tr valign="top" align="left">
             <!--
             <td align="left" width="115px" bgcolor="#<?php echo $SSstd_row5_background ?>">
