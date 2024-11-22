@@ -9,8 +9,9 @@
                 </a>
             </td>
             <td align="left" width="67px">
-                <a href="#" onclick="ScriptPanelToFront('YES');">
-                    <img src="./images/<?php echo _QXZ("vdc_tab_script.gif"); ?>" alt="SCRIPT" width="67px" height="30px" border="0" />
+                <a class="btn btn-primary" href="#" onclick="ScriptPanelToFront('YES');">
+                    Script
+                    <!--<img src="./images/<?php echo _QXZ("vdc_tab_script.gif"); ?>" alt="SCRIPT" width="67px" height="30px" border="0" />-->
                 </a>
             </td>
             <?php
