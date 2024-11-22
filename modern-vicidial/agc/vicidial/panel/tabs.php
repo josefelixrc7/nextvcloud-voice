@@ -5,7 +5,7 @@ $(function()
     $(document).on('click', '#Tabs ul li a.nav-link', (e) =>
     {
         const current_tab = $(e.currentTarget).attr('tab');
-        const tabs = ['panel', 'script', 'script2', 'form', 'chat_internal', 'chat_customer'];
+        const tabs = ['panel', 'script', 'script2', 'form', 'email', 'chat_internal', 'chat_customer'];
         for(let tab of tabs)
         {
             if(tab == current_tab)
@@ -44,7 +44,7 @@ $(function()
             </a>
         </li>
         <li class="nav-item">
-            <a tab="chat_internal" class="nav-link" href="#" onclick="EmailPanelToFront('YES');">
+            <a tab="email" class="nav-link" href="#" onclick="EmailPanelToFront('YES');">
                 Email
             </a>
         </li>
