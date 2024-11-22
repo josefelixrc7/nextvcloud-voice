@@ -118,8 +118,8 @@ if ($agent_display_dialable_leads > 0)
     <table border="0" bgcolor="<?php echo $SCRIPT_COLOR ?>" width="<?php echo $SSwidth ?>px" height="<?php echo $SSheight ?>px"><tr><td align="left" valign="top"><font class="sb_text"><div class="noscroll_script" id="ScriptContents"><?php echo _QXZ("AGENT SCRIPT"); ?></div></font></td></tr></table>
 </span>
 
-<span style="position:absolute;left:<?php echo $AMwidth ?>px;top:<?php echo $SRheight ?>px;z-index:<?php $zi++; echo $zi ?>;" id="ScriptRefresH">
-<a href="#" onclick="RefresHScript('','YES')"><font class="body_small"><?php echo _QXZ("refresh"); ?></font></a>
+<span id="ScriptRefresH">
+	<a href="#" onclick="RefresHScript('','YES')"><font class="body_small"><?php echo _QXZ("refresh"); ?></font></a>
 </span>
 
 <span id="Script2Panel" class="panel_script2">
@@ -130,7 +130,7 @@ if ($agent_display_dialable_leads > 0)
     <table border="0" bgcolor="<?php echo $SCRIPT_COLOR ?>" width="<?php echo $SSwidth ?>px" height="<?php echo $SSheight ?>px"><tr><td align="left" valign="top"><font class="sb_text"><div class="noscroll_script" id="Script2Contents"><?php echo _QXZ("AGENT SCRIPT 2"); ?></div></font></td></tr></table>
 </span>
 
-<span style="position:absolute;left:<?php echo $AMwidth ?>px;top:<?php echo $SRheight ?>px;z-index:<?php $zi++; echo $zi ?>;" id="Script2RefresH">
+<span id="Script2RefresH">
 <a href="#" onclick="RefresHScript2('','YES')"><font class="body_small"><?php echo _QXZ("refresh"); ?></font></a>
 </span>
 
