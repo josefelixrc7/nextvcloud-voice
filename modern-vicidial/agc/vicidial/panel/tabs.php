@@ -24,39 +24,47 @@ $(function()
 <span id="Tabs">
     <ul class="nav nav-tabs">
         <li class="nav-item">
-            <a tab="panel" class="nav-link active" aria-current="page" href="#" onclick="MainPanelToFront('NO','YES');">
+            <a tab="panel" class="nav-link active" href="#" onclick="MainPanelToFront('NO','YES');">
                 Panel
             </a>
         </li>
         <li class="nav-item">
-            <a tab="script" class="nav-link" href="#">
+            <a tab="script" class="nav-link" href="#" onclick="ScriptPanelToFront('YES');">
                 Script
             </a>
         </li>
         <li class="nav-item">
-            <a tab="script2" class="nav-link" href="#">
+            <a tab="script2" class="nav-link" href="#" onclick="ScriptPanel2ToFront('YES');">
                 Script 2
             </a>
         </li>
         <li class="nav-item">
-            <a tab="form" class="nav-link" href="#">
+            <a tab="form" class="nav-link" href="#" onclick="FormPanelToFront('YES');">
                 Form
             </a>
         </li>
         <li class="nav-item">
-            <a tab="chat_internal" class="nav-link" href="#">
-                Chat internal
+            <a tab="chat_internal" class="nav-link" href="#" onclick="EmailPanelToFront('YES');">
+                Email
             </a>
         </li>
         <li class="nav-item">
-            <a tab="chat_customer" class="nav-link" href="#">
+            <a tab="chat_internal" class="nav-link" href="#" onclick="InternalChatContentsLoad('YES');">
+                Chat internal
+                <img class="d-none" src="./images/<?=_QXZ("vdc_tab_chat_internal.gif")?>" name='InternalChatImg' alt="CHAT"/>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a tab="chat_customer" class="nav-link" href="#" onclick="CustomerChatPanelToFront('1', 'YES');">
                 Chat customer
+                <img class="d-none" src="./images/<?=_QXZ("vdc_tab_chat_customer.gif")?>" name='CustomerChatImg' alt="CHAT"/>
             </a>
         </li>
     </ul>
 
     <table border="0" bgcolor="#FFFFFF" height="30px">
         <tr valign="top" align="left">
+            <!--
             <td align="left" width="115px" bgcolor="#<?php echo $SSstd_row5_background ?>">
                 <a href="#" onclick="MainPanelToFront('NO','YES');">
                     <img src="/modern-vicidial/images/logo.png" alt="MAIN" height="30px" border="0" />
@@ -124,6 +132,7 @@ $(function()
                         </td>\n";
                 }
             ?>
+            -->
             <td width="<?php echo $HSwidth ?>px" valign="middle" align="center">
                 <font class="body_tiny">&nbsp;
                     <span id="status"><?php echo _QXZ("LIVE"); ?></span>
