@@ -22,7 +22,7 @@ $(function()
 </script>
 
 <span id="Tabs">
-    <ul class="nav nav-tabs">
+    <ul class="nav nav-tabs mb-4">
         <li class="nav-item">
             <a tab="panel" class="nav-link active" href="#" onclick="MainPanelToFront('NO','YES');">
                 Panel
@@ -62,7 +62,7 @@ $(function()
         </li>
     </ul>
 
-    <table border="0" bgcolor="#FFFFFF" height="30px">
+    <table class="mb-4" border="0" bgcolor="#FFFFFF" height="30px">
         <tr valign="top" align="left">
             <!--
             <td align="left" width="115px" bgcolor="#<?php echo $SSstd_row5_background ?>">
