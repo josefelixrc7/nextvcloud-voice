@@ -4,10 +4,12 @@ $(function()
 {
     $(document).on('click', '#Tabs ul li a.nav-link', (e) =>
     {
+        const current_tab = $(e.currentTarget).attr('tab');
+        console.log(current_tab)
         const tabs = ['panel', 'script', 'script2', 'form', 'chat_internal', 'chat_customer'];
         for(let tab of tabs)
         {
-            const current_tab = $(e.currentTarget).attr('tab');
+            console.log(`${tab} == ${current_tab}`)
             if(tab == current_tab)
             {
                 $(`#Tabs ul li a[tab=${current_tab}]`).addClass('active');
@@ -59,12 +61,11 @@ $(function()
         <tr valign="top" align="left">
             <td align="left" width="115px" bgcolor="#<?php echo $SSstd_row5_background ?>">
                 <a href="#" onclick="MainPanelToFront('NO','YES');">
-                    Panel
                     <img src="/modern-vicidial/images/logo.png" alt="MAIN" height="30px" border="0" />
                 </a>
             </td>
             <td align="left" width="67px">
-                <a class="btn btn-primary" href="#" onclick="ScriptPanelToFront('YES');">
+                <a href="#" onclick="ScriptPanelToFront('YES');">
                     Script
                     <img src="./images/<?php echo _QXZ("vdc_tab_script.gif"); ?>" alt="SCRIPT" width="67px" height="30px" border="0" />
                 </a>
