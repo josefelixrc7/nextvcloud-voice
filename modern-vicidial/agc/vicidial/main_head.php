@@ -9,4 +9,4 @@
     <link href="/modern-vicidial/css/dashboard.css" rel="stylesheet">
 <!-- /CSS files -->
 
-<script src="/modern-vicidial/js/libraries/bootstrap-v5.1.1/bootstrap.min.js"></script>
+<script src="/modern-vicidial/js/libraries/bootstrap-v5.1.1/bootstrap.bundle.min.js"></script>
