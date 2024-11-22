@@ -8,16 +8,13 @@ $(function()
         const tabs = ['panel', 'script', 'script2', 'form', 'chat_internal', 'chat_customer'];
         for(let tab of tabs)
         {
-            console.log(`${tab} == ${current_tab}`)
             if(tab == current_tab)
             {
-                console.log('true');
-                $(`#Tabs ul li a[tab=${current_tab}]`).addClass('active');
+                $(`#Tabs ul li a[tab=${tab}]`).addClass('active');
             }
             else
             {
-                console.log('false');
-                $(`#Tabs ul li a[tab=${current_tab}]`).removeClass('active');
+                $(`#Tabs ul li a[tab=${tab}]`).removeClass('active');
             }
         }
     });
