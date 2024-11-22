@@ -11,10 +11,14 @@ $(function()
             if(tab == current_tab)
             {
                 $(`#Tabs ul li a[tab=${tab}]`).addClass('active');
+                $(`.panel_${tab}`).removeClass('d-none');
+                $(`.panel_${tab}`).addClass('d-block');
             }
             else
             {
                 $(`#Tabs ul li a[tab=${tab}]`).removeClass('active');
+                $(`.panel_${tab}`).removeClass('d-block');
+                $(`.panel_${tab}`).addClass('d-none');
             }
         }
     });

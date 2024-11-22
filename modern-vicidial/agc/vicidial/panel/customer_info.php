@@ -1,5 +1,5 @@
 
-<span id="MainPanel">
+<span id="MainPanel" class="panel_panel">
 
     <span class="text_input" id="MainPanelCustInfo">
 
