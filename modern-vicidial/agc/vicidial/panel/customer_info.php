@@ -606,7 +606,7 @@
                 echo "<input type=\"hidden\" name=\"required_fields\" id=\"required_fields\" value=\"$required_fields\" />\n";
 
             ?>
-        <div>
+        </div>
     <!-- /Campos -->
 
     </span>
