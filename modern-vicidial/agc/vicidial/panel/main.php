@@ -204,6 +204,10 @@
                     include '../modern-vicidial/agc/vicidial/panel/customer_info.php';
                 ?>
 
+                <!-- ZZZZZZZZZZZZ  action links -->
+                <?php
+                    include '../modern-vicidial/agc/vicidial/panel/actions.php';
+                ?>
                 <footer>
                     <span id="MaiNfooterspan">
                         <span id="blind_monitor_notice_span"><b><font color="red"> &nbsp; &nbsp; <span id="blind_monitor_notice_span_contents"></span></font></b></span>
