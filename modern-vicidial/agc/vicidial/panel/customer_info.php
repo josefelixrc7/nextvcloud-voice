@@ -105,149 +105,248 @@
 
                 // Middle initial
                 if ($label_middle_initial == '---HIDE---')
-                    {echo "&nbsp; <input type=\"hidden\" name=\"middle_initial\" id=\"middle_initial\" value=\"\" />";}
+                {
+                    echo "&nbsp; <input type=\"hidden\" name=\"middle_initial\" id=\"middle_initial\" value=\"\" />";
+                }
                 else
-                    {
+                {
                     $middle_initial_readonly='';
                     if (preg_match("/---READONLY---/",$label_middle_initial))
-                        {$middle_initial_readonly='readonly="readonly"';   $label_middle_initial = preg_replace("/---READONLY---/","",$label_middle_initial);}
-                    else
-                        {
-                        if (preg_match("/---REQUIRED---/",$label_middle_initial))
-                            {$required_fields .= "middle_initial|";   $label_middle_initial = preg_replace("/---REQUIRED---/","",$label_middle_initial);}
-                        }
-                    echo "&nbsp; $label_middle_initial: <input class=\"form-control\" type=\"text\" size=\"1\" name=\"middle_initial\" id=\"middle_initial\" maxlength=\"$MAXmiddle_initial\" class=\"cust_form\" value=\"\" $middle_initial_readonly />";
-                    }
-                if ($label_last_name == '---HIDE---')
-                    {echo "&nbsp; <input type=\"hidden\" name=\"last_name\" id=\"last_name\" value=\"\" />";}
-                else
                     {
+                        $middle_initial_readonly='readonly="readonly"';   $label_middle_initial = preg_replace("/---READONLY---/","",$label_middle_initial);
+                    }
+                    else
+                    {
+                        if (preg_match("/---REQUIRED---/",$label_middle_initial))
+                        {
+                            $required_fields .= "middle_initial|";   $label_middle_initial = preg_replace("/---REQUIRED---/","",$label_middle_initial);
+                        }
+                    }
+                    echo "
+                        <div class=\"col\">
+                            <div>$label_middle_initial</div>
+                            <div><input class=\"form-control\" type=\"text\" size=\"1\" name=\"middle_initial\" id=\"middle_initial\" maxlength=\"$MAXmiddle_initial\" class=\"cust_form\" value=\"\" $middle_initial_readonly /></div>
+                        </div>
+                    ";
+                }
+
+                // Last name
+                if ($label_last_name == '---HIDE---')
+                {
+                    echo "&nbsp; <input type=\"hidden\" name=\"last_name\" id=\"last_name\" value=\"\" />";
+                }
+                else
+                {
                     $last_name_readonly='';
                     if (preg_match("/---READONLY---/",$label_last_name))
-                        {$last_name_readonly='readonly="readonly"';   $label_last_name = preg_replace("/---READONLY---/","",$label_last_name);}
+                    {
+                        $last_name_readonly='readonly="readonly"';   $label_last_name = preg_replace("/---READONLY---/","",$label_last_name);
+                    }
                     else
-                        {
+                    {
                         if (preg_match("/---REQUIRED---/",$label_last_name))
                             {$required_fields .= "last_name|";   $label_last_name = preg_replace("/---REQUIRED---/","",$label_last_name);}
-                        }
-                    echo "&nbsp; $label_last_name: <input class=\"form-control\" type=\"text\" size=\"23\" name=\"last_name\" id=\"last_name\" maxlength=\"$MAXlast_name\" class=\"cust_form\" value=\"\" $last_name_readonly />";
                     }
+                    echo "
+                        <div class=\"col\">
+                            <div>$label_last_name</div>
+                            <div><input class=\"form-control\" type=\"text\" size=\"23\" name=\"last_name\" id=\"last_name\" maxlength=\"$MAXlast_name\" class=\"cust_form\" value=\"\" $last_name_readonly /></div>
+                        </div>
+                    ";
+                }
 
+                // Address 1
                 if ($label_address1 == '---HIDE---')
-                    {echo "<input type=\"hidden\" name=\"address1\" id=\"address1\" value=\"\" />";}
+                {
+                    echo "<input type=\"hidden\" name=\"address1\" id=\"address1\" value=\"\" />";
+                }
                 else
-                    {
+                {
                     $address1_readonly='';
                     if (preg_match("/---READONLY---/",$label_address1))
-                        {$address1_readonly='readonly="readonly"';   $label_address1 = preg_replace("/---READONLY---/","",$label_address1);}
-                    else
-                        {
-                        if (preg_match("/---REQUIRED---/",$label_address1))
-                            {$required_fields .= "address1|";   $label_address1 = preg_replace("/---REQUIRED---/","",$label_address1);}
-                        }
-                    echo "$label_address1: </td><td align=\"left\" colspan=5><font class=\"body_text\"><input class=\"form-control\" type=\"text\" size=\"85\" name=\"address1\" id=\"address1\" maxlength=\"$MAXaddress1\" class=\"cust_form\" value=\"\" $address1_readonly />";
-                    }
-
-                if ($label_address2 == '---HIDE---')
-                    {echo "<input type=\"hidden\" name=\"address2\" id=\"address2\" value=\"\" />";}
-                else
                     {
+                        $address1_readonly='readonly="readonly"';   $label_address1 = preg_replace("/---READONLY---/","",$label_address1);
+                    }
+                    else
+                    {
+                        if (preg_match("/---REQUIRED---/",$label_address1))
+                        {
+                            $required_fields .= "address1|";   $label_address1 = preg_replace("/---REQUIRED---/","",$label_address1);
+                        }
+                    }
+                    echo "
+                        <div class=\"col\">
+                            <div>$label_address1</div>
+                            <div><input class=\"form-control\" type=\"text\" size=\"85\" name=\"address1\" id=\"address1\" maxlength=\"$MAXaddress1\" class=\"cust_form\" value=\"\" $address1_readonly /></div>
+                        </div>
+                    ";
+                }
+
+                // Address 2
+                if ($label_address2 == '---HIDE---')
+                {
+                    echo "<input type=\"hidden\" name=\"address2\" id=\"address2\" value=\"\" />";
+                }
+                else
+                {
                     $address2_readonly='';
                     if (preg_match("/---READONLY---/",$label_address2))
-                        {$address2_readonly='readonly="readonly"';   $label_address2 = preg_replace("/---READONLY---/","",$label_address2);}
-                    else
-                        {
-                        if (preg_match("/---REQUIRED---/",$label_address2))
-                            {$required_fields .= "address2|";   $label_address2 = preg_replace("/---REQUIRED---/","",$label_address2);}
-                        }
-                    echo "$label_address2: <input class=\"form-control\" type=\"text\" size=\"20\" name=\"address2\" id=\"address2\" maxlength=\"$MAXaddress2\" class=\"cust_form\" value=\"\" $address2_readonly />";
-                    }
-
-                if ($label_address3 == '---HIDE---')
-                    {echo "<input type=\"hidden\" name=\"address3\" id=\"address3\" value=\"\" />";}
-                else
                     {
+                        $address2_readonly='readonly="readonly"';   $label_address2 = preg_replace("/---READONLY---/","",$label_address2);
+                    }
+                    else
+                    {
+                        if (preg_match("/---REQUIRED---/",$label_address2))
+                        {
+                            $required_fields .= "address2|";   $label_address2 = preg_replace("/---REQUIRED---/","",$label_address2);
+                        }
+                    }
+                    echo "
+                        <div class=\"col\">
+                            <div>$label_address2</div>
+                            <div><input class=\"form-control\" type=\"text\" size=\"20\" name=\"address2\" id=\"address2\" maxlength=\"$MAXaddress2\" class=\"cust_form\" value=\"\" $address2_readonly /></div>
+                        </div>
+                    ";
+                }
+
+                // Address 3
+                if ($label_address3 == '---HIDE---')
+                {
+                    echo "<input type=\"hidden\" name=\"address3\" id=\"address3\" value=\"\" />";
+                }
+                else
+                {
                     $address3_readonly='';
                     if (preg_match("/---READONLY---/",$label_address3))
-                        {$address3_readonly='readonly="readonly"';   $label_address3 = preg_replace("/---READONLY---/","",$label_address3);}
-                    else
-                        {
-                        if (preg_match("/---REQUIRED---/",$label_address3))
-                            {$required_fields .= "address3|";   $label_address3 = preg_replace("/---REQUIRED---/","",$label_address3);}
-                        }
-                    echo "$label_address3: <input class=\"form-control\" type=\"text\" size=\"45\" name=\"address3\" id=\"address3\" maxlength=\"$MAXaddress3\" class=\"cust_form\" value=\"\" $address3_readonly />";
-                    }
-
-                if ($label_city == '---HIDE---')
-                    {echo " </td><td align=\"left\"><input type=\"hidden\" name=\"city\" id=\"city\" value=\"\" />";}
-                else
                     {
+                        $address3_readonly='readonly="readonly"';   $label_address3 = preg_replace("/---READONLY---/","",$label_address3);
+                    }
+                    else
+                    {
+                        if (preg_match("/---REQUIRED---/",$label_address3))
+                        {
+                            $required_fields .= "address3|";   $label_address3 = preg_replace("/---REQUIRED---/","",$label_address3);
+                        }
+                    }
+                    echo "
+                        <div class=\"col\">
+                            <div>$label_address3</div>
+                            <div><input class=\"form-control\" type=\"text\" size=\"45\" name=\"address3\" id=\"address3\" maxlength=\"$MAXaddress3\" class=\"cust_form\" value=\"\" $address3_readonly /></div>
+                        </div>
+                    ";
+                }
+
+                // City
+                if ($label_city == '---HIDE---')
+                {
+                    echo "<input type=\"hidden\" name=\"city\" id=\"city\" value=\"\" />";
+                }
+                else
+                {
                     $city_readonly='';
                     if (preg_match("/---READONLY---/",$label_city))
-                        {$city_readonly='readonly="readonly"';   $label_city = preg_replace("/---READONLY---/","",$label_city);}
-                    else
-                        {
-                        if (preg_match("/---REQUIRED---/",$label_city))
-                            {$required_fields .= "city|";   $label_city = preg_replace("/---REQUIRED---/","",$label_city);}
-                        }
-                    echo "$label_city: </td><td align=\"left\"><font class=\"body_text\"><input class=\"form-control\" type=\"text\" size=\"20\" name=\"city\" id=\"city\" maxlength=\"$MAXcity\" class=\"cust_form\" value=\"\" $city_readonly />";
-                    }
-
-                echo "</td><td align=\"right\"><font class=\"body_text\">";
-
-                if ($label_state == '---HIDE---')
-                    {echo " </td><td align=\"left\"><input type=\"hidden\" name=\"state\" id=\"state\" value=\"\" />";}
-                else
                     {
+                        $city_readonly='readonly="readonly"';   $label_city = preg_replace("/---READONLY---/","",$label_city);
+                    }
+                    else
+                    {
+                        if (preg_match("/---REQUIRED---/",$label_city))
+                        {
+                            $required_fields .= "city|";   $label_city = preg_replace("/---REQUIRED---/","",$label_city);
+                        }
+                    }
+                    echo "
+                        <div class=\"col\">
+                            <div>$label_city</div>
+                            <div><input class=\"form-control\" type=\"text\" size=\"20\" name=\"city\" id=\"city\" maxlength=\"$MAXcity\" class=\"cust_form\" value=\"\" $city_readonly /></div>
+                        </div>
+                    ";
+                }
+
+                // State
+                if ($label_state == '---HIDE---')
+                {
+                    echo "<input type=\"hidden\" name=\"state\" id=\"state\" value=\"\" />";
+                }
+                else
+                {
                     $state_readonly='';
                     if (preg_match("/---READONLY---/",$label_state))
-                        {$state_readonly='readonly="readonly"';   $label_state = preg_replace("/---READONLY---/","",$label_state);}
-                    else
-                        {
-                        if (preg_match("/---REQUIRED---/",$label_state))
-                            {$required_fields .= "state|";   $label_state = preg_replace("/---REQUIRED---/","",$label_state);}
-                        }
-                    echo "$label_state: </td><td align=\"left\"><font class=\"body_text\"><input class=\"form-control\" type=\"text\" size=\"4\" name=\"state\" id=\"state\" maxlength=\"$MAXstate\" class=\"cust_form\" value=\"\" $state_readonly />";
-                    }
-
-                echo "</td><td align=\"right\"><font class=\"body_text\">";
-
-                if ($label_postal_code == '---HIDE---')
-                    {echo " </td><td align=\"left\"><input type=\"hidden\" name=\"postal_code\" id=\"postal_code\" value=\"\" />";}
-                else
                     {
+                        $state_readonly='readonly="readonly"';   $label_state = preg_replace("/---READONLY---/","",$label_state);
+                    }
+                    else
+                    {
+                        if (preg_match("/---REQUIRED---/",$label_state))
+                        {
+                            $required_fields .= "state|";   $label_state = preg_replace("/---REQUIRED---/","",$label_state);
+                        }
+                    }
+                    echo "
+                        <div class=\"col\">
+                            <div>$label_state</div>
+                            <div><input class=\"form-control\" type=\"text\" size=\"4\" name=\"state\" id=\"state\" maxlength=\"$MAXstate\" class=\"cust_form\" value=\"\" $state_readonly /></div>
+                        </div>
+                    ";
+                }
+
+                // Postal code
+                if ($label_postal_code == '---HIDE---')
+                {
+                    echo "<input type=\"hidden\" name=\"postal_code\" id=\"postal_code\" value=\"\" />";
+                }
+                else
+                {
                     $postal_code_readonly='';
                     if (preg_match("/---READONLY---/",$label_postal_code))
-                        {$postal_code_readonly='readonly="readonly"';   $label_postal_code = preg_replace("/---READONLY---/","",$label_postal_code);}
-                    else
-                        {
-                        if (preg_match("/---REQUIRED---/",$label_postal_code))
-                            {$required_fields .= "postal_code|";   $label_postal_code = preg_replace("/---REQUIRED---/","",$label_postal_code);}
-                        }
-                    echo "$label_postal_code: </td><td align=\"left\"><font class=\"body_text\"><input class=\"form-control\" type=\"text\" size=\"14\" name=\"postal_code\" id=\"postal_code\" maxlength=\"$MAXpostal_code\" class=\"cust_form\" value=\"\" $postal_code_readonly />";
-                    }
-
-                echo "</td></tr><tr><td align=\"right\"><font class=\"body_text\">";
-
-                if ($label_province == '---HIDE---')
-                    {echo " </td><td align=\"left\"><input type=\"hidden\" name=\"province\" id=\"province\" value=\"\" />";}
-                else
                     {
+                        $postal_code_readonly='readonly="readonly"';   $label_postal_code = preg_replace("/---READONLY---/","",$label_postal_code);
+                    }
+                    else
+                    {
+                        if (preg_match("/---REQUIRED---/",$label_postal_code))
+                        {
+                            $required_fields .= "postal_code|";   $label_postal_code = preg_replace("/---REQUIRED---/","",$label_postal_code);
+                        }
+                    }
+                    echo "
+                        <div class=\"col\">
+                            <div>$label_postal_code</div>
+                            <div><input class=\"form-control\" type=\"text\" size=\"14\" name=\"postal_code\" id=\"postal_code\" maxlength=\"$MAXpostal_code\" class=\"cust_form\" value=\"\" $postal_code_readonly /></div>
+                        </div>
+                    ";
+                }
+
+                // Province
+                if ($label_province == '---HIDE---')
+                {
+                    echo "<input type=\"hidden\" name=\"province\" id=\"province\" value=\"\" />";
+                }
+                else
+                {
                     $province_readonly='';
                     if (preg_match("/---READONLY---/",$label_province))
-                        {$province_readonly='readonly="readonly"';   $label_province = preg_replace("/---READONLY---/","",$label_province);}
-                    else
-                        {
-                        if (preg_match("/---REQUIRED---/",$label_province))
-                            {$required_fields .= "province|";   $label_province = preg_replace("/---REQUIRED---/","",$label_province);}
-                        }
-                    echo "$label_province: </td><td align=\"left\"><font class=\"body_text\"><input class=\"form-control\" type=\"text\" size=\"20\" name=\"province\" id=\"province\" maxlength=\"$MAXprovince\" class=\"cust_form\" value=\"\" $province_readonly />";
+                    {
+                        $province_readonly='readonly="readonly"';   $label_province = preg_replace("/---READONLY---/","",$label_province);
                     }
+                    else
+                    {
+                        if (preg_match("/---REQUIRED---/",$label_province))
+                        {
+                            $required_fields .= "province|";   $label_province = preg_replace("/---REQUIRED---/","",$label_province);
+                        }
+                    }
+                    echo "
+                        <div class=\"col\">
+                            <div>$label_province</div>
+                            <div><input class=\"form-control\" type=\"text\" size=\"20\" name=\"province\" id=\"province\" maxlength=\"$MAXprovince\" class=\"cust_form\" value=\"\" $province_readonly /></div>
+                        </div>
+                    ";
+                }
 
-                echo "</td><td align=\"right\"><font class=\"body_text\">";
-
+                // Vendor lead code
                 if ($label_vendor_lead_code == '---HIDE---')
-                    {echo " </td><td align=\"left\"><input type=\"hidden\" name=\"vendor_lead_code\" id=\"vendor_lead_code\" value=\"\" />";}
+                {echo " </td><td align=\"left\"><input type=\"hidden\" name=\"vendor_lead_code\" id=\"vendor_lead_code\" value=\"\" />";}
                 else
                     {
                     $vendor_lead_code_readonly='';
