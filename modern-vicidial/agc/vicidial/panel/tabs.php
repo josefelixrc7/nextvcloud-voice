@@ -55,7 +55,7 @@ $(function()
         </li>
     </ul>
 
-    <!--<table border="0" bgcolor="#FFFFFF" height="30px">
+    <table border="0" bgcolor="#FFFFFF" height="30px">
         <tr valign="top" align="left">
             <td align="left" width="115px" bgcolor="#<?php echo $SSstd_row5_background ?>">
                 <a href="#" onclick="MainPanelToFront('NO','YES');">
@@ -141,5 +141,5 @@ $(function()
                 <img src="./images/<?php echo _QXZ("agc_live_call_OFF.gif"); ?>" name="livecall" alt="Live Call" width="109px" height="30px" border="0" />
             </td>
         </tr>
-    </table>-->
+    </table>
 </span>
