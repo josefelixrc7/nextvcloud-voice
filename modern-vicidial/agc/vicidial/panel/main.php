@@ -1,5 +1,5 @@
 
-<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow" style="z-index: 5">
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow" style="z-index: 6">
     <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Modern Vicidial</a>
     <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -80,8 +80,10 @@
                             <span style="background-color: <?php echo $MAIN_COLOR ?>" id="RecorDControl"><a href="#" onclick="conf_send_recording('MonitorConf',session_id,'','','','YES');return false;"><img src="./images/<?php echo _QXZ("$start_recording_GIF"); ?>" border="0" alt="Start Recording" /></a></span><br />
                             <span style="background-color: <?php echo $MAIN_COLOR ?>" id="RecorDMute"></span>
                             <?php
-                            if (!preg_match("/NOGAP/",$SSrecording_buttons))
+                            /*if (!preg_match("/NOGAP/",$SSrecording_buttons))
                                 {echo "<span id=\"SpacerSpanA\"><img src=\"./images/"._QXZ("blank.gif")."\" width=\"145px\" height=\"16px\" border=\"0\" /></span><br />\n";}
+                            */
+
                             if ($SSenable_first_webform > 0)
                                 {echo "<span style=\"background-color: #FFFFFF\" id=\"WebFormSpan\"><img src=\"./images/"._QXZ("vdc_LB_webform_OFF.gif")."\" border=\"0\" alt=\"Web Form\" /></span><br />\n";}
                             if ($enable_second_webform > 0)
@@ -89,7 +91,7 @@
                             if ($enable_third_webform > 0)
                                 {echo "<span style=\"background-color: #FFFFFF\" id=\"WebFormSpanThree\"><img src=\"./images/"._QXZ("vdc_LB_webform_three_OFF.gif")."\" border=\"0\" alt=\"Web Form 3\" /></span><br />\n";}
                             ?>
-                            <font class="body_small_bold"><span id="ParkCounterSpan"> &nbsp; </span></font><br />
+                            <!--<font class="body_small_bold"><span id="ParkCounterSpan"> &nbsp; </span></font><br />-->
                             <span style="background-color: <?php echo $MAIN_COLOR ?>" id="ParkControl"><img src="./images/<?php echo _QXZ("vdc_LB_parkcall_OFF.gif"); ?>" border="0" alt="Park Call" /></span><br />
                             <?php
                             if ( ($ivr_park_call=='ENABLED') or ($ivr_park_call=='ENABLED_PARK_ONLY') )
