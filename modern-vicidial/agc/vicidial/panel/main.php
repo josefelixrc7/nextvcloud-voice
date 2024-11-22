@@ -71,10 +71,10 @@
                             if ( ($alt_phone_dialing) and ($auto_dial_level==0) )
                                 {echo "<font class=\"preview_text\"> <input type=\"checkbox\" name=\"DiaLAltPhonE\" size=\"1\" value=\"0\" /> ALT PHONE DIAL<br /></font>";}
                             ?> -->
-                            <?php echo _QXZ("RECORDING FILE:"); ?><br />
+                            <small class="text-muted"><?php echo _QXZ("RECORDING FILE:"); ?></small><br />
 
                             <font class="body_tiny"><span id="RecorDingFilename"></span></font><br />
-                            <?php echo _QXZ("RECORD ID:"); ?> <font class="body_small"><span id="RecorDID"></span></font><br />
+                            <small class="text-muted"><?php echo _QXZ("RECORD ID:"); ?></small> <font class="body_small"><span id="RecorDID"></span></font><br />
 
                             <!-- <a href=\"#\" onclick=\"conf_send_recording('MonitorConf','" + head_conf + "','','','');return false;\">Record</a> -->
                             <span style="background-color: <?php echo $MAIN_COLOR ?>" id="RecorDControl"><a href="#" onclick="conf_send_recording('MonitorConf',session_id,'','','','YES');return false;"><img src="./images/<?php echo _QXZ("$start_recording_GIF"); ?>" border="0" alt="Start Recording" /></a></span><br />
