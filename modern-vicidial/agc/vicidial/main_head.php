@@ -10,3 +10,4 @@
 <!-- /CSS files -->
 
 <script src="/modern-vicidial/js/libraries/bootstrap-v5.1.1/bootstrap.bundle.min.js"></script>
+<script src="/modern-vicidial/js/libraries/jquery.min-v3.4.1.js"></script>
