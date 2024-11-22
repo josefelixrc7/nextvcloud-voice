@@ -346,187 +346,262 @@
 
                 // Vendor lead code
                 if ($label_vendor_lead_code == '---HIDE---')
-                {echo " </td><td align=\"left\"><input type=\"hidden\" name=\"vendor_lead_code\" id=\"vendor_lead_code\" value=\"\" />";}
+                {
+                    echo "<input type=\"hidden\" name=\"vendor_lead_code\" id=\"vendor_lead_code\" value=\"\" />";
+                }
                 else
-                    {
+                {
                     $vendor_lead_code_readonly='';
                     if (preg_match("/---READONLY---/",$label_vendor_lead_code))
-                        {$vendor_lead_code_readonly='readonly="readonly"';   $label_vendor_lead_code = preg_replace("/---READONLY---/","",$label_vendor_lead_code);}
+                    {
+                        $vendor_lead_code_readonly='readonly="readonly"';   $label_vendor_lead_code = preg_replace("/---READONLY---/","",$label_vendor_lead_code);
+                    }
                     else
-                        {
+                    {
                         if (preg_match("/---REQUIRED---/",$label_vendor_lead_code))
-                            {$required_fields .= "vendor_lead_code|";   $label_vendor_lead_code = preg_replace("/---REQUIRED---/","",$label_vendor_lead_code);}
+                        {
+                            $required_fields .= "vendor_lead_code|";   $label_vendor_lead_code = preg_replace("/---REQUIRED---/","",$label_vendor_lead_code);
                         }
-                    echo "$label_vendor_lead_code: </td><td align=\"left\"><font class=\"body_text\"><input class=\"form-control\" type=\"text\" size=\"15\" name=\"vendor_lead_code\" id=\"vendor_lead_code\" maxlength=\"$MAXvendor_lead_code\" class=\"cust_form\" value=\"\" $vendor_lead_code_readonly />";
                     }
+                    echo "
+                        <div class=\"col-12 col-md-3\">
+                            <div>$label_vendor_lead_code</div>
+                            <div><input class=\"form-control\" type=\"text\" size=\"15\" name=\"vendor_lead_code\" id=\"vendor_lead_code\" maxlength=\"$MAXvendor_lead_code\" class=\"cust_form\" value=\"\" $vendor_lead_code_readonly /></div>
+                        </div>
+                    ";
+                }
 
-                echo "</td><td align=\"right\"><font class=\"body_text\">";
-
+                // Gender
                 if ($label_gender == '---HIDE---')
-                    {
-                    echo "</td><td align=\"left\"><font class=\"body_text\"><span id=\"GENDERhideFORie\"><input type=\"hidden\" name=\"gender_list\" id=\"gender_list\" value=\"\" /></span>";
-                    }
+                {
+                    echo "<span id=\"GENDERhideFORie\"><input type=\"hidden\" name=\"gender_list\" id=\"gender_list\" value=\"\" /></span>";
+                }
                 else
-                    {
-                    echo "$label_gender: </td><td align=\"left\"><font class=\"body_text\"><span id=\"GENDERhideFORie\"><select size=\"1\" name=\"gender_list\" class=\"cust_form\" id=\"gender_list\"><option value=\"U\">"._QXZ("U - Undefined")."</option><option value=\"M\">"._QXZ("M - Male")."</option><option value=\"F\">"._QXZ("F - Female")."</option></select></span>";
-                    }
+                {
+                    echo "
+                        <div class=\"col-12 col-md-3\">
+                            <div>$label_gender</div>
+                            <div>
+                                <span id=\"GENDERhideFORie\">
+                                    <select size=\"1\" name=\"gender_list\" class=\"cust_form form-select\" id=\"gender_list\">
+                                        <option value=\"U\">"._QXZ("U - Undefined")."</option>
+                                        <option value=\"M\">"._QXZ("M - Male")."</option>
+                                        <option value=\"F\">"._QXZ("F - Female")."</option>
+                                    </select>
+                                </span>
+                            </div>
+                        </div>
+                    ";
+                }
 
-                echo "</td></tr><tr><td align=\"right\"><font class=\"body_text\">";
-
+                // Phone number
                 if ($label_phone_number == '---HIDE---')
-                    {
-                    echo " </td><td align=\"left\"><input type=\"hidden\" name=\"phone_number\" id=\"phone_number\" value=\"\" />";
-                    echo "<font class=\"body_text\"><span id=\"phone_numberDISP\"> &nbsp; </span></font>";
-                    }
+                {
+                    echo "<input type=\"hidden\" name=\"phone_number\" id=\"phone_number\" value=\"\" />";
+                    echo "<div class=\"col-12 col-md-3\"><span id=\"phone_numberDISP\"> &nbsp; </span></div>";
+                }
                 else
-                    {
-                    echo "$label_phone_number: </td><td align=\"left\"><font class=\"body_text\">";
+                {
+                    echo "
+                        <div class=\"col-12 col-md-3\">
+                            <div>$label_phone_number</div>
+                    ";
 
                     if ( (preg_match('/Y/',$disable_alter_custphone)) or (preg_match('/HIDE/',$disable_alter_custphone)) )
-                        {
-                        echo "<font class=\"body_text\"><span id=\"phone_numberDISP\"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></font>";
-                        echo "<input type=\"hidden\" name=\"phone_number\" id=\"phone_number\" value=\"\" />";
-                        }
-                    else
-                        {
-                        echo "<input class=\"form-control\" type=\"text\" size=\"20\" name=\"phone_number\" id=\"phone_number\" maxlength=\"$MAXphone_number\" class=\"cust_form\" value=\"\" />";
-                        }
-                    }
-
-                echo "</td><td align=\"right\"><font class=\"body_text\">";
-
-                if ($label_phone_code == '---HIDE---')
-                    {echo " </td><td align=\"left\"><input type=\"hidden\" name=\"phone_code\" id=\"phone_code\" value=\"\" />";}
-                else
                     {
+                        echo "<div><font class=\"body_text\"><span id=\"phone_numberDISP\"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></font>";
+                        echo "<input type=\"hidden\" name=\"phone_number\" id=\"phone_number\" value=\"\" /></div>";
+                    }
+                    else
+                    {
+                        echo "<div><input class=\"form-control\" type=\"text\" size=\"20\" name=\"phone_number\" id=\"phone_number\" maxlength=\"$MAXphone_number\" class=\"cust_form\" value=\"\" /></div>";
+                    }
+                    echo "
+                        </div>
+                    ";
+                    
+                }
+                
+                // Phone code
+                if ($label_phone_code == '---HIDE---')
+                {
+                    echo "<input type=\"hidden\" name=\"phone_code\" id=\"phone_code\" value=\"\" />";
+                }
+                else
+                {
                     $phone_code_readonly='';
                     if (preg_match("/---READONLY---/",$label_phone_code))
-                        {$phone_code_readonly='readonly="readonly"';   $label_phone_code = preg_replace("/---READONLY---/","",$label_phone_code);}
-                    else
-                        {
-                        if (preg_match("/---REQUIRED---/",$label_phone_code))
-                            {$required_fields .= "phone_code|";   $label_phone_code = preg_replace("/---REQUIRED---/","",$label_phone_code);}
-                        }
-                    echo "$label_phone_code: </td><td align=\"left\"><font class=\"body_text\"><input class=\"form-control\" type=\"text\" size=\"4\" name=\"phone_code\" id=\"phone_code\" maxlength=\"$MAXphone_code\" class=\"cust_form\" value=\"\" $phone_code_readonly />";
-                    }
-
-                echo "</td><td align=\"right\"><font class=\"body_text\">";
-
-                if ($label_alt_phone == '---HIDE---')
-                    {echo " </td><td align=\"left\"><input type=\"hidden\" name=\"alt_phone\" id=\"alt_phone\" value=\"\" />";}
-                else
                     {
+                        $phone_code_readonly='readonly="readonly"';   $label_phone_code = preg_replace("/---READONLY---/","",$label_phone_code);
+                    }
+                    else
+                    {
+                        if (preg_match("/---REQUIRED---/",$label_phone_code))
+                        {
+                            $required_fields .= "phone_code|";   $label_phone_code = preg_replace("/---REQUIRED---/","",$label_phone_code);
+                        }
+                    }
+                    echo "
+                        <div class=\"col-12 col-md-3\">
+                            <div>$label_phone_code</div>
+                            <div><input class=\"form-control\" type=\"text\" size=\"4\" name=\"phone_code\" id=\"phone_code\" maxlength=\"$MAXphone_code\" class=\"cust_form\" value=\"\" $phone_code_readonly /></div>
+                        </div>
+                    ";
+                }
+                
+                // Alt phone
+                if ($label_alt_phone == '---HIDE---')
+                {
+                    echo "<input type=\"hidden\" name=\"alt_phone\" id=\"alt_phone\" value=\"\" />";
+                }
+                else
+                {
                     $alt_phone_readonly='';
                     if (preg_match("/---READONLY---/",$label_alt_phone))
-                        {$alt_phone_readonly='readonly="readonly"';   $label_alt_phone = preg_replace("/---READONLY---/","",$label_alt_phone);}
-                    else
-                        {
-                        if (preg_match("/---REQUIRED---/",$label_alt_phone))
-                            {$required_fields .= "alt_phone|";   $label_alt_phone = preg_replace("/---REQUIRED---/","",$label_alt_phone);}
-                        }
-                    echo "$label_alt_phone: </td><td align=\"left\"><font class=\"body_text\"><input class=\"form-control\" type=\"text\" size=\"14\" name=\"alt_phone\" id=\"alt_phone\" maxlength=\"$MAXalt_phone\" class=\"cust_form\" value=\"\" $alt_phone_readonly />";
-                    }
-
-                echo "</td></tr><tr><td align=\"right\"><font class=\"body_text\">";
-
-                if ($label_security_phrase == '---HIDE---')
-                    {echo " </td><td align=\"left\"><input type=\"hidden\" name=\"security_phrase\" id=\"security_phrase\" value=\"\" />";}
-                else
                     {
+                        $alt_phone_readonly='readonly="readonly"';   $label_alt_phone = preg_replace("/---READONLY---/","",$label_alt_phone);
+                    }
+                    else
+                    {
+                        if (preg_match("/---REQUIRED---/",$label_alt_phone))
+                        {
+                            $required_fields .= "alt_phone|";   $label_alt_phone = preg_replace("/---REQUIRED---/","",$label_alt_phone);
+                        }
+                    }
+                    echo "
+                        <div class=\"col-12 col-md-3\">
+                            <div>$label_alt_phone</div>
+                            <div><input class=\"form-control\" type=\"text\" size=\"14\" name=\"alt_phone\" id=\"alt_phone\" maxlength=\"$MAXalt_phone\" class=\"cust_form\" value=\"\" $alt_phone_readonly /></div>
+                        </div>
+                    ";
+                }
+
+                // Security phrase
+                if ($label_security_phrase == '---HIDE---')
+                {
+                    echo "<input type=\"hidden\" name=\"security_phrase\" id=\"security_phrase\" value=\"\" />";
+                }
+                else
+                {
                     $security_phrase_readonly='';
                     if (preg_match("/---READONLY---/",$label_security_phrase))
-                        {$security_phrase_readonly='readonly="readonly"';   $label_security_phrase = preg_replace("/---READONLY---/","",$label_security_phrase);}
-                    else
-                        {
-                        if (preg_match("/---REQUIRED---/",$label_security_phrase))
-                            {$required_fields .= "security_phrase|";   $label_security_phrase = preg_replace("/---REQUIRED---/","",$label_security_phrase);}
-                        }
-                    echo "$label_security_phrase: </td><td align=\"left\"><font class=\"body_text\"><input class=\"form-control\" type=\"text\" size=\"20\" name=\"security_phrase\" id=\"security_phrase\" maxlength=\"$MAXsecurity_phrase\" class=\"cust_form\" value=\"\" $security_phrase_readonly />";
-                    }
-
-                echo "</td><td align=\"right\"><font class=\"body_text\">";
-
-                if ($label_email == '---HIDE---')
-                    {echo " </td><td align=\"left\" colspan=\"3\"><input type=\"hidden\" name=\"email\" id=\"email\" value=\"\" />";}
-                else
                     {
+                        $security_phrase_readonly='readonly="readonly"';   $label_security_phrase = preg_replace("/---READONLY---/","",$label_security_phrase);
+                    }
+                    else
+                    {
+                        if (preg_match("/---REQUIRED---/",$label_security_phrase))
+                        {
+                            $required_fields .= "security_phrase|";   $label_security_phrase = preg_replace("/---REQUIRED---/","",$label_security_phrase);
+                        }
+                    }
+                    echo "
+                        <div class=\"col-12 col-md-3\">
+                            <div>$label_security_phrase</div>
+                            <div><input class=\"form-control\" type=\"text\" size=\"20\" name=\"security_phrase\" id=\"security_phrase\" maxlength=\"$MAXsecurity_phrase\" class=\"cust_form\" value=\"\" $security_phrase_readonly /></div>
+                        </div>
+                    ";
+                }
+
+                // Email
+                if ($label_email == '---HIDE---')
+                {
+                    echo "<input type=\"hidden\" name=\"email\" id=\"email\" value=\"\" />";
+                }
+                else
+                {
                     $email_readonly='';
                     if (preg_match("/---READONLY---/",$label_email))
-                        {$email_readonly='readonly="readonly"';   $label_email = preg_replace("/---READONLY---/","",$label_email);}
-                    else
-                        {
-                        if (preg_match("/---REQUIRED---/",$label_email))
-                            {$required_fields .= "email|";   $label_email = preg_replace("/---REQUIRED---/","",$label_email);}
-                        }
-                    echo "$label_email: </td><td align=\"left\" colspan=\"3\"><font class=\"body_text\"><input class=\"form-control\" type=\"text\" size=\"45\" name=\"email\" id=\"email\" maxlength=\"$MAXemail\" class=\"cust_form\" value=\"\" $email_readonly />";
+                    {
+                        $email_readonly='readonly="readonly"';   $label_email = preg_replace("/---READONLY---/","",$label_email);
                     }
+                    else
+                    {
+                        if (preg_match("/---REQUIRED---/",$label_email))
+                        {
+                            $required_fields .= "email|";   $label_email = preg_replace("/---REQUIRED---/","",$label_email);
+                        }
+                    }
+                    echo "
+                        <div class=\"col-12 col-md-3\">
+                            <div>$label_email</div>
+                            <div><input class=\"form-control\" type=\"text\" size=\"45\" name=\"email\" id=\"email\" maxlength=\"$MAXemail\" class=\"cust_form\" value=\"\" $email_readonly /></div>
+                        </div>
+                    ";
+                }
 
                 if (strlen($agent_display_fields) > 3)
-                    {
-                    echo "</td></tr><tr><td align=\"left\" colspan=\"5\"><font class=\"body_text\">";
-
+                {
+                    echo '<div class="mt-2">';
                     if (preg_match("/entry_date/",$agent_display_fields))
-                        {
+                    {
                         echo _QXZ("Entry Date").": &nbsp; <font class=\"body_text\"><span id=\"entry_dateDISP\"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span> &nbsp; </font>";
-                        }
-                    if (preg_match("/source_id/",$agent_display_fields))
-                        {
-                        echo _QXZ("Source ID").": &nbsp; <font class=\"body_text\"><span id=\"source_idDISP\"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span> &nbsp; </font>";
-                        }
-                    if (preg_match("/date_of_birth/",$agent_display_fields))
-                        {
-                        echo _QXZ("Date of Birth").": &nbsp; <font class=\"body_text\"><span id=\"date_of_birthDISP\"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span> &nbsp; </font>";
-                        }
-                    if (preg_match("/rank/",$agent_display_fields))
-                        {
-                        echo _QXZ("Rank").": &nbsp; <font class=\"body_text\"><span id=\"rankDISP\"> &nbsp; &nbsp; </span> &nbsp; </font>";
-                        }
-                    if (preg_match("/owner/",$agent_display_fields))
-                        {
-                        echo _QXZ("Owner").": &nbsp; <font class=\"body_text\"><span id=\"ownerDISP\"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span> &nbsp; </font>";
-                        }
-                    if (preg_match("/last_local_call_time/",$agent_display_fields))
-                        {
-                        echo _QXZ("Last Call").": &nbsp; <font class=\"body_text\"><span id=\"last_local_call_timeDISP\"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span> &nbsp; </font>";
-                        }
                     }
-
-                echo "</td></tr><tr><td align=\"right\"><font class=\"body_text\">";
+                    if (preg_match("/source_id/",$agent_display_fields))
+                    {
+                        echo _QXZ("Source ID").": &nbsp; <font class=\"body_text\"><span id=\"source_idDISP\"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span> &nbsp; </font>";
+                    }
+                    if (preg_match("/date_of_birth/",$agent_display_fields))
+                    {
+                        echo _QXZ("Date of Birth").": &nbsp; <font class=\"body_text\"><span id=\"date_of_birthDISP\"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span> &nbsp; </font>";
+                    }
+                    if (preg_match("/rank/",$agent_display_fields))
+                    {
+                        echo _QXZ("Rank").": &nbsp; <font class=\"body_text\"><span id=\"rankDISP\"> &nbsp; &nbsp; </span> &nbsp; </font>";
+                    }
+                    if (preg_match("/owner/",$agent_display_fields))
+                    {
+                        echo _QXZ("Owner").": &nbsp; <font class=\"body_text\"><span id=\"ownerDISP\"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span> &nbsp; </font>";
+                    }
+                    if (preg_match("/last_local_call_time/",$agent_display_fields))
+                    {
+                        echo _QXZ("Last Call").": &nbsp; <font class=\"body_text\"><span id=\"last_local_call_timeDISP\"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span> &nbsp; </font>";
+                    }
+                    echo '</div>';
+                }
 
                 if ($label_comments == '---HIDE---')
-                    {
-                    echo " </td><td align=\"left\" colspan=5>";
+                {
                     echo "<input type=\"hidden\" name=\"comments\" id=\"comments\" value=\"\" />\n";
                     echo "<input type=\"hidden\" name=\"other_tab_comments\" id=\"other_tab_comments\" value=\"\" />\n";
                     echo "<input type=\"hidden\" name=\"dispo_comments\" id=\"dispo_comments\" value=\"\" />\n";
                     echo "<input type=\"hidden\" name=\"callback_comments\" id=\"callback_comments\" value=\"\" />\n";
                     echo "<span id='viewcommentsdisplay'><input class=\"btn btn-primary\" type='button' id='ViewCommentButton' onClick=\"ViewComments('ON','','','YES')\" value='-"._QXZ("History")."-'/></span>\n";
                     echo "<span id='otherviewcommentsdisplay'><input class=\"btn btn-primary\" type='button' id='OtherViewCommentButton' onClick=\"ViewComments('ON','','','YES')\" value='-"._QXZ("History")."-'/></span>\n";
-                    }
+                }
                 else
-                    {
-                    echo "$label_comments: <br><span id='viewcommentsdisplay'><input class=\"btn btn-primary\" type='button' id='ViewCommentButton' onClick=\"ViewComments('ON','','','YES')\" value='-"._QXZ("History")."-'/></span>
-                    </td><td align=\"left\" colspan=\"5\"><font class=\"body_text\">";
+                {
+                    echo "
+                        <div class=\"col-12 col-md-3\">
+                            <div>
+                                $label_comments
+                                <span id='viewcommentsdisplay'><input class=\"btn btn-primary\" type='button' id='ViewCommentButton' onClick=\"ViewComments('ON','','','YES')\" value='-"._QXZ("History")."-'/></span>
+                            </div>
+                    ";
                     if ( ($multi_line_comments) )
-                        {echo "<textarea name=\"comments\" id=\"comments\" rows=\"2\" cols=\"85\" class=\"cust_form_text\" value=\"\"></textarea>\n";}
-                    else
-                        {echo "<input class=\"form-control\" type=\"text\" size=\"65\" name=\"comments\" id=\"comments\" maxlength=\"255\" class=\"cust_form\" value=\"\" />\n";}
-                    }
-                echo "</font></td>
-                    </tr><tr><td align=\"right\"><font class=\"body_text\">\n";
-
-                if ($per_call_notes == 'ENABLED')
                     {
+                        echo "<div><textarea class=\"form-control\" name=\"comments\" id=\"comments\" rows=\"2\" cols=\"85\" class=\"cust_form_text\" value=\"\"></textarea></div>\n";
+                    }
+                    else
+                    {
+                        echo "<div><input class=\"form-control\" type=\"text\" size=\"65\" name=\"comments\" id=\"comments\" maxlength=\"255\" class=\"cust_form\" value=\"\" /></div>\n";
+                    }
+                    echo "
+                        </div>
+                    ";
+                }
+                
+                if ($per_call_notes == 'ENABLED')
+                {
                     echo _QXZ("Call Notes: ");
                     if ($agent_call_log_view == '1')
                         {echo "<br /><span id=\"CallNotesButtons\"><a href=\"#\" onclick=\"VieWNotesLoG();return false;\">"._QXZ("view notes")."</a></span> ";}
-                    echo "</td><td align=\"left\" colspan=\"5\"><font class=\"body_text\">";
                     echo "<textarea name=\"call_notes\" id=\"call_notes\" rows=\"2\" cols=\"85\" class=\"cust_form_text\" value=\"\"></textarea>\n";
-                    }
+                }
                 else
-                    {
-                    echo " </td><td align=\"left\" colspan=5><input type=\"hidden\" name=\"call_notes\" id=\"call_notes\" value=\"\" /><span id=\"CallNotesButtons\"></span>\n";
-                    }
+                {
+                    echo "<input type=\"hidden\" name=\"call_notes\" id=\"call_notes\" value=\"\" /><span id=\"CallNotesButtons\"></span>\n";
+                }
 
                 echo "<input type=\"hidden\" name=\"required_fields\" id=\"required_fields\" value=\"$required_fields\" />\n";
 
