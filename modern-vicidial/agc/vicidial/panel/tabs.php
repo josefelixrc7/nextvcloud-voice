@@ -37,33 +37,65 @@ $(function()
                 Script
             </a>
         </li>
-        <li class="nav-item">
-            <a tab="script2" class="nav-link" href="#" onclick="ScriptPanel2ToFront('YES');">
-                Script 2
-            </a>
-        </li>
-        <li class="nav-item">
-            <a tab="form" class="nav-link" href="#" onclick="FormPanelToFront('YES');">
-                Form
-            </a>
-        </li>
-        <li class="nav-item">
-            <a tab="email" class="nav-link" href="#" onclick="EmailPanelToFront('YES');">
-                Email
-            </a>
-        </li>
-        <li class="nav-item">
-            <a tab="chat_internal" class="nav-link" href="#" onclick="InternalChatContentsLoad('YES');">
-                Chat internal
-                <img class="d-none" src="./images/<?=_QXZ("vdc_tab_chat_internal.gif")?>" name='InternalChatImg' alt="CHAT"/>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a tab="chat_customer" class="nav-link" href="#" onclick="CustomerChatPanelToFront('1', 'YES');">
-                Chat customer
-                <img class="d-none" src="./images/<?=_QXZ("vdc_tab_chat_customer.gif")?>" name='CustomerChatImg' alt="CHAT"/>
-            </a>
-        </li>
+        <?php
+            //if ($SSenable_second_script > 0)
+            if (true)
+            {
+        ?>
+                <li class="nav-item">
+                    <a tab="script2" class="nav-link" href="#" onclick="ScriptPanel2ToFront('YES');">
+                        Script 2
+                    </a>
+                </li>
+        <?php
+            }
+        ?>
+        <?php
+            //if ($custom_fields_enabled > 0)
+            if (true)
+            {
+        ?>
+                <li class="nav-item">
+                    <a tab="form" class="nav-link" href="#" onclick="FormPanelToFront('YES');">
+                        Form
+                    </a>
+                </li>
+        <?php
+            }
+        ?>
+        <?php
+            //if ($email_enabled > 0)
+            if (true)
+            {
+        ?>
+                <li class="nav-item">
+                    <a tab="email" class="nav-link" href="#" onclick="EmailPanelToFront('YES');">
+                        Email
+                    </a>
+                </li>
+        <?php
+            }
+        ?>
+        <?php
+            //if ($chat_enabled > 0)
+            if (true)
+            {
+        ?>
+                <li class="nav-item">
+                    <a tab="chat_internal" class="nav-link" href="#" onclick="InternalChatContentsLoad('YES');">
+                        Chat internal
+                        <img class="d-none" src="./images/<?=_QXZ("vdc_tab_chat_internal.gif")?>" name='InternalChatImg' alt="CHAT"/>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a tab="chat_customer" class="nav-link" href="#" onclick="CustomerChatPanelToFront('1', 'YES');">
+                        Chat customer
+                        <img class="d-none" src="./images/<?=_QXZ("vdc_tab_chat_customer.gif")?>" name='CustomerChatImg' alt="CHAT"/>
+                    </a>
+                </li>
+        <?php
+            }
+        ?>
     </ul>
 
     <table class="mb-2" border="0" bgcolor="#FFFFFF" height="30px">
@@ -99,18 +131,6 @@ $(function()
                         <td align=\"left\" width=\"67px\">
                             <a href=\"#\" onclick=\"FormPanelToFront('YES');\">
                                 <img src=\"./images/"._QXZ("vdc_tab_form.gif")."\" alt=\"FORM\" width=\"67px\" height=\"30px\" border=\"0\" />
-                            </a>
-                        </td>\n";
-                }
-            ?>
-            <?php
-                //if ($email_enabled > 0)
-                if (true)
-                {
-                    echo "
-                        <td align=\"left\" width=\"67px\">
-                            <a href=\"#\" onclick=\"EmailPanelToFront('YES');\">
-                                <img src=\"./images/"._QXZ("vdc_tab_email.gif")."\" alt=\"EMAIL\" width=\"67px\" height=\"30px\" border=\"0\" />
                             </a>
                         </td>\n";
                 }
