@@ -383,7 +383,7 @@
                             <div>$label_gender</div>
                             <div>
                                 <span id=\"GENDERhideFORie\">
-                                    <select size=\"1\" name=\"gender_list\" class=\"cust_form form-select\" id=\"gender_list\">
+                                    <select size=\"1\" name=\"gender_list\" class=\"form-select\" id=\"gender_list\">
                                         <option value=\"U\">"._QXZ("U - Undefined")."</option>
                                         <option value=\"M\">"._QXZ("M - Male")."</option>
                                         <option value=\"F\">"._QXZ("F - Female")."</option>
