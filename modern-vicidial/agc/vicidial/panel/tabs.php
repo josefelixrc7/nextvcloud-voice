@@ -5,17 +5,18 @@ $(function()
     $(document).on('click', '#Tabs ul li a.nav-link', (e) =>
     {
         const current_tab = $(e.currentTarget).attr('tab');
-        console.log(current_tab)
         const tabs = ['panel', 'script', 'script2', 'form', 'chat_internal', 'chat_customer'];
         for(let tab of tabs)
         {
             console.log(`${tab} == ${current_tab}`)
             if(tab == current_tab)
             {
+                console.log('true');
                 $(`#Tabs ul li a[tab=${current_tab}]`).addClass('active');
             }
             else
             {
+                console.log('false');
                 $(`#Tabs ul li a[tab=${current_tab}]`).removeClass('active');
             }
         }
