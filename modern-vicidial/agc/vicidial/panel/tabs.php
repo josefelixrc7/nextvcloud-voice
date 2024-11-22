@@ -3,8 +3,9 @@
     <table border="0" bgcolor="#FFFFFF" height="30px">
         <tr valign="top" align="left">
             <td align="left" width="115px" bgcolor="#<?php echo $SSstd_row5_background ?>">
-                <a href="#" onclick="MainPanelToFront('NO','YES');">
-                    <img src="/modern-vicidial/images/logo.png" alt="MAIN" height="30px" border="0" />
+                <a class="btn btn-primary" href="#" onclick="MainPanelToFront('NO','YES');">
+                    Panel
+                    <!--<img src="/modern-vicidial/images/logo.png" alt="MAIN" height="30px" border="0" />-->
                 </a>
             </td>
             <td align="left" width="67px">
