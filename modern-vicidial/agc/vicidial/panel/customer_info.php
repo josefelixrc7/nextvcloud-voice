@@ -69,7 +69,7 @@
                             $label_title = preg_replace("/---REQUIRED---/","",$label_title);}
                     }
                     echo "
-                        <div class=\"col\">
+                        <div class=\"col-12 col-md-3\">
                             <div>$label_title</div>
                             <div><input class=\"form-control\" type=\"text\" size=\"4\" name=\"title\" id=\"title\" maxlength=\"$MAXtitle\" class=\"cust_form\" value=\"\" $title_readonly /></div>
                         </div>
@@ -96,7 +96,7 @@
                         }
                     }
                     echo "
-                        <div class=\"col\">
+                        <div class=\"col-12 col-md-3\">
                             <div>$label_first_name</div>
                             <div><input class=\"form-control\" type=\"text\" size=\"17\" name=\"first_name\" id=\"first_name\" maxlength=\"$MAXfirst_name\" class=\"cust_form\" value=\"\" $first_name_readonly /></div>
                         </div>
@@ -123,7 +123,7 @@
                         }
                     }
                     echo "
-                        <div class=\"col\">
+                        <div class=\"col-12 col-md-3\">
                             <div>$label_middle_initial</div>
                             <div><input class=\"form-control\" type=\"text\" size=\"1\" name=\"middle_initial\" id=\"middle_initial\" maxlength=\"$MAXmiddle_initial\" class=\"cust_form\" value=\"\" $middle_initial_readonly /></div>
                         </div>
@@ -148,7 +148,7 @@
                             {$required_fields .= "last_name|";   $label_last_name = preg_replace("/---REQUIRED---/","",$label_last_name);}
                     }
                     echo "
-                        <div class=\"col\">
+                        <div class=\"col-12 col-md-3\">
                             <div>$label_last_name</div>
                             <div><input class=\"form-control\" type=\"text\" size=\"23\" name=\"last_name\" id=\"last_name\" maxlength=\"$MAXlast_name\" class=\"cust_form\" value=\"\" $last_name_readonly /></div>
                         </div>
@@ -175,7 +175,7 @@
                         }
                     }
                     echo "
-                        <div class=\"col\">
+                        <div class=\"col-12 col-md-3\">
                             <div>$label_address1</div>
                             <div><input class=\"form-control\" type=\"text\" size=\"85\" name=\"address1\" id=\"address1\" maxlength=\"$MAXaddress1\" class=\"cust_form\" value=\"\" $address1_readonly /></div>
                         </div>
@@ -202,7 +202,7 @@
                         }
                     }
                     echo "
-                        <div class=\"col\">
+                        <div class=\"col-12 col-md-3\">
                             <div>$label_address2</div>
                             <div><input class=\"form-control\" type=\"text\" size=\"20\" name=\"address2\" id=\"address2\" maxlength=\"$MAXaddress2\" class=\"cust_form\" value=\"\" $address2_readonly /></div>
                         </div>
@@ -229,7 +229,7 @@
                         }
                     }
                     echo "
-                        <div class=\"col\">
+                        <div class=\"col-12 col-md-3\">
                             <div>$label_address3</div>
                             <div><input class=\"form-control\" type=\"text\" size=\"45\" name=\"address3\" id=\"address3\" maxlength=\"$MAXaddress3\" class=\"cust_form\" value=\"\" $address3_readonly /></div>
                         </div>
@@ -256,7 +256,7 @@
                         }
                     }
                     echo "
-                        <div class=\"col\">
+                        <div class=\"col-12 col-md-3\">
                             <div>$label_city</div>
                             <div><input class=\"form-control\" type=\"text\" size=\"20\" name=\"city\" id=\"city\" maxlength=\"$MAXcity\" class=\"cust_form\" value=\"\" $city_readonly /></div>
                         </div>
@@ -283,7 +283,7 @@
                         }
                     }
                     echo "
-                        <div class=\"col\">
+                        <div class=\"col-12 col-md-3\">
                             <div>$label_state</div>
                             <div><input class=\"form-control\" type=\"text\" size=\"4\" name=\"state\" id=\"state\" maxlength=\"$MAXstate\" class=\"cust_form\" value=\"\" $state_readonly /></div>
                         </div>
@@ -310,7 +310,7 @@
                         }
                     }
                     echo "
-                        <div class=\"col\">
+                        <div class=\"col-12 col-md-3\">
                             <div>$label_postal_code</div>
                             <div><input class=\"form-control\" type=\"text\" size=\"14\" name=\"postal_code\" id=\"postal_code\" maxlength=\"$MAXpostal_code\" class=\"cust_form\" value=\"\" $postal_code_readonly /></div>
                         </div>
@@ -337,7 +337,7 @@
                         }
                     }
                     echo "
-                        <div class=\"col\">
+                        <div class=\"col-12 col-md-3\">
                             <div>$label_province</div>
                             <div><input class=\"form-control\" type=\"text\" size=\"20\" name=\"province\" id=\"province\" maxlength=\"$MAXprovince\" class=\"cust_form\" value=\"\" $province_readonly /></div>
                         </div>
