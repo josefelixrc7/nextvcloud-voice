@@ -17646,7 +17646,7 @@ function phone_number_format(formatphone) {
 			if (AVlocation=='AgentViewSpan')
 				{
 				button_click_log = button_click_log + "" + SQLdate + "-----AgentsViewOpen---" + AVlocation + " " + AVoperation + "|";
-				document.getElementById("AgentViewLink").innerHTML = "<a href=\"#\" onclick=\"AgentsViewOpen('AgentViewSpan','close');return false;\"><?php echo _QXZ("Agents View"); ?> -</a>";
+				document.getElementById("AgentViewLink").innerHTML = "<a class=\"btn btn-sm btn-outline-secondary me-2\" href=\"#\" onclick=\"AgentsViewOpen('AgentViewSpan','close');return false;\"><?php echo _QXZ("Agents View"); ?> -</a>";
 				agent_status_view_active=1;
 				}
 			showDiv(AVlocation);
@@ -17656,7 +17656,7 @@ function phone_number_format(formatphone) {
 			if (AVlocation=='AgentViewSpan')
 				{
 				button_click_log = button_click_log + "" + SQLdate + "-----AgentsViewOpen---" + AVlocation + " " + AVoperation + "|";
-				document.getElementById("AgentViewLink").innerHTML = "<a href=\"#\" onclick=\"AgentsViewOpen('AgentViewSpan','open');return false;\"><?php echo _QXZ("Agents View"); ?> +</a>";
+				document.getElementById("AgentViewLink").innerHTML = "<a class=\"btn btn-sm btn-outline-secondary me-2\" href=\"#\" onclick=\"AgentsViewOpen('AgentViewSpan','open');return false;\"><?php echo _QXZ("Agents View"); ?> +</a>";
 				agent_status_view_active=0;
 				}
 			hideDiv(AVlocation);
