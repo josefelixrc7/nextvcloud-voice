@@ -116,10 +116,10 @@ if ($agent_display_dialable_leads > 0)
         {echo "<img src=\"./images/"._QXZ("pixel.gif")."\" width=\"1px\" height=\"".$webphone_height."px\" /><br />\n";}
 	?>
     <table border="0" bgcolor="<?php echo $SCRIPT_COLOR ?>" width="<?php echo $SSwidth ?>px" height="<?php echo $SSheight ?>px"><tr><td align="left" valign="top"><font class="sb_text"><div class="noscroll_script" id="ScriptContents"><?php echo _QXZ("AGENT SCRIPT"); ?></div></font></td></tr></table>
-</span>
 
-<span id="ScriptRefresH">
-	<a href="#" onclick="RefresHScript('','YES')"><font class="body_small"><?php echo _QXZ("refresh"); ?></font></a>
+	<span id="ScriptRefresH">
+		<a href="#" onclick="RefresHScript('','YES')"><font class="body_small"><?php echo _QXZ("refresh"); ?></font></a>
+	</span>
 </span>
 
 <span id="Script2Panel" class="panel_script2">
@@ -128,11 +128,12 @@ if ($agent_display_dialable_leads > 0)
         {echo "<img src=\"./images/"._QXZ("pixel.gif")."\" width=\"1px\" height=\"".$webphone_height."px\" /><br />\n";}
 	?>
     <table border="0" bgcolor="<?php echo $SCRIPT_COLOR ?>" width="<?php echo $SSwidth ?>px" height="<?php echo $SSheight ?>px"><tr><td align="left" valign="top"><font class="sb_text"><div class="noscroll_script" id="Script2Contents"><?php echo _QXZ("AGENT SCRIPT 2"); ?></div></font></td></tr></table>
+
+	<span id="Script2RefresH">
+		<a href="#" onclick="RefresHScript2('','YES')"><font class="body_small"><?php echo _QXZ("refresh"); ?></font></a>
+	</span>
 </span>
 
-<span id="Script2RefresH">
-<a href="#" onclick="RefresHScript2('','YES')"><font class="body_small"><?php echo _QXZ("refresh"); ?></font></a>
-</span>
 
 <span id="FormPanel" class="panel_form">
 	<?php
@@ -140,6 +141,11 @@ if ($agent_display_dialable_leads > 0)
         {echo "<img src=\"./images/"._QXZ("pixel.gif")."\" width=\"1px\" height=\"".$webphone_height."px\" /><br />\n";}
 	?>
     <table border="0" bgcolor="<?php echo $SCRIPT_COLOR ?>" width="<?php echo $SSwidth ?>px" height="<?php echo $SSheight ?>px"><tr><td align="left" valign="top"><font class="sb_text"><div class="noscroll_script" id="FormContents"><iframe src="./vdc_form_display.php?lead_id=&list_id=&stage=WELCOME" style="background-color:transparent;" scrolling="auto" frameborder="0" allowtransparency="true" id="vcFormIFrame" name="vcFormIFrame" width="<?php echo $SDwidth ?>px" height="<?php echo $SSheight ?>px" STYLE="z-index:<?php $zi++; echo $zi ?>"> </iframe></div></font></td></tr></table>
+
+	<span id="FormRefresH">
+		<a href="#" onclick="FormContentsLoad('YES')"><font class="body_small"><?php echo _QXZ("reset form"); ?></font></a>
+	</span>
+
 </span>
 
 <span id="EmailPanel" class="panel_email">
@@ -148,6 +154,11 @@ if ($agent_display_dialable_leads > 0)
         {echo "<img src=\"./images/"._QXZ("pixel.gif")."\" width=\"1px\" height=\"".$webphone_height."px\" /><br />\n";}
 	?>
     <table border="0" bgcolor="<?php echo $SCRIPT_COLOR ?>" width="<?php echo $SSwidth ?>px" height="<?php echo $SSheight ?>px"><tr><td align="left" valign="top"><font class="sb_text"><div class="noscroll_script" id="EmailContents"><iframe src="./vdc_email_display.php?lead_id=&list_id=&stage=WELCOME" style="background-color:transparent;" scrolling="auto" frameborder="0" allowtransparency="true" id="vcEmailIFrame" name="vcEmailIFrame" width="<?php echo $SDwidth ?>px" height="<?php echo $SSheight ?>px" STYLE="z-index:<?php $zi++; echo $zi ?>"> </iframe></div></font></td></tr></table>
+
+	<span id="EmailRefresH">
+		<a href="#" onclick="EmailContentsLoad('YES')"><font class="body_small"><?php echo _QXZ("refresh"); ?></font></a>
+	</span>
+
 </span>
 
 <span id="CustomerChatPanel" class="panel_chat_customer">
@@ -167,14 +178,6 @@ if ($agent_display_dialable_leads > 0)
 </span>
 
 <!-- /Panels tabs -->
-
-<span style="position:absolute;left:<?php $tempAMwidth = ($AMwidth - 15); echo $tempAMwidth ?>px;top:<?php echo $SRheight ?>px;z-index:<?php $zi++; echo $zi ?>;" id="FormRefresH">
-<a href="#" onclick="FormContentsLoad('YES')"><font class="body_small"><?php echo _QXZ("reset form"); ?></font></a>
-</span>
-
-<span style="position:absolute;left:<?php echo $AMwidth ?>px;top:<?php echo $SRheight ?>px;z-index:<?php $zi++; echo $zi ?>;" id="EmailRefresH">
-<a href="#" onclick="EmailContentsLoad('YES')"><font class="body_small"><?php echo _QXZ("refresh"); ?></font></a>
-</span>
 
 <span style="position:absolute;left:5px;top:<?php echo $HTheight ?>px;z-index:<?php $zi++; echo $zi ?>;" id="HotKeyActionBox">
     <table border="0" bgcolor="#FFDD99" width="<?php echo $HCwidth ?>px" height="70px">
