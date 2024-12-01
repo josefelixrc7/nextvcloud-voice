@@ -813,7 +813,7 @@ if ($agent_display_dialable_leads > 0)
 </span>
 
 <span class="w-100 h-100 bg-white" style="position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="CalLLoGDisplaYBox">
-    <div class="w-50 mx-auto mt-5">
+    <div class="text-center mt-5">
 
 		<table class="table" border="0" width="<?php echo $CAwidth ?>px" height="<?php echo $WRheight ?>px">
 			<tr>
