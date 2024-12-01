@@ -28,7 +28,7 @@
     <div class="row">
 
         <!-- Barra lateral -->
-        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse overflow-scroll">
             <div class="position-sticky pt-3">
 
                 <ul class="nav flex-column">
@@ -74,10 +74,8 @@
                             <span id="ManualQueueNotice"></span>
                             <span id="ManualQueueChoice"></span>
                             <span id="DiaLLeaDPrevieW">
-                                <font class="preview_text">
-                                    <input type="checkbox" name="LeadPreview" size="1" value="0" />
-                                    <?php echo _QXZ("LEAD PREVIEW"); ?><br />
-                                </font>
+                                <input class="form-check-input" type="checkbox" name="LeadPreview" size="1" value="0" />
+                                <?php echo _QXZ("LEAD PREVIEW"); ?><br />
                             </span>
                             <span id="DiaLDiaLAltPhonE">
                                 <font class="preview_text">
