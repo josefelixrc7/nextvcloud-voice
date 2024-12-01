@@ -35,7 +35,7 @@
                         <?php
                             if ( ($agent_lead_search == 'ENABLED') or ($agent_lead_search == 'LIVE_CALL_INBOUND') or ($agent_lead_search == 'LIVE_CALL_INBOUND_AND_MANUAL') )
                             {
-                                echo "<a href=\"#\" onclick=\"OpeNSearcHForMDisplaYBox();return false;\">B&uacute;squeda de LEAD</a>";
+                                echo "<a href=\"#\" onclick=\"OpeNSearcHForMDisplaYBox();return false;\">"._QXZ("LEAD SEARCH")."</a>";
                             }
                         ?>
                     </td>
