@@ -323,7 +323,7 @@ if ( ($stage == 'login') or ($stage == 'logout') )
 		echo "<INPUT TYPE=HIDDEN NAME=VD_login VALUE=\"$VD_login\">\n";
 		echo "<INPUT TYPE=HIDDEN NAME=VD_pass VALUE=\"$VD_pass\">\n";
 		echo "<CENTER><BR><font class=\"sd_text\">$VDdisplayMESSAGE</font><BR><BR>";
-		echo "<table width=\"100%\"><tr><td></td>\n";
+		/*echo "<table width=\"100%\"><tr><td></td>\n";
 		echo "</tr></table>\n";
 		echo "<br /><br /><br /><center><table width=\"460px\" cellpadding=\"3\" cellspacing=\"0\" bgcolor=\"#$SSframe_background\"><tr bgcolor=\"white\">";
 		echo "<td align=\"left\" valign=\"bottom\" bgcolor=\"#$SSmenu_background\" width=\"170\"><img src=\"$selected_logo\" border=\"0\" height=\"45\" width=\"170\" alt=\"Agent Screen\" /></td>";
@@ -336,7 +336,33 @@ if ( ($stage == 'login') or ($stage == 'logout') )
 		echo "<TD ALIGN=LEFT><INPUT TYPE=PASSWORD NAME=pass SIZE=10 MAXLENGTH=20 VALUE=''></TD></TR>\n";
 		echo "<TR><TD ALIGN=CENTER COLSPAN=2><INPUT TYPE=SUBMIT NAME=SUBMIT VALUE="._QXZ("SUBMIT")."> &nbsp; </TD></TR>\n";
 		echo "<TR><TD ALIGN=LEFT COLSPAN=2><font class=\"body_tiny\"><BR>"._QXZ("VERSION:")." $version &nbsp; &nbsp; &nbsp; "._QXZ("BUILD:")." $build</TD></TR>\n";
-		echo "</TABLE>\n";
+		echo "</TABLE>\n";*/
+
+?>
+
+        <section class="mt-2">
+            <div class="mb-3">
+                <span class="text-muted"><?=_QXZ("User Login")?></span>
+            </div>
+            <div class="mb-3">
+                <input class="form-control" TYPE=TEXT NAME=user SIZE=10 MAXLENGTH=20 VALUE="<?=$VD_login?>">
+            </div>
+        </section>
+        <section class="mt-2">
+            <div class="mb-3">
+                <span class="text-muted"><?=_QXZ("User Password:")?></span>
+            </div>
+            <div class="mb-3">
+                <input class="form-control" TYPE=PASSWORD NAME=pass SIZE=10 MAXLENGTH=20 VALUE=''>
+            </div>
+        </section>
+        <section class="mt-2">
+            <div class="mb-3">
+                <input class="btn btn-primary" TYPE=SUBMIT NAME=SUBMIT VALUE="<?=_QXZ("SUBMIT")?>">
+            </div>
+        </section>
+<?php
+
 		echo "</FORM>\n\n";
 
         print_end();
@@ -431,7 +457,7 @@ if ( ($stage == 'login') or ($stage == 'logout') )
 			echo "<INPUT TYPE=HIDDEN NAME=phone_pass VALUE=\"$phone_pass\">\n";
 			echo "<INPUT TYPE=HIDDEN NAME=VD_login VALUE=\"$VD_login\">\n";
 			echo "<INPUT TYPE=HIDDEN NAME=VD_pass VALUE=\"$VD_pass\">\n";
-			echo "<CENTER><BR><font class=\"sd_text\">$VDdisplayMESSAGE</font><BR><BR>";
+			/*echo "<CENTER><BR><font class=\"sd_text\">$VDdisplayMESSAGE</font><BR><BR>";
 			echo "<table width=\"100%\"><tr><td></td>\n";
 			echo "</tr></table>\n";
 			echo "<br /><br /><br /><center><table width=\"460px\" cellpadding=\"3\" cellspacing=\"0\" bgcolor=\"#$SSframe_background\"><tr bgcolor=\"white\">";
@@ -445,7 +471,33 @@ if ( ($stage == 'login') or ($stage == 'logout') )
 			echo "<TD ALIGN=LEFT><INPUT TYPE=PASSWORD NAME=pass SIZE=10 MAXLENGTH=20 VALUE=''></TD></TR>\n";
 			echo "<TR><TD ALIGN=CENTER COLSPAN=2><INPUT TYPE=SUBMIT NAME=SUBMIT VALUE=\""._QXZ("SUBMIT")."\"> &nbsp; </TD></TR>\n";
 			echo "<TR><TD ALIGN=LEFT COLSPAN=2><font class=\"body_tiny\"><BR>"._QXZ("VERSION:")." $version &nbsp; &nbsp; &nbsp; "._QXZ("BUILD:")." $build</TD></TR>\n";
-			echo "</TABLE>\n";
+			echo "</TABLE>\n";*/
+
+            ?>
+                <?=$VDdisplayMESSAGE?>
+                <section class="mt-2">
+                    <div class="mb-3">
+                        <span class="text-muted"><?=_QXZ("User Login")?></span>
+                    </div>
+                    <div class="mb-3">
+                        <input class="form-control" TYPE=TEXT NAME=user SIZE=10 MAXLENGTH=20 VALUE="<?=$VD_login?>">
+                    </div>
+                </section>
+                <section class="mt-2">
+                    <div class="mb-3">
+                        <span class="text-muted"><?=_QXZ("User Password:")?></span>
+                    </div>
+                    <div class="mb-3">
+                        <input class="form-control" TYPE=PASSWORD NAME=pass SIZE=10 MAXLENGTH=20 VALUE=''>
+                    </div>
+                </section>
+                <section class="mt-2">
+                    <div class="mb-3">
+                        <input class="btn btn-primary" TYPE=SUBMIT NAME=SUBMIT VALUE="<?=_QXZ("SUBMIT")?>">
+                    </div>
+                </section>
+        <?php
+
 			echo "</FORM>\n\n";
             print_end();
 			/*echo "</body>\n\n";
@@ -542,7 +594,7 @@ if ( ($stage == 'login') or ($stage == 'logout') )
 			echo"<META HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=utf-8\">\n";
 			echo"</HEAD>\n";
 			echo "<BODY BGCOLOR=WHITE MARGINHEIGHT=0 MARGINWIDTH=0>\n";*/
-			echo "<CENTER><BR><font class=\"sd_text\">$VDdisplayMESSAGE</font><BR><BR>";
+			/*echo "<CENTER><BR><font class=\"sd_text\">$VDdisplayMESSAGE</font><BR><BR>";
 			echo "<table width=\"100%\"><tr><td></td>\n";
 			echo "</tr></table>\n";
 			echo "<br /><br /><br /><center><table width=\"460px\" cellpadding=\"3\" cellspacing=\"0\" bgcolor=\"#$SSframe_background\"><tr bgcolor=\"white\">";
@@ -553,7 +605,20 @@ if ( ($stage == 'login') or ($stage == 'logout') )
 			echo "<TR><TD ALIGN=CENTER COLSPAN=2><font size=3><font class=\"skb_text\"> $LOGtimeMESSAGE<BR>&nbsp; </font></TD></TR>\n";
 			echo "<TR><TD ALIGN=CENTER COLSPAN=2><B> $BACKlink <BR>&nbsp; </B></TD></TR>\n";
 			echo "<TR><TD ALIGN=LEFT COLSPAN=2><font class=\"body_tiny\"><BR>"._QXZ("VERSION:")." $version &nbsp; &nbsp; &nbsp; "._QXZ("BUILD:")." $build</TD></TR>\n";
-			echo "</TABLE>\n";
+			echo "</TABLE>\n";*/
+
+        ?>
+            <?=$VDdisplayMESSAGE?>
+            <section class="mt-2">
+                <div class="mb-3">
+                    <span class="text-muted"><?=$LOGtimeMESSAGE?></span>
+                </div>
+                <div class="mb-3">
+                    <?=$BACKlink?>
+                </div>
+            </section>
+        <?php
+
             print_end();
 			/*echo "</body>\n\n";
 			echo "</html>\n\n";*/
@@ -595,7 +660,7 @@ if ( ($stage == 'login') or ($stage == 'logout') )
 		echo "<INPUT TYPE=HIDDEN NAME=VD_pass VALUE=\"$VD_pass\">\n";
 		echo "<INPUT TYPE=HIDDEN NAME=user VALUE=\"$user\">\n";
 		echo "<INPUT TYPE=HIDDEN NAME=pass VALUE=\"$pass\">\n";
-		echo "<CENTER><BR><font class=\"sd_text\">$VDdisplayMESSAGE</font><BR><BR>";
+		/*echo "<CENTER><BR><font class=\"sd_text\">$VDdisplayMESSAGE</font><BR><BR>";
 		echo "<table width=\"100%\"><tr><td></td>\n";
 		echo "</tr></table>\n";
 		echo "<br /><br /><br /><center><table width=\"460px\" cellpadding=\"3\" cellspacing=\"0\" bgcolor=\"#$SSframe_background\"><tr bgcolor=\"white\">";
@@ -606,7 +671,20 @@ if ( ($stage == 'login') or ($stage == 'logout') )
 		echo "<TR><TD ALIGN=CENTER COLSPAN=2><font size=3><font class=\"skb_text\"> $LOGtimeMESSAGE<BR>&nbsp; </font></TD></TR>\n";
 		echo "<TR><TD ALIGN=CENTER COLSPAN=2><INPUT TYPE=SUBMIT NAME=\"$button_name\" VALUE=\"$button_name\"> &nbsp; </TD></TR>\n";
 		echo "<TR><TD ALIGN=LEFT COLSPAN=2><font size=1><BR>"._QXZ("VERSION:")." $version &nbsp; &nbsp; &nbsp; "._QXZ("BUILD:")." $build</TD></TR>\n";
-		echo "</TABLE>\n";
+		echo "</TABLE>\n";*/
+
+        ?>
+            <?=$VDdisplayMESSAGE?>
+            <section class="mt-2">
+                <div class="mb-3">
+                    <span class="text-muted"><?=$LOGtimeMESSAGE?></span>
+                </div>
+                <div class="mb-3">
+                    <INPUT TYPE=SUBMIT NAME="<?=$button_name?>" VALUE="<?=$button_name?>">
+                </div>
+            </section>
+        <?php
+
 		echo "</FORM>\n\n";
         print_end();
 		/*echo "</body>\n\n";
@@ -634,8 +712,8 @@ else
 	echo "<INPUT TYPE=HIDDEN NAME=phone_pass VALUE=\"$phone_pass\">\n";
 	echo "<INPUT TYPE=HIDDEN NAME=VD_login VALUE=\"$VD_login\">\n";
 	echo "<INPUT TYPE=HIDDEN NAME=VD_pass VALUE=\"$VD_pass\">\n";
-	echo "<CENTER><BR><font class=\"sd_text\">$VDdisplayMESSAGE</font><BR><BR>";
-	echo "<table width=\"100%\"><tr><td></td>\n";
+	//echo "<CENTER><BR><font class=\"sd_text\">$VDdisplayMESSAGE</font><BR><BR>";
+	/*echo "<table width=\"100%\"><tr><td></td>\n";
 	echo "</tr></table>\n";
 	echo "<br /><br /><br /><center><table width=\"460px\" cellpadding=\"3\" cellspacing=\"0\" bgcolor=\"#$SSframe_background\"><tr bgcolor=\"white\">";
 	echo "<td align=\"left\" valign=\"bottom\" bgcolor=\"#$SSmenu_background\" width=\"170\"><img src=\"$selected_logo\" border=\"0\" height=\"45\" width=\"170\" alt=\"Agent Screen\" /></td>";
@@ -648,7 +726,33 @@ else
 	echo "<TD ALIGN=LEFT><INPUT TYPE=PASSWORD NAME=pass SIZE=10 MAXLENGTH=20 VALUE=''></TD></TR>\n";
 	echo "<TR><TD ALIGN=CENTER COLSPAN=2><INPUT TYPE=SUBMIT NAME=SUBMIT VALUE="._QXZ("SUBMIT")."> &nbsp; </TD></TR>\n";
 	echo "<TR><TD ALIGN=LEFT COLSPAN=2><font class=\"body_tiny\"><BR>"._QXZ("VERSION:")." $version &nbsp; &nbsp; &nbsp; "._QXZ("BUILD:")." $build</TD></TR>\n";
-	echo "</TABLE>\n";
+	echo "</TABLE>\n";*/
+
+    ?>
+        <?=$VDdisplayMESSAGE?>
+        <section class="mt-2">
+            <div class="mb-3">
+                <span class="text-muted"><?=_QXZ("User Login")?></span>
+            </div>
+            <div class="mb-3">
+                <input class="form-control" TYPE=TEXT NAME=user SIZE=10 MAXLENGTH=20 VALUE="<?=$VD_login?>">
+            </div>
+        </section>
+        <section class="mt-2">
+            <div class="mb-3">
+                <span class="text-muted"><?=_QXZ("User Password:")?></span>
+            </div>
+            <div class="mb-3">
+                <input class="form-control" TYPE=PASSWORD NAME=pass SIZE=10 MAXLENGTH=20 VALUE=''>
+            </div>
+        </section>
+        <section class="mt-2">
+            <div class="mb-3">
+                <input class="btn btn-primary" TYPE=SUBMIT NAME=SUBMIT VALUE="<?=_QXZ("SUBMIT")?>">
+            </div>
+        </section>
+    <?php
+
 	echo "</FORM>\n\n";
     print_end();
 	/*echo "</body>\n\n";
