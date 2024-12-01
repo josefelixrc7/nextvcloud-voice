@@ -127,6 +127,65 @@ if ($qm_conf_ct > 0)
 	$SSagent_script =		$row[7];
 	}
 
+
+
+
+?>
+
+<!-- Modern Vicidial -->
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Reloj - ModernVici</title>
+        <link rel="icon" type="image/x-icon" href="/modern-vicidial/images/logo.png">
+
+        <!-- CSS files -->
+            <link rel="stylesheet" href="/modern-vicidial/css/libraries/fontawesome-v5.9.0.min.css">
+            <link href="/modern-vicidial/css/libraries/bootstrap-v5.1.1/bootstrap.min.css" rel="stylesheet">
+            <link href="/modern-vicidial/css/main.css" rel="stylesheet">
+        <!-- /CSS files -->
+
+    </head>
+    <body class="position-relative">
+
+        <div class="row">
+            <section class="col-12 col-md-6 p-5">
+                <div class="p-2 p-md-5">
+
+                    <div class="d-flex justify-content-start align-items-center mb-4">
+                        <img width="50px;" src="/modern-vicidial/images/logo.png" alt="Logo">
+                        <h2 class="ms-4">Reloj</h2>
+                    </div>
+                    <p class="p">Bienvenido al Reloj</p>
+
+<?php
+
+function print_end()
+{
+    echo '
+                </div>
+                </section>
+                <section class="d-none d-md-block col-12 col-md-6">
+                    <img class="w-100 h-100" src="/modern-vicidial/images/image1.png">
+                </section>
+            </div>
+
+            <!-- Javascript -->
+                <!-- Libraries -->
+                <script src="/modern-vicidial/js/libraries/jquery.min-v3.4.1.js"></script>
+                <script src="/modern-vicidial/js/libraries/bootstrap-v5.1.1/bootstrap.bundle.min.js"></script>
+            <!-- Javascript -->
+        </body>
+        </html>
+    ';
+}
+
+
+
+
 if (strlen($VUselected_language) < 1)
 	{$VUselected_language = $SSdefault_language;}
 ##### END SETTINGS LOOKUP #####
@@ -222,8 +281,8 @@ if ( ($SSweb_logo!='default_new') and ($SSweb_logo!='default_old') )
 ##### END Define colors and logo #####
 
 
-echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"../agc/css/style.css\" />\n";
-echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"../agc/css/custom.css\" />\n";
+//echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"../agc/css/style.css\" />\n";
+//echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"../agc/css/custom.css\" />\n";
 
 if ( ($stage == 'login') or ($stage == 'logout') )
 	{
@@ -242,59 +301,6 @@ if ( ($stage == 'login') or ($stage == 'logout') )
 			print "<!-- case check $user|$VD_login|$VUuser:   |$valid_user| -->\n";
 			}
 		}
-
-?>
-
-<!-- Modern Vicidial -->
-
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Reloj - ModernVici</title>
-        <link rel="icon" type="image/x-icon" href="/modern-vicidial/images/logo.png">
-
-        <!-- CSS files -->
-            <link rel="stylesheet" href="/modern-vicidial/css/libraries/fontawesome-v5.9.0.min.css">
-            <link href="/modern-vicidial/css/libraries/bootstrap-v5.1.1/bootstrap.min.css" rel="stylesheet">
-            <link href="/modern-vicidial/css/main.css" rel="stylesheet">
-        <!-- /CSS files -->
-
-    </head>
-    <body class="position-relative">
-
-        <div class="row">
-            <section class="col-12 col-md-6 p-5">
-                <div class="p-2 p-md-5">
-
-                    <div class="d-flex justify-content-start align-items-center mb-4">
-                        <img width="50px;" src="/modern-vicidial/images/logo.png" alt="Logo">
-                        <h2 class="ms-4">Reloj</h2>
-                    </div>
-                    <p class="p">Bienvenido al Reloj</p>
-
-<?php
-
-    function print_end()
-    {
-        echo '
-                    </div>
-                    </section>
-                    <section class="d-none d-md-block col-12 col-md-6">
-                        <img class="w-100 h-100" src="/modern-vicidial/images/image1.png">
-                    </section>
-                </div>
-
-                <!-- Javascript -->
-                    <!-- Libraries -->
-                    <script src="/modern-vicidial/js/libraries/jquery.min-v3.4.1.js"></script>
-                    <script src="/modern-vicidial/js/libraries/bootstrap-v5.1.1/bootstrap.bundle.min.js"></script>
-                <!-- Javascript -->
-            </body>
-            </html>
-        ';
-    }
 
 	print "<!-- vicidial_users active count for $user:   |$valid_user| -->\n";
 
