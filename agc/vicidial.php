@@ -14212,9 +14212,9 @@ function set_length(SLnumber,SLlength_goal,SLdirection)
 								}
 							}
 						if (print_ct == VD_statuses_ct_onethird) 
-							{dispo_HTML = dispo_HTML + "</span></font></td><td height=\"300px\" width=\"240px\" valign=\"top\"><font class=\"log_text\"><span id=\"DispoSelectB\">";}
+							{dispo_HTML = dispo_HTML + "</span></font></td><td width=\"240px\" valign=\"top\"><font class=\"log_text\"><span id=\"DispoSelectB\">";}
 						if (print_ct == VD_statuses_ct_twothird) 
-							{dispo_HTML = dispo_HTML + "</span></font></td><td height=\"300px\" width=\"240px\" valign=\"top\"><font class=\"log_text\"><span id=\"DispoSelectC\">";}
+							{dispo_HTML = dispo_HTML + "</span></font></td><td width=\"240px\" valign=\"top\"><font class=\"log_text\"><span id=\"DispoSelectC\">";}
 						print_ct++;
 						}
 					loop_ct++;

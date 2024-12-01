@@ -433,7 +433,7 @@ if ($agent_display_dialable_leads > 0)
 </span>
 
 <span class="w-100 h-100 bg-white" style="position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="DispoSelectBox">
-    <div class="w-50 mx-auto mt-5">
+    <div class="w-50 mx-auto mt-2">
 
 		<div class="card">
 			<h5 class="card-header">
@@ -457,12 +457,14 @@ if ($agent_display_dialable_leads > 0)
 					<span id="DispoCommentsContent"><input type="hidden" name="dispo_comments" id="dispo_comments" value="" /></span>
 					<span id="DispoSelectContent" class="m-2"> <?php echo _QXZ("End-of-call Disposition Selection"); ?> </span>
 					<input type="hidden" name="DispoSelection" id="DispoSelection" /><br />
-					<input class="form-check-input" type="checkbox" name="DispoSelectStop" id="DispoSelectStop" size="1" value="0" /> <?php echo _QXZ("PAUSE AGENT DIALING"); ?> <br />
-					<a class="btn btn-secondary" href="#" onclick="DispoSelectContent_create('','ReSET','YES');return false;"><?php echo _QXZ("CLEAR FORM"); ?></a> | 
-					<a class="btn btn-primary" href="#" onclick="DispoSelect_submit('','','YES');return false;"><?php echo _QXZ("SUBMIT"); ?></a>
-					<br /><br />
-					<a class="btn btn-secondary" href="#" onclick="WeBForMDispoSelect_submit();return false;"><?php echo _QXZ("WEB FORM SUBMIT"); ?></a>
-					<br /><br /> &nbsp;
+					<div class="text-center">
+						<input class="form-check-input" type="checkbox" name="DispoSelectStop" id="DispoSelectStop" size="1" value="0" /> <?php echo _QXZ("PAUSE AGENT DIALING"); ?>
+						<div class="btn-group mt-2" role="group" aria-label="Basic example">
+							<a class="btn btn-secondary" href="#" onclick="WeBForMDispoSelect_submit();return false;"><?php echo _QXZ("WEB FORM SUBMIT"); ?></a>
+							<a class="btn btn-secondary" href="#" onclick="DispoSelectContent_create('','ReSET','YES');return false;"><?php echo _QXZ("CLEAR FORM"); ?></a>
+							<a class="btn btn-primary" href="#" onclick="DispoSelect_submit('','','YES');return false;"><?php echo _QXZ("SUBMIT"); ?></a>
+						</div>
+					</div>
 				</font>
 
 			</div>
