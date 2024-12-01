@@ -812,15 +812,27 @@ if ($agent_display_dialable_leads > 0)
 	?>
 </span>
 
-<span style="position:absolute;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="CalLLoGDisplaYBox">
-	<table border="0" bgcolor="#CCFFCC" width="<?php echo $CAwidth ?>px" height="<?php echo $WRheight ?>px"><tr><td align="center" valign="top"> &nbsp; &nbsp; &nbsp; <font class="sd_text"><?php echo _QXZ("AGENT CALL LOG:"); ?></font> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <font class="sh_text"><a href="#" onclick="CalLLoGVieWClose();return false;"><?php echo _QXZ("close"); ?> [X]</a><br />
-	<?php
-	if ($webphone_location == 'bar')
-		{echo "<br /><img src=\"./images/"._QXZ("pixel.gif")."\" width=\"1px\" height=\"".$webphone_height."px\" /><br />\n";}
-	?>
-	<div class="scroll_calllog" id="CallLogSpan"> <?php echo _QXZ("Call log List"); ?> </div>
-	<br /><br /> &nbsp;</font>
-	</td></tr></table>
+<span class="w-100 h-100 bg-white" style="position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="CalLLoGDisplaYBox">
+    <div class="w-50 mx-auto mt-5">
+
+		<table class="table" border="0" width="<?php echo $CAwidth ?>px" height="<?php echo $WRheight ?>px">
+			<tr>
+				<td align="center" valign="top"> &nbsp; &nbsp; &nbsp;
+					<font class="sd_text"><?php echo _QXZ("AGENT CALL LOG:"); ?></font> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+					<font class="sh_text">
+						<a href="#" onclick="CalLLoGVieWClose();return false;"><?php echo _QXZ("close"); ?> [X]</a><br />
+						<?php
+						if ($webphone_location == 'bar')
+							{echo "<br /><img src=\"./images/"._QXZ("pixel.gif")."\" width=\"1px\" height=\"".$webphone_height."px\" /><br />\n";}
+						?>
+						<div class="scroll_calllog" id="CallLogSpan"> <?php echo _QXZ("Call log List"); ?> </div>
+						<br /><br /> &nbsp;
+					</font>
+				</td>
+			</tr>
+		</table>
+
+	</div>
 </span>
 
 <span style="position:absolute;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="AgentTimeDisplayBox">
