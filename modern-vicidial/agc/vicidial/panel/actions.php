@@ -800,7 +800,7 @@ if ($agent_display_dialable_leads > 0)
 					}
 				?>
 
-				<div class="btn-group" role="group" aria-label="Basic example">
+				<div class="btn-group d-block" role="group" aria-label="Basic example">
 					<a class="btn btn-primary" href="#" onclick="NeWManuaLDiaLCalLSubmiT('NOW','YES');return false;"><?php echo _QXZ("Dial Now"); ?></a>
 					<?php if ($manual_dial_preview > 0)
 						{
