@@ -400,7 +400,7 @@ if ($agent_display_dialable_leads > 0)
 
 <span class="w-100 h-100 bg-white" style="position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="LogouTBox">
     <div class="w-50 mx-auto mt-5">
-		<div class="mb-2">
+		<div class="mb-2 text-center">
 			<span id="LogouTProcess">
 				<br />
 				<br />
@@ -411,7 +411,7 @@ if ($agent_display_dialable_leads > 0)
 				<img src="./images/<?php echo _QXZ("agent_loading_animation.gif"); ?>" height="206px" width="206px" alt="<?php echo _QXZ("LOGOUT PROCESSING..."); ?>" />
 			</span>
 		</div>
-		<div class="">
+		<div class="text-center">
 			<span id="LogouTBoxLink">
 				<font class="loading_text"><?php echo _QXZ("LOGOUT"); ?></font>
 			</span>
