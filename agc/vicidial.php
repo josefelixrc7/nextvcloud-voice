@@ -14197,24 +14197,24 @@ function set_length(SLnumber,SLlength_goal,SLdirection)
 							{CBflag = '*';}
 						// check for minimum and maximum customer talk seconds to see if status is non-selectable
 						if ( ( (VARMINstatuses[loop_ct] > 0) && (customer_sec < VARMINstatuses[loop_ct]) ) || ( (VARMAXstatuses[loop_ct] > 0) && (customer_sec > VARMAXstatuses[loop_ct]) ) )
-							{
+						{
 							dispo_HTML = dispo_HTML + '<DEL>' + VARstatuses[loop_ct] + " - " + VARstatusnames[loop_ct] + "</DEL> " + CBflag + "<br /><br />";
-							}
+						}
 						else
-							{
+						{
 							if (taskDSgrp == VARstatuses[loop_ct]) 
-								{
-								dispo_HTML = dispo_HTML + "<font size=\"3\" face=\"Arial, Helvetica, sans-serif\" style=\"BACKGROUND-COLOR: #FFFFCC\"><b><a href=\"#\" onclick=\"DispoSelect_submit('','','YES');return false;\">" + VARstatuses[loop_ct] + " - " + VARstatusnames[loop_ct] + "</a> " + CBflag + "</b></font><br /><br />";
-								}
-							else
-								{
-								dispo_HTML = dispo_HTML + "<font size=\"2\" face=\"Arial, Helvetica, sans-serif\"><a href=\"#\" onclick=\"DispoSelectContent_create('" + VARstatuses[loop_ct] + "','ADD','YES');return false;\" onMouseOver=\"this.style.backgroundColor = '#FFFFCC'\" onMouseOut=\"this.style.backgroundColor = 'transparent'\";>" + VARstatuses[loop_ct] + " - " + VARstatusnames[loop_ct] + "</a></font> " + CBflag + "<br /><br />";
-								}
+							{
+								dispo_HTML = dispo_HTML + "<font size=\"3\" face=\"Arial, Helvetica, sans-serif\"><b><a href=\"#\" onclick=\"DispoSelect_submit('','','YES');return false;\">" + VARstatuses[loop_ct] + " - " + VARstatusnames[loop_ct] + "</a> " + CBflag + "</b></font><br /><br />";
 							}
+							else
+							{
+								dispo_HTML = dispo_HTML + "<font size=\"2\" face=\"Arial, Helvetica, sans-serif\"><a href=\"#\" onclick=\"DispoSelectContent_create('" + VARstatuses[loop_ct] + "','ADD','YES');return false;\" onMouseOut=\"this.style.backgroundColor = 'transparent'\";>" + VARstatuses[loop_ct] + " - " + VARstatusnames[loop_ct] + "</a></font> " + CBflag + "<br /><br />";
+							}
+						}
 						if (print_ct == VD_statuses_ct_onethird) 
-							{dispo_HTML = dispo_HTML + "</span></font></td><td width=\"240px\" valign=\"top\"><font class=\"log_text\"><span id=\"DispoSelectB\">";}
+							{dispo_HTML = dispo_HTML + "</span></font></td><td valign=\"top\"><font class=\"log_text\"><span id=\"DispoSelectB\">";}
 						if (print_ct == VD_statuses_ct_twothird) 
-							{dispo_HTML = dispo_HTML + "</span></font></td><td width=\"240px\" valign=\"top\"><font class=\"log_text\"><span id=\"DispoSelectC\">";}
+							{dispo_HTML = dispo_HTML + "</span></font></td><td valign=\"top\"><font class=\"log_text\"><span id=\"DispoSelectC\">";}
 						print_ct++;
 						}
 					loop_ct++;
