@@ -252,7 +252,7 @@ if ( ($stage == 'login') or ($stage == 'logout') )
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Agentes - ModernVici</title>
+        <title>Reloj - ModernVici</title>
         <link rel="icon" type="image/x-icon" href="/modern-vicidial/images/logo.png">
 
         <!-- CSS files -->
