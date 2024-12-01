@@ -48,6 +48,34 @@
             <?php
                 $required_fields = '|';
 
+                // Phone number
+                if ($label_phone_number == '---HIDE---')
+                {
+                    echo "<input type=\"hidden\" name=\"phone_number\" id=\"phone_number\" value=\"\" />";
+                    echo "<div class=\"col-12 col-md-3\"><span id=\"phone_numberDISP\"> &nbsp; </span></div>";
+                }
+                else
+                {
+                    echo "
+                        <div class=\"col-12 col-md-3\">
+                            <div>$label_phone_number</div>
+                    ";
+
+                    if ( (preg_match('/Y/',$disable_alter_custphone)) or (preg_match('/HIDE/',$disable_alter_custphone)) )
+                    {
+                        echo "<div><font class=\"body_text\"><span id=\"phone_numberDISP\"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></font>";
+                        echo "<input type=\"hidden\" name=\"phone_number\" id=\"phone_number\" value=\"\" /></div>";
+                    }
+                    else
+                    {
+                        echo "<div><input class=\"form-control\" type=\"text\" size=\"20\" name=\"phone_number\" id=\"phone_number\" maxlength=\"$MAXphone_number\" class=\"cust_form\" value=\"\" /></div>";
+                    }
+                    echo "
+                        </div>
+                    ";
+                    
+                }
+                
                 // Title
                 if ($label_title == '---HIDE---')
                 {
@@ -394,34 +422,6 @@
                     ";
                 }
 
-                // Phone number
-                if ($label_phone_number == '---HIDE---')
-                {
-                    echo "<input type=\"hidden\" name=\"phone_number\" id=\"phone_number\" value=\"\" />";
-                    echo "<div class=\"col-12 col-md-3\"><span id=\"phone_numberDISP\"> &nbsp; </span></div>";
-                }
-                else
-                {
-                    echo "
-                        <div class=\"col-12 col-md-3\">
-                            <div>$label_phone_number</div>
-                    ";
-
-                    if ( (preg_match('/Y/',$disable_alter_custphone)) or (preg_match('/HIDE/',$disable_alter_custphone)) )
-                    {
-                        echo "<div><font class=\"body_text\"><span id=\"phone_numberDISP\"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></font>";
-                        echo "<input type=\"hidden\" name=\"phone_number\" id=\"phone_number\" value=\"\" /></div>";
-                    }
-                    else
-                    {
-                        echo "<div><input class=\"form-control\" type=\"text\" size=\"20\" name=\"phone_number\" id=\"phone_number\" maxlength=\"$MAXphone_number\" class=\"cust_form\" value=\"\" /></div>";
-                    }
-                    echo "
-                        </div>
-                    ";
-                    
-                }
-                
                 // Phone code
                 if ($label_phone_code == '---HIDE---')
                 {
