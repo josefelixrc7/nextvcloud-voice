@@ -675,6 +675,16 @@ if ($agent_display_dialable_leads > 0)
 <span class="w-100 h-100 bg-white" style="position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="NeWManuaLDiaLBox">
     <div class="w-50 mx-auto mt-5">
 
+		<div class="card">
+
+			<div class="card-header">
+				<?php echo _QXZ("NEW MANUAL DIAL LEAD FOR %1s in campaign %2s:",0,'',$VD_login,$VD_campaign); ?>
+			</div>
+			<div class="card-body">
+				
+			</div>
+
+		</div>
 	</div>
 </span>
 
