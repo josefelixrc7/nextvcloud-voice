@@ -614,8 +614,8 @@ if ( ($stage == 'login') or ($stage == 'logout') )
                 <div class="mb-3">
                     <span class="text-muted"><?=$LOGtimeMESSAGE?></span>
                 </div>
-                <div class="mb-3">
-                    <?=$BACKlink?>
+                <div class="mt-3 mb-3">
+                    <a href="/" class="">Ir a inicio</a>
                 </div>
             </section>
         <?php
