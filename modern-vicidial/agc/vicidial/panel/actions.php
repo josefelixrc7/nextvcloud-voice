@@ -432,7 +432,7 @@ if ($agent_display_dialable_leads > 0)
     <table border="0" bgcolor="#CCFFCC" width="<?php echo $CAwidth ?>px" height="47px"><tr><td align="center" valign="top"><font class="sh_text"><?php echo _QXZ("Any changes made to the customer information below at this time will not be comitted, You must change customer information before you Hangup the call."); ?></font> </td></tr></table>
 </span>
 
-<span class="w-100 h-100 bg-white" style="position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="DispoSelectBox">
+<span class="w-100 h-100" style="background:#eee;position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="DispoSelectBox">
     <div class="w-50 mx-auto mt-2">
 
 		<div class="card">
@@ -672,7 +672,7 @@ if ($agent_display_dialable_leads > 0)
     </td></tr></table>
 </span>
 
-<span class="w-100 h-100 bg-white overflow-scroll" style="position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="NeWManuaLDiaLBox">
+<span class="w-100 h-100 overflow-scroll" style="background:#eee;position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="NeWManuaLDiaLBox">
     <div class="w-50 mx-auto mt-5">
 
 		<div class="card">
@@ -958,7 +958,7 @@ if ($agent_display_dialable_leads > 0)
 	?>
 </span>
 
-<span class="w-100 h-100 bg-white" style="position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="CalLLoGDisplaYBox">
+<span class="w-100 h-100" style="background:#eee;position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="CalLLoGDisplaYBox">
     <div class="text-center mt-5">
 
 		<table class="table" border="0" width="<?php echo $CAwidth ?>px" height="<?php echo $WRheight ?>px">
