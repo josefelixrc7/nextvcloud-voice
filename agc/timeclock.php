@@ -1,5 +1,5 @@
 
 
 <?php
-    include '../modern-vicidial/timeclock/main.php';
+    include '../modern-vicidial/agc/timeclock/main.php';
 ?>
