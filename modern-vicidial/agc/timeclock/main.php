@@ -681,7 +681,7 @@ if ( ($stage == 'login') or ($stage == 'logout') )
                     <span class="text-muted"><?=$LOGtimeMESSAGE?></span>
                 </div>
                 <div class="mb-3">
-                    <INPUT TYPE=SUBMIT NAME="<?=$button_name?>" VALUE="<?=$button_name?>">
+                    <INPUT class="btn btn-primary" TYPE=SUBMIT NAME="<?=$button_name?>" VALUE="<?=$button_name?>">
                 </div>
             </section>
         <?php
