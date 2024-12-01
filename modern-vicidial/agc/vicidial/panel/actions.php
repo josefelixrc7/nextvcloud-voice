@@ -458,8 +458,10 @@ if ($agent_display_dialable_leads > 0)
 					<span id="DispoSelectContent" class="m-2"> <?php echo _QXZ("End-of-call Disposition Selection"); ?> </span>
 					<input type="hidden" name="DispoSelection" id="DispoSelection" /><br />
 					<div class="text-center">
-						<input class="form-check-input" type="checkbox" name="DispoSelectStop" id="DispoSelectStop" size="1" value="0" /> <?php echo _QXZ("PAUSE AGENT DIALING"); ?>
-						<div class="btn-group mt-2" role="group" aria-label="Basic example">
+						<div class="mb-2">
+							<input class="form-check-input" type="checkbox" name="DispoSelectStop" id="DispoSelectStop" size="1" value="0" /> <?php echo _QXZ("PAUSE AGENT DIALING"); ?>
+						</div>
+						<div class="btn-group" role="group" aria-label="Basic example">
 							<a class="btn btn-secondary" href="#" onclick="WeBForMDispoSelect_submit();return false;"><?php echo _QXZ("WEB FORM SUBMIT"); ?></a>
 							<a class="btn btn-secondary" href="#" onclick="DispoSelectContent_create('','ReSET','YES');return false;"><?php echo _QXZ("CLEAR FORM"); ?></a>
 							<a class="btn btn-primary" href="#" onclick="DispoSelect_submit('','','YES');return false;"><?php echo _QXZ("SUBMIT"); ?></a>
