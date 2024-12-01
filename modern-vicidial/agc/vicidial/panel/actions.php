@@ -672,7 +672,7 @@ if ($agent_display_dialable_leads > 0)
     </td></tr></table>
 </span>
 
-<!--<span class="w-100 h-100 bg-white overflow-scroll" style="position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="NeWManuaLDiaLBox">
+<span class="w-100 h-100 bg-white overflow-scroll" style="position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="NeWManuaLDiaLBox">
     <div class="w-50 mx-auto mt-5">
 
 		<div class="card">
@@ -696,9 +696,6 @@ if ($agent_display_dialable_leads > 0)
 							}
 						?>
 						<span class="text-muted"><?php echo _QXZ("Note: all new manual dial leads will go into list %1s",0,'',$manual_dial_list_id); ?></span>
-					</div>
-					<div class="mb-3">
-						<input class="form-control" type="text" name="VD_login" size="20" maxlength="20" value="<?=$VD_login?>"/>
 					</div>
 				</section>
 
@@ -820,7 +817,7 @@ if ($agent_display_dialable_leads > 0)
 </span>-->
 
 
-<span style="position:absolute;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="NeWManuaLDiaLBox">
+<!--<span style="position:absolute;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="NeWManuaLDiaLBox">
     <table border="0" bgcolor="#CCFFCC" width="<?php echo $CAwidth ?>px" height="<?php echo $WRheight ?>px"><tr><td align="center" valign="top"> <font class="sd_text"><?php echo _QXZ("NEW MANUAL DIAL LEAD FOR %1s in campaign %2s:",0,'',$VD_login,$VD_campaign); ?></font><br /><br /><font class="sh_text"><?php echo _QXZ("Enter information below for the new lead you wish to call."); ?>
  <br />
 	<?php 
@@ -909,7 +906,7 @@ if ($agent_display_dialable_leads > 0)
 	 ?>
 	<a href="#" onclick="ManualDialHide();return false;"><?php echo _QXZ("Go Back"); ?></a></font>
     </td></tr></table>
-</span>
+</span>-->
 
 
 <span style="position:absolute;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="CloserSelectBox">
