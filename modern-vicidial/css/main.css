@@ -26,8 +26,7 @@
 }
 
 #LogiNReseT input
-,#LogouTBoxLink a
-,#MainStatuSSpan a{
+,#LogouTBoxLink a{
     display: inline-block;
     font-weight: 400;
     line-height: 1.5;

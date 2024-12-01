@@ -14183,7 +14183,7 @@ function set_length(SLnumber,SLlength_goal,SLdirection)
 			var MINMAXend='';
 			var VD_statuses_ct_onethird = parseInt(VARSELstatuses_ct / 3);
 			var VD_statuses_ct_twothird = (VD_statuses_ct_onethird * 2);
-			var dispo_HTML = "<table cellpadding=\"5\" cellspacing=\"5\" width=\"760px\"><tr><td colspan=\"2\"><b> <?php echo _QXZ("CALL DISPOSITION"); ?></b></td></tr><tr><td bgcolor=\"#99FF99\" height=\"300px\" width=\"240px\" valign=\"top\"><font class=\"log_text\"><span id=\"DispoSelectA\">";
+			var dispo_HTML = "<table cellpadding=\"5\" cellspacing=\"5\" width=\"760px\"><tr><td colspan=\"2\"><b> <?php echo _QXZ("CALL DISPOSITION"); ?></b></td></tr><tr><td height=\"300px\" width=\"240px\" valign=\"top\"><font class=\"log_text\"><span id=\"DispoSelectA\">";
 			var loop_ct = 0;
 			var print_ct = 0;
 			if (hide_dispo_list < 1)
@@ -14212,9 +14212,9 @@ function set_length(SLnumber,SLlength_goal,SLdirection)
 								}
 							}
 						if (print_ct == VD_statuses_ct_onethird) 
-							{dispo_HTML = dispo_HTML + "</span></font></td><td bgcolor=\"#99FF99\" height=\"300px\" width=\"240px\" valign=\"top\"><font class=\"log_text\"><span id=\"DispoSelectB\">";}
+							{dispo_HTML = dispo_HTML + "</span></font></td><td height=\"300px\" width=\"240px\" valign=\"top\"><font class=\"log_text\"><span id=\"DispoSelectB\">";}
 						if (print_ct == VD_statuses_ct_twothird) 
-							{dispo_HTML = dispo_HTML + "</span></font></td><td bgcolor=\"#99FF99\" height=\"300px\" width=\"240px\" valign=\"top\"><font class=\"log_text\"><span id=\"DispoSelectC\">";}
+							{dispo_HTML = dispo_HTML + "</span></font></td><td height=\"300px\" width=\"240px\" valign=\"top\"><font class=\"log_text\"><span id=\"DispoSelectC\">";}
 						print_ct++;
 						}
 					loop_ct++;
