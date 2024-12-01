@@ -2,11 +2,13 @@
 <form name="alert_form" id="alert_form" onsubmit="return false;">
 
     <span style="position:absolute;left:200px;top:200px;z-index:<?php $zi++; echo $zi ?>;" id="AlertBox">
-        
+
         <div class="card">
             <h5 class="card-header"><?php echo _QXZ("Agent Alert!"); ?></h5>
             <div class="card-body">
-                <span id="AlertBoxContent"> <?php echo _QXZ("Alert Box"); ?> </span>
+                <div class="mb-2">
+                    <span id="AlertBoxContent"> <?php echo _QXZ("Alert Box"); ?> </span>
+                </div>
                 <button class="btn btn-primary" type="button" name="alert_button" id="alert_button" onclick="hideDiv('AlertBox');return false;"><?php echo _QXZ("OK"); ?></BUTTON>
             </div>
         </div>
