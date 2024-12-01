@@ -92,9 +92,9 @@
                             <!--
                             <?php
                             if ( ($manual_dial_preview) and ($auto_dial_level==0) )
-                            {echo "<font class=\"preview_text\"> <input type=\"checkbox\" name=\"LeadPreview\" size=\"1\" value=\"0\" /> LEAD PREVIEW<br /></font>";}
+                            {echo "<font class=\"\"> <input class=\"form-check-input\" type=\"checkbox\" name=\"LeadPreview\" size=\"1\" value=\"0\" /> LEAD PREVIEW<br /></font>";}
                             if ( ($alt_phone_dialing) and ($auto_dial_level==0) )
-                            {echo "<font class=\"preview_text\"> <input type=\"checkbox\" name=\"DiaLAltPhonE\" size=\"1\" value=\"0\" /> ALT PHONE DIAL<br /></font>";}
+                            {echo "<font class=\"\"> <input class=\"form-check-input\" type=\"checkbox\" name=\"DiaLAltPhonE\" size=\"1\" value=\"0\" /> ALT PHONE DIAL<br /></font>";}
                             ?> -->
 
                             <small class="text-muted"><?php echo _QXZ("RECORDING FILE:"); ?></small><br />
