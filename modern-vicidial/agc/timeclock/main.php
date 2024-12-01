@@ -338,9 +338,9 @@ if ( ($stage == 'login') or ($stage == 'logout') )
 		echo "<TR><TD ALIGN=LEFT COLSPAN=2><font class=\"body_tiny\"><BR>"._QXZ("VERSION:")." $version &nbsp; &nbsp; &nbsp; "._QXZ("BUILD:")." $build</TD></TR>\n";
 		echo "</TABLE>\n";*/
 
-        $VDdisplayMESSAGE
 ?>
 
+        <?=$VDdisplayMESSAGE?>
         <section class="mt-2">
             <div class="mb-3">
                 <span class="text-muted"><?=_QXZ("User Login")?></span>
