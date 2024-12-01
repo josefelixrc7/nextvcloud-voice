@@ -20582,39 +20582,13 @@ $zi=2;
 
 </form>
 
-<form name="alert_form" id="alert_form" onsubmit="return false;">
 
-<span style="position:absolute;left:200px;top:200px;z-index:<?php $zi++; echo $zi ?>;" id="AlertBox">
-<table border="2" bgcolor="#666666" cellpadding="2" cellspacing="1">
-<tr><td bgcolor="#f0f0f0" align="left">
-<font face="arial,helvetica" size="2"><b> &nbsp; <?php echo _QXZ("Agent Alert!"); ?></b></font>
-</td></tr>
-<tr><td bgcolor="#E6E6E6">
-<table border="0" bgcolor="#E3E3E3" width="400">
-<tr>
-<td align="center" valign="top" width="50"> &nbsp; 
-<br /><br />
-<img src="./images/<?php echo _QXZ("alert.gif"); ?>" alt="alert" border="0">
-</td>
-<td align="center" valign="top"> &nbsp; 
-<br /><br />
-<font face="arial,helvetica" size="2">
-<span id="AlertBoxContent"> <?php echo _QXZ("Alert Box"); ?> </span>
-</font>
-<br /><br />
-</td>
-</tr><tr>
-<td align="center" valign="top" colspan="2">
-<button type="button" name="alert_button" id="alert_button" onclick="hideDiv('AlertBox');return false;"><?php echo _QXZ("OK"); ?></BUTTON>
-<br /> &nbsp;
-<!-- <a href="#" onclick="document.alert_form.alert_button.focus();">focus</a> -->
-</td></tr>
-</table>
-</td></tr>
-</table>
-</span>
+<!-- Alert box -->
+<?php
+	include '../modern-vicidial/agc/vicidial/panel/parts/alert_box.php';
+?>
+<!-- /Alert box -->
 
-</form>
 
 <audio id='ChatAudioAlertFile'><source src="sounds/chat_alert.mp3" type="audio/mpeg"></audio>
 <audio id='EmailAudioAlertFile'><source src="sounds/email_alert.mp3" type="audio/mpeg"></audio>
