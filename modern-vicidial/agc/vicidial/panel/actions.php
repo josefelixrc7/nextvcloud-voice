@@ -672,7 +672,7 @@ if ($agent_display_dialable_leads > 0)
     </td></tr></table>
 </span>
 
-<span class="w-100 h-100 bg-white" style="position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="NeWManuaLDiaLBox">
+<span class="w-100 h-100 bg-white overflow-scroll" style="position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="NeWManuaLDiaLBox">
     <div class="w-50 mx-auto mt-5">
 
 		<div class="card">
