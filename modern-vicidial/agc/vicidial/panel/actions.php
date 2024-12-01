@@ -687,6 +687,14 @@ if ($agent_display_dialable_leads > 0)
 						<span class="text-muted"><?php echo _QXZ("NEW MANUAL DIAL LEAD FOR %1s in campaign %2s:",0,'',$VD_login,$VD_campaign); ?></span>
 						<span class="text-muted"><?php echo _QXZ("Enter information below for the new lead you wish to call."); ?></span>
 
+						<?php 
+							if (!preg_match("/X/i",$manual_dial_prefix))
+							{
+						?>
+								<span class="text-muted"><?=_QXZ("Note: a dial prefix of %1s will be added to the beginning of this number",0,'',$manual_dial_prefix)?></span>
+						<?php
+							}
+						?>
 						<span class="text-muted"><?php echo _QXZ("Note: all new manual dial leads will go into list %1s",0,'',$manual_dial_list_id); ?></span>
 					</div>
 					<div class="mb-3">
@@ -694,6 +702,117 @@ if ($agent_display_dialable_leads > 0)
 					</div>
 				</section>
 
+				<section class="mt-2">
+					<div class="mb-3">
+						<span class="text-muted"><?php echo _QXZ("Dial Code:"); ?></span>
+					</div>
+					<div class="mb-3">
+						<input class="form-control" type="text" size="7" maxlength="10" name="MDDiaLCodE" id="MDDiaLCodE" class="cust_form" value="<?php echo $default_phone_code ?>" />
+						<?php echo _QXZ("(This is usually a 1 in the USA-Canada)"); ?>
+					</div>
+				</section>
+
+				<section class="mt-2">
+					<div class="mb-3">
+						<span class="text-muted"><?php echo _QXZ("Phone Number:"); ?></span>
+					</div>
+					<div class="mb-3">
+						
+						<input class="form-control" type="text" size="14" maxlength="18" name="MDPhonENumbeR" id="MDPhonENumbeR" class="cust_form" value="" />
+						&nbsp; <?php echo _QXZ("(digits only)"); ?>
+
+						<input type="hidden" name="MDPhonENumbeRHiddeN" id="MDPhonENumbeRHiddeN" value="" />
+						<input type="hidden" name="MDLeadID" id="MDLeadID" value="" />
+						<input type="hidden" name="MDType" id="MDType" value="" />
+					</div>
+				</section>
+				
+				<?php 
+					if ($manual_dial_lead_id=='Y')
+					{
+				?>
+						<section class="mt-2">
+							<div class="mb-3">
+								<span class="text-muted"><?=_QXZ("Dial Lead ID:")?></span>
+							</div>
+							<div class="mb-3">
+								<input class="form-control" type="text" size="10" maxlength="10" name="MDLeadIDEntry" id="MDLeadIDEntry" class="cust_form" value="\"/>
+								<?=_QXZ("(digits only)")?>
+							</div>
+						</section>
+				<?php
+					}
+					else
+					{
+						echo "<input type=\"hidden\" name=\"MDLeadIDEntry\" id=\"MDLeadIDEntry\" value=\"\" />\n";
+					}
+
+					$LeadLookuPXtra='';
+					if ($manual_dial_search_checkbox == 'SELECTED_LOCK')
+						{$LeadLookuPXtra = 'CHECKED DISABLED ';}
+					if ($manual_dial_search_checkbox == 'UNSELECTED_LOCK')
+						{$LeadLookuPXtra = 'DISABLED ';}
+				?>
+
+				<section class="mt-2">
+					<div class="mb-3">
+						<span class="text-muted"><?php echo _QXZ("Search Existing Leads:"); ?></span>
+					</div>
+					<div class="mb-3">
+						<input class="form-check-input" type="checkbox" name="LeadLookuP" id="LeadLookuP" size="1" value="0" <?php echo $LeadLookuPXtra ?>/>
+						&nbsp; <?php echo _QXZ("(This option if checked will attempt to find the phone number in the system before inserting it as a new lead)"); ?>
+					</div>
+				</section>
+
+				<section class="mt-2">
+					<div class="mb-3">
+						<span class="text-muted">
+							<CENTER>
+								<span id="ManuaLDiaLGrouPSelecteD"></span> &nbsp; &nbsp; <span id="ManuaLDiaLGrouP"></span>
+								<br><br>
+								<span id="ManuaLDiaLInGrouPSelecteD"></span> &nbsp; &nbsp; <span id="ManuaLDiaLInGrouP"></span>
+								<br><br>
+								<span id="NoDiaLSelecteD"></span>
+							</CENTER>
+							<?php echo _QXZ("If you want to dial a number and have it NOT be added as a new lead, enter in the exact dialstring that you want to call in the Dial Override field below. To hangup this call you will have to open the CALLS IN THIS SESSION link at the bottom of the screen and hang it up by clicking on its channel link there."); ?>
+						</span>
+					</div>
+				</section>
+
+				<?php
+					if ($manual_dial_override_field == 'ENABLED')
+					{
+				?>
+					<section class="mt-2">
+						<div class="mb-3">
+							<span class="text-muted"><?php echo _QXZ("Dial Override:"); ?></span>
+						</div>
+						<div class="mb-3">
+							<input class="form-control" type="text" size="24" maxlength="20" name="MDDiaLOverridE" id="MDDiaLOverridE" class="cust_form" value="" />
+						</div>
+					</section>
+				<?php
+						echo _QXZ("(digits only please)");
+					}
+					else
+					{
+				?>
+						<input type="hidden" name="MDDiaLOverridE" id="MDDiaLOverridE" value="" />&nbsp; 
+				<?php
+						echo _QXZ("DISABLED");
+					}
+				?>
+
+				<div class="btn-group" role="group" aria-label="Basic example">
+					<a class="btn btn-primary" href="#" onclick="NeWManuaLDiaLCalLSubmiT('NOW','YES');return false;"><?php echo _QXZ("Dial Now"); ?></a>
+					<?php if ($manual_dial_preview > 0)
+						{
+							echo "<a class=\"btn btn-primary\" href=\"#\" onclick=\"NeWManuaLDiaLCalLSubmiT('PREVIEW','YES');return false;\">"._QXZ("Preview Call")."</a>";
+						}
+					?>
+					<a class="btn btn-primary" href="#" onclick="ManualDialHide();return false;"><?php echo _QXZ("Go Back"); ?></a>
+				</div>
+				
 			</div>
 
 		</div>
