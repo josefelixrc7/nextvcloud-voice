@@ -26,7 +26,8 @@
 }
 
 #LogiNReseT input
-,#LogouTBoxLink a{
+,#LogouTBoxLink a
+,#MainStatuSSpan a{
     display: inline-block;
     font-weight: 400;
     line-height: 1.5;
@@ -48,4 +49,14 @@
     color: #fff;
     background-color: #5c636a;
     border-color: #565e64;
+}
+
+#DispoSelectMaxMin{
+    display: none;
+}
+
+.preview_text {
+	font-size: 13px;
+	font-family: sans-serif;
+	background: none !important;
 }
