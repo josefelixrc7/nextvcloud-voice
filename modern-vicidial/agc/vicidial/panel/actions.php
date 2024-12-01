@@ -398,16 +398,30 @@ if ($agent_display_dialable_leads > 0)
     </td></tr></table>
 </span>
 
-<span style="position:absolute;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="LogouTBox">
-    <table border="0" bgcolor="#FFFFFF" width="<?php echo $JS_browser_width ?>px" height="<?php echo $JS_browser_height ?>px"><tr><td align="center"><br /><span id="LogouTProcess">
-	<br />
-	<br />
-	<font class="loading_text"><?php echo _QXZ("LOGOUT PROCESSING..."); ?></font>
-	<br />
-	<br />
-	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="./images/<?php echo _QXZ("agent_loading_animation.gif"); ?>" height="206px" width="206px" alt="<?php echo _QXZ("LOGOUT PROCESSING..."); ?>" />
-	</span><br /><br /><span id="LogouTBoxLink"><font class="loading_text"><?php echo _QXZ("LOGOUT"); ?></font></span></td></tr></table>
+<span class="w-100 h-100 bg-white" style="position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="LogouTBox">
+    <div class="w-50 mx-auto mt-5">
+		<table border="0" bgcolor="#FFFFFF" width="<?php echo $JS_browser_width ?>px" height="<?php echo $JS_browser_height ?>px">
+			<tr>
+				<td align="center"><br />
+					<span id="LogouTProcess">
+						<br />
+						<br />
+						<font class="loading_text"><?php echo _QXZ("LOGOUT PROCESSING..."); ?></font>
+						<br />
+						<br />
+						&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+						<img src="./images/<?php echo _QXZ("agent_loading_animation.gif"); ?>" height="206px" width="206px" alt="<?php echo _QXZ("LOGOUT PROCESSING..."); ?>" />
+					</span>
+					<br /><br />
+					<span id="LogouTBoxLink">
+						<font class="loading_text"><?php echo _QXZ("LOGOUT"); ?></font>
+					</span>
+				</td>
+			</tr>
+		</table>
+	</div>
 </span>
+
 
 <span style="position:absolute;left:0px;top:70px;z-index:<?php $zi++; echo $zi ?>;" id="DispoButtonHideA">
     <table border="0" bgcolor="#CCFFCC" width="165px" height="22px"><tr><td align="center" valign="top"></td></tr></table>
