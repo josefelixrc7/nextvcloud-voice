@@ -322,7 +322,7 @@ if ( ($stage == 'login') or ($stage == 'logout') )
 		echo "<INPUT TYPE=HIDDEN NAME=phone_pass VALUE=\"$phone_pass\">\n";
 		echo "<INPUT TYPE=HIDDEN NAME=VD_login VALUE=\"$VD_login\">\n";
 		echo "<INPUT TYPE=HIDDEN NAME=VD_pass VALUE=\"$VD_pass\">\n";
-		echo "<CENTER><BR><font class=\"sd_text\">$VDdisplayMESSAGE</font><BR><BR>";
+		//echo "<CENTER><BR><font class=\"sd_text\">$VDdisplayMESSAGE</font><BR><BR>";
 		/*echo "<table width=\"100%\"><tr><td></td>\n";
 		echo "</tr></table>\n";
 		echo "<br /><br /><br /><center><table width=\"460px\" cellpadding=\"3\" cellspacing=\"0\" bgcolor=\"#$SSframe_background\"><tr bgcolor=\"white\">";
@@ -338,6 +338,7 @@ if ( ($stage == 'login') or ($stage == 'logout') )
 		echo "<TR><TD ALIGN=LEFT COLSPAN=2><font class=\"body_tiny\"><BR>"._QXZ("VERSION:")." $version &nbsp; &nbsp; &nbsp; "._QXZ("BUILD:")." $build</TD></TR>\n";
 		echo "</TABLE>\n";*/
 
+        $VDdisplayMESSAGE
 ?>
 
         <section class="mt-2">
