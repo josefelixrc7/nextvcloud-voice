@@ -675,37 +675,6 @@ if ($agent_display_dialable_leads > 0)
 <span class="w-100 h-100 bg-white" style="position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="NeWManuaLDiaLBox">
     <div class="w-50 mx-auto mt-5">
 
-		<div class="card">
-
-			<div class="card-header">
-				<?php echo _QXZ("NEW MANUAL DIAL LEAD FOR %1s in campaign %2s:",0,'',$VD_login,$VD_campaign); ?>
-			</div>
-			<div class="card-body">
-				
-				<section class="mt-2">
-					<div class="mb-3">
-						<span class="text-muted"><?php echo _QXZ("NEW MANUAL DIAL LEAD FOR %1s in campaign %2s:",0,'',$VD_login,$VD_campaign); ?></span>
-						<span class="text-muted"><?php echo _QXZ("Enter information below for the new lead you wish to call."); ?></span>
-
-						<?php 
-							if (!preg_match("/X/i",$manual_dial_prefix))
-							{
-								echo '<span class="text-muted">';
-								echo _QXZ("Note: a dial prefix of %1s will be added to the beginning of this number",0,'',$manual_dial_prefix);
-								echo '</span>'
-							}
-						?>
-						<span class="text-muted"><?php echo _QXZ("Note: all new manual dial leads will go into list %1s",0,'',$manual_dial_list_id); ?></span>
-					</div>
-					<div class="mb-3">
-						<input class="form-control" type="text" name="VD_login" size="20" maxlength="20" value="<?=$VD_login?>"/>
-					</div>
-				</section>
-
-			</div>
-			
-		</div>
-
 	</div>
 </span>
 
