@@ -1107,7 +1107,7 @@ if ($agent_display_dialable_leads > 0)
 	</td></tr></table>
 </span>
 
-<span class="w-100 h-100 bg-white sticky-top" style="left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="DeactivateDOlDSessioNSpan">
+<span class="w-100 h-100 bg-white" style="position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="DeactivateDOlDSessioNSpan">
     <div class="w-50 mx-auto">
 		<?php echo _QXZ("Another live agent session was open using your user ID. It has been disabled. Click OK to continue to the agent screen."); ?><br />
 		<a class="btn btn-primary mt-2" href="#" onclick="hideDiv('DeactivateDOlDSessioNSpan');return false;"><?php echo _QXZ("OK"); ?></a>
