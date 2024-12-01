@@ -1,2 +1,5 @@
 
-include '../modern-vicidial/timeclock/main.php';
+
+<?php
+    include '../modern-vicidial/timeclock/main.php';
+?>
