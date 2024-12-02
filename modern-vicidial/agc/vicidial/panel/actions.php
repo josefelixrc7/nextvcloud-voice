@@ -385,7 +385,8 @@ if ($agent_display_dialable_leads > 0)
     </tr></table>
 </span>
 
-<span class="w-100 h-100 bg-white" style="position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="NoneInSessionBox">
+<!--<span class="w-100 h-100 bg-white" style="position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="NoneInSessionBox">-->
+<span style="width:0;heigth:0;position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="NoneInSessionBox">
     <div class="w-50 mx-auto mt-5">
 
 		<div class="text-center">
