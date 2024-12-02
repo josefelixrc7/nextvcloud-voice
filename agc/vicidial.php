@@ -20091,13 +20091,13 @@ function phone_number_format(formatphone) {
 				document.getElementById("ViewCommentsShowHide").innerHTML = "<a href=\"#\" onclick=\"ViewComments('OFF','','','YES');return false;\"><?php echo _QXZ("hide comment history"); ?></a> - <a href=\"#\" onclick=\"ViewComments('OFF','OFF','','YES');return false;\"><?php echo _QXZ("close"); ?></a>";
 				}
 			//view_comments_active = 1;
-			document.getElementById("viewcommentsdisplay").innerHTML = "<input type=\"button\" id='ViewCommentButton' onClick=\"ViewComments('OFF','','','YES')\" value=\"<?php echo _QXZ("HIDE"); ?>\" />";
+			document.getElementById("viewcommentsdisplay").innerHTML = "<input class=\"btn btn-sm btn-outline-secondary\" type=\"button\" id='ViewCommentButton' onClick=\"ViewComments('OFF','','','YES')\" value=\"<?php echo _QXZ("HIDE"); ?>\" />";
 			if (comments_all_tabs == 'ENABLED')
-				{document.getElementById("otherviewcommentsdisplay").innerHTML = "<input type=\"button\" id='OtherViewCommentButton' onClick=\"ViewComments('OFF','','','YES')\" value=\"<?php echo _QXZ("HIDE"); ?>\" />";}
+				{document.getElementById("otherviewcommentsdisplay").innerHTML = "<input class=\"btn btn-sm btn-outline-secondary\" type=\"button\" id='OtherViewCommentButton' onClick=\"ViewComments('OFF','','','YES')\" value=\"<?php echo _QXZ("HIDE"); ?>\" />";}
 			if (VCspanname == 'dispo') 
-				{document.getElementById("dispoviewcommentsdisplay").innerHTML = "<input type=\"button\" id='DispoViewCommentButton' onClick=\"ViewComments('OFF','','dispo','YES')\" value=\"<?php echo _QXZ("HIDE"); ?>\" />";}
+				{document.getElementById("dispoviewcommentsdisplay").innerHTML = "<input class=\"btn btn-sm btn-outline-secondary\" type=\"button\" id='DispoViewCommentButton' onClick=\"ViewComments('OFF','','dispo','YES')\" value=\"<?php echo _QXZ("HIDE"); ?>\" />";}
 			if (VCspanname == 'cb') 
-				{document.getElementById("cbviewcommentsdisplay").innerHTML = "<input type=\"button\" id='CBViewCommentButton' onClick=\"ViewComments('OFF','','cb','YES')\" value=\"<?php echo _QXZ("HIDE"); ?>\" />";}
+				{document.getElementById("cbviewcommentsdisplay").innerHTML = "<input class=\"btn btn-sm btn-outline-secondary\" type=\"button\" id='CBViewCommentButton' onClick=\"ViewComments('OFF','','cb','YES')\" value=\"<?php echo _QXZ("HIDE"); ?>\" />";}
 			}
 		else
 			{
@@ -20111,17 +20111,17 @@ function phone_number_format(formatphone) {
 			else
 				{hideDiv('ViewCommentsBox');}
 			//view_comments_active = 0;
-			document.getElementById("viewcommentsdisplay").innerHTML = "<input type=\"button\" id='ViewCommentButton' value='0' onClick=\"ViewComments('ON','','','YES')\">";
+			document.getElementById("viewcommentsdisplay").innerHTML = "<input class=\"btn btn-sm btn-outline-secondary\" type=\"button\" id='ViewCommentButton' value='+' onClick=\"ViewComments('ON','','','YES')\">";
             document.vicidial_form.ViewCommentButton.value = document.vicidial_form.audit_comments_button.value;
 			if (comments_all_tabs == 'ENABLED')
 				{
-				document.getElementById("otherviewcommentsdisplay").innerHTML = "<input type=\"button\" id='OtherViewCommentButton' value='0' onClick=\"ViewComments('ON','','','YES')\">";
+				document.getElementById("otherviewcommentsdisplay").innerHTML = "<input class=\"btn btn-sm btn-outline-secondary\" type=\"button\" id='OtherViewCommentButton' value='0' onClick=\"ViewComments('ON','','','YES')\">";
 	            document.vicidial_form.OtherViewCommentButton.value = document.vicidial_form.audit_comments_button.value;
 				}
 			if (VCspanname == 'dispo') 
-				{document.getElementById("dispoviewcommentsdisplay").innerHTML = "<input type=\"button\" id='DispoViewCommentButton' onClick=\"ViewComments('ON','','dispo','YES')\" value='0' />";}
+				{document.getElementById("dispoviewcommentsdisplay").innerHTML = "<input class=\"btn btn-sm btn-outline-secondary\" type=\"button\" id='DispoViewCommentButton' onClick=\"ViewComments('ON','','dispo','YES')\" value='0' />";}
 			if (VCspanname == 'cb') 
-				{document.getElementById("cbviewcommentsdisplay").innerHTML = "<input type=\"button\" id='CBViewCommentButton' onClick=\"ViewComments('ON','','cb','YES')\" value='0' />";}
+				{document.getElementById("cbviewcommentsdisplay").innerHTML = "<input class=\"btn btn-sm btn-outline-secondary\" type=\"button\" id='CBViewCommentButton' onClick=\"ViewComments('ON','','cb','YES')\" value='0' />";}
 			}
 		}
 
