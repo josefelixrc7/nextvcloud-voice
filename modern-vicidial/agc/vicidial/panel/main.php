@@ -141,7 +141,7 @@
                                 }
                             ?>
 
-                            <!--<font class="body_small_bold"><span id="ParkCounterSpan"> &nbsp; </span></font><br />-->
+                            <font class="body_small_bold"><span id="ParkCounterSpan"> &nbsp; </span></font><br />
                             <span class="mb-2" style="background-color: <?php echo $MAIN_COLOR ?>" id="ParkControl">
                                 <img src="./images/<?php echo _QXZ("vdc_LB_parkcall_OFF.gif"); ?>" border="0" alt="Park Call" />
                             </span><br />
