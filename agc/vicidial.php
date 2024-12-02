@@ -16320,7 +16320,7 @@ function set_length(SLnumber,SLlength_goal,SLdirection)
 					{
 					agent_events('logged_out', tempreason, aec);   aec++;
 
-					document.getElementById("LogouTProcess").innerHTML = "<br /><br /><font class=\"loading_text\"><?php echo _QXZ("LOGOUT PROCESSING..."); ?></font><br /><br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src=\"./images/<?php echo _QXZ("agent_loading_animation.gif"); ?>\" height=\"206px\" width=\"206px\" alt=\"<?php echo _QXZ("LOGOUT PROCESSING..."); ?>\" />";
+					document.getElementById("LogouTProcess").innerHTML = "<br /><br /><font class=\"loading_text\"><?php echo _QXZ("LOGOUT PROCESSING..."); ?></font><br /><br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src=\"./images/<?php echo _QXZ("agent_loading_animation.gif"); ?>\" height=\"100px\" width=\"100px\" alt=\"<?php echo _QXZ("LOGOUT PROCESSING..."); ?>\" />";
 					//	document.getElementById("LogouTProcess").innerHTML = "<?php echo _QXZ("LOGOUT PROCESSING..."); ?>";
 					var xmlhttp=false;
 					/*@cc_on @*/
@@ -20558,7 +20558,7 @@ $zi=2;
  <font class="loading_text"><?php echo _QXZ("Loading..."); ?></font>
  <br />
  <br />
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="./images/<?php echo _QXZ("agent_loading_animation.gif"); ?>" height="206px" width="206px" alt="<?php echo _QXZ("Loading..."); ?>" />
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="./images/<?php echo _QXZ("agent_loading_animation.gif"); ?>" height="100px" width="100px" alt="<?php echo _QXZ("Loading..."); ?>" />
  <br />
  <br />
     </td></tr></table>

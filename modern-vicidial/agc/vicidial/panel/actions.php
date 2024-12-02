@@ -408,7 +408,7 @@ if ($agent_display_dialable_leads > 0)
 				<br />
 				<br />
 				&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-				<img src="./images/<?php echo _QXZ("agent_loading_animation.gif"); ?>" height="206px" width="206px" alt="<?php echo _QXZ("LOGOUT PROCESSING..."); ?>" />
+				<img src="./images/<?php echo _QXZ("agent_loading_animation.gif"); ?>" height="100px" width="100px" alt="<?php echo _QXZ("LOGOUT PROCESSING..."); ?>" />
 			</span>
 		</div>
 		<div class="text-center">
