@@ -1,7 +1,7 @@
 
 <span id="debugbottomspan"></span>
 
-<span id="PauseCodeButtons">
+<span style="visibility:hidden;" id="PauseCodeButtons">
 	<font class="body_text">
 		<span id="PauseCodeLinkSpan"></span> <br />
 	</font>
