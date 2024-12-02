@@ -20112,7 +20112,7 @@ function phone_number_format(formatphone) {
 				{hideDiv('ViewCommentsBox');}
 			//view_comments_active = 0;
 			document.getElementById("viewcommentsdisplay").innerHTML = "<input class=\"btn btn-sm\" type=\"button\" id='ViewCommentButton' value='+' onClick=\"ViewComments('ON','','','YES')\">";
-            document.vicidial_form.ViewCommentButton.value = document.vicidial_form.audit_comments_button.value;
+            //document.vicidial_form.ViewCommentButton.value = document.vicidial_form.audit_comments_button.value;
 			if (comments_all_tabs == 'ENABLED')
 				{
 				document.getElementById("otherviewcommentsdisplay").innerHTML = "<input class=\"btn btn-sm\" type=\"button\" id='OtherViewCommentButton' value='+' onClick=\"ViewComments('ON','','','YES')\">";
