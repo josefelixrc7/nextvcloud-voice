@@ -58,7 +58,7 @@
                 {
                     echo "
                         <div class=\"col-12 col-md-3\">
-                            <div><h2>$label_phone_number</h2></div>
+                            <div><b>$label_phone_number</b></div>
                     ";
 
                     if ( (preg_match('/Y/',$disable_alter_custphone)) or (preg_match('/HIDE/',$disable_alter_custphone)) )
