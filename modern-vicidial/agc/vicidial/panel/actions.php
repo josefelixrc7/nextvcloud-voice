@@ -854,7 +854,7 @@ if ($agent_display_dialable_leads > 0)
 
 		</div>
 	</div>
-</span>-->
+</span>
 
 
 <!--<span style="position:absolute;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="NeWManuaLDiaLBox">
