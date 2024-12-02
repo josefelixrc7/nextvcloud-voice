@@ -63,7 +63,7 @@
 
                     if ( (preg_match('/Y/',$disable_alter_custphone)) or (preg_match('/HIDE/',$disable_alter_custphone)) )
                     {
-                        echo "<div><font class=\"body_text\"><span id=\"phone_numberDISP\"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></font>";
+                        echo "<div><h3><span id=\"phone_numberDISP\"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></h3>";
                         echo "<input type=\"hidden\" name=\"phone_number\" id=\"phone_number\" value=\"\" /></div>";
                     }
                     else
