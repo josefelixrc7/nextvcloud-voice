@@ -385,12 +385,19 @@ if ($agent_display_dialable_leads > 0)
     </tr></table>
 </span>
 
-<span style="display:none;position:absolute;left:0px;top:12px;z-index:<?php $zi++; echo $zi ?>;" id="NoneInSessionBox">
-    <table border="0" bgcolor="#CCFFFF" width="<?php echo $CAwidth ?>px" height="<?php echo $WRheight ?>px"><tr><td align="center"> <font class="sd_text"><?php echo _QXZ("No one is in your session:"); ?> <span id="NoneInSessionID"></span><br />
-	<a href="#" onclick="NoneInSessionOK();return false;"><?php echo _QXZ("Go Back"); ?></a>
-    <br /><br />
-	<span id="NoneInSessionLink"><a href="#" onclick="NoneInSessionCalL();return false;"><?php echo _QXZ("Call Agent Again"); ?></a></font></span>
-    </td></tr></table>
+<span class="w-100 h-100 bg-white" style="position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="NoneInSessionBox">
+    <div class="w-50 mx-auto mt-5">
+
+		<div class="text-center">
+			<?php echo _QXZ("No one is in your session:"); ?>
+			<span id="NoneInSessionID"></span><br />
+			<a class="btn btn-secondary" href="#" onclick="NoneInSessionOK();return false;"><?php echo _QXZ("Go Back"); ?></a>
+			<span id="NoneInSessionLink">
+				<a class="btn btn-primary" href="#" onclick="NoneInSessionCalL();return false;"><?php echo _QXZ("Call Agent Again"); ?></a>
+			</span>
+		</div>
+
+	</div>
 </span>
 
 <span style="position:absolute;left:0px;top:30px;z-index:<?php $zi++; echo $zi ?>;" id="CustomerGoneBox">
