@@ -391,10 +391,12 @@ if ($agent_display_dialable_leads > 0)
 		<div class="text-center">
 			<?php echo _QXZ("No one is in your session:"); ?>
 			<span id="NoneInSessionID"></span><br />
-			<a class="btn btn-secondary" href="#" onclick="NoneInSessionOK();return false;"><?php echo _QXZ("Go Back"); ?></a>
-			<span id="NoneInSessionLink">
-				<a class="btn btn-primary" href="#" onclick="NoneInSessionCalL();return false;"><?php echo _QXZ("Call Agent Again"); ?></a>
-			</span>
+			<div class="mt-3">
+				<a class="btn btn-secondary" href="#" onclick="NoneInSessionOK();return false;"><?php echo _QXZ("Go Back"); ?></a>
+				<span id="NoneInSessionLink">
+					<a class="btn btn-primary" href="#" onclick="NoneInSessionCalL();return false;"><?php echo _QXZ("Call Agent Again"); ?></a>
+				</span>
+			</div>
 		</div>
 
 	</div>
