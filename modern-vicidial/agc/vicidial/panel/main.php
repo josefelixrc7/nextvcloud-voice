@@ -261,6 +261,11 @@
                     <span id="MainCommit">
                         <a class="btn btn-sm btn-outline-secondary me-2" href="#" onclick="CustomerData_update('YES')"><?=_QXZ("commit");?></a>
                     </span>
+                    
+                    <!--AgentTimeSpan-->
+                    <span id="AgentTimeSpan">
+                        <a class="btn btn-sm btn-outline-secondary me-2" href="#" onclick="AgentTimeReport('open');return false;"><?php echo _QXZ("AGENT TIME"); ?></a>
+                    </span>
                 </div>
             </div>
             <!-- Barra de botones -->

@@ -1,22 +1,25 @@
 
-<span style="position:absolute;left:0px;top:<?php echo $DBheight ?>px;z-index:<?php $zi++; echo $zi ?>;" id="debugbottomspan"></span>
+<span id="debugbottomspan"></span>
 
-<span style="position:absolute;left:165px;top:<?php echo $CBheight ?>px;z-index:<?php $zi++; echo $zi ?>;" id="AgentTimeSpan">
-<font class="body_text"><a href="#" onclick="AgentTimeReport('open');return false;"><?php echo _QXZ("AGENT TIME"); ?></a></font>
+<span id="PauseCodeButtons">
+	<font class="body_text">
+		<span id="PauseCodeLinkSpan"></span> <br />
+	</font>
 </span>
 
-<span style="position:absolute;left:550px;top:<?php echo $CBheight ?>px;z-index:<?php $zi++; echo $zi ?>;" id="PauseCodeButtons"><font class="body_text">
-<span id="PauseCodeLinkSpan"></span> <br />
-</font></span>
+<span id="VolumeControlSpan">
+	<span id="VolumeUpSpan"><img src="./images/<?php echo _QXZ("vdc_volume_up_off.gif"); ?>" border="0" /></span><br />
+	<span id="VolumeDownSpan"><img src="./images/<?php echo _QXZ("vdc_volume_down_off.gif"); ?>" border="0" /></span>
+</span>
+<br>
+<span id="AgentStatusSpan">
+	<font class="body_text">
+		<?php echo _QXZ("Your Status:"); ?> <span id="AgentStatusStatus"></span> <br />
+		<?php echo _QXZ("Calls Dialing:"); ?> <span id="AgentStatusDiaLs"></span>
+	</font>
+</span>
 
-<span style="position:absolute;left:5px;top:<?php echo $CBheight ?>px;z-index:<?php $zi++; echo $zi ?>;" id="VolumeControlSpan"><span id="VolumeUpSpan"><img src="./images/<?php echo _QXZ("vdc_volume_up_off.gif"); ?>" border="0" /></span><br /><span id="VolumeDownSpan"><img src="./images/<?php echo _QXZ("vdc_volume_down_off.gif"); ?>" border="0" /></span>
-</font></span>
-
-<span style="position:absolute;left:35px;top:<?php echo $CBheight ?>px;z-index:<?php $zi++; echo $zi ?>;" id="AgentStatusSpan"><font class="body_text">
-<?php echo _QXZ("Your Status:"); ?> <span id="AgentStatusStatus"></span> <br /><?php echo _QXZ("Calls Dialing:"); ?> <span id="AgentStatusDiaLs"></span>
-</font></span>
-
-<span style="position:absolute;left:<?php echo $PDwidth ?>px;top:<?php echo $AMheight ?>px;z-index:<?php $zi++; echo $zi ?>;" id="AgentMuteANDPreseTDiaL"><font class="body_text">
+<span id="AgentMuteANDPreseTDiaL"><font class="body_text">
 	<?php
 	if ($PreseT_DiaL_LinKs)
 		{
@@ -29,9 +32,23 @@
     <br /><br /> &nbsp; <br />
 </font></span>
 
-<span style="position:absolute;left:0px;top:<?php echo $CQheight ?>px;width:<?php echo $MNwidth ?>px;overflow:scroll;z-index:<?php $zi++; echo $zi ?>;background-color:<?php echo $SIDEBAR_COLOR ?>;" id="callsinqueuedisplay"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="5px" rowspan="2">&nbsp;</td><td align="center"><font class="body_text"><?php echo _QXZ("Calls In Queue:"); ?> &nbsp; </font></td></tr><tr><td align="center"><span id="callsinqueuelist">&nbsp;</span></td></tr></table></span>
+<span id="callsinqueuedisplay">
+	<table cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<td width="5px" rowspan="2">&nbsp;</td>
+			<td align="center">
+				<font class="body_text"><?php echo _QXZ("Calls In Queue:"); ?> &nbsp;</font>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+				<span id="callsinqueuelist">&nbsp;</span>
+			</td>
+		</tr>
+	</table>
+</span>
 
-<font class="body_small"><span style="position:absolute;left:<?php echo $CLwidth ?>px;top:<?php echo $QLheight ?>px;z-index:<?php $zi++; echo $zi ?>;" id="callsinqueuelink">
+<font id="callsinqueuelink">
 <?php 
 if ($view_calls_in_queue > 0)
 	{ 
@@ -43,11 +60,13 @@ if ($view_calls_in_queue > 0)
 ?>
 </span></font>
 
-<span style="position:absolute;left:300px;top:<?php echo $CBheight ?>px;z-index:<?php $zi++; echo $zi ?>;" id="CallbacksButtons"><font class="body_text">
-<span id="CBstatusSpan"><?php echo _QXZ("X ACTIVE CALLBACKS"); ?></span> <br />
-</font></span>
+<span id="CallbacksButtons">
+	<font class="body_text">
+		<span id="CBstatusSpan"><?php echo _QXZ("X ACTIVE CALLBACKS"); ?></span> <br />
+	</font>
+</span>
 
-<span style="position:absolute;left:500px;top:<?php echo $AMheight ?>px;z-index:<?php $zi++; echo $zi ?>;" id="OtherTabCommentsSpan">
+<span id="OtherTabCommentsSpan">
 <?php 
 	if ( ($comments_all_tabs == 'ENABLED') and ($label_comments != '---HIDE---') )
 		{
@@ -68,18 +87,29 @@ if ($view_calls_in_queue > 0)
 ?>
 </span>
 
-<span id="AgentViewSpan"><table cellpadding="0" cellspacing="0" border="0"><tr><td width="5px" rowspan="2">&nbsp;</td><td align="center"><font class="body_text">
-<?php echo _QXZ("Other Agents Status:"); ?> &nbsp; </font></td></tr><tr><td align="center"><span id="AgentViewStatus">&nbsp;</span></td></tr></table></span>
+<span id="AgentViewSpan">
+	<table cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<td width="5px" rowspan="2">&nbsp;</td>
+			<td align="center">
+				<font class="body_text"><?php echo _QXZ("Other Agents Status:"); ?> &nbsp; </font>
+			</td>
+		</tr>
+		<tr>
+			<td align="center"><span id="AgentViewStatus">&nbsp;</span></td>
+		</tr>
+	</table>
+</span>
 
 <?php
 $zi++;
 if ($webphone_location == 'bar')
 	{
-	echo "<span style=\"position:absolute;left:0px;top:46px;height:".$webphone_height."px;width=".$webphone_width."px;overflow:hidden;z-index:$zi;background-color:$SIDEBAR_COLOR;\" id=\"webphoneSpan\"><span id=\"webphonecontent\" style=\"overflow:hidden;\">$webphone_content</span></span>\n";
+	echo "<span id=\"webphoneSpan\"><span id=\"webphonecontent\" style=\"overflow:hidden;\">$webphone_content</span></span>\n";
 	}
 else
 	{
-    echo "<span style=\"position:absolute;left:" . $SBwidth . "px;top:15px;height:500px;overflow:scroll;z-index:$zi;background-color:$SIDEBAR_COLOR;\" id=\"webphoneSpan\"><table cellpadding=\"$webphone_pad\" cellspacing=\"0\" border=\"0\"><tr><td width=\"5px\" rowspan=\"2\">&nbsp;</td><td align=\"center\"><font class=\"body_text\">
+    echo "<span id=\"webphoneSpan\"><table cellpadding=\"$webphone_pad\" cellspacing=\"0\" border=\"0\"><tr><td width=\"5px\" rowspan=\"2\">&nbsp;</td><td align=\"center\"><font class=\"body_text\">
     "._QXZ("Web Phone").": &nbsp; </font></td></tr><tr><td align=\"center\"><span id=\"webphonecontent\">$webphone_content</span></td></tr></table></span>\n";
 	}
 ?>
@@ -90,13 +120,13 @@ if ($is_webphone=='Y')
 	{ 
 	?>
 
-    <span style="position:absolute;left:<?php echo $SBwidth ?>px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="webphoneLinkSpan"><table cellpadding="0" cellspacing="0" border="0" width="120px"><tr><td align="right"><font class="body_small"><span id="webphoneLink"> &nbsp; <a href="#" onclick="webphoneOpen('webphoneSpan','close');return false;"><?php echo _QXZ("WebPhone View -"); ?></a></span></font></td></tr></table></span>
+    <span id="webphoneLinkSpan"><table cellpadding="0" cellspacing="0" border="0" width="120px"><tr><td align="right"><font class="body_small"><span id="webphoneLink"> &nbsp; <a href="#" onclick="webphoneOpen('webphoneSpan','close');return false;"><?php echo _QXZ("WebPhone View -"); ?></a></span></font></td></tr></table></span>
 
 	<?php 
 	}
 ?>
 
-<font class="body_small"><span style="position:absolute;left:165px;top:<?php echo $SDLheight ?>px;z-index:<?php $zi++; echo $zi ?>;" id="dialableleadsspan">
+<font class="body_small"><span id="dialableleadsspan">
 <?php 
 if ($agent_display_dialable_leads > 0)
 	{ 
@@ -105,7 +135,7 @@ if ($agent_display_dialable_leads > 0)
 ?>
 </span></font>
 
-<span style="position:absolute;left:<?php echo $MUwidth ?>px;top:<?php echo $SLheight ?>px;z-index:<?php $zi++; echo $zi ?>;" id="AgentMuteSpan"></span>
+<span id="AgentMuteSpan"></span>
 
 
 <!-- Panels tabs -->

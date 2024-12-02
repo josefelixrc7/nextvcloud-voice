@@ -19979,6 +19979,7 @@ function phone_number_format(formatphone) {
 			{
 			divref = document.getElementById(divvar).style;
 			divref.visibility = 'visible';
+			divref.display = 'block';
 			}
 		}
 	function hideDiv(divvar)
@@ -19987,6 +19988,7 @@ function phone_number_format(formatphone) {
 			{
 			divref = document.getElementById(divvar).style;
 			divref.visibility = 'hidden';
+			divref.display = 'none';
 			if (divvar == 'InternalChatPanel') // Clear the manager chat panel to prevent incoming messages from immediately being marked as read
 				{
 				document.getElementById('InternalChatIFrame').src='./agc_agent_manager_chat_interface.php?user='+user+'&pass='+orig_pass;
