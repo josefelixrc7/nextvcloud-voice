@@ -1355,9 +1355,9 @@ if ($user_login_first == 1)
 	if ( (strlen($VD_login)<1) or (strlen($VD_pass)<1) or (strlen($VD_campaign)<1) )
 	{
 
-		#include '../modern-vicidial/agc/vicidial/agentes_login_campana.php';
+		include '../modern-vicidial/agc/vicidial/login_campana.php';
 		
-		echo "<title>"._QXZ("Agent web client: Campaign Login")."</title>\n";
+		/*echo "<title>"._QXZ("Agent web client: Campaign Login")."</title>\n";
 		echo "</head>\n";
         echo "<body onresize=\"browser_dimensions();\" onload=\"browser_dimensions();\">\n";
 		if ($hide_timeclock_link < 1)
@@ -1395,7 +1395,7 @@ if ($user_login_first == 1)
         echo "</table>\n";
         echo "</form>\n\n";
 		echo "</body>\n\n";
-		echo "</html>\n\n";
+		echo "</html>\n\n";*/
 		exit;
 	}
 	else
@@ -1412,7 +1412,9 @@ if ($user_login_first == 1)
 
 			if ( (strlen($phone_login) < 1) or (strlen($phone_pass) < 1) )
 				{
-				echo "<title>"._QXZ("Agent web client:  Login")."</title>\n";
+				include '../modern-vicidial/agc/vicidial/login_telefono.php';
+
+				/*echo "<title>"._QXZ("Agent web client:  Login")."</title>\n";
 				echo "</head>\n";
                 echo "<body onresize=\"browser_dimensions();\"  onLoad=\"browser_dimensions();\">\n";
 				if ($hide_timeclock_link < 1)
@@ -1451,7 +1453,7 @@ if ($user_login_first == 1)
                 echo "</table></center>\n";
                 echo "</form>\n\n";
 				echo "</body>\n\n";
-				echo "</html>\n\n";
+				echo "</html>\n\n";*/
 				exit;
 				}
 			}
@@ -1997,9 +1999,9 @@ else
 
 			if ( (!preg_match("/\s$VD_campaign\s/i",$LOGallowed_campaigns)) and (!preg_match("/ALL-CAMPAIGNS/i",$LOGallowed_campaigns)) )
 			{
-				#include '../modern-vicidial/agc/vicidial/agentes_login_campana.php';
+				include '../modern-vicidial/agc/vicidial/login_campana.php';
 				
-				echo "<title>"._QXZ("Agent web client: Campaign Login")."</title>\n";
+				/*echo "<title>"._QXZ("Agent web client: Campaign Login")."</title>\n";
 				echo "</head>\n";
                 echo "<body onresize=\"browser_dimensions();\" onload=\"browser_dimensions();\">\n";
 				if ($hide_timeclock_link < 1)
@@ -2027,7 +2029,7 @@ else
 				echo "<span id=\"LogiNReseT\"></span>\n";
                 echo "</form>\n\n";
 				echo "</body>\n\n";
-				echo "</html>\n\n";
+				echo "</html>\n\n";*/
 				exit;
 			}
 
@@ -3164,7 +3166,7 @@ else
 		
 ?>
 		<script>
-			mensaje('Tu tel&eacute;fono y contrase&ntilde;a no est&aacute;n activos en el sistema, intenta de nuevo.');
+			mensaje('<?=_QXZ("Sorry, your phone login and password are not active in this system, please try again:")?>');
 		</script>
 <?php
 
@@ -3353,7 +3355,7 @@ else
 			}
 		##### END phone login load balancing functions #####
 
-		echo "<title>Agent web client</title>\n";
+		//echo "<title>Agent web client</title>\n";
 		$stmt="SELECT extension,dialplan_number,voicemail_id,phone_ip,computer_ip,server_ip,login,pass,status,active,phone_type,fullname,company,picture,messages,old_messages,protocol,local_gmt,ASTmgrUSERNAME,ASTmgrSECRET,login_user,login_pass,login_campaign,park_on_extension,conf_on_extension,VICIDIAL_park_on_extension,VICIDIAL_park_on_filename,monitor_prefix,recording_exten,voicemail_exten,voicemail_dump_exten,ext_context,dtmf_send_extension,call_out_number_group,client_browser,install_directory,local_web_callerID_URL,VICIDIAL_web_URL,AGI_call_logging_enabled,user_switching_enabled,conferencing_enabled,admin_hangup_enabled,admin_hijack_enabled,admin_monitor_enabled,call_parking_enabled,updater_check_enabled,AFLogging_enabled,QUEUE_ACTION_enabled,CallerID_popup_enabled,voicemail_button_enabled,enable_fast_refresh,fast_refresh_rate,enable_persistant_mysql,auto_dial_next_number,VDstop_rec_after_each_call,DBX_server,DBX_database,DBX_user,DBX_pass,DBX_port,DBY_server,DBY_database,DBY_user,DBY_pass,DBY_port,outbound_cid,enable_sipsak_messages,email,template_id,conf_override,phone_context,phone_ring_timeout,conf_secret,is_webphone,use_external_server_ip,codecs_list,webphone_dialpad,phone_ring_timeout,on_hook_agent,webphone_auto_answer,webphone_dialbox,webphone_mute,webphone_volume,webphone_debug,webphone_layout from phones where login='$phone_login' and pass='$phone_pass' and active = 'Y';";
 		if ($DB) {echo "|$stmt|\n";}
 		$rslt=mysql_to_mysqli($stmt, $link);
@@ -4059,8 +4061,17 @@ else
 				}
 			}
 		else
-			{
-			echo "<title>"._QXZ("Agent web client: Campaign Login")."</title>\n";
+		{
+
+			include '../modern-vicidial/agc/vicidial/login_campana.php';
+		
+			?>
+					<script>
+						mensaje('<?=_QXZ("Sorry, there are no leads in the hopper for this campaign")?>');
+					</script>
+			<?php
+			
+			/*echo "<title>"._QXZ("Agent web client: Campaign Login")."</title>\n";
 			echo "</head>\n";
             echo "<body onresize=\"browser_dimensions();\" onload=\"browser_dimensions();\">\n";
 			if ($hide_timeclock_link < 1)
@@ -4088,12 +4099,20 @@ else
 			echo "<span id=\"LogiNReseT\"></span>\n";
             echo "</form>\n\n";
 			echo "</body>\n\n";
-			echo "</html>\n\n";
+			echo "</html>\n\n";*/
 			exit;
-			}
+		}
 		if (strlen($session_id) < 1)
-			{
-			echo "<title>"._QXZ("Agent web client: Campaign Login")."</title>\n";
+		{
+			include '../modern-vicidial/agc/vicidial/login_campana.php';
+		
+			?>
+					<script>
+						mensaje('<?=_QXZ("Sorry, there are no available sessions")?>');
+					</script>
+			<?php
+			
+			/*echo "<title>"._QXZ("Agent web client: Campaign Login")."</title>\n";
 			echo "</head>\n";
             echo "<body onresize=\"browser_dimensions();\" onload=\"browser_dimensions();\">\n";
 			if ($hide_timeclock_link < 1)
@@ -4121,9 +4140,9 @@ else
 			echo "<span id=\"LogiNReseT\"></span>\n";
 			echo "</FORM>\n\n";
 			echo "</body>\n\n";
-			echo "</html>\n\n";
+			echo "</html>\n\n";*/
 			exit;
-			}
+		}
 
 		if (preg_match('/MSIE/',$browser)) 
 			{
