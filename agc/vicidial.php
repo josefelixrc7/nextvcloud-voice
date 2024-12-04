@@ -14321,6 +14321,7 @@ function set_length(SLnumber,SLlength_goal,SLdirection)
 					{
 						PauseCode_HTML = PauseCode_HTML + "<tr><td><a class=\"btn btn-outlined-secondary\" href=\"#\" onclick=\"PauseCodeSelect_submit('" + VARpause_codes[loop_ct] + "','YES');return false;\">" + VARpause_codes[loop_ct] + " - " + VARpause_code_names[loop_ct] + "</a></td></tr>";
 					}
+					loop_ct++;
 				}
 				PauseCode_HTML = PauseCode_HTML + '</tbody></table>'
 
