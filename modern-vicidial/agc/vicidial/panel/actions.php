@@ -472,22 +472,24 @@ if ($agent_display_dialable_leads > 0)
     <table border="0" bgcolor="#CCFFCC" width="<?php echo $CAwidth ?>px" height="47px"><tr><td align="center" valign="top"><font class="sh_text"><?php echo _QXZ("Any changes made to the customer information below at this time will not be comitted, You must change customer information before you Hangup the call."); ?></font> </td></tr></table>
 </span>
 
-<span class="w-100 h-100" style="background:#eee;position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="DispoSelectBox">
+<span class="w-100 h-100" style="background:rgba(0, 0, 0, 0.5);position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="DispoSelectBox">
     <div class="w-50 mx-auto mt-2">
 
 		<div class="card">
-			<h5 class="card-header">
-				<span><?php echo _QXZ("DISPOSITION CALL :"); ?></span>
-				<span>
-					<span id="DispoSelectPhonE"></span> &nbsp; &nbsp; &nbsp;
-					<span id="DispoSelectHAspan">
-						<a class="btn btn-danger" href="#" onclick="DispoHanguPAgaiN()"><?php echo _QXZ("Hangup Again"); ?></a>
-					</span> &nbsp; &nbsp; &nbsp;
-					<span id="DispoSelectMaxMin">
-						<a href="#" onclick="DispoMinimize()"> <?php echo _QXZ("minimize"); ?> </a>
+			<div class="card-header">
+				<h5>
+					<span><?php echo _QXZ("DISPOSITION CALL :"); ?></span>
+					<span>
+						<span id="DispoSelectPhonE"></span> &nbsp; &nbsp; &nbsp;
+						<span id="DispoSelectHAspan">
+							<a class="btn btn-danger" href="#" onclick="DispoHanguPAgaiN()"><?php echo _QXZ("Hangup Again"); ?></a>
+						</span> &nbsp; &nbsp; &nbsp;
+						<span id="DispoSelectMaxMin">
+							<a href="#" onclick="DispoMinimize()"> <?php echo _QXZ("minimize"); ?> </a>
+						</span>
 					</span>
-				</span>
-			</h5>
+				</h5>
+			</div>
 			<div class="card-body">
 			
 				<font class="sh_text">
@@ -501,14 +503,15 @@ if ($agent_display_dialable_leads > 0)
 						<div class="mb-2">
 							<input class="form-check-input" type="checkbox" name="DispoSelectStop" id="DispoSelectStop" size="1" value="0" /> <?php echo _QXZ("PAUSE AGENT DIALING"); ?>
 						</div>
-						<div class="btn-group" role="group" aria-label="Basic example">
-							<a class="btn btn-secondary" href="#" onclick="WeBForMDispoSelect_submit();return false;"><?php echo _QXZ("WEB FORM SUBMIT"); ?></a>
-							<a class="btn btn-secondary" href="#" onclick="DispoSelectContent_create('','ReSET','YES');return false;"><?php echo _QXZ("CLEAR FORM"); ?></a>
-							<a class="btn btn-primary" href="#" onclick="DispoSelect_submit('','','YES');return false;"><?php echo _QXZ("SUBMIT"); ?></a>
-						</div>
 					</div>
 				</font>
 
+			</div>
+
+			<div class="card-footer">
+				<a class="btn btn-secondary" href="#" onclick="WeBForMDispoSelect_submit();return false;"><?php echo _QXZ("WEB FORM SUBMIT"); ?></a>
+				<a class="btn btn-secondary" href="#" onclick="DispoSelectContent_create('','ReSET','YES');return false;"><?php echo _QXZ("CLEAR FORM"); ?></a>
+				<a class="btn btn-primary" href="#" onclick="DispoSelect_submit('','','YES');return false;"><?php echo _QXZ("SUBMIT"); ?></a>
 			</div>
 		</div>
 
@@ -712,7 +715,7 @@ if ($agent_display_dialable_leads > 0)
     </td></tr></table>
 </span>
 
-<span class="w-100 h-100 overflow-scroll" style="background:#eee;position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="NeWManuaLDiaLBox">
+<span class="w-100 h-100 overflow-scroll" style="background:rbga(0, 0, 0, 0.5);position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="NeWManuaLDiaLBox">
     <div class="w-50 mx-auto mt-5">
 
 		<div class="card">
@@ -840,18 +843,17 @@ if ($agent_display_dialable_leads > 0)
 					}
 				?>
 
-				<div class="btn-group d-block mt-2" role="group" aria-label="Basic example">
-					<a class="btn btn-primary" href="#" onclick="NeWManuaLDiaLCalLSubmiT('NOW','YES');return false;"><?php echo _QXZ("Dial Now"); ?></a>
-					<?php if ($manual_dial_preview > 0)
-						{
-							echo "<a class=\"btn btn-primary\" href=\"#\" onclick=\"NeWManuaLDiaLCalLSubmiT('PREVIEW','YES');return false;\">"._QXZ("Preview Call")."</a>";
-						}
-					?>
-					<a class="btn btn-primary" href="#" onclick="ManualDialHide();return false;"><?php echo _QXZ("Go Back"); ?></a>
-				</div>
-				
 			</div>
 
+			<div class="card-footer">
+				<a class="btn btn-secondary" href="#" onclick="ManualDialHide();return false;"><?php echo _QXZ("Go Back"); ?></a>
+				<a class="btn btn-primary" href="#" onclick="NeWManuaLDiaLCalLSubmiT('NOW','YES');return false;"><?php echo _QXZ("Dial Now"); ?></a>
+				<?php if ($manual_dial_preview > 0)
+					{
+						echo "<a class=\"btn btn-primary\" href=\"#\" onclick=\"NeWManuaLDiaLCalLSubmiT('PREVIEW','YES');return false;\">"._QXZ("Preview Call")."</a>";
+					}
+				?>
+			</div>
 		</div>
 	</div>
 </span>
