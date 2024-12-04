@@ -14,22 +14,21 @@
                 <div class="row">
                     <section class="col-12 col-sm-6">
                         <div class="mb-3">
-                            <span class="text-muted"><?php echo _QXZ("Dial Code:"); ?></span>
+                            <span><?php echo _QXZ("Dial Code:"); ?></span>
                         </div>
                         <div class="mb-3">
-                            <input class="form-control" type="text" size="7" maxlength="10" name="MDDiaLCodE" id="MDDiaLCodE" class="cust_form" value="<?php echo $default_phone_code ?>" />
-                            <?php echo _QXZ("(This is usually a 1 in the USA-Canada)"); ?>
+                            <input class="form-control" type="text" size="7" maxlength="10" name="MDDiaLCodE" id="MDDiaLCodE" value="<?php echo $default_phone_code ?>" />
+                            <span class="text-muted"><?php echo _QXZ("(This is usually a 1 in the USA-Canada)"); ?></span>
                         </div>
                     </section>
 
                     <section class="col-12 col-sm-6">
                         <div class="mb-3">
-                            <span class="text-muted"><?php echo _QXZ("Phone Number:"); ?></span>
+                            <span><?php echo _QXZ("Phone Number:"); ?></span>
                         </div>
                         <div class="mb-3">
-                            
-                            <input class="form-control" type="text" size="14" maxlength="18" name="MDPhonENumbeR" id="MDPhonENumbeR" class="cust_form" value="" />
-                            &nbsp; <?php echo _QXZ("(digits only)"); ?>
+                            <input class="form-control" type="text" size="14" maxlength="18" name="MDPhonENumbeR" id="MDPhonENumbeR" value="" />
+                            <span class="text-muted"><?php echo _QXZ("(digits only)"); ?></span>
 
                             <input type="hidden" name="MDPhonENumbeRHiddeN" id="MDPhonENumbeRHiddeN" value="" />
                             <input type="hidden" name="MDLeadID" id="MDLeadID" value="" />
@@ -65,8 +64,8 @@
                                 <span class="text-muted"><?=_QXZ("Dial Lead ID:")?></span>
                             </div>
                             <div class="mb-3">
-                                <input class="form-control" type="text" size="10" maxlength="10" name="MDLeadIDEntry" id="MDLeadIDEntry" class="cust_form" value="\"/>
-                                <?=_QXZ("(digits only)")?>
+                                <input class="form-control" type="text" size="10" maxlength="10" name="MDLeadIDEntry" id="MDLeadIDEntry" value="\"/>
+                                <span class="text-muted"><?=_QXZ("(digits only)")?></span>
                             </div>
                         </section>
                 <?php
@@ -83,43 +82,44 @@
                         {$LeadLookuPXtra = 'DISABLED ';}
                 ?>
 
-                <section class="mt-2">
-                    <div class="mb-3">
-                        <span class="text-muted">
-                            <?php echo _QXZ("Search Existing Leads:"); ?>
-                        </span>
-                    </div>
-                    <div class="mb-2">
-                        <input class="form-check-input" type="checkbox" name="LeadLookuP" id="LeadLookuP" size="1" value="0" <?php echo $LeadLookuPXtra ?>/>
-                        <!--<?php echo _QXZ("(This option if checked will attempt to find the phone number in the system before inserting it as a new lead)"); ?>-->
-                    </div>
-                </section>
+                <div class="row">
+                    <section class="col-12 col-sm-6">
+                        <div class="mb-3">
+                            <span><?php echo _QXZ("Search Existing Leads:"); ?></span>
+                            <input class="form-check-input" type="checkbox" name="LeadLookuP" id="LeadLookuP" size="1" value="0" <?php echo $LeadLookuPXtra ?>/>
+                        </div>
+                        <div class="">
+                            
+                            <!--<?php echo _QXZ("(This option if checked will attempt to find the phone number in the system before inserting it as a new lead)"); ?>-->
+                        </div>
+                    </section>
 
-                <section class="mt-2">
-                    <div class="mb-3">
-                        <span class="text-muted">
-                            <CENTER>
-                                <span id="ManuaLDiaLGrouPSelecteD"></span> &nbsp; &nbsp; <span id="ManuaLDiaLGrouP"></span>
-                                <span id="ManuaLDiaLInGrouPSelecteD"></span> &nbsp; &nbsp; <span id="ManuaLDiaLInGrouP"></span>
-                                <span id="NoDiaLSelecteD"></span>
-                            </CENTER>
-                            <!--<?php echo _QXZ("If you want to dial a number and have it NOT be added as a new lead, enter in the exact dialstring that you want to call in the Dial Override field below. To hangup this call you will have to open the CALLS IN THIS SESSION link at the bottom of the screen and hang it up by clicking on its channel link there."); ?>-->
-                        </span>
-                    </div>
-                </section>
+                    <section class="col-12 col-sm-6">
+                        <div class="mb-3">
+                            <span class="text-muted">
+                                <CENTER>
+                                    <span id="ManuaLDiaLGrouPSelecteD"></span> &nbsp; &nbsp; <span id="ManuaLDiaLGrouP"></span>
+                                    <span id="ManuaLDiaLInGrouPSelecteD"></span> &nbsp; &nbsp; <span id="ManuaLDiaLInGrouP"></span>
+                                    <span id="NoDiaLSelecteD"></span>
+                                </CENTER>
+                                <!--<?php echo _QXZ("If you want to dial a number and have it NOT be added as a new lead, enter in the exact dialstring that you want to call in the Dial Override field below. To hangup this call you will have to open the CALLS IN THIS SESSION link at the bottom of the screen and hang it up by clicking on its channel link there."); ?>-->
+                            </span>
+                        </div>
+                    </section>
+                </div>
 
                 <?php
                     if ($manual_dial_override_field == 'ENABLED')
                     {
                 ?>
-                    <section class="mt-2">
-                        <div class="mb-3">
-                            <span class="text-muted"><?php echo _QXZ("Dial Override:"); ?></span>
-                        </div>
-                        <div class="mb-3">
-                            <input class="form-control" type="text" size="24" maxlength="20" name="MDDiaLOverridE" id="MDDiaLOverridE" class="cust_form" value="" />
-                        </div>
-                    </section>
+                        <section class="mt-2">
+                            <div class="mb-3">
+                                <span class=""><?php echo _QXZ("Dial Override:"); ?></span>
+                            </div>
+                            <div class="mb-3">
+                                <input class="form-control" type="text" size="24" maxlength="20" name="MDDiaLOverridE" id="MDDiaLOverridE" class="cust_form" value="" />
+                            </div>
+                        </section>
                 <?php
                         echo '<span class="text-muted">'._QXZ("(digits only please)").'</span>';
                     }
@@ -136,7 +136,8 @@
 
             <div class="card-footer">
                 <a class="btn btn-secondary me-auto" href="#" onclick="ManualDialHide();return false;"><?php echo _QXZ("Go Back"); ?></a>
-                <?php if ($manual_dial_preview > 0)
+                <?php
+                    if ($manual_dial_preview > 0)
                     {
                         echo "<a class=\"btn btn-primary\" href=\"#\" onclick=\"NeWManuaLDiaLCalLSubmiT('PREVIEW','YES');return false;\">"._QXZ("Preview Call")."</a>";
                     }
