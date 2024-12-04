@@ -90,7 +90,7 @@
                         </div>
                         <div class="">
                             
-                            <?php echo _QXZ("(This option if checked will attempt to find the phone number in the system before inserting it as a new lead)"); ?>
+                            <span class="text-muted"><?php echo _QXZ("(This option if checked will attempt to find the phone number in the system before inserting it as a new lead)"); ?></span>
                         </div>
                     </section>
 
