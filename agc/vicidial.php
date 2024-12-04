@@ -14225,9 +14225,11 @@ function set_length(SLnumber,SLlength_goal,SLdirection)
 							{
 								dispo_HTML += `
 									<div class="col-12 col-sm-4 text-center">
-										<a class="btn btn-outline-secondary w-100" href="#" onclick="DispoSelect_submit('','','YES');return false;">
-											${VARstatuses[loop_ct]} - ${VARstatusnames[loop_ct]} ${CBflag}
-										</a>
+										<div class="p-2">
+											<a class="btn btn-outline-secondary w-100" href="#" onclick="DispoSelect_submit('','','YES');return false;">
+												${VARstatuses[loop_ct]} - ${VARstatusnames[loop_ct]} ${CBflag}
+											</a>
+										</div>
 									</div>
 								`;
 							}
@@ -14235,9 +14237,11 @@ function set_length(SLnumber,SLlength_goal,SLdirection)
 							{
 								dispo_HTML += `
 									<div class="col-12 col-sm-4 text-center">
-										<a class="btn btn-outline-secondary w-100" href="#" onclick="DispoSelectContent_create('${VARstatuses[loop_ct]}','ADD','YES');return false;">
-											${VARstatuses[loop_ct]} - ${VARstatusnames[loop_ct]} ${CBflag}
-										</a>
+										<div class="p-2">
+											<a class="btn btn-outline-secondary w-100" href="#" onclick="DispoSelectContent_create('${VARstatuses[loop_ct]}','ADD','YES');return false;">
+												${VARstatuses[loop_ct]} - ${VARstatusnames[loop_ct]} ${CBflag}
+											</a>
+										</div>
 									</div>
 								`;
 							}
