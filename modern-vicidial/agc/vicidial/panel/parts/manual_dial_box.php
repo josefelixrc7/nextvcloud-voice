@@ -86,11 +86,11 @@
                     <section class="col-12 col-sm-6">
                         <div class="mb-3">
                             <span><?php echo _QXZ("Search Existing Leads:"); ?></span>
-                            <input class="form-check-input" type="checkbox" name="LeadLookuP" id="LeadLookuP" size="1" value="0" <?php echo $LeadLookuPXtra ?>/>
+                            <input class="form-check-input ms-2" type="checkbox" name="LeadLookuP" id="LeadLookuP" size="1" value="0" <?php echo $LeadLookuPXtra ?>/>
                         </div>
                         <div class="">
                             
-                            <!--<?php echo _QXZ("(This option if checked will attempt to find the phone number in the system before inserting it as a new lead)"); ?>-->
+                            <?php echo _QXZ("(This option if checked will attempt to find the phone number in the system before inserting it as a new lead)"); ?>
                         </div>
                     </section>
 
