@@ -1,6 +1,6 @@
 
 <span class="w-100 h-100 overflow-scroll" tabindex="-1" style="background:rgba(0, 0, 0, 0.5);position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="PauseCodeSelectBox">
-    <div class="w-50 mx-auto mt-5">
+    <div class="w-sm-50 mx-auto mt-5">
 
         <div class="card">
 
