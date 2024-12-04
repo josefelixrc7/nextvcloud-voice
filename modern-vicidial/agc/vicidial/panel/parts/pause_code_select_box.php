@@ -11,27 +11,18 @@
             </div>
             <div class="card-body">
                 
-                <table>
-                    <tr>
-                        <td align="center" valign="top">
-                            <font class="sh_text">
-                                <?php
-                                    if ($webphone_location == 'bar')
-                                    {echo "<br /><img src=\"./images/"._QXZ("pixel.gif")."\" width=\"1px\" height=\"".$webphone_height."px\" /><br />\n";}
-                                ?>
-                                <span id="PauseCodeSelectContent"> <?php echo _QXZ("Pause Code Selection"); ?> </span>
-                                <input type="hidden" name="PauseCodeSelection" id="PauseCodeSelection" />
-                                <?php
-                                if ($mgrapr_ct > 0)
-                                {
-                                    echo "<br /><br /><b>* "._QXZ("These pause codes require manager approval")."</b>\n";
-                                }
-                                ?>
-                            </font>
-                
-                        </td>
-                    </tr>
-                </table>
+                <?php
+                    if ($webphone_location == 'bar')
+                    {echo "<br /><img src=\"./images/"._QXZ("pixel.gif")."\" width=\"1px\" height=\"".$webphone_height."px\" /><br />\n";}
+                ?>
+                <span id="PauseCodeSelectContent"> <?php echo _QXZ("Pause Code Selection"); ?> </span>
+                <input type="hidden" name="PauseCodeSelection" id="PauseCodeSelection" />
+                <?php
+                    if ($mgrapr_ct > 0)
+                    {
+                        echo "<br /><br /><b>* "._QXZ("These pause codes require manager approval")."</b>\n";
+                    }
+                ?>
 
             </div>
         </div>
