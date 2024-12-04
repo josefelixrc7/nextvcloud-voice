@@ -12,7 +12,7 @@
             <div class="card-body">
                 
                 <div class="row">
-                    <section class="col-12 col-sd-6">
+                    <section class="col-12 col-sm-6">
                         <div class="mb-3">
                             <span class="text-muted"><?php echo _QXZ("Dial Code:"); ?></span>
                         </div>
@@ -22,7 +22,7 @@
                         </div>
                     </section>
 
-                    <section class="col-12 col-sd-6">
+                    <section class="col-12 col-sm-6">
                         <div class="mb-3">
                             <span class="text-muted"><?php echo _QXZ("Phone Number:"); ?></span>
                         </div>
