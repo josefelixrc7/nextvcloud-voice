@@ -1,6 +1,6 @@
 
-<span class="w-100 h-100 overflow-scroll" tabindex="-1" style="background:rbga(0, 0, 0, 0.5);position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="NeWManuaLDiaLBox">
-    <div class="w-50 mx-auto mt-5">
+<span class="w-100 h-100 overflow-scroll" tabindex="-1" style="background:rgba(0, 0, 0, 0.5);position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="NeWManuaLDiaLBox">
+    <div class="w-75 mx-auto mt-5">
 
         <div class="card">
 
@@ -95,9 +95,7 @@
                         <span class="text-muted">
                             <CENTER>
                                 <span id="ManuaLDiaLGrouPSelecteD"></span> &nbsp; &nbsp; <span id="ManuaLDiaLGrouP"></span>
-                                <br><br>
                                 <span id="ManuaLDiaLInGrouPSelecteD"></span> &nbsp; &nbsp; <span id="ManuaLDiaLInGrouP"></span>
-                                <br><br>
                                 <span id="NoDiaLSelecteD"></span>
                             </CENTER>
                             <?php echo _QXZ("If you want to dial a number and have it NOT be added as a new lead, enter in the exact dialstring that you want to call in the Dial Override field below. To hangup this call you will have to open the CALLS IN THIS SESSION link at the bottom of the screen and hang it up by clicking on its channel link there."); ?>
