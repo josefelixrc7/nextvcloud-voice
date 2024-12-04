@@ -37,12 +37,7 @@
                         </div>
                     </section>
                 </div>
-                <p>
-                    <button class="btn btn-outlined-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                        ?
-                    </button>
-                </p>
-                <section class="collapse" id="collapseExample">
+                <!--<section>
                     <div class="mb-3">
                         <span class="text-muted"><?php echo _QXZ("NEW MANUAL DIAL LEAD FOR %1s in campaign %2s:",0,'',$VD_login,$VD_campaign); ?></span>
                         <span class="text-muted"><?php echo _QXZ("Enter information below for the new lead you wish to call."); ?></span>
@@ -57,7 +52,7 @@
                         ?>
                         <span class="text-muted"><?php echo _QXZ("Note: all new manual dial leads will go into list %1s",0,'',$manual_dial_list_id); ?></span>
                     </div>
-                </section>
+                </section>-->
 
                 <hr>
 
@@ -92,14 +87,11 @@
                     <div class="mb-3">
                         <span class="text-muted">
                             <?php echo _QXZ("Search Existing Leads:"); ?>
-                            <button class="btn btn-outlined-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
-                                ?
-                            </button>
                         </span>
                     </div>
-                    <div class="collapse mb-2" id="collapseExample2">
+                    <div class="mb-2">
                         <input class="form-check-input" type="checkbox" name="LeadLookuP" id="LeadLookuP" size="1" value="0" <?php echo $LeadLookuPXtra ?>/>
-                        &nbsp; <?php echo _QXZ("(This option if checked will attempt to find the phone number in the system before inserting it as a new lead)"); ?>
+                        <!--<?php echo _QXZ("(This option if checked will attempt to find the phone number in the system before inserting it as a new lead)"); ?>-->
                     </div>
                 </section>
 
@@ -111,7 +103,7 @@
                                 <span id="ManuaLDiaLInGrouPSelecteD"></span> &nbsp; &nbsp; <span id="ManuaLDiaLInGrouP"></span>
                                 <span id="NoDiaLSelecteD"></span>
                             </CENTER>
-                            <?php echo _QXZ("If you want to dial a number and have it NOT be added as a new lead, enter in the exact dialstring that you want to call in the Dial Override field below. To hangup this call you will have to open the CALLS IN THIS SESSION link at the bottom of the screen and hang it up by clicking on its channel link there."); ?>
+                            <!--<?php echo _QXZ("If you want to dial a number and have it NOT be added as a new lead, enter in the exact dialstring that you want to call in the Dial Override field below. To hangup this call you will have to open the CALLS IN THIS SESSION link at the bottom of the screen and hang it up by clicking on its channel link there."); ?>-->
                         </span>
                     </div>
                 </section>
@@ -129,7 +121,7 @@
                         </div>
                     </section>
                 <?php
-                        echo _QXZ("(digits only please)");
+                        echo '<span class="text-muted">'._QXZ("(digits only please)").'</span>';
                     }
                     else
                     {
