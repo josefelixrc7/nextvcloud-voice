@@ -95,6 +95,30 @@
                     </section>
 
                     <section class="col-12 col-sm-6">
+                    <?php
+                        if ($manual_dial_override_field == 'ENABLED')
+                        {
+                    ?>
+                            <div class="mb-3">
+                                <span class=""><?php echo _QXZ("Dial Override:"); ?></span>
+                            </div>
+                            <div class="mb-3">
+                                <input class="form-control" type="text" size="24" maxlength="20" name="MDDiaLOverridE" id="MDDiaLOverridE" class="cust_form" value="" />
+                            </div>
+                    <?php
+                            echo '<span class="text-muted">'._QXZ("(digits only please)").'</span>';
+                        }
+                        else
+                        {
+                    ?>
+                            <input type="hidden" name="MDDiaLOverridE" id="MDDiaLOverridE" value="" />&nbsp; 
+                    <?php
+                            echo _QXZ("DISABLED");
+                        }
+                    ?>
+                    </section>
+
+                    <section class="col-12 col-sm-6">
                         <div class="mb-3">
                             <span class="text-muted">
                                 <CENTER>
@@ -107,30 +131,6 @@
                         </div>
                     </section>
                 </div>
-
-                <?php
-                    if ($manual_dial_override_field == 'ENABLED')
-                    {
-                ?>
-                        <section class="mt-2">
-                            <div class="mb-3">
-                                <span class=""><?php echo _QXZ("Dial Override:"); ?></span>
-                            </div>
-                            <div class="mb-3">
-                                <input class="form-control" type="text" size="24" maxlength="20" name="MDDiaLOverridE" id="MDDiaLOverridE" class="cust_form" value="" />
-                            </div>
-                        </section>
-                <?php
-                        echo '<span class="text-muted">'._QXZ("(digits only please)").'</span>';
-                    }
-                    else
-                    {
-                ?>
-                        <input type="hidden" name="MDDiaLOverridE" id="MDDiaLOverridE" value="" />&nbsp; 
-                <?php
-                        echo _QXZ("DISABLED");
-                    }
-                ?>
 
             </div>
 
