@@ -14223,11 +14223,23 @@ function set_length(SLnumber,SLlength_goal,SLdirection)
 						{
 							if (taskDSgrp == VARstatuses[loop_ct]) 
 							{
-								dispo_HTML = dispo_HTML + "<div class=\"col-12 col-sm-4\"><a class=\"btn btn-outline-secondary\" href=\"#\" onclick=\"DispoSelect_submit('','','YES');return false;\">" + VARstatuses[loop_ct] + " - " + VARstatusnames[loop_ct] + "</a> " + CBflag + "</div>";
+								dispo_HTML += `
+									<div class="col-12 col-sm-4 text-center">
+										<a class="btn btn-outline-secondary w-100" href="#" onclick="DispoSelect_submit('','','YES');return false;">
+											${VARstatuses[loop_ct]} - ${VARstatusnames[loop_ct]} ${CBflag}
+										</a>
+									</div>
+								`;
 							}
 							else
 							{
-								dispo_HTML = dispo_HTML + "<div class=\"col-12 col-sm-4\"><a class=\"btn btn-outline-secondary\" href=\"#\" onclick=\"DispoSelectContent_create('" + VARstatuses[loop_ct] + "','ADD','YES');return false;\" onMouseOut=\"this.style.backgroundColor = 'transparent'\";>" + VARstatuses[loop_ct] + " - " + VARstatusnames[loop_ct] + "</a> " + CBflag + "</div>";
+								dispo_HTML += `
+									<div class="col-12 col-sm-4 text-center">
+										<a class="btn btn-outline-secondary w-100" href="#" onclick="DispoSelectContent_create('${VARstatuses[loop_ct]}','ADD','YES');return false;">
+											${VARstatuses[loop_ct]} - ${VARstatusnames[loop_ct]} ${CBflag}
+										</a>
+									</div>
+								`;
 							}
 						}
 						/*if (print_ct == VD_statuses_ct_onethird) 
