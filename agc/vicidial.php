@@ -14294,36 +14294,22 @@ function set_length(SLnumber,SLlength_goal,SLdirection)
 				var mgrapr_ct=0;
 				document.vicidial_form.PauseCodeSelection.value = '';		
 				var VD_pause_codes_ct_half = parseInt(VD_pause_codes_ct / 2);
-                PauseCode_HTML = '<table class="table"><thead><tr><td><?php echo _QXZ("PAUSE CODE"); ?></td></tr></thead><tbody>';
+                PauseCode_HTML = '<div class="mb-2"><h5><?php echo _QXZ("PAUSE CODE"); ?></h5></div>'
+				PauseCode_HTML += '<div class="row">';
 				var loop_ct = 0;
 				while (loop_ct < VD_pause_codes_ct)
 				{
-					/*var temp_mgrapr='';
-					if (VARpause_code_mgrapr[loop_ct] == 'YES') 
-						{
-						mgrapr_ct++;
-						temp_mgrapr=' *';
-						PauseCode_HTML = PauseCode_HTML + "<font size=\"3\" face=\"Arial, Helvetica, sans-serif\" style=\"BACKGROUND-COLOR: #FFFFCC\"><b><a href=\"#\" onclick=\"PauseCodeOpen_mgrapr('" + VARpause_codes[loop_ct] + "','" + VARpause_code_names[loop_ct] + "','YES');return false;\">" + VARpause_codes[loop_ct] + " - " + VARpause_code_names[loop_ct] + '' + temp_mgrapr + "</a></b></font><br /><br />";
-						}
-					else
-						{
-						PauseCode_HTML = PauseCode_HTML + "<font size=\"3\" face=\"Arial, Helvetica, sans-serif\" style=\"BACKGROUND-COLOR: #FFFFCC\"><b><a href=\"#\" onclick=\"PauseCodeSelect_submit('" + VARpause_codes[loop_ct] + "','YES');return false;\">" + VARpause_codes[loop_ct] + " - " + VARpause_code_names[loop_ct] + "</a></b></font><br /><br />";
-						}
-					loop_ct++;
-					if (loop_ct == VD_pause_codes_ct_half) 
-                        {PauseCode_HTML = PauseCode_HTML + "</span></font></td><td bgcolor=\"#99FF99\" height=\"300px\" width=\"240px\" valign=\"top\"><font class=\"log_text\"><span id=PauseCodeSelectB>";}
-					*/
 					if (VARpause_code_mgrapr[loop_ct] == 'YES') 
 					{
-						PauseCode_HTML = PauseCode_HTML + "<tr><td><a class=\"btn btn-outlined-secondary\" href=\"#\" onclick=\"PauseCodeOpen_mgrapr('" + VARpause_codes[loop_ct] + "','" + VARpause_code_names[loop_ct] + "','YES');return false;\">" + VARpause_codes[loop_ct] + " - " + VARpause_code_names[loop_ct] + '' + temp_mgrapr + "</a></td></tr>";
+						PauseCode_HTML = PauseCode_HTML + "<div class=\"col\"><a class=\"btn btn-outline-secondary\" href=\"#\" onclick=\"PauseCodeOpen_mgrapr('" + VARpause_codes[loop_ct] + "','" + VARpause_code_names[loop_ct] + "','YES');return false;\">" + VARpause_codes[loop_ct] + " - " + VARpause_code_names[loop_ct] + '' + temp_mgrapr + "</a></div>";
 					}
 					else
 					{
-						PauseCode_HTML = PauseCode_HTML + "<tr><td><a class=\"btn btn-outlined-secondary\" href=\"#\" onclick=\"PauseCodeSelect_submit('" + VARpause_codes[loop_ct] + "','YES');return false;\">" + VARpause_codes[loop_ct] + " - " + VARpause_code_names[loop_ct] + "</a></td></tr>";
+						PauseCode_HTML = PauseCode_HTML + "<div class=\"col\"><a class=\"btn btn-outline-secondary\" href=\"#\" onclick=\"PauseCodeSelect_submit('" + VARpause_codes[loop_ct] + "','YES');return false;\">" + VARpause_codes[loop_ct] + " - " + VARpause_code_names[loop_ct] + "</a></div>";
 					}
 					loop_ct++;
 				}
-				PauseCode_HTML = PauseCode_HTML + '</tbody></table>'
+				PauseCode_HTML = PauseCode_HTML + '</div>'
 
 				if (agent_pause_codes_active=='FORCE')
 					{var Go_BacK_LinK = '';}
