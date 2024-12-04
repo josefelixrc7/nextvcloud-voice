@@ -14295,17 +14295,17 @@ function set_length(SLnumber,SLlength_goal,SLdirection)
 				document.vicidial_form.PauseCodeSelection.value = '';		
 				var VD_pause_codes_ct_half = parseInt(VD_pause_codes_ct / 2);
                 PauseCode_HTML = '<div class="mb-2"><h5><?php echo _QXZ("PAUSE CODE"); ?></h5></div>'
-				PauseCode_HTML += '<div class="row">';
+				PauseCode_HTML += '<div class="row my-5">';
 				var loop_ct = 0;
 				while (loop_ct < VD_pause_codes_ct)
 				{
 					if (VARpause_code_mgrapr[loop_ct] == 'YES') 
 					{
-						PauseCode_HTML = PauseCode_HTML + "<div class=\"col\"><a class=\"btn btn-outline-secondary\" href=\"#\" onclick=\"PauseCodeOpen_mgrapr('" + VARpause_codes[loop_ct] + "','" + VARpause_code_names[loop_ct] + "','YES');return false;\">" + VARpause_codes[loop_ct] + " - " + VARpause_code_names[loop_ct] + '' + temp_mgrapr + "</a></div>";
+						PauseCode_HTML = PauseCode_HTML + "<div class=\"col text-center\"><a class=\"btn btn-outline-secondary\" href=\"#\" onclick=\"PauseCodeOpen_mgrapr('" + VARpause_codes[loop_ct] + "','" + VARpause_code_names[loop_ct] + "','YES');return false;\">" + VARpause_codes[loop_ct] + " - " + VARpause_code_names[loop_ct] + '' + temp_mgrapr + "</a></div>";
 					}
 					else
 					{
-						PauseCode_HTML = PauseCode_HTML + "<div class=\"col\"><a class=\"btn btn-outline-secondary\" href=\"#\" onclick=\"PauseCodeSelect_submit('" + VARpause_codes[loop_ct] + "','YES');return false;\">" + VARpause_codes[loop_ct] + " - " + VARpause_code_names[loop_ct] + "</a></div>";
+						PauseCode_HTML = PauseCode_HTML + "<div class=\"col text-center\"><a class=\"btn btn-outline-secondary\" href=\"#\" onclick=\"PauseCodeSelect_submit('" + VARpause_codes[loop_ct] + "','YES');return false;\">" + VARpause_codes[loop_ct] + " - " + VARpause_code_names[loop_ct] + "</a></div>";
 					}
 					loop_ct++;
 				}
