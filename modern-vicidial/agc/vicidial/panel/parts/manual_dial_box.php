@@ -11,6 +11,33 @@
             </div>
             <div class="card-body">
                 
+                <div class="row">
+                    <section class="col-12 col-sd-6">
+                        <div class="mb-3">
+                            <span class="text-muted"><?php echo _QXZ("Dial Code:"); ?></span>
+                        </div>
+                        <div class="mb-3">
+                            <input class="form-control" type="text" size="7" maxlength="10" name="MDDiaLCodE" id="MDDiaLCodE" class="cust_form" value="<?php echo $default_phone_code ?>" />
+                            <?php echo _QXZ("(This is usually a 1 in the USA-Canada)"); ?>
+                        </div>
+                    </section>
+
+                    <section class="col-12 col-sd-6">
+                        <div class="mb-3">
+                            <span class="text-muted"><?php echo _QXZ("Phone Number:"); ?></span>
+                        </div>
+                        <div class="mb-3">
+                            
+                            <input class="form-control" type="text" size="14" maxlength="18" name="MDPhonENumbeR" id="MDPhonENumbeR" class="cust_form" value="" />
+                            &nbsp; <?php echo _QXZ("(digits only)"); ?>
+
+                            <input type="hidden" name="MDPhonENumbeRHiddeN" id="MDPhonENumbeRHiddeN" value="" />
+                            <input type="hidden" name="MDLeadID" id="MDLeadID" value="" />
+                            <input type="hidden" name="MDType" id="MDType" value="" />
+                        </div>
+                    </section>
+                </div>
+                
                 <section class="mt-2">
                     <div class="mb-3">
                         <span class="text-muted"><?php echo _QXZ("NEW MANUAL DIAL LEAD FOR %1s in campaign %2s:",0,'',$VD_login,$VD_campaign); ?></span>
@@ -27,32 +54,7 @@
                         <span class="text-muted"><?php echo _QXZ("Note: all new manual dial leads will go into list %1s",0,'',$manual_dial_list_id); ?></span>
                     </div>
                 </section>
-
-                <section class="mt-2">
-                    <div class="mb-3">
-                        <span class="text-muted"><?php echo _QXZ("Dial Code:"); ?></span>
-                    </div>
-                    <div class="mb-3">
-                        <input class="form-control" type="text" size="7" maxlength="10" name="MDDiaLCodE" id="MDDiaLCodE" class="cust_form" value="<?php echo $default_phone_code ?>" />
-                        <?php echo _QXZ("(This is usually a 1 in the USA-Canada)"); ?>
-                    </div>
-                </section>
-
-                <section class="mt-2">
-                    <div class="mb-3">
-                        <span class="text-muted"><?php echo _QXZ("Phone Number:"); ?></span>
-                    </div>
-                    <div class="mb-3">
-                        
-                        <input class="form-control" type="text" size="14" maxlength="18" name="MDPhonENumbeR" id="MDPhonENumbeR" class="cust_form" value="" />
-                        &nbsp; <?php echo _QXZ("(digits only)"); ?>
-
-                        <input type="hidden" name="MDPhonENumbeRHiddeN" id="MDPhonENumbeRHiddeN" value="" />
-                        <input type="hidden" name="MDLeadID" id="MDLeadID" value="" />
-                        <input type="hidden" name="MDType" id="MDType" value="" />
-                    </div>
-                </section>
-                
+                <hr>
                 <?php 
                     if ($manual_dial_lead_id=='Y')
                     {
