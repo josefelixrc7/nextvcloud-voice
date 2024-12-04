@@ -14202,15 +14202,15 @@ function set_length(SLnumber,SLlength_goal,SLdirection)
 			var MINMAXend='';
 			var VD_statuses_ct_onethird = parseInt(VARSELstatuses_ct / 3);
 			var VD_statuses_ct_twothird = (VD_statuses_ct_onethird * 2);
-			var dispo_HTML = "<table cellpadding=\"5\" cellspacing=\"5\" width=\"760px\"><tr><td colspan=\"2\"><b> <?php echo _QXZ("CALL DISPOSITION"); ?></b></td></tr><tr><td height=\"300px\" width=\"240px\" valign=\"top\"><font class=\"log_text\"><span id=\"DispoSelectA\">";
+			var dispo_HTML = "<table class=\"table\"><tr><td><b> <?php echo _QXZ("CALL DISPOSITION"); ?></b></td></tr><tr><td><font class=\"log_text\"><span id=\"DispoSelectA\">";
 			var loop_ct = 0;
 			var print_ct = 0;
 			if (hide_dispo_list < 1)
-				{
+			{
 				while (loop_ct < VD_statuses_ct)
-					{
+				{
 					if (VARSELstatuses[loop_ct] == 'Y')
-						{
+					{
 						CBflag = '';
 						if (VARCBstatuses[loop_ct] == 'Y')
 							{CBflag = '*';}
@@ -14223,26 +14223,26 @@ function set_length(SLnumber,SLlength_goal,SLdirection)
 						{
 							if (taskDSgrp == VARstatuses[loop_ct]) 
 							{
-								dispo_HTML = dispo_HTML + "<font size=\"3\" face=\"Arial, Helvetica, sans-serif\"><b><a href=\"#\" onclick=\"DispoSelect_submit('','','YES');return false;\">" + VARstatuses[loop_ct] + " - " + VARstatusnames[loop_ct] + "</a> " + CBflag + "</b></font><br /><br />";
+								dispo_HTML = dispo_HTML + "<font size=\"3\" face=\"Arial, Helvetica, sans-serif\"><b><a class=\"btn btn-outline-secondary\" href=\"#\" onclick=\"DispoSelect_submit('','','YES');return false;\">" + VARstatuses[loop_ct] + " - " + VARstatusnames[loop_ct] + "</a> " + CBflag + "</b></font><br /><br />";
 							}
 							else
 							{
-								dispo_HTML = dispo_HTML + "<font size=\"2\" face=\"Arial, Helvetica, sans-serif\"><a href=\"#\" onclick=\"DispoSelectContent_create('" + VARstatuses[loop_ct] + "','ADD','YES');return false;\" onMouseOut=\"this.style.backgroundColor = 'transparent'\";>" + VARstatuses[loop_ct] + " - " + VARstatusnames[loop_ct] + "</a></font> " + CBflag + "<br /><br />";
+								dispo_HTML = dispo_HTML + "<font size=\"2\" face=\"Arial, Helvetica, sans-serif\"><a class=\"btn btn-outline-secondary\" href=\"#\" onclick=\"DispoSelectContent_create('" + VARstatuses[loop_ct] + "','ADD','YES');return false;\" onMouseOut=\"this.style.backgroundColor = 'transparent'\";>" + VARstatuses[loop_ct] + " - " + VARstatusnames[loop_ct] + "</a></font> " + CBflag + "<br /><br />";
 							}
 						}
 						if (print_ct == VD_statuses_ct_onethird) 
-							{dispo_HTML = dispo_HTML + "</span></font></td><td valign=\"top\"><font class=\"log_text\"><span id=\"DispoSelectB\">";}
+							{dispo_HTML = dispo_HTML + "</span></font></td><td><font class=\"log_text\"><span id=\"DispoSelectB\">";}
 						if (print_ct == VD_statuses_ct_twothird) 
-							{dispo_HTML = dispo_HTML + "</span></font></td><td valign=\"top\"><font class=\"log_text\"><span id=\"DispoSelectC\">";}
+							{dispo_HTML = dispo_HTML + "</span></font></td><td><font class=\"log_text\"><span id=\"DispoSelectC\">";}
 						print_ct++;
-						}
-					loop_ct++;
 					}
+					loop_ct++;
 				}
+			}
 			else
-				{
+			{
 				dispo_HTML = dispo_HTML + "<?php echo _QXZ("Disposition Status List Hidden"); ?><br /><br />";
-				}
+			}
 			dispo_HTML = dispo_HTML + "</span></font></td></tr></table>";
 
 			if (taskDSstage == 'ReSET') {document.vicidial_form.DispoSelection.value = '';}
