@@ -14267,20 +14267,20 @@ function set_length(SLnumber,SLlength_goal,SLdirection)
 			{button_click_log = button_click_log + "" + SQLdate + "-----PauseCodeSelectContent_create---|";}
 		var move_on=1;
 		if ( (AutoDialWaiting == 1) || (VD_live_customer_call==1) || (alt_dial_active==1) || (MD_channel_look==1) || (in_lead_preview_state==1) )
-			{
+		{
 			if ((auto_pause_precall == 'Y') && ( (agent_pause_codes_active=='Y') || (agent_pause_codes_active=='FORCE') ) && (AutoDialWaiting == 1) && (VD_live_customer_call!=1) && (alt_dial_active!=1) && (MD_channel_look!=1) && (in_lead_preview_state!=1) )
-				{
+			{
 				agent_log_id = AutoDial_ReSume_PauSe("VDADpause",'','','','','1','');
-				}
+			}
 			else
-				{
+			{
 				move_on=0;
 				alert_box("<?php echo _QXZ("YOU MUST BE PAUSED TO ENTER A PAUSE CODE IN AUTO-DIAL MODE"); ?>");
 				button_click_log = button_click_log + "" + SQLdate + "-----PauseCodeOpenFailed---" + VDRP_stage + " " + "|";
-				}
 			}
+		}
 		if (move_on == 1)
-			{
+		{
 			if (APIManualDialQueue > 0)
 				{
 				PauseCodeSelect_submit('NXDIAL');
@@ -14294,11 +14294,15 @@ function set_length(SLnumber,SLlength_goal,SLdirection)
 				var mgrapr_ct=0;
 				document.vicidial_form.PauseCodeSelection.value = '';		
 				var VD_pause_codes_ct_half = parseInt(VD_pause_codes_ct / 2);
-                PauseCode_HTML = "<table cellpadding=\"5\" cellspacing=\"5\" width=\"500px\"><tr><td colspan=\"2\"><font class=sh_text'> <?php echo _QXZ("PAUSE CODE"); ?></font></td></tr><tr><td bgcolor=\"#99FF99\" height=\"300px\" width=\"240px\" valign=\"top\"><font class=\"log_text\"><span id=\"PauseCodeSelectA\">";
+                PauseCode_HTML = `
+					<table class="table">
+						<thead><tr><td><?php echo _QXZ("PAUSE CODE"); ?></td></tr></thead>
+						<tbody>
+				`;
 				var loop_ct = 0;
 				while (loop_ct < VD_pause_codes_ct)
-					{
-					var temp_mgrapr='';
+				{
+					/*var temp_mgrapr='';
 					if (VARpause_code_mgrapr[loop_ct] == 'YES') 
 						{
 						mgrapr_ct++;
@@ -14312,19 +14316,29 @@ function set_length(SLnumber,SLlength_goal,SLdirection)
 					loop_ct++;
 					if (loop_ct == VD_pause_codes_ct_half) 
                         {PauseCode_HTML = PauseCode_HTML + "</span></font></td><td bgcolor=\"#99FF99\" height=\"300px\" width=\"240px\" valign=\"top\"><font class=\"log_text\"><span id=PauseCodeSelectB>";}
+					*/
+					if (VARpause_code_mgrapr[loop_ct] == 'YES') 
+					{
+						PauseCode_HTML = PauseCode_HTML + "<tr><td><a class=\"btn btn-outlined-secondary\" href=\"#\" onclick=\"PauseCodeOpen_mgrapr('" + VARpause_codes[loop_ct] + "','" + VARpause_code_names[loop_ct] + "','YES');return false;\">" + VARpause_codes[loop_ct] + " - " + VARpause_code_names[loop_ct] + '' + temp_mgrapr + "</a></td></tr>";
 					}
+					else
+					{
+						PauseCode_HTML = PauseCode_HTML + "<tr><td><a class=\"btn btn-outlined-secondary\" href=\"#\" onclick=\"PauseCodeSelect_submit('" + VARpause_codes[loop_ct] + "','YES');return false;\">" + VARpause_codes[loop_ct] + " - " + VARpause_code_names[loop_ct] + "</a></td></tr>";
+					}
+				}
+				PauseCode_HTML = PauseCode_HTML + '</tbody></table>'
 
 				if (agent_pause_codes_active=='FORCE')
 					{var Go_BacK_LinK = '';}
 				else
-                    {var Go_BacK_LinK = "<font size=\"3\" face=\"Arial, Helvetica, sans-serif\" style=\"BACKGROUND-COLOR: #FFFFCC\"><b><a href=\"#\" onclick=\"PauseCodeSelect_submit('','YES');return false;\"><?php echo _QXZ("Go Back"); ?></a>";}
+                    {var Go_BacK_LinK = "<div class=\"mt-2\"><a class=\"btn btn-secondary\" href=\"#\" onclick=\"PauseCodeSelect_submit('','YES');return false;\"><?php echo _QXZ("Go Back"); ?></a></div>";}
 
-                PauseCode_HTML = PauseCode_HTML + "</span></font></td></tr></table><br /><br />" + Go_BacK_LinK;
+                PauseCode_HTML = PauseCode_HTML + Go_BacK_LinK;
 				document.getElementById("PauseCodeSelectContent").innerHTML = PauseCode_HTML;
 
 				agent_events('pause_code_open', '', aec);   aec++;
-				}
 			}
+		}
 		if (focus_blur_enabled==1)
 			{
 			document.inert_form.inert_button.focus();
