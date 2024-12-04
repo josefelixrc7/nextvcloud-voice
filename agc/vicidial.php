@@ -14294,11 +14294,7 @@ function set_length(SLnumber,SLlength_goal,SLdirection)
 				var mgrapr_ct=0;
 				document.vicidial_form.PauseCodeSelection.value = '';		
 				var VD_pause_codes_ct_half = parseInt(VD_pause_codes_ct / 2);
-                PauseCode_HTML = `
-					<table class="table">
-						<thead><tr><td><?php echo _QXZ("PAUSE CODE"); ?></td></tr></thead>
-						<tbody>
-				`;
+                PauseCode_HTML = '<table class="table"><thead><tr><td><?php echo _QXZ("PAUSE CODE"); ?></td></tr></thead><tbody>';
 				var loop_ct = 0;
 				while (loop_ct < VD_pause_codes_ct)
 				{
