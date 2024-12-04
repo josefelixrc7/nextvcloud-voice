@@ -1,6 +1,6 @@
 
 <span class="w-100 h-100 overflow-scroll" tabindex="-1" style="background:rgba(0, 0, 0, 0.5);position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="NeWManuaLDiaLBox">
-    <div class="w-75 mx-auto mt-5">
+    <div class="w-50 mx-auto mt-5">
 
         <div class="card">
 
@@ -37,8 +37,12 @@
                         </div>
                     </section>
                 </div>
-                
-                <section class="mt-2">
+                <p>
+                    <button class="btn btn-outlined-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        ?
+                    </button>
+                </p>
+                <section class="collapse" id="collapseExample">
                     <div class="mb-3">
                         <span class="text-muted"><?php echo _QXZ("NEW MANUAL DIAL LEAD FOR %1s in campaign %2s:",0,'',$VD_login,$VD_campaign); ?></span>
                         <span class="text-muted"><?php echo _QXZ("Enter information below for the new lead you wish to call."); ?></span>
@@ -54,7 +58,9 @@
                         <span class="text-muted"><?php echo _QXZ("Note: all new manual dial leads will go into list %1s",0,'',$manual_dial_list_id); ?></span>
                     </div>
                 </section>
+
                 <hr>
+
                 <?php 
                     if ($manual_dial_lead_id=='Y')
                     {
@@ -84,9 +90,14 @@
 
                 <section class="mt-2">
                     <div class="mb-3">
-                        <span class="text-muted"><?php echo _QXZ("Search Existing Leads:"); ?></span>
+                        <span class="text-muted">
+                            <?php echo _QXZ("Search Existing Leads:"); ?>
+                            <button class="btn btn-outlined-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                                ?
+                            </button>
+                        </span>
                     </div>
-                    <div class="mb-3">
+                    <div class="collapse mb-2" id="collapseExample2">
                         <input class="form-check-input" type="checkbox" name="LeadLookuP" id="LeadLookuP" size="1" value="0" <?php echo $LeadLookuPXtra ?>/>
                         &nbsp; <?php echo _QXZ("(This option if checked will attempt to find the phone number in the system before inserting it as a new lead)"); ?>
                     </div>
