@@ -24,8 +24,8 @@
 					<span id="DispoManualQueueMessage"></span>
 					<span id="PerCallNotesContent"><input type="hidden" name="call_notes_dispo" id="call_notes_dispo" value="" /></span>
 					<span id="DispoCommentsContent"><input type="hidden" name="dispo_comments" id="dispo_comments" value="" /></span>
-					<span id="DispoSelectContent" class="m-2"> <?php echo _QXZ("End-of-call Disposition Selection"); ?> </span>
-					<input type="hidden" name="DispoSelection" id="DispoSelection" /><br />
+					<span id="DispoSelectContent" class="my-2"> <?php echo _QXZ("End-of-call Disposition Selection"); ?> </span>
+					<input type="hidden" name="DispoSelection" id="DispoSelection" />
 					<div class="text-center">
 						<div class="mb-2">
 							<input class="form-check-input" type="checkbox" name="DispoSelectStop" id="DispoSelectStop" size="1" value="0" /> <?php echo _QXZ("PAUSE AGENT DIALING"); ?>
