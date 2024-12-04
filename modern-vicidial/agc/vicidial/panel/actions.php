@@ -943,21 +943,9 @@ if ($agent_display_dialable_leads > 0)
 	</td></tr></table>
 </span>
 
-<span style="position:absolute;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="PauseCodeSelectBox">
-	<table border="0" bgcolor="#CCFFCC" width="<?php echo $CAwidth ?>px" height="<?php echo $WRheight ?>px"><tr><td align="center" valign="top"> <font class="sd_text"><?php echo _QXZ("SELECT A PAUSE CODE :"); ?></font><br /><font class="sh_text">
-	<?php
-	if ($webphone_location == 'bar')
-		{echo "<br /><img src=\"./images/"._QXZ("pixel.gif")."\" width=\"1px\" height=\"".$webphone_height."px\" /><br />\n";}
-	?>
-	<span id="PauseCodeSelectContent"> <?php echo _QXZ("Pause Code Selection"); ?> </span>
-	<input type="hidden" name="PauseCodeSelection" id="PauseCodeSelection" />
-	<?php
-	if ($mgrapr_ct > 0)
-		{echo "<br /><br /><b>* "._QXZ("These pause codes require manager approval")."</b>\n";}
-	?>
-	<br /><br /> &nbsp;</font>
-	</td></tr></table>
-</span>
+<?php
+	include 'parts/pause_code_select_box.php'
+?>
 
 <span style="position:absolute;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="PauseCodeMgrAprBox">
 	<table border="0" bgcolor="#CCFFCC" width="<?php echo $CAwidth ?>px" height="<?php echo $WRheight ?>px"><tr><td align="center" valign="top"> <font class="sd_text"><?php echo _QXZ("Pause Code Manager Approval"); ?>:</font><br /><br /><font class="sh_text">
