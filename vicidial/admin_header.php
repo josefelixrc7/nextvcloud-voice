@@ -119,17 +119,7 @@ $SSalt_row2_background='99FF99';
 $SSalt_row3_background='CCFFCC';
 $SSbutton_color='EFEFEF';*/
 
-$SSmenu_background='e9f5f3';
-$SSframe_background='FFF';
-$SSstd_row1_background='9BB9FB';
-$SSstd_row2_background='B9CBFD';
-$SSstd_row3_background='8EBCFD';
-$SSstd_row4_background='B6D3FC';
-$SSstd_row5_background='A3C3D6';
-$SSalt_row1_background='BDFFBD';
-$SSalt_row2_background='99FF99';
-$SSalt_row3_background='CCFFCC';
-$SSbutton_color='EFEFEF';
+include '/modern-vicidial/admin/colors.php';
 
 if ($SSadmin_screen_colors != 'default')
 	{
@@ -137,7 +127,7 @@ if ($SSadmin_screen_colors != 'default')
 	$rslt=mysql_to_mysqli($stmt, $link);
 	if ($DB) {echo "$stmt\n";}
 	$colors_ct = mysqli_num_rows($rslt);
-	if ($colors_ct > 0)
+	/*if ($colors_ct > 0)
 		{
 		$row=mysqli_fetch_row($rslt);
 		$SSmenu_background =		$row[0];
@@ -153,17 +143,20 @@ if ($SSadmin_screen_colors != 'default')
 		$SSweb_logo =			$row[10];
 		$SSbutton_color = 		$row[11];
 		}
-	}
+	}*/
+
 $Mhead_color =	$SSstd_row5_background;
 $Mmain_bgcolor = $SSmenu_background;
 $Mhead_color =	$SSstd_row5_background;
 
-$selected_logo = "./images/vicidial_admin_web_logo.png";
-$selected_small_logo = "./images/vicidial_admin_web_logo.png";
+/*$selected_logo = "./images/vicidial_admin_web_logo.png";
+$selected_small_logo = "./images/vicidial_admin_web_logo.png";*/
+$selected_logo = "/modern-vicidial/logo.png";
+$selected_small_logo = "/modern-vicidial/logo.png";
 $logo_new=0;
 $logo_old=0;
 $logo_small_old=0;
-if (file_exists('./images/vicidial_admin_web_logo.png')) {$logo_new++;}
+/*if (file_exists('./images/vicidial_admin_web_logo.png')) {$logo_new++;}
 if (file_exists('vicidial_admin_web_logo_small.gif')) {$logo_small_old++;}
 if (file_exists('vicidial_admin_web_logo.gif')) {$logo_old++;}
 if ($SSweb_logo=='default_new')
@@ -184,7 +177,7 @@ if ( ($SSweb_logo!='default_new') and ($SSweb_logo!='default_old') )
 		$selected_small_logo = "./images/vicidial_admin_web_logo$SSweb_logo";
 		}
 	}
-
+*/
 
 ##### BEGIN populate dynamic header content #####
 if ($hh=='users') 
