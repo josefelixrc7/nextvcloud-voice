@@ -8,7 +8,7 @@
     $SSstd_row3_background='d7e2f2';
     $SSstd_row4_background='FFF';
     $SSstd_row5_background='A3C3D6';
-    $SSalt_row1_background='BDFFBD';
+    $SSalt_row1_background='e3f7e3';
     $SSalt_row2_background='99FF99';
     $SSalt_row3_background='CCFFCC';
     $SSbutton_color='EFEFEF';
