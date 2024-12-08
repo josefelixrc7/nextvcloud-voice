@@ -41,6 +41,18 @@
     color: #333 !important;
 }
 
+TABLE.help_td {
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: none !important;
+	padding: 1rem !important;
+	color: #333 !important;
+	font-size: 10pt;
+	background: #fff !important;
+	border: none !important;
+}
+
 /* Forms */
 
 input[type="text"]{
