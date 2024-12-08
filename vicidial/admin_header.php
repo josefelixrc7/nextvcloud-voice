@@ -2728,7 +2728,7 @@ if ($subcamp_font_size < 4) {$subcamp_font_size='11';}
 	
 if (strlen($reports_hh) > 25) { 
 	?>
-<TR BGCOLOR=<?php echo $reports_color ?>><TD ALIGN=LEFT COLSPAN=2><FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"><B> &nbsp; </B></TD></TR>
+<TR BGCOLOR=<?php echo $reports_color ?>><TD class="p-2" ALIGN=LEFT COLSPAN=2><FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"><B> &nbsp; </B></TD></TR>
 <?php } ?>
 
 
