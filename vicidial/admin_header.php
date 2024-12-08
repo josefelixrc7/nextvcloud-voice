@@ -2731,6 +2731,9 @@ if (strlen($reports_hh) > 25) {
 
 
 <TR><TD ALIGN=LEFT COLSPAN=2 HEIGHT=2 BGCOLOR=#<?php echo "$SSmenu_background" ?>></TD></TR>
+
+<!-- FULL HTML HEADER END -->
+
 <TR><TD ALIGN=LEFT COLSPAN=2>
 <?php 
 ######################### FULL HTML HEADER END #######################################
