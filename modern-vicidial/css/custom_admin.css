@@ -33,9 +33,9 @@
 }
 .subhead_style_selected:hover
 {
-	background-color: rgba(255, 255, 255, 0.6);
+	background-color: rgba(255, 255, 255, 0.8);
 
     a{
-        color: rgba(255, 255, 255, 0.8);
+        color: #333;
     }
 }
