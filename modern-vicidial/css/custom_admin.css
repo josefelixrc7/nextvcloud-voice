@@ -100,7 +100,9 @@ input[type="submit"]{
 	transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     border-color: #6c757d;
 }
-input[type="button"]:hover{
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover{
     color: #fff !important;
     background-color: #6c757d !important;
     border-color: #6c757d;
