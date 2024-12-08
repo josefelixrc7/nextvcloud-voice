@@ -1,0 +1,27 @@
+
+.subhead_style
+{
+	color: #fff;
+}
+.subhead_style:hover
+{
+	color: #fff;
+	background-color: rgba(1, 1, 1, 0.3);
+}
+
+.subhead_style_selected
+{
+	background-color: rgba(1, 1, 1, 0.3);
+    
+    a{
+        color: #fff;
+    }
+}
+.subhead_style_selected:hover
+{
+	background-color: rgba(1, 1, 1, 0.6);
+
+    a{
+        color: #fff;
+    }
+}

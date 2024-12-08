@@ -1690,27 +1690,6 @@ background:rgb(102,255,51);
 	}
 .head_style_selected:hover{background-color: <?php echo $Mhead_color ?>;}
 
-.subhead_style
-{
-	color: #fff;
-}
-.subhead_style:hover
-{
-	color: #fff;
-	background-color: rgba(1, 1, 1, 0.3);
-}
-
-.subhead_style_selected
-{
-	color: #fff;
-	background-color: rgba(1, 1, 1, 0.3);
-}
-.subhead_style_selected:hover
-{
-	color: #fff;
-	background-color: rgba(1, 1, 1, 0.6);
-}
-
 .adminmenu_style_selected
 {
 	background-color: white;
