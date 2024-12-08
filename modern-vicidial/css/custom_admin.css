@@ -83,7 +83,7 @@ input[type="button"]{
     border-color: #6c757d;
 }
 input[type="button"]:hover{
-    color: #fff;
+    color: #fff !important;
     background-color: #6c757d !important;
     border-color: #6c757d;
 }
