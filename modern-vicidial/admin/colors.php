@@ -1,7 +1,7 @@
 
 <?php
     // Main colors
-    $SSmenu_background='e9f5f3';
+    $SSmenu_background='2e69fd';
     $SSframe_background='FFF';
     $SSstd_row1_background='9BB9FB';
     $SSstd_row2_background='B9CBFD';
@@ -14,5 +14,5 @@
     $SSbutton_color='EFEFEF';
 
     // Extra colors
-    
+
 ?>
