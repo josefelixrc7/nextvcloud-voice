@@ -1750,6 +1750,8 @@ background:rgb(102,255,51);
 <?php
 ##### END - bar chart CSS style #####
 
+include '../modern-vicidial/admin/head.php';
+
 echo "</head>\n";
 if ( ($SSadmin_modify_refresh > 1) and (preg_match("/^3|^4/",$ADD)) )
 	{
