@@ -1794,10 +1794,10 @@ if ($subcamp_font_size < 4) {$subcamp_font_size='11';}
 	<!-- REPORTS NAVIGATION -->
 	<!--<TR WIDTH=160><TD><DIV CLASS="horiz_line"></DIV></TD></TR>-->
 	<TR BGCOLOR=#<?php echo "$SSmenu_background "; if ($SSadmin_row_click > 0) {echo " onclick=\"window.document.location='$ADMIN?ADD=999999';\"";} ?>>
-		<TD ALIGN=LEFT <?php echo $reports_hh ?>>
+		<TD class="p-2" ALIGN=LEFT <?php echo $reports_hh ?>>
 			<a href="<?php echo $ADMIN ?>?ADD=999999" STYLE="text-decoration:none;">
 				<!--<?php echo $reports_icon ?>-->
-				<i class="fas fa-table"></i>
+				<i class="fas fa-table text-white"></i>
 				<FONT class="ms-2" STYLE="font-family:HELVETICA;font-size:<?php echo $header_font_size ?>;color:<?php echo $reports_fc ?>"><?php echo $reports_bold ?> <?php echo _QXZ("Reports"); ?>
 			</a>
 		</TD>
