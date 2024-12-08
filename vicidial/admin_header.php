@@ -151,8 +151,6 @@ $Mhead_color =	$SSstd_row5_background;
 
 /*$selected_logo = "./images/vicidial_admin_web_logo.png";
 $selected_small_logo = "./images/vicidial_admin_web_logo.png";*/
-$selected_logo = "/modern-vicidial/logo.png";
-$selected_small_logo = "/modern-vicidial/logo.png";
 $logo_new=0;
 $logo_old=0;
 $logo_small_old=0;
@@ -177,6 +175,8 @@ if ( ($SSweb_logo!='default_new') and ($SSweb_logo!='default_old') )
 		$selected_small_logo = "./images/vicidial_admin_web_logo$SSweb_logo";
 		}
 	}
+$selected_logo = "../modern-vicidial/logo.png";
+$selected_small_logo = "../modern-vicidial/logo.png";
 
 
 ##### BEGIN populate dynamic header content #####
