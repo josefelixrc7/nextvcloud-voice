@@ -2734,7 +2734,7 @@ if (strlen($reports_hh) > 25) {
 
 <!-- FULL HTML HEADER END -->
 
-<TR><TD ALIGN=LEFT COLSPAN=2>
+<TR><TD class="p-2" ALIGN=LEFT COLSPAN=2>
 <?php 
 ######################### FULL HTML HEADER END #######################################
 }
