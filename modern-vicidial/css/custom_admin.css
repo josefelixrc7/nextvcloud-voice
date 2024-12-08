@@ -40,3 +40,14 @@
 {
     color: #333 !important;
 }
+
+/* Forms */
+
+input{
+    margin-top:.5rem;
+    margin-bottom:.5rem;
+}
+select{
+    margin-top:.5rem;
+    margin-bottom:.5rem;
+}
