@@ -2285,7 +2285,7 @@ if ($subcamp_font_size < 4) {$subcamp_font_size='11';}
 		<TD class="p-2" ALIGN=LEFT <?php echo $usergroups_hh ?>>
 			<a href="<?php echo $ADMIN ?>?ADD=100000" STYLE="text-decoration:none;">
 				<i class="fas fa-users text-white"></i>
-				<FONT STYLE="font-family:HELVETICA;font-size:<?php echo $header_font_size ?>;color:<?php $text_color_white echo /*$usergroups_fc*/ ?>"><?php echo $usergroups_bold ?> <?php echo _QXZ("User Groups"); ?>
+				<FONT STYLE="font-family:HELVETICA;font-size:<?php echo $header_font_size ?>;color:<?php echo $text_color_white /*$usergroups_fc*/ ?>"><?php echo $usergroups_bold ?> <?php echo _QXZ("User Groups"); ?>
 			</a>
 		</TD>
 	</TR>
