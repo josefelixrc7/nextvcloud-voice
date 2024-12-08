@@ -6,7 +6,7 @@
     $SSstd_row1_background='f2f2f2';
     $SSstd_row2_background='FFF';
     $SSstd_row3_background='8EBCFD';
-    $SSstd_row4_background='B6D3FC';
+    $SSstd_row4_background='FFF';
     $SSstd_row5_background='A3C3D6';
     $SSalt_row1_background='BDFFBD';
     $SSalt_row2_background='99FF99';
