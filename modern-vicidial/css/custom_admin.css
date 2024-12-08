@@ -1,18 +1,17 @@
 
-.subhead_style
+.subhead_style a
 {
 	color: #fff;
 }
 .subhead_style:hover
 {
-	color: #fff;
 	background-color: rgba(1, 1, 1, 0.3);
 }
 
 .subhead_style_selected
 {
 	background-color: rgba(1, 1, 1, 0.3);
-    
+
     a{
         color: #fff;
     }
