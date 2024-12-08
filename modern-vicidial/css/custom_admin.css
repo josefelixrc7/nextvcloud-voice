@@ -47,7 +47,7 @@ input[type="text"]{
     margin-top:.5rem;
     margin-bottom:.5rem;
     display: block;
-    width: 100%;
+    /*width: 100%;*/
     padding: .375rem .75rem;
     font-size: 1rem;
     font-weight: 400;
@@ -83,7 +83,7 @@ select{
     margin-bottom:.5rem;
 
     display: block;
-    width: 100%;
+    /*width: 100%;*/
     padding: .375rem 2.25rem .375rem .75rem;
     -moz-padding-start: calc(0.75rem - 3px);
     font-size: 1rem;
