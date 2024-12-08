@@ -5846,7 +5846,7 @@ $SSalt_row2_background='99FF99';
 $SSalt_row3_background='CCFFCC';
 $SSbutton_color='EFEFEF';*/
 
-include '/modern-vicidial/admin/colors.php';
+include '../modern-vicidial/admin/colors.php';
 
 $SSweb_logo='default_old';
 
