@@ -1696,15 +1696,18 @@ background:rgb(102,255,51);
 }
 .subhead_style:hover
 {
+	color: #fff;
 	background-color: rgba(1, 1, 1, 0.3);
 }
 
 .subhead_style_selected
 {
+	color: #fff;
 	background-color: rgba(1, 1, 1, 0.3);
 }
 .subhead_style_selected:hover
 {
+	color: #fff;
 	background-color: rgba(1, 1, 1, 0.6);
 }
 
