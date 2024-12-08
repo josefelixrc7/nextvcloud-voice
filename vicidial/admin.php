@@ -112,7 +112,8 @@ $subcamp_color =	'#C6C6C6';
 $Msubhead_color =	'#E6E6E6';
 $Mselected_color =	'#C6C6C6';
 $Mhead_color =		'#A3C3D6';
-$Mmain_bgcolor =	'#015B91';
+//$Mmain_bgcolor =	'#015B91';
+$Mmain_bgcolor =	'#e9f5f3';
 
 ###
 
