@@ -1768,7 +1768,9 @@ if ($subcamp_font_size < 4) {$subcamp_font_size='11';}
 <TR>
 <TD class="px-2" VALIGN=TOP WIDTH=170 BGCOLOR=#<?php echo "$SSmenu_background" ?> ALIGN=CENTER VALIGN=MIDDLE>
 	
-	<A class="text-center" HREF="./admin.php"><IMG SRC="<?php echo $selected_logo; ?>" WIDTH=80 BORDER=0 ALT="System logo"></A>
+	<div class="my-2">
+		<a class="text-center" HREF="./admin.php"><IMG SRC="<?php echo $selected_logo; ?>" WIDTH=80 BORDER=0 ALT="System logo"></a>
+	</div>
 
 	<div class="my-2">
 		<B><FONT FACE="ARIAL,HELVETICA" COLOR=white><?php echo _QXZ("ADMINISTRATION"); ?></FONT></B>
