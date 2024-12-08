@@ -84,7 +84,7 @@ input[type="button"]{
 }
 input[type="button"]:hover{
     color: #fff;
-    background-color: #6c757d;
+    background-color: #6c757d !important;
     border-color: #6c757d;
 }
 input[type="checkbox"]{
