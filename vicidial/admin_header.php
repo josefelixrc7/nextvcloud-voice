@@ -107,8 +107,20 @@ $SSagent_soundboards =		$row[13];
 $SSenable_drop_lists =		$row[14];
 $SSallow_ip_lists =			$row[15];
 
-$SSmenu_background='015B91';
+/*$SSmenu_background='015B91';
 $SSframe_background='D9E6FE';
+$SSstd_row1_background='9BB9FB';
+$SSstd_row2_background='B9CBFD';
+$SSstd_row3_background='8EBCFD';
+$SSstd_row4_background='B6D3FC';
+$SSstd_row5_background='A3C3D6';
+$SSalt_row1_background='BDFFBD';
+$SSalt_row2_background='99FF99';
+$SSalt_row3_background='CCFFCC';
+$SSbutton_color='EFEFEF';*/
+
+$SSmenu_background='e9f5f3';
+$SSframe_background='FFF';
 $SSstd_row1_background='9BB9FB';
 $SSstd_row2_background='B9CBFD';
 $SSstd_row3_background='8EBCFD';
