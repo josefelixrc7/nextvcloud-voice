@@ -1791,23 +1791,26 @@ if ($subcamp_font_size < 4) {$subcamp_font_size='11';}
 	if ( ($reports_only_user < 1) and ($qc_only_user < 1) )
 	{
 	?>
+
 	<!-- REPORTS NAVIGATION -->
-	<!--<TR WIDTH=160><TD><DIV CLASS="horiz_line"></DIV></TD></TR>-->
 	<TR BGCOLOR=#<?php echo "$SSmenu_background "; if ($SSadmin_row_click > 0) {echo " onclick=\"window.document.location='$ADMIN?ADD=999999';\"";} ?>>
 		<TD class="p-2" ALIGN=LEFT <?php echo $reports_hh ?>>
 			<a href="<?php echo $ADMIN ?>?ADD=999999" STYLE="text-decoration:none;">
-				<!--<?php echo $reports_icon ?>-->
 				<i class="fas fa-table text-white"></i>
-				<FONT class="ms-2" STYLE="font-family:HELVETICA;font-size:<?php echo $header_font_size ?>;color:<?php echo $reports_fc ?>"><?php echo $reports_bold ?> <?php echo _QXZ("Reports"); ?>
+				<FONT class="ms-2" STYLE="font-family:HELVETICA;font-size:<?php echo $header_font_size ?>;color:<?php echo $text_color_white /*$reports_fc*/ ?>"><?php echo $reports_bold ?> <?php echo _QXZ("Reports"); ?>
 			</a>
 		</TD>
 	</TR>
 
 	<!-- USERS NAVIGATION -->
-	<!--<TR WIDTH=160><TD><DIV CLASS="horiz_line"></DIV></TD></TR>-->
-	<TR WIDTH=160 BGCOLOR=#<?php echo "$SSmenu_background "; if ($SSadmin_row_click > 0) {echo " onclick=\"window.document.location='$ADMIN?ADD=0A';\"";} ?>><TD ALIGN=LEFT <?php echo $users_hh ?> WIDTH=160>
-	<a href="<?php echo $ADMIN ?>?ADD=0A" STYLE="text-decoration:none;"><?php echo $users_icon ?> <FONT STYLE="font-family:HELVETICA;font-size:<?php echo $header_font_size ?>;color:<?php echo $users_fc ?>"><?php echo $users_bold ?><?php echo _QXZ("Users"); ?></a>
-	</TD></TR>
+	<TR WIDTH=160 BGCOLOR=#<?php echo "$SSmenu_background "; if ($SSadmin_row_click > 0) {echo " onclick=\"window.document.location='$ADMIN?ADD=0A';\"";} ?>>
+		<TD class="p-2" ALIGN=LEFT <?php echo $users_hh ?> WIDTH=160>
+			<a href="<?php echo $ADMIN ?>?ADD=0A" STYLE="text-decoration:none;">
+				<i class="fas fa-table text-white"></i>
+				<FONT STYLE="font-family:HELVETICA;font-size:<?php echo $header_font_size ?>;color:<?php echo $text_color_white /*$users_fc*/ ?>"><?php echo $users_bold ?><?php echo _QXZ("Users"); ?>
+			</a>
+		</TD>
+	</TR>
 	<?php
 	if (strlen($users_hh) > 25) 
 		{ 

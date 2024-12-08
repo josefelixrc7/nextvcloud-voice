@@ -14,5 +14,5 @@
     $SSbutton_color='EFEFEF';
 
     // Extra colors
-
+    $text_color_white = "#FFF";
 ?>
