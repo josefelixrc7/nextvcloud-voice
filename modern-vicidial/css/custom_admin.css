@@ -35,7 +35,8 @@
 {
 	background-color: rgba(255, 255, 255, 0.8);
 
-    a{
-        color: #333;
-    }
+}
+.subhead_style_selected:hover a
+{
+    color: #333;
 }
