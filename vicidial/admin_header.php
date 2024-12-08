@@ -1774,7 +1774,7 @@ if ($subcamp_font_size < 4) {$subcamp_font_size='11';}
 		<B><FONT FACE="ARIAL,HELVETICA" COLOR=white><?php echo _QXZ("ADMINISTRATION"); ?></FONT></B>
 	</div>
 
-	<TABLE CELLPADDING=2 CELLSPACING=0 BGCOLOR=#<?php echo "$SSmenu_background" ?> WIDTH=160>
+	<TABLE id="mv-nav" CELLPADDING=2 CELLSPACING=0 BGCOLOR=#<?php echo "$SSmenu_background" ?> WIDTH=160>
 	<?php
 	if ( ($reports_only_user < 1) and ($qc_only_user < 1) )
 	{
@@ -1785,7 +1785,7 @@ if ($subcamp_font_size < 4) {$subcamp_font_size='11';}
 		<TD class="p-2" ALIGN=LEFT <?php echo $reports_hh ?>>
 			<a href="<?php echo $ADMIN ?>?ADD=999999" STYLE="text-decoration:none;">
 				<i class="fas fa-table text-white"></i>
-				<FONT class="ms-2" STYLE="font-family:HELVETICA;font-size:<?php echo $header_font_size ?>;color:<?php echo $text_color_white /*$reports_fc*/ ?>"><?php echo $reports_bold ?> <?php echo _QXZ("Reports"); ?>
+				<FONT class="ms-2" STYLE="font-family:HELVETICA;font-size:<?php echo $header_font_size ?>;"><?php echo $reports_bold ?> <?php echo _QXZ("Reports"); ?>
 			</a>
 		</TD>
 	</TR>
@@ -1795,7 +1795,7 @@ if ($subcamp_font_size < 4) {$subcamp_font_size='11';}
 		<TD class="p-2" ALIGN=LEFT <?php echo $users_hh ?> WIDTH=160>
 			<a href="<?php echo $ADMIN ?>?ADD=0A" STYLE="text-decoration:none;">
 				<i class="fas fa-user text-white"></i>
-				<FONT class="ms-2" STYLE="font-family:HELVETICA;font-size:<?php echo $header_font_size ?>;color:<?php echo $text_color_white /*$users_fc*/ ?>"><?php echo $users_bold ?><?php echo _QXZ("Users"); ?>
+				<FONT class="ms-2" STYLE="font-family:HELVETICA;font-size:<?php echo $header_font_size ?>;"><?php echo $users_bold ?><?php echo _QXZ("Users"); ?>
 			</a>
 		</TD>
 	</TR>
@@ -1880,7 +1880,7 @@ if ($subcamp_font_size < 4) {$subcamp_font_size='11';}
 		<TD class="p-2" ALIGN=LEFT <?php echo $campaigns_hh ?>>
 			<a href="<?php echo $ADMIN ?>?ADD=10" STYLE="text-decoration:none;">
 				<i class="fas fa-tachometer-alt text-white"></i>
-				<FONT class="ms-2" STYLE="font-family:HELVETICA;font-size:<?php echo $header_font_size ?>;color:<?php echo $text_color_white /*$campaigns_fc*/ ?>"><?php echo $campaigns_bold ?><?php echo _QXZ("Campaigns"); ?>
+				<FONT class="ms-2" STYLE="font-family:HELVETICA;font-size:<?php echo $header_font_size ?>;"><?php echo $campaigns_bold ?><?php echo _QXZ("Campaigns"); ?>
 			</a>
 		</TD>
 	</TR>
@@ -1954,7 +1954,7 @@ if ($subcamp_font_size < 4) {$subcamp_font_size='11';}
 			<TD class="p-2" ALIGN=LEFT <?php echo $lists_hh ?>>
 				<a href="<?php echo $ADMIN ?>?ADD=100" STYLE="text-decoration:none;">
 					<i class="fas fa-list text-white"></i>
-					<FONT class="ms-2" STYLE="font-family:HELVETICA;font-size:<?php echo $header_font_size ?>;color:<?php echo $text_color_white /*$lists_fc*/ ?>"><?php echo $lists_bold ?><?php echo _QXZ("Lists"); ?>
+					<FONT class="ms-2" STYLE="font-family:HELVETICA;font-size:<?php echo $header_font_size ?>;"><?php echo $lists_bold ?><?php echo _QXZ("Lists"); ?>
 				</a>
 			</TD>
 		</TR>
@@ -2031,7 +2031,7 @@ if ($subcamp_font_size < 4) {$subcamp_font_size='11';}
 		<TD class="p-2" ALIGN=LEFT <?php echo $qc_hh ?>>
 			<a href="<?php echo $ADMIN ?>?ADD=100000000000000" STYLE="text-decoration:none;">
 				<i class="fas fa-spell-check text-white"></i>
-				<FONT class="ms-2" STYLE="font-family:HELVETICA;font-size:<?php echo $header_font_size ?>;color:<?php echo $text_color_white /*$qc_fc*/ ?>"><?php echo $qc_bold ?> <?php echo _QXZ("Quality Control"); ?> </FONT>
+				<FONT class="ms-2" STYLE="font-family:HELVETICA;font-size:<?php echo $header_font_size ?>;"><?php echo $qc_bold ?> <?php echo _QXZ("Quality Control"); ?> </FONT>
 			</a>
 		</TD>
 	</TR>
@@ -2070,7 +2070,7 @@ if ($subcamp_font_size < 4) {$subcamp_font_size='11';}
 		<TD class="p-2" ALIGN=LEFT <?php echo $scripts_hh ?>>
 			<a href="<?php echo $ADMIN ?>?ADD=1000000" STYLE="text-decoration:none;">
 				<i class="fas fa-scroll text-white"></i>
-				<FONT class="ms-2" STYLE="font-family:HELVETICA;font-size:<?php echo $header_font_size ?>;color:<?php echo $text_color_white /*$scripts_fc*/ ?>"><?php echo $scripts_bold ?> <?php echo _QXZ("Scripts"); ?>
+				<FONT class="ms-2" STYLE="font-family:HELVETICA;font-size:<?php echo $header_font_size ?>;"><?php echo $scripts_bold ?> <?php echo _QXZ("Scripts"); ?>
 			</a>
 		</TD>
 	</TR>
@@ -2103,7 +2103,7 @@ if ($subcamp_font_size < 4) {$subcamp_font_size='11';}
 			<TD class="p-2" ALIGN=LEFT <?php echo $filters_hh ?>>
 				<a href="<?php echo $ADMIN ?>?ADD=10000000" STYLE="text-decoration:none;">
 					<i class="fas fa-filter text-white"></i>
-					<FONT class="ms-2" STYLE="font-family:HELVETICA;font-size:<?php echo $header_font_size ?>;color:<?php echo $text_color_white /*$filters_fc*/ ?>"><?php echo $filters_bold ?> <?php echo _QXZ("Filters"); ?>
+					<FONT class="ms-2" STYLE="font-family:HELVETICA;font-size:<?php echo $header_font_size ?>;"><?php echo $filters_bold ?> <?php echo _QXZ("Filters"); ?>
 				</a>
 			</TD>
 		</TR>
@@ -2131,7 +2131,7 @@ if ($subcamp_font_size < 4) {$subcamp_font_size='11';}
 		<TD class="p-2" ALIGN=LEFT <?php echo $ingroups_hh ?>>
 			<a href="<?php echo $ADMIN ?>?ADD=1001" STYLE="text-decoration:none;">
 				<i class="fas fa-user-friends text-white"></i>
-				<FONT class="ms-2" STYLE="font-family:HELVETICA;font-size:<?php echo $header_font_size ?>;color:<?php echo $text_color_white /*$ingroups_fc*/ ?>"><?php echo $ingroups_bold ?> <?php echo _QXZ("Inbound"); ?>
+				<FONT class="ms-2" STYLE="font-family:HELVETICA;font-size:<?php echo $header_font_size ?>;"><?php echo $ingroups_bold ?> <?php echo _QXZ("Inbound"); ?>
 			</a>
 		</TD>
 	</TR>
@@ -2267,7 +2267,7 @@ if ($subcamp_font_size < 4) {$subcamp_font_size='11';}
 		<TD class="p-2" ALIGN=LEFT <?php echo $usergroups_hh ?>>
 			<a href="<?php echo $ADMIN ?>?ADD=100000" STYLE="text-decoration:none;">
 				<i class="fas fa-users text-white"></i>
-				<FONT STYLE="font-family:HELVETICA;font-size:<?php echo $header_font_size ?>;color:<?php echo $text_color_white /*$usergroups_fc*/ ?>"><?php echo $usergroups_bold ?> <?php echo _QXZ("User Groups"); ?>
+				<FONT STYLE="font-family:HELVETICA;font-size:<?php echo $header_font_size ?>;"><?php echo $usergroups_bold ?> <?php echo _QXZ("User Groups"); ?>
 			</a>
 		</TD>
 	</TR>
@@ -2303,7 +2303,7 @@ if ($subcamp_font_size < 4) {$subcamp_font_size='11';}
 		<TD class="p-2" ALIGN=LEFT <?php echo $remoteagent_hh ?>>
 			<a href="<?php echo $ADMIN ?>?ADD=10000" STYLE="text-decoration:none;">
 				<i class="fas fa-id-badge text-white"></i>
-				<FONT class="ms-2" STYLE="font-family:HELVETICA;font-size:<?php echo $header_font_size ?>;color:<?php echo $text_color_white /*$remoteagent_fc*/ ?>"><?php echo $remoteagent_bold ?> <?php echo _QXZ("Remote Agents"); ?>
+				<FONT class="ms-2" STYLE="font-family:HELVETICA;font-size:<?php echo $header_font_size ?>;"><?php echo $remoteagent_bold ?> <?php echo _QXZ("Remote Agents"); ?>
 			</a>
 		</TD>
 	</TR>
@@ -2340,7 +2340,7 @@ if ($subcamp_font_size < 4) {$subcamp_font_size='11';}
 		<TD class="p-2" ALIGN=LEFT <?php echo $admin_hh ?>>
 			<a href="<?php echo $ADMIN ?>?ADD=999998" STYLE="text-decoration:none;">
 				<i class="fas fa-tools text-white"></i>
-				<FONT class="ms-2" STYLE="font-family:HELVETICA;font-size:<?php echo $header_font_size ?>;color:<?php echo $text_color_white /*$admin_fc*/ ?>"><?php echo $admin_bold ?> <?php echo _QXZ("Admin"); ?>
+				<FONT class="ms-2" STYLE="font-family:HELVETICA;font-size:<?php echo $header_font_size ?>;"><?php echo $admin_bold ?> <?php echo _QXZ("Admin"); ?>
 			</a>
 		</TD>
 	</TR>
