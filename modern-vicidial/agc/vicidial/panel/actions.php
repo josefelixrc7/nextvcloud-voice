@@ -919,15 +919,29 @@ if ($agent_display_dialable_leads > 0)
 	</div>
 </span>
 
-<span style="position:absolute;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="SearcHResultSDisplaYBox">
-	<table border="0" bgcolor="#CCFFCC" width="<?php echo $CAwidth ?>px" height="<?php echo $WRheight ?>px"><tr><td align="center" valign="top"> &nbsp; &nbsp; &nbsp; <font class="sd_text"><?php echo _QXZ("SEARCH RESULTS:"); ?></font> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <font class="sh_text"><a href="#" onclick="hideDiv('SearcHResultSDisplaYBox');return false;"><?php echo _QXZ("close"); ?> [X]</a><br />
-	<?php
-	if ($webphone_location == 'bar')
-		{echo "<br /><img src=\"./images/"._QXZ("pixel.gif")."\" width=\"1px\" height=\"".$webphone_height."px\" /><br />\n";}
-	?>
-	<div class="scroll_calllog" id="SearcHResultSSpan"> <?php echo _QXZ("Search Results"); ?> </div>
-	<br /><br /> &nbsp;</font>
-	</td></tr></table>
+<span class="w-100 h-100 overflow-scroll" tabindex="-1" style="background:rgba(0, 0, 0, 0.5);position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="SearcHResultSDisplaYBox">
+    <div class="w-50 mx-auto mt-2">
+
+		<div class="card">
+			<div class="card-header">
+				<h5>
+					<?php echo _QXZ("SEARCH RESULTS:"); ?>
+					<a href="#" onclick="hideDiv('SearcHResultSDisplaYBox');return false;"><?php echo _QXZ("close"); ?> [X]</a>
+				</h5>
+			</div>
+			<div class="card-body">
+
+				<table><tr><td align="center" valign="top">
+				<?php
+				if ($webphone_location == 'bar')
+					{echo "<br /><img src=\"./images/"._QXZ("pixel.gif")."\" width=\"1px\" height=\"".$webphone_height."px\" /><br />\n";}
+				?>
+				<div class="btn btn-primary" id="SearcHResultSSpan"> <?php echo _QXZ("Search Results"); ?> </div>
+				<br /><br /> &nbsp;</font>
+				</td></tr></table>
+			</div>
+		</div>
+	</div>
 </span>
 
 <span style="position:absolute;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="CalLNotesDisplaYBox">
