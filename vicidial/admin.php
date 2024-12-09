@@ -26072,7 +26072,7 @@ if ($ADD==31)
 			{
 			echo "<br><b>"._QXZ("LISTS WITHIN THIS CAMPAIGN").": &nbsp; $NWB#campaign_lists$NWE</b>\n";
 
-			echo "<TABLE><TR><TD>\n";
+			echo "<TABLE class=\"table\"><TR><TD>\n";
 				echo "<FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 			$LISTlink='stage=LISTIDDOWN';
@@ -26103,8 +26103,8 @@ if ($ADD==31)
 			$rslt=mysql_to_mysqli($stmt, $link);
 			$lists_to_print = mysqli_num_rows($rslt);
 
-			echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
-			echo "<TR BGCOLOR=BLACK>";
+			echo "<center><TABLE class=\"table mb-2\" width=$section_width cellspacing=0 cellpadding=1>\n";
+			echo "<TR BGCOLOR=\"#444\">";
 			echo "<TD><a href=\"$PHP_SELF?ADD=31&campaign_id=$campaign_id&$LISTlink\"><B><FONT FACE=\"Arial,Helvetica\" size=1 color=white>"._QXZ("LIST ID")."</B></a></TD>";
 			echo "<TD><a href=\"$PHP_SELF?ADD=31&campaign_id=$campaign_id&$NAMElink\"><B><FONT FACE=\"Arial,Helvetica\" size=1 color=white>"._QXZ("LIST NAME")."</B></a></TD>";
 			echo "<TD><B><FONT FACE=\"Arial,Helvetica\" size=1 color=white>"._QXZ("DESCRIPTION")."</B></TD>\n";
@@ -40856,7 +40856,7 @@ if ($ADD==82)
 ######################
 if ($ADD=="0A")
 	{
-	echo "<TABLE><TR><TD>\n";
+	echo "<TABLE class=\"table\"><TR><TD>\n";
 	echo "<FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 	echo "<img src=\"images/icon_black_users.png\" alt=\"Users\" width=42 height=42> "._QXZ("USER LISTINGS").": ";
 	if (preg_match('/display_all/',$status))
@@ -40891,7 +40891,7 @@ if ($ADD=="0A")
 	$people_to_print = mysqli_num_rows($rslt);
 
 	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
-	echo "<tr bgcolor=black>";
+	echo "<tr bgcolor=\"#444\">";
 	echo "<td><a href=\"$PHP_SELF?ADD=0A&status=$status&$USERlink\"><font size=1 color=white><B>"._QXZ("USER ID")."</B></a> &nbsp; ";
 	echo "<a href=\"$PHP_SELF?ADD=0A&status=$status&$USERNUMlink\"><font size=1 color=white><B>- # -</B></a></td>";
 	echo "<td><a href=\"$PHP_SELF?ADD=0A&status=$status&$NAMElink\"><font size=1 color=white><B>"._QXZ("FULL NAME")."</B></a></td>";
@@ -40934,7 +40934,7 @@ if ($ADD=="0A")
 ######################
 if ($ADD==10)
 	{
-	echo "<TABLE><TR><TD>\n";
+	echo "<TABLE class=\"table\"><TR><TD>\n";
 	echo "<FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 	if (file_exists('options.php'))
@@ -40960,7 +40960,7 @@ if ($ADD==10)
 	$campaigns_to_print = mysqli_num_rows($rslt);
 
 	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
-	echo "<tr bgcolor=black>";
+	echo "<tr bgcolor=\"#444\">";
 	echo "<td NOWRAP><font size=1 color=white align=left><B>"._QXZ("CAMPAIGN ID")."</B></td>";
 	echo "<td NOWRAP><font size=1 color=white><CENTER><B>"._QXZ("NAME")."</B></CENTER></td>";
 	echo "<td NOWRAP><font size=1 color=white><B>"._QXZ("ACTIVE")." &nbsp; </B></td>";
@@ -41012,7 +41012,7 @@ if ($ADD==10)
 ######################
 if ($ADD==100)
 	{
-	echo "<TABLE><TR><TD>\n";
+	echo "<TABLE class=\"table\"><TR><TD>\n";
 	echo "<FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 	##### get list of campaign IDs for validation of list campaign
@@ -41089,7 +41089,7 @@ if ($ADD==100)
 			}
 		}
 	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
-	echo "<TR BGCOLOR=BLACK>";
+	echo "<TR BGCOLOR=\"#444\">";
 	echo "<TD><a href=\"$PHP_SELF?ADD=100&$LISTlink$rankLINK\"><B><FONT FACE=\"Arial,Helvetica\" size=1 color=white>"._QXZ("LIST ID")."</B></a></TD>";
 	echo "<TD><a href=\"$PHP_SELF?ADD=100&$NAMElink$rankLINK\"><B><FONT FACE=\"Arial,Helvetica\" size=1 color=white>"._QXZ("LIST NAME")."</B></a></TD>";
 	echo "<TD><B><FONT FACE=\"Arial,Helvetica\" size=1 color=white>"._QXZ("DESCRIPTION")."</B></TD>\n";
