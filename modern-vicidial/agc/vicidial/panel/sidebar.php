@@ -113,8 +113,7 @@
                                         </li>
                                     ";
                                 }
-                                //if ($enable_third_webform > 0)
-                                if (true)
+                                if ($enable_third_webform > 0)
                                 {
                                     echo "
                                         <li class=\"nav-item\">
@@ -136,8 +135,7 @@
                                         <img class="img-fluid" src="./images/<?php echo _QXZ("vdc_LB_parkcall_OFF.gif"); ?>" border="0" alt="Park Call" />
                                     </span>
                                     <?php
-                                        //if ( ($ivr_park_call=='ENABLED') or ($ivr_park_call=='ENABLED_PARK_ONLY') )
-                                        if (true)
+                                        if ( ($ivr_park_call=='ENABLED') or ($ivr_park_call=='ENABLED_PARK_ONLY') )
                                         {
                                             echo "
                                                 <span class=\"mb-2\" id=\"ivrParkControl\">
@@ -159,8 +157,7 @@
                                 </div>
                             </li>
                             <?php
-                                //if ($quick_transfer_button_enabled > 0)
-                                if (true)
+                                if ($quick_transfer_button_enabled > 0)
                                 {
                                     echo "
                                         <li class=\"nav-item\">
@@ -171,8 +168,7 @@
                                             </div>
                                         </li>";
                                 }
-                                //if ($custom_3way_button_transfer_enabled > 0)
-                                if (true)
+                                if ($custom_3way_button_transfer_enabled > 0)
                                 {
                                     echo "
                                         <li class=\"nav-item\">
