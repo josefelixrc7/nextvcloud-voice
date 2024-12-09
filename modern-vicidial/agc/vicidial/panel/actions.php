@@ -936,7 +936,7 @@ if ($agent_display_dialable_leads > 0)
 				if ($webphone_location == 'bar')
 					{echo "<br /><img src=\"./images/"._QXZ("pixel.gif")."\" width=\"1px\" height=\"".$webphone_height."px\" /><br />\n";}
 				?>
-				<div class="btn btn-primary" id="SearcHResultSSpan"> <?php echo _QXZ("Search Results"); ?> </div>
+				<div id="SearcHResultSSpan"> <?php echo _QXZ("Search Results"); ?> </div>
 				<br /><br /> &nbsp;</font>
 				</td></tr></table>
 			</div>
