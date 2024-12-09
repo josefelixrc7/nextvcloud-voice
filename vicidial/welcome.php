@@ -1,6 +1,6 @@
 <?php
 
-include '/index.html';
+header('Location: /');
 exit;
 
 # welcome.php - VICIDIAL welcome page
