@@ -1,6 +1,6 @@
 
         <!-- Barra lateral -->
-        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse overflow-scroll" style="background: #060e23 !important;">
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse overflow-scroll" style="background: #060e23 !important;max-width:200px;">
             <div class="position-sticky pt-3 text-white">
 
                 <ul class="nav flex-column">
