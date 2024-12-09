@@ -19,7 +19,7 @@
     </div>
     <div class="navbar-nav">
         <div class="nav-item text-nowrap">
-			<a class="btn btn-outline-ligth" href="#" onclick="NormalLogout();return false;needToConfirmExit = false;"><?=_QXZ("LOGOUT");?></a>
+			<a class="btn btn-outline-light" href="#" onclick="NormalLogout();return false;needToConfirmExit = false;"><?=_QXZ("LOGOUT");?></a>
         </div>
     </div>
 </header>

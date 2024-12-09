@@ -7,10 +7,10 @@
                     <li class="nav-item">
                         <div class="nav-link">
                             <?php
-                                if ($webphone_location == 'bar')
+                                /*if ($webphone_location == 'bar')
                                 {
                                     echo "<img src=\"./images/"._QXZ("pixel.gif")."\" width=\"1px\" height=\"".$webphone_height."px\" /><br />\n";
-                                }
+                                }*/
                                 $alt_phone_selected='';
                                 if ( ($alt_number_dialing=='SELECTED') or ($alt_number_dialing=='SELECTED_TIMER_ALT') or ($alt_number_dialing=='SELECTED_TIMER_ADDR3') )
                                 {
@@ -36,7 +36,7 @@
                         <div class="nav-link">
                             <span id="DiaLControl">
                                 <a class="btn btn-secondary" href="#" onclick="ManualDialNext('','','','','','0','','','YES');">
-                                    <img style="width:100%;" src="./images/<?php echo _QXZ("vdc_LB_dialnextnumber_OFF.gif"); ?>" border="0" alt="Dial Next Number" />
+                                    <img class="img-fluid" src="./images/<?php echo _QXZ("vdc_LB_dialnextnumber_OFF.gif"); ?>" border="0" alt="Dial Next Number" />
                                 </a>
                             </span>
                         </div>
@@ -57,7 +57,7 @@
                             </span>
                             <font class="skb_text">
                                 <span id="NexTCalLPausE">
-                                    <a href="#" onclick="next_call_pause_click();return false;"><?php echo _QXZ("Next Call Pause"); ?></a> <br />
+                                    <a href="#" onclick="next_call_pause_click();return false;"><?php echo _QXZ("Next Call Pause"); ?></a>
                                 </span>
                             </font>
 
@@ -68,94 +68,132 @@
                             if ( ($alt_phone_dialing) and ($auto_dial_level==0) )
                             {echo "<font class=\"\"> <input class=\"form-check-input\" type=\"checkbox\" name=\"DiaLAltPhonE\" size=\"1\" value=\"0\" /> ALT PHONE DIAL<br /></font>";}
                             ?> -->
-
-                            <small class="text-muted"><?php echo _QXZ("RECORDING FILE:"); ?></small><br />
-                            <font class="body_tiny">
-                                <span id="RecorDingFilename"></span>
-                            </font><br />
-                            <small class="text-muted"><?php echo _QXZ("RECORD ID:"); ?></small>
-                            <font class="body_small">
-                                <span id="RecorDID"></span>
-                            </font><br />
-
-                            <span class="mb-2" style="background-color: <?php echo $MAIN_COLOR ?>" id="RecorDControl">
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link">
+                            <small class="text-white"><?php echo _QXZ("RECORDING FILE:"); ?></small>
+                            <small class="text-white"><span id="RecorDingFilename"></span></small>
+                            <small class="text-white"><?php echo _QXZ("RECORD ID:"); ?></small>
+                            <small class="text-white"><span id="RecorDID"></span></small>
+                            <br>
+                            <span class="mb-2" id="RecorDControl">
                                 <a href="#" onclick="conf_send_recording('MonitorConf',session_id,'','','','YES');return false;">
-                                    <img style="width:100%;" src="./images/<?php echo _QXZ("$start_recording_GIF"); ?>" border="0" alt="Start Recording" />
+                                    <img class="img-fluid" src="./images/<?php echo _QXZ("$start_recording_GIF"); ?>" border="0" alt="Start Recording" />
                                 </a>
                             </span><br />
-                            <span class="mb-2" style="background-color: <?php echo $MAIN_COLOR ?>" id="RecorDMute"></span>
-                            <?php
-                                if ($SSenable_first_webform > 0)
-                                {
-                                    echo "
+                            <span class="mb-2" id="RecorDMute"></span>
+                        </div>
+                    </li>
+                    <?php
+                        if ($SSenable_first_webform > 0)
+                        {
+                            echo "
+                                <li class=\"nav-item\">
+                                    <div class=\"nav-link\">
                                         <span class=\"mb-2\" style=\"background-color: #FFFFFF\" id=\"WebFormSpan\">
-                                            <img style=\"width:100%;\" src=\"./images/"._QXZ("vdc_LB_webform_OFF.gif")."\" border=\"0\" alt=\"Web Form\" />
-                                        </span><br />\n";
-                                }
-                                if ($enable_second_webform > 0)
-                                {
-                                    echo "
+                                            <img class=\"img-fluid\" src=\"./images/"._QXZ("vdc_LB_webform_OFF.gif")."\" border=\"0\" alt=\"Web Form\" />
+                                        </span>
+                                    </div>
+                                </li>";
+                        }
+                        if ($enable_second_webform > 0)
+                        {
+                            echo "
+                                <li class=\"nav-item\">
+                                    <div class=\"nav-link\">
                                         <span class=\"mb-2\" style=\"background-color: #FFFFFF\" id=\"WebFormSpanTwo\">
-                                            <img style=\"width:100%;\" src=\"./images/"._QXZ("vdc_LB_webform_two_OFF.gif")."\" border=\"0\" alt=\"Web Form 2\" />
-                                        </span><br />\n";
-                                }
-                                if ($enable_third_webform > 0)
-                                {
-                                    echo "
+                                            <img class=\"img-fluid\" src=\"./images/"._QXZ("vdc_LB_webform_two_OFF.gif")."\" border=\"0\" alt=\"Web Form 2\" />
+                                        </span>
+                                    </div>
+                                </li>
+                            ";
+                        }
+                        if ($enable_third_webform > 0)
+                        {
+                            echo "
+                                <li class=\"nav-item\">
+                                    <div class=\"nav-link\">
                                         <span class=\"mb-2\" style=\"background-color: #FFFFFF\" id=\"WebFormSpanThree\">
-                                            <img style=\"width:100%;\" src=\"./images/"._QXZ("vdc_LB_webform_three_OFF.gif")."\" border=\"0\" alt=\"Web Form 3\" />
-                                        </span><br />\n";
-                                }
-                            ?>
+                                            <img class=\"img-fluid\" src=\"./images/"._QXZ("vdc_LB_webform_three_OFF.gif")."\" border=\"0\" alt=\"Web Form 3\" />
+                                        </span>
+                                    </div>
+                                </li>";
+                        }
+                    ?>
 
-                            <font class="body_small_bold"><span id="ParkCounterSpan"> &nbsp; </span></font><br />
-                            <span class="mb-2" style="background-color: <?php echo $MAIN_COLOR ?>" id="ParkControl">
-                                <img style="width:100%;" src="./images/<?php echo _QXZ("vdc_LB_parkcall_OFF.gif"); ?>" border="0" alt="Park Call" />
-                            </span><br />
-                            <?php
-                                if ( ($ivr_park_call=='ENABLED') or ($ivr_park_call=='ENABLED_PARK_ONLY') )
-                                {
-                                    echo "
+                    <li class="nav-item">
+                        <div class="nav-link">
+                            <font class="body_small_bold"><span id="ParkCounterSpan"></span></font>
+                            <br>
+                            <span class="mb-2" id="ParkControl">
+                                <img class="img-fluid" src="./images/<?php echo _QXZ("vdc_LB_parkcall_OFF.gif"); ?>" border="0" alt="Park Call" />
+                            </span>
+                        </div>
+                    </li>
+                    <?php
+                        if ( ($ivr_park_call=='ENABLED') or ($ivr_park_call=='ENABLED_PARK_ONLY') )
+                        {
+                            echo "
+                                <li class=\"nav-item\">
+                                    <div class=\"nav-link\">
                                         <span class=\"mb-2\" style=\"background-color: $MAIN_COLOR\" id=\"ivrParkControl\">
-                                            <img style=\"width:100%;\" src=\"./images/"._QXZ("vdc_LB_ivrparkcall_OFF.gif")."\" border=\"0\" alt=\"IVR Park Call\" />
-                                        </span><br />\n";}
-                                else
-                                {
-                                    echo "<span class=\"mb-2\" style=\"background-color: $MAIN_COLOR\" id=\"ivrParkControl\"></span>\n";
-                                }
-                            ?>
-                            <span class="mb-2" style="background-color: <?php echo $MAIN_COLOR ?>" id="XferControl">
-                                <img style="width:100%;" src="./images/<?php echo _QXZ("vdc_LB_transferconf_OFF.gif"); ?>" border="0" alt="Transfer - Conference" />
-                            </span><br />
-
-                            <?php
-                                if ($quick_transfer_button_enabled > 0)
-                                {
-                                    echo "
+                                            <img class=\"img-fluid\" src=\"./images/"._QXZ("vdc_LB_ivrparkcall_OFF.gif")."\" border=\"0\" alt=\"IVR Park Call\" />
+                                        </span>
+                                    </div>
+                                </li>";
+                        }
+                        else
+                        {
+                            echo "
+                                <li class=\"nav-item\">
+                                    <div class=\"nav-link\">
+                                        <span class=\"mb-2\" id=\"ivrParkControl\"></span>
+                                    </div>
+                                </li>";
+                        }
+                    ?>
+                    <li class="nav-item">
+                        <div class="nav-link">
+                            <span class="mb-2" id="XferControl">
+                                <img class="img-fluid" src="./images/<?php echo _QXZ("vdc_LB_transferconf_OFF.gif"); ?>" border="0" alt="Transfer - Conference" />
+                            </span>
+                        </div>
+                    </li>
+                    <?php
+                        if ($quick_transfer_button_enabled > 0)
+                        {
+                            echo "
+                                <li class=\"nav-item\">
+                                    <div class=\"nav-link\">
                                         <span class=\"mb-2\" style=\"background-color: $MAIN_COLOR\" id=\"QuickXfer\">
-                                            <img style=\"width:100%;\" src=\"./images/"._QXZ("vdc_LB_quickxfer_OFF.gif")."\" border=\"0\" alt=\"Quick Transfer\" />
-                                        </span><br />\n";}
-                                if ($custom_3way_button_transfer_enabled > 0)
-                                {
-                                    echo "
+                                            <img class=\"img-fluid\" src=\"./images/"._QXZ("vdc_LB_quickxfer_OFF.gif")."\" border=\"0\" alt=\"Quick Transfer\" />
+                                        </span>
+                                    </div>
+                                </li>";
+                        }
+                        if ($custom_3way_button_transfer_enabled > 0)
+                        {
+                            echo "
+                                <li class=\"nav-item\">
+                                    <div class=\"nav-link\">
                                         <span class=\"mb-2\" style=\"background-color: $MAIN_COLOR\" id=\"CustomXfer\">
-                                            <img style=\"width:100%;\" src=\"./images/"._QXZ("vdc_LB_customxfer_OFF.gif")."\" border=\"0\" alt=\"Custom Transfer\" />
-                                        </span><br />\n";}
-                            ?>
+                                            <img class=\"img-fluid\" src=\"./images/"._QXZ("vdc_LB_customxfer_OFF.gif")."\" border=\"0\" alt=\"Custom Transfer\" />
+                                        </span>
+                                    </div>
+                                </li>";
+                        }
+                    ?>
 
+                    <li class="nav-item">
+                        <div class="nav-link">
                             <span id="ReQueueCall"></span>
-
-                            <?php
-                                if ($call_requeue_button > 0)
-                                    {echo "<br />\n";}
-                            ?>
-
                         </div>
                     </li>
                     <li class="nav-item">
                         <div class="nav-link">
                             <span class="mb-2" style="background-color: #FFCCFF" id="HangupControl">
-                                <img style="width:100%;" src="./images/<?php echo _QXZ("vdc_LB_hangupcustomer_OFF.gif"); ?>" border="0" alt="Hangup Customer" />
+                                <img class="img-fluid" src="./images/<?php echo _QXZ("vdc_LB_hangupcustomer_OFF.gif"); ?>" border="0" alt="Hangup Customer" />
                             </span>
                         </div>
                     </li>
@@ -164,7 +202,7 @@
                             <div class="text_input" id="SendDTMFdiv">
                                 <span style="background-color: <?php echo $MAIN_COLOR ?>" id="SendDTMF">
                                     <a href="#" onclick="SendConfDTMF(session_id,'YES');return false;">
-                                        <img style="width:100%;" src="./images/<?php echo _QXZ("vdc_LB_senddtmf.gif"); ?>" border="0" alt="Send DTMF" align="bottom" />
+                                        <img class="img-fluid" src="./images/<?php echo _QXZ("vdc_LB_senddtmf.gif"); ?>" border="0" alt="Send DTMF" align="bottom" />
                                     </a>
                                     <input class="mt-2 form-control form-control-sm" type="text" size="5" name="conf_dtmf" class="cust_form" value="" maxlength="50" />
                                 </span>
