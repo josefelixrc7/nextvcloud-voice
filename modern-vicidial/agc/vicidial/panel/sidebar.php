@@ -3,10 +3,10 @@
         <nav id="sidebarMenu" class="col-md-3 d-md-block sidebar collapse overflow-scroll" style="background: #060e23 !important;max-width:200px;">
             <div class="position-sticky pt-3 text-white">
 
-                <div class="row">
+                <div class="">
 
                     <!-- First ul -->
-                    <div class="col-12">
+                    <div class="px-3">
 
                         <ul class="nav flex-column">
                             <li class="nav-item">
@@ -126,10 +126,6 @@
                                 }
                             ?>
                         </ul>
-
-                    <!--</div>
-
-                    <div class="col-6">-->
 
                         <ul class="nav flex-column">
                             <li class="nav-item">
