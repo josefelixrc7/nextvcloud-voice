@@ -76,12 +76,11 @@
                             <small class="text-white"><span id="RecorDingFilename"></span></small>
                             <small class="text-white"><?php echo _QXZ("RECORD ID:"); ?></small>
                             <small class="text-white"><span id="RecorDID"></span></small>
-                            <br>
                             <span class="mb-2" id="RecorDControl">
                                 <a href="#" onclick="conf_send_recording('MonitorConf',session_id,'','','','YES');return false;">
                                     <img class="img-fluid" src="./images/<?php echo _QXZ("$start_recording_GIF"); ?>" border="0" alt="Start Recording" />
                                 </a>
-                            </span><br />
+                            </span>
                             <span class="mb-2" id="RecorDMute"></span>
                         </div>
                     </li>
@@ -125,7 +124,6 @@
                     <li class="nav-item">
                         <div class="nav-link">
                             <font class="body_small_bold"><span id="ParkCounterSpan"></span></font>
-                            <br>
                             <span class="mb-2" id="ParkControl">
                                 <img class="img-fluid" src="./images/<?php echo _QXZ("vdc_LB_parkcall_OFF.gif"); ?>" border="0" alt="Park Call" />
                             </span>
