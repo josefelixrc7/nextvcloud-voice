@@ -41925,7 +41925,7 @@ if ($ADD==12000)
 ######################
 if ($ADD==100000)
 	{
-	echo "<TABLE><TR><TD>\n";
+	echo "<TABLE class=\"table\"><TR><TD>\n";
 	echo "<FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 	$stmt="SELECT user_group,group_name,forced_timeclock_login from vicidial_user_groups $whereLOGadmin_viewable_groupsSQL order by user_group;";
@@ -41933,8 +41933,8 @@ if ($ADD==100000)
 	$usergroups_to_print = mysqli_num_rows($rslt);
 
 	echo "<img src=\"images/icon_black_usergroups.png\" alt=\"User Groups\" width=42 height=42> "._QXZ("USER GROUPS LISTINGS").":\n";
-	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
-	echo "<tr bgcolor=black>";
+	echo "<center><TABLE class=\"table\" width=$section_width cellspacing=0 cellpadding=1>\n";
+	echo "<tr bgcolor=\"#444\">";
 	echo "<td><font size=1 color=white align=left><B>"._QXZ("USER GROUP")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("GROUP NAME")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("FORCE TIMECLOCK")." &nbsp; </B></td>";
