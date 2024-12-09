@@ -6,7 +6,7 @@
                 <div class="row">
 
                     <!-- First ul -->
-                    <div class="col-6">
+                    <div class="col-12">
 
                         <ul class="nav flex-column">
                             <li class="nav-item">
@@ -127,10 +127,9 @@
                             ?>
                         </ul>
 
-                    </div>
+                    <!--</div>
 
-                    <!-- Second ul -->
-                    <div class="col-6">
+                    <div class="col-6">-->
 
                         <ul class="nav flex-column">
                             <li class="nav-item">
