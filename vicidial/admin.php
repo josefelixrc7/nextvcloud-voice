@@ -40959,7 +40959,7 @@ if ($ADD==10)
 	$rslt=mysql_to_mysqli($stmt, $link);
 	$campaigns_to_print = mysqli_num_rows($rslt);
 
-	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
+	echo "<center><TABLE class=\"table\" width=$section_width cellspacing=0 cellpadding=1>\n";
 	echo "<tr bgcolor=\"#444\">";
 	echo "<td NOWRAP><font size=1 color=white align=left><B>"._QXZ("CAMPAIGN ID")."</B></td>";
 	echo "<td NOWRAP><font size=1 color=white><CENTER><B>"._QXZ("NAME")."</B></CENTER></td>";
@@ -41088,7 +41088,7 @@ if ($ADD==100)
 			echo " &nbsp; &nbsp; <a href=\"$PHP_SELF?ADD=100&status=display_all$rankLINK\"><font size=1 color=black>"._QXZ("show all lists")."</font></a>\n";
 			}
 		}
-	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
+	echo "<center><TABLE class=\"table\" width=$section_width cellspacing=0 cellpadding=1>\n";
 	echo "<TR BGCOLOR=\"#444\">";
 	echo "<TD><a href=\"$PHP_SELF?ADD=100&$LISTlink$rankLINK\"><B><FONT FACE=\"Arial,Helvetica\" size=1 color=white>"._QXZ("LIST ID")."</B></a></TD>";
 	echo "<TD><a href=\"$PHP_SELF?ADD=100&$NAMElink$rankLINK\"><B><FONT FACE=\"Arial,Helvetica\" size=1 color=white>"._QXZ("LIST NAME")."</B></a></TD>";
