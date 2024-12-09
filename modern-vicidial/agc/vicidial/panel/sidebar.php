@@ -1,7 +1,7 @@
 
         <!-- Barra lateral -->
-        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse overflow-scroll">
-            <div class="position-sticky pt-3">
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse overflow-scroll" style="background: #060e23 !important;">
+            <div class="position-sticky pt-3 text-white">
 
                 <ul class="nav flex-column">
                     <li class="nav-item">
@@ -24,7 +24,7 @@
                                     </font>
                                 </b>
                             </span>
-                            <font class="body_text">
+                            <font class="text-white">
                                 <?php echo _QXZ("STATUS:"); ?>
                                 <span id="MainStatuSSpan"></span>
                                 <span id=timer_alt_display></span>
@@ -34,7 +34,7 @@
                     </li>
                     <li class="nav-item">
                         <div class="nav-link">
-                            <span style="background-color: #CCFFCC" id="DiaLControl">
+                            <span id="DiaLControl">
                                 <a class="btn btn-secondary" href="#" onclick="ManualDialNext('','','','','','0','','','YES');">
                                     <img src="./images/<?php echo _QXZ("vdc_LB_dialnextnumber_OFF.gif"); ?>" border="0" alt="Dial Next Number" />
                                 </a>
