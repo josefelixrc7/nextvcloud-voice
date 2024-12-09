@@ -95,7 +95,7 @@
                                     echo "
                                         <li class=\"nav-item\">
                                             <div class=\"\">
-                                                <span class=\"mb-2\" style=\"background-color: #FFFFFF\" id=\"WebFormSpan\">
+                                                <span class=\"mb-2\" id=\"WebFormSpan\">
                                                     <img class=\"img-fluid\" src=\"./images/"._QXZ("vdc_LB_webform_OFF.gif")."\" border=\"0\" alt=\"Web Form\" />
                                                 </span>
                                             </div>
@@ -106,7 +106,7 @@
                                     echo "
                                         <li class=\"nav-item\">
                                             <div class=\"\">
-                                                <span class=\"mb-2\" style=\"background-color: #FFFFFF\" id=\"WebFormSpanTwo\">
+                                                <span class=\"mb-2\" id=\"WebFormSpanTwo\">
                                                     <img class=\"img-fluid\" src=\"./images/"._QXZ("vdc_LB_webform_two_OFF.gif")."\" border=\"0\" alt=\"Web Form 2\" />
                                                 </span>
                                             </div>
@@ -118,7 +118,7 @@
                                     echo "
                                         <li class=\"nav-item\">
                                             <div class=\"\">
-                                                <span class=\"mb-2\" style=\"background-color: #FFFFFF\" id=\"WebFormSpanThree\">
+                                                <span class=\"mb-2\" id=\"WebFormSpanThree\">
                                                     <img class=\"img-fluid\" src=\"./images/"._QXZ("vdc_LB_webform_three_OFF.gif")."\" border=\"0\" alt=\"Web Form 3\" />
                                                 </span>
                                             </div>
@@ -138,7 +138,7 @@
                                         if ( ($ivr_park_call=='ENABLED') or ($ivr_park_call=='ENABLED_PARK_ONLY') )
                                         {
                                             echo "
-                                                <span class=\"mb-2\" style=\"background-color: $MAIN_COLOR\" id=\"ivrParkControl\">
+                                                <span class=\"mb-2\" id=\"ivrParkControl\">
                                                     <img class=\"img-fluid\" src=\"./images/"._QXZ("vdc_LB_ivrparkcall_OFF.gif")."\" border=\"0\" alt=\"IVR Park Call\" />
                                                 </span>";
                                         }
@@ -162,7 +162,7 @@
                                     echo "
                                         <li class=\"nav-item\">
                                             <div class=\"\">
-                                                <span class=\"mb-2\" style=\"background-color: $MAIN_COLOR\" id=\"QuickXfer\">
+                                                <span class=\"mb-2\" id=\"QuickXfer\">
                                                     <img class=\"img-fluid\" src=\"./images/"._QXZ("vdc_LB_quickxfer_OFF.gif")."\" border=\"0\" alt=\"Quick Transfer\" />
                                                 </span>
                                             </div>
@@ -173,7 +173,7 @@
                                     echo "
                                         <li class=\"nav-item\">
                                             <div class=\"\">
-                                                <span class=\"mb-2\" style=\"background-color: $MAIN_COLOR\" id=\"CustomXfer\">
+                                                <span class=\"mb-2\" id=\"CustomXfer\">
                                                     <img class=\"img-fluid\" src=\"./images/"._QXZ("vdc_LB_customxfer_OFF.gif")."\" border=\"0\" alt=\"Custom Transfer\" />
                                                 </span>
                                             </div>
@@ -188,7 +188,7 @@
                             </li>
                             <li class="nav-item">
                                 <div class="">
-                                    <span class="mb-2" style="background-color: #FFCCFF" id="HangupControl">
+                                    <span class="mb-2" id="HangupControl">
                                         <img class="img-fluid" src="./images/<?php echo _QXZ("vdc_LB_hangupcustomer_OFF.gif"); ?>" border="0" alt="Hangup Customer" />
                                     </span>
                                 </div>
@@ -196,17 +196,13 @@
                             <li class="nav-item">
                                 <div class="">
                                     <div class="text_input" id="SendDTMFdiv">
-                                        <span style="background-color: <?php echo $MAIN_COLOR ?>" id="SendDTMF">
+                                        <span id="SendDTMF">
                                             <a href="#" onclick="SendConfDTMF(session_id,'YES');return false;">
                                                 <img class="img-fluid" src="./images/<?php echo _QXZ("vdc_LB_senddtmf.gif"); ?>" border="0" alt="Send DTMF" align="bottom" />
                                             </a>
                                             <input class="mt-2 form-control form-control-sm" type="text" size="5" name="conf_dtmf" class="cust_form" value="" maxlength="50" />
                                         </span>
                                     </div>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <div class="">
                                     <span id="busycallsdebug"></span>
                                 </div>
                             </li>
