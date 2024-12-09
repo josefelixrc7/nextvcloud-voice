@@ -816,7 +816,7 @@ if ($agent_display_dialable_leads > 0)
 
 		<div class="card">
 			<div class="card-header">
-				<h5>
+				<h5 class="d-flex">
 					<span class="w-auto"><?php echo _QXZ("SEARCH FOR A LEAD:"); ?></span>
 					<a class="btn btn-close ms-auto" href="#" onclick="LeaDSearcHVieWClose();return false;"></a>
 				</h5>
@@ -827,7 +827,7 @@ if ($agent_display_dialable_leads > 0)
 						<td align="center" valign="top"> 
 				<?php
 				if ($webphone_location == 'bar')
-					{echo "<br /><img src=\"./images/"._QXZ("pixel.gif")."\" width=\"1px\" height=\"".$webphone_height."px\" /><br />\n";}
+					{echo "<img src=\"./images/"._QXZ("pixel.gif")."\" width=\"1px\" height=\"".$webphone_height."px\" />\n";}
 				$TEMPlabel_vendor_lead_code = preg_replace("/---READONLY---|---REQUIRED---|---HIDE---/","",$label_vendor_lead_code);
 				?>
 				<br /><br />
@@ -924,7 +924,7 @@ if ($agent_display_dialable_leads > 0)
 
 		<div class="card">
 			<div class="card-header">
-				<h5>
+				<h5 class="d-flex">
 					<span class="w-auto"><?php echo _QXZ("SEARCH RESULTS:"); ?></span>
 					<a class="ms-auto btn btn-close" href="#" onclick="hideDiv('SearcHResultSDisplaYBox');return false;"></a>
 				</h5>
