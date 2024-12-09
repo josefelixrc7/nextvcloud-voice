@@ -1760,7 +1760,7 @@ if ($subcamp_font_size < 4) {$subcamp_font_size='11';}
 
 
 ?>
-<CENTER>
+<CENTER style="background-color: rgb(234, 234, 234) !important;">
 
 <TABLE BGCOLOR=white cellpadding=0 cellspacing=0>
 
