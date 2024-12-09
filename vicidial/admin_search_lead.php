@@ -258,7 +258,6 @@ $regexLOGallowed_campaigns = " $LOGallowed_campaigns ";
 <html>
 <head>
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
-<link rel="icon" type="image/x-icon" href="/modern-vicidial/images/logo.png">
 <title>
 <?php echo _QXZ("ADMINISTRATION: Lead Search");
 

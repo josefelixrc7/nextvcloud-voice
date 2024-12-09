@@ -377,6 +377,7 @@ else if ($android_header)
 else
 {
 if ($no_title < 1) {echo "</title>\n";}
+echo '<link rel="icon" type="image/x-icon" href="/modern-vicidial/images/logo.png">';
 echo "<script language=\"Javascript\">\n";
 echo "var field_name = '';\n";
 echo "var user = '$PHP_AUTH_USER';\n";
