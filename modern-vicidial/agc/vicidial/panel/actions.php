@@ -811,97 +811,101 @@ if ($agent_display_dialable_leads > 0)
 	</td></tr></table>
 </span>
 
-<span style="position:absolute;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="SearcHForMDisplaYBox">
-	<table border="0" bgcolor="#CCFFCC" width="<?php echo $CAwidth ?>px" height="<?php echo $WRheight ?>px"><tr><td align="center" valign="top"> &nbsp; &nbsp; &nbsp; <font class="sd_text"><?php echo _QXZ("SEARCH FOR A LEAD:"); ?></font> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <font class="sh_text"><a href="#" onclick="LeaDSearcHVieWClose();return false;"><?php echo _QXZ("close"); ?> [X]</a><br />
-	<?php
-	if ($webphone_location == 'bar')
-		{echo "<br /><img src=\"./images/"._QXZ("pixel.gif")."\" width=\"1px\" height=\"".$webphone_height."px\" /><br />\n";}
-	$TEMPlabel_vendor_lead_code = preg_replace("/---READONLY---|---REQUIRED---|---HIDE---/","",$label_vendor_lead_code);
-	?>
-	<br /><br />
-	<?php echo _QXZ("Notes: when doing a search for a lead, the phone number, lead ID or %1s are the best fields to use.",0,'',$TEMPlabel_vendor_lead_code); ?> <br /><?php echo _QXZ("Using the other fields may be slower. Lead searching does not allow for wildcard or partial search terms."); ?> <br /><?php echo _QXZ("Lead search requests are all logged in the system."); ?>
-	<br /><br />
-	<center>
-	<table border="0">
-	<tr>
-	<td align="right"> <font class="sh_text"><?php echo _QXZ("Phone Number:"); ?></font> </td><td align="left"><input type="text" size="18" maxlength="20" name="search_phone_number" id="search_phone_number"></td>
-	</tr>
-	<tr>
-	<td align="right"> <font class="sh_text"><?php echo _QXZ("Phone Number Fields:"); ?></font> </td>
-	<td align="left"><font class="sh_text">
-	<input type="checkbox" name="search_main_phone" id="search_main_phone" size="1" value="0" checked /> <?php echo _QXZ("Main Phone Number"); ?>
-	<input type="checkbox" name="search_alt_phone" id="search_alt_phone" size="1" value="0" /> <?php echo _QXZ("Alternate Phone Number"); ?>
-	<input type="checkbox" name="search_addr3_phone" id="search_addr3_phone" size="1" value="0" /> <?php echo _QXZ("Address3 Phone Number"); ?>
-	</font>
-	</td>
-	</tr>
-	<tr>
-	<td align="right"> <font class="sh_text"><?php echo _QXZ("Lead ID:"); ?></font> </td><td align="left"><input type="text" size="11" maxlength="10" name="search_lead_id" id="search_lead_id"></td>
-	</tr>
-	<tr>
+<span class="w-100 h-100 overflow-scroll" tabindex="-1" style="background:rgba(0, 0, 0, 0.5);position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="SearcHForMDisplaYBox">
+    <div class="w-50 mx-auto mt-2">
 
-	<?php
-	if ($label_vendor_lead_code == '---HIDE---')
-        {echo " </td><td align=\"left\"><input type=\"hidden\" name=\"search_vendor_lead_code\" id=\"search_vendor_lead_code\" value=\"\" />";}
-	else
-        {
-		$label_vendor_lead_code = preg_replace("/---READONLY---|---REQUIRED---/","",$label_vendor_lead_code);
-		echo "<td align=\"right\"> <font class=\"sh_text\">$label_vendor_lead_code:</font> </td><td align=\"left\"><input type=\"text\" size=\"18\" maxlength=\"$MAXvendor_lead_code\" name=\"search_vendor_lead_code\" id=\"search_vendor_lead_code\"></td>\n";
-		}
-	echo "</tr><tr>\n";
+		<table><tr><td align="center" valign="top"> &nbsp; &nbsp; &nbsp; <font class="sd_text"><?php echo _QXZ("SEARCH FOR A LEAD:"); ?></font> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <font class="sh_text"><a href="#" onclick="LeaDSearcHVieWClose();return false;"><?php echo _QXZ("close"); ?> [X]</a><br />
+		<?php
+		if ($webphone_location == 'bar')
+			{echo "<br /><img src=\"./images/"._QXZ("pixel.gif")."\" width=\"1px\" height=\"".$webphone_height."px\" /><br />\n";}
+		$TEMPlabel_vendor_lead_code = preg_replace("/---READONLY---|---REQUIRED---|---HIDE---/","",$label_vendor_lead_code);
+		?>
+		<br /><br />
+		<?php echo _QXZ("Notes: when doing a search for a lead, the phone number, lead ID or %1s are the best fields to use.",0,'',$TEMPlabel_vendor_lead_code); ?> <br /><?php echo _QXZ("Using the other fields may be slower. Lead searching does not allow for wildcard or partial search terms."); ?> <br /><?php echo _QXZ("Lead search requests are all logged in the system."); ?>
+		<br /><br />
+		<center>
+		<table border="0">
+		<tr>
+		<td align="right"> <font class="sh_text"><?php echo _QXZ("Phone Number:"); ?></font> </td><td align="left"><input class="form-control mb-2" type="text" size="18" maxlength="20" name="search_phone_number" id="search_phone_number"></td>
+		</tr>
+		<tr>
+		<td align="right"> <font class="sh_text"><?php echo _QXZ("Phone Number Fields:"); ?></font> </td>
+		<td align="left"><font class="sh_text">
+		<input class="form-check-control mb-2" type="checkbox" name="search_main_phone" id="search_main_phone" size="1" value="0" checked /> <?php echo _QXZ("Main Phone Number"); ?>
+		<input class="form-check-control mb-2" type="checkbox" name="search_alt_phone" id="search_alt_phone" size="1" value="0" /> <?php echo _QXZ("Alternate Phone Number"); ?>
+		<input class="form-check-control mb-2" type="checkbox" name="search_addr3_phone" id="search_addr3_phone" size="1" value="0" /> <?php echo _QXZ("Address3 Phone Number"); ?>
+		</font>
+		</td>
+		</tr>
+		<tr>
+		<td align="right"> <font class="sh_text"><?php echo _QXZ("Lead ID:"); ?></font> </td><td align="left"><input class="form-control mb-2" type="text" size="11" maxlength="10" name="search_lead_id" id="search_lead_id"></td>
+		</tr>
+		<tr>
 
-	if ($label_first_name == '---HIDE---')
-        {echo " </td><td align=\"left\"><input type=\"hidden\" name=\"search_first_name\" id=\"search_first_name\" value=\"\" />";}
-	else
-        {
-		$label_first_name = preg_replace("/---READONLY---|---REQUIRED---/","",$label_first_name);
-		echo "<td align=\"right\"> <font class=\"sh_text\">$label_first_name:</font> </td><td align=\"left\"><input type=\"text\" size=\"18\" maxlength=\"$MAXfirst_name\" name=\"search_first_name\" id=\"search_first_name\"></td>\n";
-		}
-	echo "</tr><tr>\n";
+		<?php
+		if ($label_vendor_lead_code == '---HIDE---')
+			{echo " </td><td align=\"left\"><input type=\"hidden\" name=\"search_vendor_lead_code\" id=\"search_vendor_lead_code\" value=\"\" />";}
+		else
+			{
+			$label_vendor_lead_code = preg_replace("/---READONLY---|---REQUIRED---/","",$label_vendor_lead_code);
+			echo "<td align=\"right\"> <font class=\"sh_text\">$label_vendor_lead_code:</font> </td><td align=\"left\"><input class=\"form-control mb-2\" type=\"text\" size=\"18\" maxlength=\"$MAXvendor_lead_code\" name=\"search_vendor_lead_code\" id=\"search_vendor_lead_code\"></td>\n";
+			}
+		echo "</tr><tr>\n";
 
-	if ($label_last_name == '---HIDE---')
-        {echo " </td><td align=\"left\"><input type=\"hidden\" name=\"search_last_name\" id=\"search_last_name\" value=\"\" />";}
-	else
-        {
-		$label_last_name = preg_replace("/---READONLY---|---REQUIRED---/","",$label_last_name);
-		echo "<td align=\"right\"> <font class=\"sh_text\">$label_last_name:</font> </td><td align=\"left\"><input type=\"text\" size=\"18\" maxlength=\"$MAXlast_name\" name=\"search_last_name\" id=\"search_last_name\"></td>\n";
-		}
-	echo "</tr><tr>\n";
+		if ($label_first_name == '---HIDE---')
+			{echo " </td><td align=\"left\"><input type=\"hidden\" name=\"search_first_name\" id=\"search_first_name\" value=\"\" />";}
+		else
+			{
+			$label_first_name = preg_replace("/---READONLY---|---REQUIRED---/","",$label_first_name);
+			echo "<td align=\"right\"> <font class=\"sh_text\">$label_first_name:</font> </td><td align=\"left\"><input class=\"form-control mb-2\" type=\"text\" size=\"18\" maxlength=\"$MAXfirst_name\" name=\"search_first_name\" id=\"search_first_name\"></td>\n";
+			}
+		echo "</tr><tr>\n";
 
-	if ($label_city == '---HIDE---')
-        {echo " </td><td align=\"left\"><input type=\"hidden\" name=\"search_city\" id=\"search_city\" value=\"\" />";}
-	else
-        {
-		$label_city = preg_replace("/---READONLY---|---REQUIRED---/","",$label_city);
-		echo "<td align=\"right\"> <font class=\"sh_text\">$label_city:</font> </td><td align=\"left\"><input type=\"text\" size=\"18\" maxlength=\"$MAXcity\" name=\"search_city\" id=\"search_city\"></td>\n";
-		}
-	echo "</tr><tr>\n";
+		if ($label_last_name == '---HIDE---')
+			{echo " </td><td align=\"left\"><input type=\"hidden\" name=\"search_last_name\" id=\"search_last_name\" value=\"\" />";}
+		else
+			{
+			$label_last_name = preg_replace("/---READONLY---|---REQUIRED---/","",$label_last_name);
+			echo "<td align=\"right\"> <font class=\"sh_text\">$label_last_name:</font> </td><td align=\"left\"><input class=\"form-control mb-2\" type=\"text\" size=\"18\" maxlength=\"$MAXlast_name\" name=\"search_last_name\" id=\"search_last_name\"></td>\n";
+			}
+		echo "</tr><tr>\n";
 
-	if ($label_state == '---HIDE---')
-        {echo " </td><td align=\"left\"><input type=\"hidden\" name=\"search_state\" id=\"search_state\" value=\"\" />";}
-	else
-        {
-		$label_state = preg_replace("/---READONLY---|---REQUIRED---/","",$label_state);
-		echo "<td align=\"right\"> <font class=\"sh_text\">$label_state:</font> </td><td align=\"left\"><input type=\"text\" size=\"18\" maxlength=\"$MAXstate\" name=\"search_state\" id=\"search_state\"></td>\n";
-		}
-	echo "</tr><tr>\n";
+		if ($label_city == '---HIDE---')
+			{echo " </td><td align=\"left\"><input type=\"hidden\" name=\"search_city\" id=\"search_city\" value=\"\" />";}
+		else
+			{
+			$label_city = preg_replace("/---READONLY---|---REQUIRED---/","",$label_city);
+			echo "<td align=\"right\"> <font class=\"sh_text\">$label_city:</font> </td><td align=\"left\"><input class=\"form-control mb-2\" type=\"text\" size=\"18\" maxlength=\"$MAXcity\" name=\"search_city\" id=\"search_city\"></td>\n";
+			}
+		echo "</tr><tr>\n";
 
-	if ($label_postal_code == '---HIDE---')
-        {echo " </td><td align=\"left\"><input type=\"hidden\" name=\"search_postal_code\" id=\"search_postal_code\" value=\"\" />";}
-	else
-        {
-		$label_postal_code = preg_replace("/---READONLY---|---REQUIRED---/","",$label_postal_code);
-		echo "<td align=\"right\"> <font class=\"sh_text\">$label_postal_code:</font> </td><td align=\"left\"><input type=\"text\" size=\"10\" maxlength=\"$MAXpostal_code\" name=\"search_postal_code\" id=\"search_postal_code\"></td>\n";
-		}
-	echo "</tr><tr>\n";
+		if ($label_state == '---HIDE---')
+			{echo " </td><td align=\"left\"><input type=\"hidden\" name=\"search_state\" id=\"search_state\" value=\"\" />";}
+		else
+			{
+			$label_state = preg_replace("/---READONLY---|---REQUIRED---/","",$label_state);
+			echo "<td align=\"right\"> <font class=\"sh_text\">$label_state:</font> </td><td align=\"left\"><input class=\"form-control mb-2\" type=\"text\" size=\"18\" maxlength=\"$MAXstate\" name=\"search_state\" id=\"search_state\"></td>\n";
+			}
+		echo "</tr><tr>\n";
 
-	?>
+		if ($label_postal_code == '---HIDE---')
+			{echo " </td><td align=\"left\"><input type=\"hidden\" name=\"search_postal_code\" id=\"search_postal_code\" value=\"\" />";}
+		else
+			{
+			$label_postal_code = preg_replace("/---READONLY---|---REQUIRED---/","",$label_postal_code);
+			echo "<td align=\"right\"> <font class=\"sh_text\">$label_postal_code:</font> </td><td align=\"left\"><input class=\"form-control mb-2\" type=\"text\" size=\"10\" maxlength=\"$MAXpostal_code\" name=\"search_postal_code\" id=\"search_postal_code\"></td>\n";
+			}
+		echo "</tr><tr>\n";
 
-	<td align="center" colspan="2"><br /> <font class="sh_text"><a href="#" onclick="LeadSearchSubmit();return false;"><?php echo _QXZ("SUBMIT SEARCH"); ?></a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="#" onclick="LeadSearchReset();return false;"><?php echo _QXZ("reset form"); ?></a></font></td>
-	</tr>
-	</table>
-	<br /><br /> &nbsp;
-	</td></tr></table>
+		?>
+
+		<td align="center" colspan="2"><br /> <font class="sh_text"><a class="btn btn-primary" href="#" onclick="LeadSearchSubmit();return false;"><?php echo _QXZ("SUBMIT SEARCH"); ?></a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a class="btn btn-secondary" href="#" onclick="LeadSearchReset();return false;"><?php echo _QXZ("reset form"); ?></a></font></td>
+		</tr>
+		</table>
+		<br /><br /> &nbsp;
+		</td></tr></table>
+
+	</div>
 </span>
 
 <span style="position:absolute;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="SearcHResultSDisplaYBox">
