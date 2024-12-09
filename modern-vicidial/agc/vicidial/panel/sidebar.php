@@ -10,7 +10,7 @@
 
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <div class="nav-link">
+                                <div class="">
                                     <?php
                                         /*if ($webphone_location == 'bar')
                                         {
@@ -38,7 +38,7 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <div class="nav-link">
+                                <div class="">
                                     <span id="DiaLControl">
                                         <a class="btn btn-secondary" href="#" onclick="ManualDialNext('','','','','','0','','','YES');">
                                             <img class="img-fluid" src="./images/<?php echo _QXZ("vdc_LB_dialnextnumber_OFF.gif"); ?>" border="0" alt="Dial Next Number" />
@@ -47,7 +47,7 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <div class="nav-link">
+                                <div class="">
                                     <span id="ManualQueueNotice"></span>
                                     <span id="ManualQueueChoice"></span>
                                     <span id="DiaLLeaDPrevieW">
@@ -76,7 +76,7 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <div class="nav-link">
+                                <div class="">
                                     <small class="text-white"><?php echo _QXZ("RECORDING FILE:"); ?></small>
                                     <small class="text-white"><span id="RecorDingFilename"></span></small><br>
                                     <small class="text-white"><?php echo _QXZ("RECORD ID:"); ?></small>
@@ -94,7 +94,7 @@
                                 {
                                     echo "
                                         <li class=\"nav-item\">
-                                            <div class=\"nav-link\">
+                                            <div class=\"\">
                                                 <span class=\"mb-2\" style=\"background-color: #FFFFFF\" id=\"WebFormSpan\">
                                                     <img class=\"img-fluid\" src=\"./images/"._QXZ("vdc_LB_webform_OFF.gif")."\" border=\"0\" alt=\"Web Form\" />
                                                 </span>
@@ -105,7 +105,7 @@
                                 {
                                     echo "
                                         <li class=\"nav-item\">
-                                            <div class=\"nav-link\">
+                                            <div class=\"\">
                                                 <span class=\"mb-2\" style=\"background-color: #FFFFFF\" id=\"WebFormSpanTwo\">
                                                     <img class=\"img-fluid\" src=\"./images/"._QXZ("vdc_LB_webform_two_OFF.gif")."\" border=\"0\" alt=\"Web Form 2\" />
                                                 </span>
@@ -117,7 +117,7 @@
                                 {
                                     echo "
                                         <li class=\"nav-item\">
-                                            <div class=\"nav-link\">
+                                            <div class=\"\">
                                                 <span class=\"mb-2\" style=\"background-color: #FFFFFF\" id=\"WebFormSpanThree\">
                                                     <img class=\"img-fluid\" src=\"./images/"._QXZ("vdc_LB_webform_three_OFF.gif")."\" border=\"0\" alt=\"Web Form 3\" />
                                                 </span>
@@ -134,37 +134,28 @@
 
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <div class="nav-link">
+                                <div class="">
                                     <font class="body_small_bold"><span id="ParkCounterSpan"></span></font>
                                     <span class="mb-2" id="ParkControl">
                                         <img class="img-fluid" src="./images/<?php echo _QXZ("vdc_LB_parkcall_OFF.gif"); ?>" border="0" alt="Park Call" />
                                     </span>
-                                </div>
-                            </li>
-                            <?php
-                                if ( ($ivr_park_call=='ENABLED') or ($ivr_park_call=='ENABLED_PARK_ONLY') )
-                                {
-                                    echo "
-                                        <li class=\"nav-item\">
-                                            <div class=\"nav-link\">
+                                    <?php
+                                        if ( ($ivr_park_call=='ENABLED') or ($ivr_park_call=='ENABLED_PARK_ONLY') )
+                                        {
+                                            echo "
                                                 <span class=\"mb-2\" style=\"background-color: $MAIN_COLOR\" id=\"ivrParkControl\">
                                                     <img class=\"img-fluid\" src=\"./images/"._QXZ("vdc_LB_ivrparkcall_OFF.gif")."\" border=\"0\" alt=\"IVR Park Call\" />
-                                                </span>
-                                            </div>
-                                        </li>";
-                                }
-                                else
-                                {
-                                    echo "
-                                        <li class=\"nav-item\">
-                                            <div class=\"nav-link\">
-                                                <span class=\"mb-2\" id=\"ivrParkControl\"></span>
-                                            </div>
-                                        </li>";
-                                }
-                            ?>
+                                                </span>";
+                                        }
+                                        else
+                                        {
+                                            echo "<span class=\"mb-2\" id=\"ivrParkControl\"></span>";
+                                        }
+                                    ?>
+                                </div>
+                            </li>
                             <li class="nav-item">
-                                <div class="nav-link">
+                                <div class="">
                                     <span class="mb-2" id="XferControl">
                                         <img class="img-fluid" src="./images/<?php echo _QXZ("vdc_LB_transferconf_OFF.gif"); ?>" border="0" alt="Transfer - Conference" />
                                     </span>
@@ -175,7 +166,7 @@
                                 {
                                     echo "
                                         <li class=\"nav-item\">
-                                            <div class=\"nav-link\">
+                                            <div class=\"\">
                                                 <span class=\"mb-2\" style=\"background-color: $MAIN_COLOR\" id=\"QuickXfer\">
                                                     <img class=\"img-fluid\" src=\"./images/"._QXZ("vdc_LB_quickxfer_OFF.gif")."\" border=\"0\" alt=\"Quick Transfer\" />
                                                 </span>
@@ -186,7 +177,7 @@
                                 {
                                     echo "
                                         <li class=\"nav-item\">
-                                            <div class=\"nav-link\">
+                                            <div class=\"\">
                                                 <span class=\"mb-2\" style=\"background-color: $MAIN_COLOR\" id=\"CustomXfer\">
                                                     <img class=\"img-fluid\" src=\"./images/"._QXZ("vdc_LB_customxfer_OFF.gif")."\" border=\"0\" alt=\"Custom Transfer\" />
                                                 </span>
@@ -196,19 +187,19 @@
                             ?>
 
                             <li class="nav-item">
-                                <div class="nav-link">
+                                <div class="">
                                     <span id="ReQueueCall"></span>
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <div class="nav-link">
+                                <div class="">
                                     <span class="mb-2" style="background-color: #FFCCFF" id="HangupControl">
                                         <img class="img-fluid" src="./images/<?php echo _QXZ("vdc_LB_hangupcustomer_OFF.gif"); ?>" border="0" alt="Hangup Customer" />
                                     </span>
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <div class="nav-link">
+                                <div class="">
                                     <div class="text_input" id="SendDTMFdiv">
                                         <span style="background-color: <?php echo $MAIN_COLOR ?>" id="SendDTMF">
                                             <a href="#" onclick="SendConfDTMF(session_id,'YES');return false;">
@@ -220,7 +211,7 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <div class="nav-link">
+                                <div class="">
                                     <span id="busycallsdebug"></span>
                                 </div>
                             </li>
