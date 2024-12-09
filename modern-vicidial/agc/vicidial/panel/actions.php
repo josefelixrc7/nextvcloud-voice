@@ -929,7 +929,7 @@ if ($agent_display_dialable_leads > 0)
 					<a class="ms-auto btn btn-close" href="#" onclick="hideDiv('SearcHResultSDisplaYBox');return false;"></a>
 				</h5>
 			</div>
-			<div class="card-body">
+			<div class="card-body overflow-scroll">
 
 				<table><tr><td align="center" valign="top">
 				<?php
