@@ -3,7 +3,7 @@
         <nav id="sidebarMenu" class="col-md-2 d-md-block sidebar collapse overflow-scroll" style="background: #060e23 !important;">
             <div class="position-sticky pt-3 text-white">
 
-                <div class="" style="max-width:200px;">
+                <div class="mx-auto" style="max-width:200px;">
 
                     <!-- First ul -->
                     <div class="px-4">
