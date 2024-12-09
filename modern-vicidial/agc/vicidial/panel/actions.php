@@ -818,7 +818,7 @@ if ($agent_display_dialable_leads > 0)
 			<div class="card-header">
 				<h5>
 					<?php echo _QXZ("SEARCH FOR A LEAD:"); ?>
-					<a href="#" onclick="LeaDSearcHVieWClose();return false;"><?php echo _QXZ("close"); ?> [X]</a>
+					<a class="btn-close" href="#" onclick="LeaDSearcHVieWClose();return false;"></a>
 				</h5>
 			</div>
 			<div class="card-body">
@@ -926,7 +926,7 @@ if ($agent_display_dialable_leads > 0)
 			<div class="card-header">
 				<h5>
 					<?php echo _QXZ("SEARCH RESULTS:"); ?>
-					<a href="#" onclick="hideDiv('SearcHResultSDisplaYBox');return false;"><?php echo _QXZ("close"); ?> [X]</a>
+					<a class="ms-auto btn-close" href="#" onclick="hideDiv('SearcHResultSDisplaYBox');return false;"></a>
 				</h5>
 			</div>
 			<div class="card-body">
