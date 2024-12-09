@@ -40890,7 +40890,7 @@ if ($ADD=="0A")
 	$rslt=mysql_to_mysqli($stmt, $link);
 	$people_to_print = mysqli_num_rows($rslt);
 
-	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
+	echo "<center><TABLE class=\"table\" width=$section_width cellspacing=0 cellpadding=1>\n";
 	echo "<tr bgcolor=\"#444\">";
 	echo "<td><a href=\"$PHP_SELF?ADD=0A&status=$status&$USERlink\"><font size=1 color=white><B>"._QXZ("USER ID")."</B></a> &nbsp; ";
 	echo "<a href=\"$PHP_SELF?ADD=0A&status=$status&$USERNUMlink\"><font size=1 color=white><B>- # -</B></a></td>";
@@ -41810,7 +41810,7 @@ if ($ADD==1700)
 ######################
 if ($ADD==10000)
 	{
-	echo "<TABLE><TR><TD>\n";
+	echo "<TABLE class=\"table\"><TR><TD>\n";
 	echo "<FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 	# gather list of allowed users
@@ -41839,8 +41839,8 @@ if ($ADD==10000)
 	$remoteagents_to_print = mysqli_num_rows($rslt);
 
 	echo "<img src=\"images/icon_black_remoteagents.png\" alt=\"Remote Agents\" width=42 height=42> "._QXZ("REMOTE AGENTS LISTINGS").":\n";
-	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
-	echo "<tr bgcolor=black>";
+	echo "<center><TABLEclass=\"table\" width=$section_width cellspacing=0 cellpadding=1>\n";
+	echo "<tr bgcolor=\"#444\">";
 	echo "<td><font size=1 color=white align=left><B>"._QXZ("USER")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("LINES")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("SERVER")." &nbsp; </B></td>";
@@ -41964,7 +41964,7 @@ if ($ADD==100000)
 ######################
 if ($ADD==1000000)
 	{
-	echo "<TABLE><TR><TD>\n";
+	echo "<TABLE class=\"table\"><TR><TD>\n";
 	echo "<FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 	$stmt="SELECT script_id,script_name,active,user_group,script_color from vicidial_scripts $whereLOGadmin_viewable_groupsSQL order by script_id;";
@@ -41972,8 +41972,8 @@ if ($ADD==1000000)
 	$scripts_to_print = mysqli_num_rows($rslt);
 
 	echo "<img src=\"images/icon_black_scripts.png\" alt=\"Scripts\" width=42 height=42> "._QXZ("SCRIPTS LISTINGS").":\n";
-	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
-	echo "<tr bgcolor=black>";
+	echo "<center><TABLE class=\"table\" width=$section_width cellspacing=0 cellpadding=1>\n";
+	echo "<tr bgcolor=\"#444\">";
 	echo "<td><font size=1 color=white align=left><B>"._QXZ("SCRIPT ID")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("SCRIPT NAME")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("ACTIVE")." &nbsp; </B></td>";
@@ -42007,7 +42007,7 @@ if ($ADD==1000000)
 ######################
 if ($ADD==10000000)
 	{
-	echo "<TABLE><TR><TD>\n";
+	echo "<TABLE class=\"table\"><TR><TD>\n";
 	echo "<FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 	$stmt="SELECT lead_filter_id,lead_filter_name,user_group from vicidial_lead_filters $whereLOGadmin_viewable_groupsSQL order by lead_filter_id;";
@@ -42015,8 +42015,8 @@ if ($ADD==10000000)
 	$filters_to_print = mysqli_num_rows($rslt);
 
 	echo "<img src=\"images/icon_black_filters.png\" alt=\"Filters\" width=42 height=42> "._QXZ("LEAD FILTER LISTINGS").":\n";
-	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
-	echo "<tr bgcolor=black>";
+	echo "<center><TABLE class=\"table\" width=$section_width cellspacing=0 cellpadding=1>\n";
+	echo "<tr bgcolor=\"#444\">";
 	echo "<td><font size=1 color=white align=left><B>"._QXZ("FILTER ID")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("FILTER NAME")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("ADMIN GROUP")."</B></td>";
@@ -42046,7 +42046,7 @@ if ($ADD==10000000)
 ######################
 if ($ADD==100000000)
 	{
-	echo "<TABLE><TR><TD>\n";
+	echo "<TABLE class=\"table\"><TR><TD>\n";
 	echo "<img src=\"images/icon_calltimes.png\" width=42 height=42 align=left> <FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 	if (strlen($whereLOGadmin_viewable_groupsSQL) > 0) {$tempLOGadmin_viewable_call_timesSQL = $LOGadmin_viewable_call_timesSQL;}
@@ -42057,8 +42057,8 @@ if ($ADD==100000000)
 	$calltimes_to_print = mysqli_num_rows($rslt);
 
 	echo "<br>"._QXZ("CALL TIME LISTINGS").":\n";
-	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
-	echo "<tr bgcolor=black>";
+	echo "<center><TABLE class=\"table\" width=$section_width cellspacing=0 cellpadding=1>\n";
+	echo "<tr bgcolor=\"#444\">";
 	echo "<td><font size=1 color=white align=left><B>"._QXZ("CALLTIME ID")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("CALLTIME NAME")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("DEFAULT START")."</B></td>";
@@ -42184,7 +42184,7 @@ if ($ADD==1200000000)
 ######################
 if ($ADD==130000000)
 	{
-	echo "<TABLE><TR><TD>\n";
+	echo "<TABLE class=\"table\"><TR><TD>\n";
 	echo "<img src=\"images/icon_shifts.png\" width=42 height=42 align=left> <FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 	$stmt="SELECT shift_id,shift_name,shift_start_time,shift_length,shift_weekdays,user_group from vicidial_shifts $whereLOGadmin_viewable_groupsSQL order by shift_id;";
@@ -42192,8 +42192,8 @@ if ($ADD==130000000)
 	$shifts_to_print = mysqli_num_rows($rslt);
 
 	echo "<br>"._QXZ("SHIFT LISTINGS").":\n";
-	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
-	echo "<tr bgcolor=black>";
+	echo "<center><TABLE class=\"table\" width=$section_width cellspacing=0 cellpadding=1>\n";
+	echo "<tr bgcolor=\"#444\">";
 	echo "<td><font size=1 color=white align=left><B>"._QXZ("SHIFT ID")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("SHIFT NAME")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("SHIFT START")."</B></td>";
@@ -42229,7 +42229,7 @@ if ($ADD==130000000)
 ######################
 if ($ADD==10000000000)
 	{
-	echo "<TABLE><TR><TD>\n";
+	echo "<TABLE class=\"table\"><TR><TD>\n";
 	echo "<img src=\"images/icon_phones.png\" width=42 height=42 align=left> <FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 	$EXTENlink="stage=EXTENDOWN&status=$status";
@@ -42298,8 +42298,8 @@ if ($ADD==10000000000)
 	echo "<br>"._QXZ("PHONE LISTINGS").":\n";
 	if (strlen($next_prev_HTML) > 10)
 		{echo "<br><br><b> &nbsp; $next_prev_HTML</b><br>";}
-	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
-	echo "<tr bgcolor=black>";
+	echo "<center><TABLE class=\"table\" width=$section_width cellspacing=0 cellpadding=1>\n";
+	echo "<tr bgcolor=\"#444\">";
 	echo "<td><a href=\"$PHP_SELF?ADD=10000000000&$EXTENlink\"><font size=1 color=white><B>"._QXZ("EXTEN")."</B></a> &nbsp; ";
 	echo "<a href=\"$PHP_SELF?ADD=10000000000&$EXTENNUMlink\"><font size=1 color=white><B>- # -</B></a></td>";
 	echo "<td><a href=\"$PHP_SELF?ADD=10000000000&$PROTOlink\"><font size=1 color=white><B>"._QXZ("PROTO")."</B></a></td>";
@@ -42428,7 +42428,7 @@ if ($ADD==13000000000)
 ######################
 if ($ADD==100000000000)
 	{
-	echo "<TABLE><TR><TD>\n";
+	echo "<TABLE class=\"table\"><TR><TD>\n";
 	echo "<img src=\"images/icon_servers.png\" width=42 height=42 align=left> <FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 	$stmt="SELECT server_id,server_description,server_ip,active,asterisk_version,max_vicidial_trunks,local_gmt,active_agent_login_server from servers $whereLOGadmin_viewable_groupsSQL order by server_id";
@@ -42436,8 +42436,8 @@ if ($ADD==100000000000)
 	$servers_to_print = mysqli_num_rows($rslt);
 
 	echo "<br>"._QXZ("SERVER LISTINGS").":\n";
-	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
-	echo "<tr bgcolor=black>";
+	echo "<center><TABLE class=\"table\" width=$section_width cellspacing=0 cellpadding=1>\n";
+	echo "<tr bgcolor=\"#444\">";
 	echo "<td><font size=1 color=white align=left><B>"._QXZ("SERVER ID")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("NAME")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("SERVER IP")."</B></td>";
@@ -42477,7 +42477,7 @@ if ($ADD==100000000000)
 ######################
 if ($ADD==130000000000)
 	{
-	echo "<TABLE><TR><TD>\n";
+	echo "<TABLE class=\"table\"><TR><TD>\n";
 	echo "<img src=\"images/icon_templates.png\" width=42 height=42 align=left> <FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 	$stmt="SELECT template_id,template_name,user_group from vicidial_conf_templates $whereLOGadmin_viewable_groupsSQL order by template_id";
@@ -42485,8 +42485,8 @@ if ($ADD==130000000000)
 	$templates_to_print = mysqli_num_rows($rslt);
 
 	echo "<br>"._QXZ("CONF TEMPLATE LISTINGS").":\n";
-	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
-	echo "<tr bgcolor=black>";
+	echo "<center><TABLE class=\"table\" width=$section_width cellspacing=0 cellpadding=1>\n";
+	echo "<tr bgcolor=\"#444\">";
 	echo "<td><font size=1 color=white align=left><B>"._QXZ("Template ID")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("Template Name")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("ADMIN GROUP")."</B></td>";
@@ -42516,7 +42516,7 @@ if ($ADD==130000000000)
 ######################
 if ($ADD==140000000000)
 	{
-	echo "<TABLE><TR><TD>\n";
+	echo "<TABLE class=\"table\"><TR><TD>\n";
 	echo "<img src=\"images/icon_carriers.png\" width=42 height=42 align=left> <FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 	$stmt="SELECT carrier_id,carrier_name,server_ip,protocol,registration_string,active,user_group from vicidial_server_carriers $whereLOGadmin_viewable_groupsSQL order by carrier_id";
@@ -42524,8 +42524,8 @@ if ($ADD==140000000000)
 	$carriers_to_print = mysqli_num_rows($rslt);
 
 	echo "<br>"._QXZ("CARRIER LISTINGS").":\n";
-	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
-	echo "<tr bgcolor=black>";
+	echo "<center><TABLE class=\"table\" width=$section_width cellspacing=0 cellpadding=1>\n";
+	echo "<tr bgcolor=\"#444\">";
 	echo "<td><font size=1 color=white align=left><B>"._QXZ("Carrier ID")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("Carrier Name")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("Server IP")."</B></td>";
@@ -42618,7 +42618,7 @@ if ($ADD==150000000000)
 ######################
 if ($ADD==160000000000)
 	{
-	echo "<TABLE><TR><TD>\n";
+	echo "<TABLE class=\"table\"><TR><TD>\n";
 	echo "<img src=\"images/icon_musiconhold.png\" width=42 height=42 align=left> <FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 	$stmt="SELECT moh_id,moh_name,active,random,user_group from vicidial_music_on_hold where remove='N' $LOGadmin_viewable_groupsSQL order by moh_id";
@@ -42626,8 +42626,8 @@ if ($ADD==160000000000)
 	$moh_to_print = mysqli_num_rows($rslt);
 
 	echo "<br>"._QXZ("MUSIC-ON-HOLD(MOH) LISTINGS").":\n";
-	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
-	echo "<tr bgcolor=black>";
+	echo "<center><TABLE class=\"table\" width=$section_width cellspacing=0 cellpadding=1>\n";
+	echo "<tr bgcolor=\"#444\">";
 	echo "<td><font size=1 color=white align=left><B>"._QXZ("MOH ID")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("MOH Name")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("Active")."</B></td>";
@@ -42665,7 +42665,7 @@ if ($ADD==160000000000)
 ######################
 if ($ADD==170000000000)
 	{
-	echo "<TABLE><TR><TD>\n";
+	echo "<TABLE class=\"table\"><TR><TD>\n";
 	echo "<img src=\"images/icon_voicemail.png\" width=42 height=42 align=left> <FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 	$stmt="SELECT voicemail_id,fullname,active,messages,old_messages,delete_vm_after_email,user_group from vicidial_voicemail $whereLOGadmin_viewable_groupsSQL order by voicemail_id";
@@ -42673,8 +42673,8 @@ if ($ADD==170000000000)
 	$vm_to_print = mysqli_num_rows($rslt);
 
 	echo "<br>"._QXZ("VOICEMAIL BOXES").":\n";
-	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
-	echo "<tr bgcolor=black>";
+	echo "<center><TABLE class=\"table\" width=$section_width cellspacing=0 cellpadding=1>\n";
+	echo "<tr bgcolor=\"#444\">";
 	echo "<td><font size=1 color=white align=left><B>"._QXZ("VOICEMAIL ID")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("Name")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("Active")."</B></td>";
@@ -42713,7 +42713,7 @@ if ($ADD==170000000000)
 ######################
 if ($ADD==180000000000)
 	{
-	echo "<TABLE><TR><TD>\n";
+	echo "<TABLE class=\"table\"><TR><TD>\n";
 	echo "<img src=\"images/icon_screenlabels.png\" width=42 height=42 align=left> <FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 	$stmt="SELECT label_id,label_name,active,user_group from vicidial_screen_labels $whereLOGadmin_viewable_groupsSQL order by label_id";
@@ -42721,8 +42721,8 @@ if ($ADD==180000000000)
 	$lb_to_print = mysqli_num_rows($rslt);
 
 	echo "<br>"._QXZ("Agent Screen Labels").":\n";
-	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
-	echo "<tr bgcolor=black>";
+	echo "<center><TABLE class=\"table\" width=$section_width cellspacing=0 cellpadding=1>\n";
+	echo "<tr bgcolor=\"#444\">";
 	echo "<td><font size=1 color=white align=left><B>"._QXZ("LABEL ID")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("Name")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("Active")."</B></td>";
@@ -42755,7 +42755,7 @@ if ($ADD==180000000000)
 ######################
 if ($ADD==182000000000)
 	{
-	echo "<TABLE><TR><TD>\n";
+	echo "<TABLE class=\"table\"><TR><TD>\n";
 	echo "<img src=\"images/icon_screencolors.png\" width=42 height=42 align=left> <FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 	$stmt="SELECT colors_id,colors_name,active,user_group,menu_background,frame_background,std_row1_background,web_logo from vicidial_screen_colors $whereLOGadmin_viewable_groupsSQL order by colors_id";
@@ -42763,8 +42763,8 @@ if ($ADD==182000000000)
 	$lb_to_print = mysqli_num_rows($rslt);
 
 	echo "<br>"._QXZ("Screen Colors").":\n";
-	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
-	echo "<tr bgcolor=black>";
+	echo "<center><TABLE class=\"table\" width=$section_width cellspacing=0 cellpadding=1>\n";
+	echo "<tr bgcolor=\"#444\">";
 	echo "<td><font size=1 color=white align=left><B>"._QXZ("COLORS ID")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("Name")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("Active")."</B></td>";
@@ -42890,7 +42890,7 @@ if ($ADD==190000000000)
 ######################
 if ($ADD==192000000000)
 	{
-	echo "<TABLE><TR><TD>\n";
+	echo "<TABLE class=\"table\"><TR><TD>\n";
 	echo "<img src=\"images/icon_settingscontainer.png\" width=42 height=42 align=left> <FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 	$stmt="SELECT container_id,container_notes,container_type,user_group,container_entry from vicidial_settings_containers $whereLOGadmin_viewable_groupsSQL order by container_type,container_id";
@@ -42898,8 +42898,8 @@ if ($ADD==192000000000)
 	$sc_to_print = mysqli_num_rows($rslt);
 
 	echo "<br>"._QXZ("Settings Containers").":\n";
-	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
-	echo "<tr bgcolor=black>";
+	echo "<center><TABLE class=\"table\" width=$section_width cellspacing=0 cellpadding=1>\n";
+	echo "<tr bgcolor=\"#444\">";
 	echo "<td><font size=1 color=white align=left><B>"._QXZ("Container ID")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("Notes")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("Type")."</B></td>";
@@ -42934,7 +42934,7 @@ if ($ADD==192000000000)
 ######################
 if ($ADD==193000000000)
 	{
-	echo "<TABLE><TR><TD>\n";
+	echo "<TABLE class=\"table\"><TR><TD>\n";
 	echo "<img src=\"images/icon_statusgroups.png\" width=42 height=42 align=left> <FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 	$stmt="SELECT status_group_id,status_group_notes,user_group from vicidial_status_groups $whereLOGadmin_viewable_groupsSQL order by status_group_id;";
@@ -42942,8 +42942,8 @@ if ($ADD==193000000000)
 	$status_groups_to_print = mysqli_num_rows($rslt);
 
 	echo "<br>"._QXZ("STATUS GROUP LISTINGS").":\n";
-	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
-	echo "<TR BGCOLOR=BLACK>";
+	echo "<center><TABLE class=\"table\" width=$section_width cellspacing=0 cellpadding=1>\n";
+	echo "<TR BGCOLOR=\"#444\">";
 	echo "<TD><font size=1 color=white>"._QXZ("STATUS GROUP ID")."</TD>";
 	echo "<TD><font size=1 color=white>"._QXZ("NOTES")."</TD>";
 	echo "<TD><font size=1 color=white>"._QXZ("GROUP")."</TD>";
@@ -43104,7 +43104,7 @@ if ($ADD==195000000000)
 ######################
 if ($ADD==196000000000)
 	{
-	echo "<TABLE><TR><TD>\n";
+	echo "<TABLE class=\"table\"><TR><TD>\n";
 	echo "<img src=\"images/icon_cidgroups.png\" width=42 height=42 align=left> <FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 	$stmt="SELECT cid_group_id,cid_group_notes,cid_group_type,user_group,cid_auto_rotate_minutes from vicidial_cid_groups $whereLOGadmin_viewable_groupsSQL order by cid_group_id;";
@@ -43112,8 +43112,8 @@ if ($ADD==196000000000)
 	$cid_groups_to_print = mysqli_num_rows($rslt);
 
 	echo "<br>"._QXZ("CID GROUP LISTINGS").":\n";
-	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
-	echo "<TR BGCOLOR=BLACK>";
+	echo "<center><TABLE class=\"table\" width=$section_width cellspacing=0 cellpadding=1>\n";
+	echo "<TR BGCOLOR=\"#444\">";
 	echo "<TD><font size=1 color=white>"._QXZ("CID GROUP ID")."</TD>";
 	echo "<TD><font size=1 color=white>"._QXZ("NOTES")."</TD>";
 	echo "<TD><font size=1 color=white>"._QXZ("TYPE")."</TD>";
@@ -43171,7 +43171,7 @@ if ($ADD==196000000000)
 ######################
 if ($ADD==197000000000)
 	{
-	echo "<TABLE><TR><TD>\n";
+	echo "<TABLE class=\"table\"><TR><TD>\n";
 	echo "<img src=\"images/icon_vm_messages.png\" width=42 height=42 align=left> <FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 	$stmt="SELECT leave_vm_message_group_id,leave_vm_message_group_notes,active,user_group from leave_vm_message_groups $whereLOGadmin_viewable_groupsSQL order by leave_vm_message_group_id;";
@@ -43179,8 +43179,8 @@ if ($ADD==197000000000)
 	$vmm_groups_to_print = mysqli_num_rows($rslt);
 
 	echo "<br>"._QXZ("VM MESSAGE GROUP LISTINGS").":\n";
-	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
-	echo "<TR BGCOLOR=BLACK>";
+	echo "<center><TABLE class=\"table\" width=$section_width cellspacing=0 cellpadding=1>\n";
+	echo "<TR BGCOLOR=\"#444\">";
 	echo "<TD><font size=1 color=white>"._QXZ("VMM GROUP ID")."</TD>";
 	echo "<TD><font size=1 color=white>"._QXZ("NOTES")."</TD>";
 	echo "<TD><font size=1 color=white>"._QXZ("ACTIVE")."</TD>";
@@ -43233,7 +43233,7 @@ if ($ADD==197000000000)
 ######################
 if ($ADD==1000000000000)
 	{
-	echo "<TABLE><TR><TD>\n";
+	echo "<TABLE class=\"table\"><TR><TD>\n";
 	echo "<img src=\"images/icon_conferences.png\" width=42 height=42 align=left> <FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 	$stmt="SELECT conf_exten,server_ip,extension from conferences order by conf_exten";
@@ -43241,8 +43241,8 @@ if ($ADD==1000000000000)
 	$conferences_to_print = mysqli_num_rows($rslt);
 
 	echo "<br>"._QXZ("CONFERENCE LISTINGS").":\n";
-	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
-	echo "<tr bgcolor=black>";
+	echo "<center><TABLE class=\"table\" width=$section_width cellspacing=0 cellpadding=1>\n";
+	echo "<tr bgcolor=\"#444\">";
 	echo "<td><font size=1 color=white align=left><B>"._QXZ("CONFERENCE")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("SERVER IP")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("EXTENSION")."</B></td>";
