@@ -295,6 +295,7 @@ else
 ######################### SMALL HTML HEADER BEGIN #######################################
 if($short_header)
 	{
+	echo '<link rel="icon" type="image/x-icon" href="/modern-vicidial/images/logo.png">';
 	if($no_header)
 		{
 		# display nothing
