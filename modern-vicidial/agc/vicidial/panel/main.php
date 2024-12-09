@@ -17,9 +17,9 @@
             <span id="SecondSDISP"></span>
         </span>
     </div>
-    <div class="navbar-nav m-md-0 m-2">
+    <div class="navbar-nav p-2">
         <div class="nav-item text-nowrap">
-			<a class="btn btn-outline-light ms-2" href="#" onclick="NormalLogout();return false;needToConfirmExit = false;"><?=_QXZ("LOGOUT");?></a>
+			<a class="btn btn-outline-light" href="#" onclick="NormalLogout();return false;needToConfirmExit = false;"><?=_QXZ("LOGOUT");?></a>
         </div>
     </div>
 </header>
