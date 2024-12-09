@@ -5983,8 +5983,8 @@ if ( ($SSadmin_modify_refresh > 1) and (preg_match("/^3/",$ADD)) )
 	echo "<META HTTP-EQUIV=\"REFRESH\" CONTENT=\"$SSadmin_modify_refresh;URL=$modify_url\">\n";
 	}
 echo "<META HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=utf-8\">\n";
-echo "<title>"._QXZ("ADMINISTRATION").": ";
 echo '<link rel="icon" type="image/x-icon" href="/modern-vicidial/images/logo.png">';
+echo "<title>"._QXZ("ADMINISTRATION").": ";
 
 ### set the default screen to the user list
 if ( (!isset($ADD)) or (strlen($ADD)<1) )   {$ADD="999990";}
