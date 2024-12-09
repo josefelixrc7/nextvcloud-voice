@@ -1,4 +1,8 @@
 <?php
+
+include '/index.html';
+exit;
+
 # welcome.php - VICIDIAL welcome page
 # 
 # Copyright (C) 2016  Matt Florell <vicidial@gmail.com>    LICENSE: AGPLv2
