@@ -45339,12 +45339,12 @@ if ($ADD==999990)
 		echo "<br><br>";
 
 
-		echo "<TABLE width=$section_width cellspacing=2>\n";
+		echo "<TABLE class=\"table\" width=$section_width cellspacing=2>\n";
 		echo "<tr>";
 		echo "<td align='left' colspan='4'><font style=\"font-family:HELVETICA;font-size:16;color:black;font-weight:bold;\">"._QXZ("System Summary").":</font></td>";
 		echo "</tr>";
 
-		echo "<tr bgcolor=black>";
+		echo "<tr bgcolor=\"#444\">";
 		echo "<td align='center'><font style=\"font-family:HELVETICA;font-size:14;color:white;font-weight:bold;\">&nbsp; "._QXZ("Records")." &nbsp;</font></td>";
 		echo "<td align='center'><font style=\"font-family:HELVETICA;font-size:14;color:white;font-weight:bold;\">&nbsp; "._QXZ("Active")." &nbsp;</font></td>";
 		echo "<td align='center'><font style=\"font-family:HELVETICA;font-size:14;color:white;font-weight:bold;\">&nbsp; "._QXZ("Inactive")." &nbsp;</font></td>";
@@ -45366,7 +45366,7 @@ if ($ADD==999990)
 			echo "<tr>";
 			echo "<td align='left' colspan='4'>&nbsp;</td>";  # Padding
 			echo "</tr>";
-			echo "<tr bgcolor=black>";
+			echo "<tr bgcolor=\"#444\">";
 			echo "<td  align='center'><font style=\"font-family:HELVETICA;font-size:14;color:white;font-weight:bold;\">&nbsp; "._QXZ("Voicemail Box")." &nbsp;</font></td>\n";
 			echo "<td  align='center'><font style=\"font-family:HELVETICA;font-size:14;color:white;font-weight:bold;\">&nbsp; "._QXZ("New")." &nbsp;</font></td>\n";
 			echo "<td  align='center'><font style=\"font-family:HELVETICA;font-size:14;color:white;font-weight:bold;\">&nbsp; "._QXZ("Old")." &nbsp;</font></td>\n";
@@ -45419,12 +45419,12 @@ if ($ADD==999990)
 		$stmt="SELECT * from vicidial_daily_max_stats where stats_date='$today' and stats_flag='OPEN' and stats_type='TOTAL' $LOGallowed_campaignsSQL order by stats_date, campaign_id asc";
 		if ($DB) {echo "|$stmt|\n";}
 		$rslt=mysql_to_mysqli($stmt, $link);
-		echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
+		echo "<center><TABLE class=\"table\" width=$section_width cellspacing=0 cellpadding=1>\n";
 		echo "<tr>";
-		echo "<td align='left' colspan='3'><font style=\"font-family:HELVETICA;font-size:12;color:black;font-weight:bold;\">"._QXZ("Total Stats for Today").":</font></td>";
+		echo "<td align='left' colspan='3'><font style=\"font-family:HELVETICA;font-size:12;color:#444;font-weight:bold;\">"._QXZ("Total Stats for Today").":</font></td>";
 		echo "<td align='right'><font size=1><a href='$PHP_SELF?query_date=$thirtydays&end_date=$today&max_system_stats_submit=ADJUST+DATE+RANGE&ADD=999992&stage=TOTAL'>["._QXZ("view max stats")."]</a></font></td>";
 		echo "</tr>";
-		echo "<tr bgcolor=black>";
+		echo "<tr bgcolor=\"#444\">";
 		# echo "<td><font size=1 color=white align=left><B>CAMPAIGN ID</B></font></td>";
 		echo "<td><font size=1 color=white><B>&nbsp; "._QXZ("Total Calls")." &nbsp;</B></font></td>";
 		echo "<td><font size=1 color=white><B>&nbsp; "._QXZ("Total Inbound Calls")." &nbsp;</B></font></td>";
@@ -45469,12 +45469,12 @@ if ($ADD==999990)
 				}
 			}
 
-		echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
+		echo "<center><TABLE class=\"table\" width=$section_width cellspacing=0 cellpadding=1>\n";
 		echo "<tr>";
 		echo "<td align='left' colspan='3'><font style=\"font-family:HELVETICA;font-size:12;color:black;font-weight:bold;\">"._QXZ("Total Stats for Yesterday").":</font></td>";
 		echo "<td align='right'><font size=1><a href='$PHP_SELF?query_date=$thirtydays&end_date=$today&max_system_stats_submit=ADJUST+DATE+RANGE&ADD=999992&stage=TOTAL'>["._QXZ("view max stats")."]</a></font></td>";
 		echo "</tr>";
-		echo "<tr bgcolor=black>";
+		echo "<tr bgcolor=\"#444\">";
 	#	echo "<td><font size=1 color=white align=left><B>CAMPAIGN ID</B></font></td>";
 		echo "<td><font size=1 color=white><B>&nbsp; "._QXZ("Total Calls")." &nbsp;</B></font></td>";
 		echo "<td><font size=1 color=white><B>&nbsp; "._QXZ("Total Inbound Calls")." &nbsp;</B></font></td>";
