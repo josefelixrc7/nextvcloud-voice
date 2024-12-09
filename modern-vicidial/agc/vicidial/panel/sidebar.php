@@ -1,6 +1,6 @@
 
         <!-- Barra lateral -->
-        <nav id="sidebarMenu" class="col-md-3 d-md-block sidebar collapse overflow-scroll" style="background: #060e23 !important;">
+        <nav id="sidebarMenu" class="col-md-2 d-md-block sidebar collapse overflow-scroll" style="background: #060e23 !important;">
             <div class="position-sticky pt-3 text-white">
 
                 <div class="">
