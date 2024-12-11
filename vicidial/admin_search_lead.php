@@ -338,7 +338,7 @@ if ( (!$vendor_id) and (!$phone)  and (!$lead_id) and (!$log_phone)  and (!$log_
 	echo "<br><center>\n";
 	echo "<form method=post name=search action=\"$PHP_SELF\">\n";
 	echo "<input type=hidden name=DB value=\"$DB\">\n";
-	echo "<TABLE CELLPADDING=3 CELLSPACING=3>";
+	echo "<TABLE class=\"".$table_classes_1."\" CELLPADDING=3 CELLSPACING=3>";
 	echo "<TR bgcolor=#$SSmenu_background>";
 	echo "<TD colspan=3 align=center><font color=#FFFFFF><b>"._QXZ("Lead Search Options").":</b></font></TD>";
 	echo "</TR>";
