@@ -1325,8 +1325,8 @@ if ($gdpr_display==2 && preg_match("/purge$/", $gdpr_action))
 	{
 	echo "</script>\n";
 	echo "<link rel=\"stylesheet\" href=\"calendar.css\">\n";
-	echo "</head><BODY BGCOLOR=white marginheight=0 marginwidth=0 leftmargin=0 topmargin=0>\n";
 	require("/modern-vicidial/admin/head.php");
+	echo "</head><BODY BGCOLOR=white marginheight=0 marginwidth=0 leftmargin=0 topmargin=0>\n";
 	echo "<span style=\"position:absolute;left:0px;top:0px;z-index:20;\" id=admin_header>";
 
 	$short_header=1;
