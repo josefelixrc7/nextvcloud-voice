@@ -2937,7 +2937,7 @@ if ($report_display_type=='TEXT')
 if ( ($report_display_type=='HTML') or ($report_display_type=='LIMITED') )
 	{
 	$Aecho = '';
-	$Aecho .= "<table class=\"table\" cellpadding=1 cellspacing=1 border=0 class='realtime_table'>";
+	$Aecho .= "<table class=\"table table-bordered\" cellpadding=1 cellspacing=1 border=0 class='realtime_table'>";
 	$Aecho .= "<tr>";
 	$Aecho .= "<td colspan=4><font class='top_head_key'>&nbsp;"._QXZ("Agents Time On Calls Campaign").":</font></td>";
 	$Aecho .= "<td colspan=3><font class='top_settings_val'>&nbsp;</font></td>";
