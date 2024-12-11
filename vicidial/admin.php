@@ -23179,7 +23179,7 @@ if ($ADD==3)
 				}
 
 			echo "<input type=hidden name=user value=\"$user\">\n";
-			echo "<center><TABLE class=\"table\" width=$section_width cellspacing=3>\n";
+			echo "<center><TABLE class=\"<?=table_classes_1?>\" width=$section_width cellspacing=3>\n";
 			echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("User Number").": </td><td align=left><b>$user</b>$NWB#users-user$NWE</td></tr>\n";
 
 			if ($SSpass_hash_enabled > 0)
