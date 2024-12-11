@@ -15,4 +15,7 @@
 
     // Extra colors
     $text_color_white = "#FFF";
+
+    // Detail view table classes
+    $table_classes_1 = "table table-striped table-bordered";
 ?>
