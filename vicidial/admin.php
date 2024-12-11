@@ -8224,7 +8224,7 @@ if ($ADD==121)
 	else
 		{echo "<br>"._QXZ("ADD NUMBERS TO THE DNC LIST")."<form action=$PHP_SELF method=POST>\n";}
 	echo "<input type=hidden name=ADD value=121>\n";
-	echo "<center><TABLE width=850 cellspacing=3>\n";
+	echo "<center><TABLE class=\"".$table_classes_1."\" width=850 cellspacing=3>\n";
 	echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("List").": </td><td align=left><select size=1 name=campaign_id>\n";
 	echo "$campaigns_list";
 	echo "</select></td></tr>\n";
