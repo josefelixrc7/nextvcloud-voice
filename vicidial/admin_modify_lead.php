@@ -706,7 +706,7 @@ if ($enable_gdpr_download_deletion>0)
 			}
 
 		$HTML_text.="<BR><BR>";
-		$HTML_text.="<TABLE width=1000 cellspacing=1 cellpadding=5>\n";
+		$HTML_text.="<TABLE class=\"".$table_classes_1."\" width=1000 cellspacing=1 cellpadding=5>\n";
 		$HTML_text.="<tr>\n";
 		$HTML_text.="\t<td align='left'><B>"._QXZ("GDPR DATA PURGE PREVIEW")."</B> <I>("._QXZ("greyed fields will be emptied").")</I>:</td>";
 		$HTML_text.="\t<th><a href=\"admin_modify_lead.php?lead_id=$lead_id&gdpr_action=download\">"._QXZ("DOWNLOAD")."</a></th>";
@@ -729,7 +729,7 @@ if ($enable_gdpr_download_deletion>0)
 				{
 				$CSV_text.="\""._QXZ("TABLE NAME").":\",\"$table_name\"\n";
 				$HTML_text.="<B>"._QXZ("TABLE NAME").": $table_name</B><BR>\n";
-				$HTML_text.="<TABLE width=1000 cellspacing=1 cellpadding=5>\n";
+				$HTML_text.="<TABLE class=\"".$table_classes_1."\" width=1000 cellspacing=1 cellpadding=5>\n";
 
 				$j=0;
 				while($row=mysqli_fetch_array($mysql_rslt,MYSQLI_ASSOC)) 
@@ -2335,7 +2335,7 @@ else
 	echo "<input type=hidden name=call_began value=\"$call_began\">\n";
 	echo "<input type=hidden name=parked_time value=\"$parked_time\">\n";
 	echo "<input type=hidden name=FORM_LOADED id=FORM_LOADED value=\"0\" />\n";
-	echo "<table cellpadding=1 cellspacing=0>\n";
+	echo "<table class=\"".$table_classes_1."\" cellpadding=1 cellspacing=0>\n";
 	echo "<tr><td colspan=2>"._QXZ("Lead ID").": $lead_id &nbsp; &nbsp; "._QXZ("List ID").":  $list_id &nbsp; &nbsp; <font size=2>"._QXZ("GMT offset").": $gmt_offset_now &nbsp; &nbsp; "._QXZ("CSLR").": $called_since_last_reset</td></tr>\n";
 	echo "<tr><td colspan=2>"._QXZ("Fronter").": <A HREF=\"user_stats.php?user=$tsr\">$tsr</A> &nbsp; &nbsp; "._QXZ("Called Count").": $called_count <font size=2>("._QXZ("today").": $call_count_today)</font> &nbsp; &nbsp; "._QXZ("Last Local Call").": $last_local_call_time</td></tr>\n";
 	if ($archive_search=="Yes") 
@@ -2594,7 +2594,7 @@ else
 
 	if ($lead_id != 'NEW') 
 		{
-		echo "<TABLE BGCOLOR=#".$SSstd_row4_background." WIDTH=750><TR><TD>\n";
+		echo "<TABLE class=\"".$table_classes_1."\" BGCOLOR=#".$SSstd_row4_background." WIDTH=750><TR><TD>\n";
 		echo _QXZ("Callback Details").":<BR>\n";
 		if ( ($dispo == 'CALLBK') or ($dispo == 'CBHOLD') or ($scheduled_callback == 'Y') )
 			{
@@ -2607,7 +2607,7 @@ else
 			if ($CB_to_print>0)
 				{
 				echo "<form action='$PHP_SELF' method='POST' name='vsn' id='vsn'>";
-				echo "<TABLE BGCOLOR=#".$SSstd_row4_background." WIDTH=800>";
+				echo "<TABLE class=\"".$table_classes_1."\" BGCOLOR=#".$SSstd_row4_background." WIDTH=800>";
 				echo "<tr>";
 				echo "<td><font size=2>"._QXZ("CallBack Date/Time").":</font></td>";
 				echo "<td><font size=2>"._QXZ("CallBack Disposition").":</font></td>";
@@ -2816,7 +2816,7 @@ else
 			if ($cb > 0)
 				{
 				echo "<B>"._QXZ("CALLBACKS LOG").":</B>\n";
-				echo "<TABLE width=750 cellspacing=0 cellpadding=1>\n";
+				echo "<TABLE class=\"".$table_classes_1."\" width=750 cellspacing=0 cellpadding=1>\n";
 				echo "<tr><td><font size=1># </td><td><font size=2>"._QXZ("ENTRY TIME")." </td><td><font size=2>"._QXZ("CALLBACK TIME")." </td><td align=left><font size=2>"._QXZ("USER")."</td><td align=left><font size=2> "._QXZ("RECIPIENT")."</td><td align=left><font size=2> "._QXZ("LEAD STATUS")."</td><td align=left><font size=2> "._QXZ("STATUS")."</td><td align=left><font size=2> "._QXZ("LIST")."</td><td align=left><font size=2> "._QXZ("CAMPAIGN")."</td></tr>\n";
 
 				echo "$callbacks_log";
@@ -2902,7 +2902,7 @@ else
 			if ($cb > 0)
 				{
 				echo "<B>"._QXZ("CALLBACKS LOG").":</B>\n";
-				echo "<TABLE width=750 cellspacing=0 cellpadding=1>\n";
+				echo "<TABLE class=\"".$table_classes_1."\" width=750 cellspacing=0 cellpadding=1>\n";
 				echo "<tr><td><font size=1># </td><td><font size=2>"._QXZ("ENTRY TIME")." </td><td><font size=2>"._QXZ("CALLBACK TIME")." </td><td align=left><font size=2>"._QXZ("USER")."</td><td align=left><font size=2> "._QXZ("RECIPIENT")."</td><td align=left><font size=2> "._QXZ("LEAD STATUS")."</td><td align=left><font size=2> "._QXZ("STATUS")."</td><td align=left><font size=2> "._QXZ("LIST")."</td><td align=left><font size=2> "._QXZ("CAMPAIGN")."</td></tr>\n";
 
 				echo "$callbacks_log";
@@ -2916,7 +2916,7 @@ else
 		if ($c > 0)
 			{
 			echo "<B>"._QXZ("EXTENDED ALTERNATE PHONE NUMBERS FOR THIS LEAD").":</B>\n";
-			echo "<TABLE width=550 cellspacing=0 cellpadding=1>\n";
+			echo "<TABLE class=\"".$table_classes_1."\" width=550 cellspacing=0 cellpadding=1>\n";
 			echo "<tr><td><font size=1># </td><td><font size=2>"._QXZ("ALT PHONE")." </td><td align=left><font size=2>"._QXZ("ALT NOTE")."</td><td align=left><font size=2> "._QXZ("ALT COUNT")."</td><td align=left><font size=2> "._QXZ("ACTIVE")."</td></tr>\n";
 
 			echo "$alts_output\n";
@@ -2961,7 +2961,7 @@ else
 			{
 			$out_log_width=1300;
 			if ($AMDcount > 0) {$out_log_width=1500;}
-			echo "<TABLE width=$out_log_width cellspacing=0 cellpadding=1>\n";
+			echo "<TABLE class=\"".$table_classes_1."\" width=$out_log_width cellspacing=0 cellpadding=1>\n";
 			echo "<tr><td><font size=1># </td><td><font size=2>"._QXZ("DATE/TIME")." </td><td align=left><font size=2>"._QXZ("LENGTH")."</td><td align=left><font size=2> "._QXZ("STATUS")."</td><td align=left><font size=2> "._QXZ("TSR")."</td><td align=right><font size=2> "._QXZ("CAMPAIGN")."</td><td align=right><font size=2> "._QXZ("LIST")."</td><td align=right><font size=2> "._QXZ("LEAD")."</td><td align=right><font size=2> "._QXZ("HANGUP REASON")."</td><td align=right><font size=2> "._QXZ("PHONE")."</td><td align=center><font size=2> <a href=\"$PHP_SELF?lead_id=$lead_id&archive_search=$archive_search&archive_log=$archive_log&CIDdisplay=$altCIDdisplay\">"._QXZ("CALLER ID")."</a></td><td align=right><font size=2> <a href=\"$PHP_SELF?lead_id=$lead_id&archive_search=$archive_search&archive_log=$archive_log&CIDdisplay=$altCIDdisplay\">"._QXZ("UNIQUEID")."</a></td><td align=right><font size=2> <a href=\"$PHP_SELF?lead_id=$lead_id&archive_search=$archive_search&archive_log=$archive_log&CIDdisplay=$altCIDdisplay\">"._QXZ("SERVER IP")."</a></td>";
 			if ($AMDcount > 0)
 				{echo "<td align=right><font size=2> "._QXZ("AMD STATUS")."</td><td align=right><font size=2> "._QXZ("AMD RESPONSE")."</td>";}
@@ -2969,7 +2969,7 @@ else
 			}
 		else
 			{
-			echo "<TABLE width=850 cellspacing=0 cellpadding=1>\n";
+			echo "<TABLE class=\"".$table_classes_1."\" width=850 cellspacing=0 cellpadding=1>\n";
 			echo "<tr><td><font size=1># </td><td><font size=2>"._QXZ("DATE/TIME")." </td><td align=left><font size=2>"._QXZ("LENGTH")."</td><td align=left><font size=2> "._QXZ("STATUS")."</td><td align=left><font size=2> "._QXZ("TSR")."</td><td align=right><font size=2> "._QXZ("CAMPAIGN")."</td><td align=right><font size=2> "._QXZ("LIST")."</td><td align=right><font size=2> "._QXZ("LEAD")."</td><td align=right><font size=2> "._QXZ("HANGUP REASON")."</td><td align=right><font size=2> "._QXZ("PHONE")."</td><td align=right><font size=2> <a href=\"$PHP_SELF?lead_id=$lead_id&archive_search=$archive_search&archive_log=$archive_log&CIDdisplay=$altCIDdisplay\">"._QXZ("CALLER ID")."</a></td></tr>\n";
 			}
 
@@ -2981,12 +2981,12 @@ else
 		echo "<B>"._QXZ("CLOSER RECORDS FOR THIS LEAD").":</B>\n";
 		if ($CIDdisplay=="Yes")
 			{
-			echo "<TABLE width=1150 cellspacing=0 cellpadding=1>\n";
+			echo "<TABLE class=\"".$table_classes_1."\" width=1150 cellspacing=0 cellpadding=1>\n";
 			echo "<tr><td><font size=1># </td><td><font size=2>"._QXZ("DATE/TIME")." </td><td align=left><font size=2>"._QXZ("LENGTH")."</td><td align=left><font size=2> "._QXZ("STATUS")."</td><td align=left><font size=2> "._QXZ("TSR")."</td><td align=right><font size=2> "._QXZ("CAMPAIGN")."</td><td align=right><font size=2> "._QXZ("LIST")."</td><td align=right><font size=2> "._QXZ("LEAD")."</td><td align=right><font size=2> "._QXZ("WAIT")."</td><td align=right><font size=2> "._QXZ("HANGUP REASON")."</td><td align=center><font size=2> <a href=\"$PHP_SELF?lead_id=$lead_id&archive_search=$archive_search&archive_log=$archive_log&CIDdisplay=$altCIDdisplay\">"._QXZ("CALL ID")."</a></td><td align=center><font size=2> <a href=\"$PHP_SELF?lead_id=$lead_id&archive_search=$archive_search&archive_log=$archive_log&CIDdisplay=$altCIDdisplay\">"._QXZ("DID")."</a></td><td align=right><font size=2> <a href=\"$PHP_SELF?lead_id=$lead_id&archive_search=$archive_search&archive_log=$archive_log&CIDdisplay=$altCIDdisplay\">"._QXZ("UNIQUEID")."</a></td><td align=right><font size=2> <a href=\"$PHP_SELF?lead_id=$lead_id&archive_search=$archive_search&archive_log=$archive_log&CIDdisplay=$altCIDdisplay\">"._QXZ("SERVER IP")."</a></td></tr>\n";
 			}
 		else
 			{
-			echo "<TABLE width=850 cellspacing=0 cellpadding=1>\n";
+			echo "<TABLE class=\"".$table_classes_1."\" width=850 cellspacing=0 cellpadding=1>\n";
 			echo "<tr><td><font size=1># </td><td><font size=2>"._QXZ("DATE/TIME")." </td><td align=left><font size=2>"._QXZ("LENGTH")."</td><td align=left><font size=2> "._QXZ("STATUS")."</td><td align=left><font size=2> "._QXZ("TSR")."</td><td align=right><font size=2> "._QXZ("CAMPAIGN")."</td><td align=right><font size=2> "._QXZ("LIST")."</td><td align=right><font size=2> "._QXZ("LEAD")."</td><td align=right><font size=2> "._QXZ("WAIT")."</td><td align=right><font size=2> "._QXZ("HANGUP REASON")."</td><td align=right><font size=2> <a href=\"$PHP_SELF?lead_id=$lead_id&archive_search=$archive_search&archive_log=$archive_log&CIDdisplay=$altCIDdisplay\">"._QXZ("CALL ID")."</a></td></tr>\n";
 			}
 
@@ -2997,7 +2997,7 @@ else
 
 
 		echo "<B>"._QXZ("AGENT LOG RECORDS FOR THIS LEAD").":</B>\n";
-		echo "<TABLE width=750 cellspacing=0 cellpadding=1>\n";
+		echo "<TABLE class=\"".$table_classes_1."\" width=750 cellspacing=0 cellpadding=1>\n";
 		echo "<tr><td><font size=1># </td><td><font size=2>"._QXZ("DATE/TIME")." </td><td align=left><font size=2>"._QXZ("CAMPAIGN")."</td><td align=left><font size=2> "._QXZ("TSR")."</td><td align=left><font size=2> "._QXZ("PAUSE")."</td><td align=right><font size=2> "._QXZ("WAIT")."</td><td align=right><font size=2> "._QXZ("TALK")."</td><td align=right><font size=2> "._QXZ("DISPO")."</td><td align=right><font size=2> "._QXZ("STATUS")."</td><td align=right><font size=2> "._QXZ("GROUP")."</td><td align=right><font size=2> "._QXZ("SUB")."</td></tr>\n";
 
 			echo "$agent_log\n";
@@ -3007,7 +3007,7 @@ else
 
 
 		echo "<B>"._QXZ("PARK LOGS FOR THIS LEAD").":</B>\n";
-		echo "<TABLE width=750 cellspacing=1 cellpadding=1>\n";
+		echo "<TABLE class=\"".$table_classes_1."\" width=750 cellspacing=1 cellpadding=1>\n";
 		echo "<tr><td><font size=1># </td><td align=left><font size=2> "._QXZ("PARK TIME")."</td><td><font size=2>"._QXZ("CHANNEL GROUP")." </td><td align=left><font size=2>"._QXZ("TSR")." </td><td align=left><font size=2> &nbsp; "._QXZ("STATUS")."</td><td align=left><font size=2> "._QXZ("GRAB TIME")."</td><td align=left><font size=2> "._QXZ("HANGUP TIME")."</td><td align=left><font size=2> "._QXZ("PARK SEC")."</td><td align=left><font size=2> "._QXZ("TALK SEC")."</td><td align=left><font size=2> "._QXZ("EXTENSION")."</td></tr>\n";
 
 		$stmt="SELECT * from park_log where lead_id='" . mysqli_real_escape_string($link, $lead_id) . "' order by parked_time, grab_time, hangup_time desc limit 500;";
@@ -3043,7 +3043,7 @@ else
 
 
 		echo "<B>"._QXZ("IVR LOGS FOR THIS LEAD").":</B>\n";
-		echo "<TABLE width=750 cellspacing=1 cellpadding=1>\n";
+		echo "<TABLE class=\"".$table_classes_1."\" width=750 cellspacing=1 cellpadding=1>\n";
 		echo "<tr><td><font size=1># </td><td align=left><font size=2> "._QXZ("CAMPAIGN")."</td><td><font size=2>"._QXZ("DATE/TIME")." </td><td align=left><font size=2>"._QXZ("CALL MENU")." </td><td align=left><font size=2> &nbsp; "._QXZ("ACTION")."</td></tr>\n";
 
 		$stmt="SELECT campaign_id,event_date,menu_id,menu_action from vicidial_outbound_ivr_log where lead_id='" . mysqli_real_escape_string($link, $lead_id) . "' order by uniqueid,event_date,menu_action desc limit 500;";
@@ -3082,7 +3082,7 @@ else
 		if ($logs_to_print > 0)
 			{
 			echo "<B>"._QXZ("AGENT FROM SWITCH-LEADS FOR THIS LEAD").":</B>\n";
-			echo "<TABLE width=750 cellspacing=1 cellpadding=1>\n";
+			echo "<TABLE class=\"".$table_classes_1."\" width=750 cellspacing=1 cellpadding=1>\n";
 			echo "<tr><td><font size=1># </td><td align=left><font size=2> "._QXZ("SWITCH TIME")."</td><td><font size=2>"._QXZ("CAMPAIGN")." </td><td align=left><font size=2>"._QXZ("TSR")." </td><td align=left><font size=2> &nbsp; "._QXZ("TO LEAD ID")."</td><td align=left><font size=2> "._QXZ("CALL ID")."</td><td align=left><font size=2> "._QXZ("UNIQUEID")."</td><td align=left><font size=2> "._QXZ("PHONE NUMBER")."</td></tr>\n";
 
 
@@ -3119,7 +3119,7 @@ else
 		if ($logs_to_print > 0)
 			{
 			echo "<B>"._QXZ("AGENT TO SWITCH-LEADS FOR THIS LEAD").":</B>\n";
-			echo "<TABLE width=750 cellspacing=1 cellpadding=1>\n";
+			echo "<TABLE class=\"".$table_classes_1."\" width=750 cellspacing=1 cellpadding=1>\n";
 			echo "<tr><td><font size=1># </td><td align=left><font size=2> "._QXZ("SWITCH TIME")."</td><td><font size=2>"._QXZ("CAMPAIGN")." </td><td align=left><font size=2>"._QXZ("TSR")." </td><td align=left><font size=2> &nbsp; "._QXZ("FROM LEAD ID")."</td><td align=left><font size=2> "._QXZ("CALL ID")."</td><td align=left><font size=2> "._QXZ("UNIQUEID")."</td><td align=left><font size=2> "._QXZ("PHONE NUMBER")."</td></tr>\n";
 
 
@@ -3159,7 +3159,7 @@ else
 		if ($logs_to_print > 0)
 			{
 			echo "<B>"._QXZ("AGENT CUSTOM FIELDS SWITCH-LISTS FOR THIS LEAD").":</B>\n";
-			echo "<TABLE width=750 cellspacing=1 cellpadding=1>\n";
+			echo "<TABLE class=\"".$table_classes_1."\" width=750 cellspacing=1 cellpadding=1>\n";
 			echo "<tr><td><font size=1># </td><td align=left><font size=2> "._QXZ("SWITCH TIME")."</td><td><font size=2>"._QXZ("CAMPAIGN")." </td><td align=left><font size=2>"._QXZ("TSR")." </td><td align=left><font size=2> &nbsp; "._QXZ("TO LIST ID")."</td><td align=left><font size=2> "._QXZ("FROM LIST ID")."</td><td align=left><font size=2> "._QXZ("CALL ID")."</td></tr>\n";
 
 
@@ -3193,7 +3193,7 @@ else
 		if ($allow_emails>0) 
 			{
 			echo "<B>"._QXZ("OUTBOUND EMAILS FOR THIS LEAD").":</B>\n";
-			echo "<TABLE width=750 cellspacing=1 cellpadding=1>\n";
+			echo "<TABLE class=\"".$table_classes_1."\" width=750 cellspacing=1 cellpadding=1>\n";
 			echo "<tr><td><font size=1># </td><td><font size=2>"._QXZ("DATE/TIME")." </td><td align=right><font size=2> "._QXZ("USER")."</td><td align=right><font size=2> "._QXZ("CAMPAIGN")."</td><td align=left><font size=2>"._QXZ("EMAIL TO")."</td><td align=left><font size=2> "._QXZ("MESSAGE")."</td><td align=right><font size=2> "._QXZ("ATTACHMENTS")."</td></tr>\n";
 
 			$stmt="SELECT * from vicidial_email_log where lead_id='" . mysqli_real_escape_string($link, $lead_id) . "' order by email_date desc limit 500;";
@@ -3235,7 +3235,7 @@ else
 			}
 
 		echo "<B>"._QXZ("RECORDINGS FOR THIS LEAD").":</B>\n";
-		echo "<TABLE width=800 cellspacing=1 cellpadding=1>\n";
+		echo "<TABLE class=\"".$table_classes_1."\" width=800 cellspacing=1 cellpadding=1>\n";
 		echo "<tr><td><font size=1># </td><td align=left><font size=2> "._QXZ("LEAD")."</td><td><font size=2>"._QXZ("DATE/TIME")." </td><td align=left><font size=2>"._QXZ("SECONDS")." </td><td align=left><font size=2> &nbsp; "._QXZ("RECID")."</td><td align=center><font size=2>"._QXZ("FILENAME")."</td><td align=left><font size=2>"._QXZ("LOCATION")."</td><td align=left><font size=2>"._QXZ("TSR")."</td>$mute_column<td align=left><font size=2> </td></tr>\n";
 
 		$stmt="SELECT recording_id,channel,server_ip,extension,start_time,start_epoch,end_time,end_epoch,length_in_sec,length_in_min,filename,location,lead_id,user,vicidial_id from recording_log where lead_id='" . mysqli_real_escape_string($link, $lead_id) . "' order by recording_id desc limit 500;";
@@ -3435,7 +3435,7 @@ else
 	if ($log_recording_access > 0) 
 		{
 		echo "<B>"._QXZ("RECORDING ACCESS LOG FOR THIS LEAD").":</B>\n";
-		echo "<TABLE width=750 cellspacing=1 cellpadding=1>\n";
+		echo "<TABLE class=\"".$table_classes_1."\" width=750 cellspacing=1 cellpadding=1>\n";
 		echo "<tr><td><font size=1># </td><td align=left><font size=2> "._QXZ("LEAD")."</td><td><font size=2>"._QXZ("DATE/TIME")." </td><td align=left><font size=2>"._QXZ("RECORDING ID")."</td><td align=left><font size=2>"._QXZ("USER")."</td><td align=left><font size=2>"._QXZ("RESULT")." </td><td align=left><font size=2>"._QXZ("IP")." </td></tr>\n";
 
 		$stmt="SELECT recording_id,lead_id,user,access_datetime,access_result,ip from vicidial_recording_access_log where lead_id='" . mysqli_real_escape_string($link, $lead_id) . "' order by recording_access_log_id desc limit 500;";
@@ -3516,7 +3516,7 @@ else
 			{
 			echo "<br><br><br>";
 			echo "<B>"._QXZ("GDPR compliance").":</B>\n";
-			echo "<TABLE width=750 cellspacing=2 cellpadding=5>\n";
+			echo "<TABLE class=\"".$table_classes_1."\" width=750 cellspacing=2 cellpadding=5>\n";
 			echo "<tr bgcolor='#$SSstd_row2_background'>";
 			echo "<td><font size=2>";
 			echo "<a href=\"admin_modify_lead.php?lead_id=$lead_id&gdpr_action=download\">"._QXZ("Click here to download GDPR-formatted data for this lead")."</a><BR>\n";
