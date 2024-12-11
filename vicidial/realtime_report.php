@@ -1962,7 +1962,6 @@ if (preg_match("/LIMITED/",$report_display_type))
 			<div class="card-header">
 				<h5 class="d-flex">
 					<span class="w-auto"><?php echo _QXZ("SEARCH RESULTS:"); ?></span>
-					<a class="ms-auto btn btn-close" href="#" onclick="hideDiv('SearcHResultSDisplaYBox');return false;"></a>
 				</h5>
 			</div>
 			<div id="campaign_select_list_1" class="card-body overflow-scroll">
@@ -2013,7 +2012,25 @@ else
 	echo "<a href=\"#\" onclick=\"showDiv('campaign_select_list');\"><font class='top_head_key'>"._QXZ("Choose Report Display Options")."</a>";
 	echo "</TD></TR></TABLE>\n";
 	echo "</span>\n";
-	echo "<span style=\"position:absolute;left:0px;z-index:21;\" id=campaign_select_list>\n";
+	//echo "<span style=\"position:absolute;left:0px;z-index:21;\" id=campaign_select_list>\n";
+	?>
+	
+	<span class="w-100 h-100 overflow-scroll" tabindex="-1" style="background:rgba(0, 0, 0, 0.5);position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="campaign_select_list">
+		<div class="w-50 mx-auto mt-2">
+	
+			<div class="card">
+				<div class="card-header">
+					<h5 class="d-flex">
+						<span class="w-auto"><?php echo _QXZ("SEARCH RESULTS:"); ?></span>
+					</h5>
+				</div>
+				<div id="campaign_select_list_1" class="card-body overflow-scroll">
+				</div>
+			</div>
+		</div>
+	</span>
+	
+	<?php
 	echo "<TABLE WIDTH=0 HEIGHT=0 CELLPADDING=0 CELLSPACING=0 BGCOLOR=\"#D9E6FE\"><TR><TD ALIGN=CENTER>\n";
 	echo "";
 	echo "</TD></TR></TABLE>\n";
