@@ -485,6 +485,8 @@ echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"vicidial_stylesheet.php\
 echo "<script language=\"JavaScript\" src=\"help.js\"></script>\n";
 echo "<div id='HelpDisplayDiv' class='help_info' style='display:none;'></div>";
 echo "<META HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=utf-8\">\n";
+
+include '../modern-vicidial/admin/head.php';
 echo "<!-- VERSION: $version     BUILD: $build -->\n";
 echo "<!-- SEED TIME  $secX:   $year-$mon-$mday $hour:$min:$sec  LOCAL GMT OFFSET NOW: $LOCAL_GMT_OFF  DST: $isdst -->\n";
 
@@ -622,7 +624,7 @@ $short_header=1;
 
 require("admin_header.php");
 
-echo "<TABLE CELLPADDING=4 CELLSPACING=0><TR><TD>";
+echo "<TABLE class=\"".$table_classes_1."\" CELLPADDING=4 CELLSPACING=0><TR><TD>";
 
 
 if ( (preg_match("/NANPA/",$usacan_check)) or (preg_match("/NANPA/",$tz_method)) )
