@@ -1040,6 +1040,7 @@ header ("Content-type: text/html; charset=utf-8");
 echo "<html>\n";
 echo "<head>\n";
 include '/modern-vicidial/admin/head.php';
+echo "<!-- test -->";
 echo "<META HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=utf-8\">\n";
 echo "<TITLE>"._QXZ("Modify Lead")."</TITLE>\n";
 ?>
