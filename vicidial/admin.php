@@ -26958,7 +26958,7 @@ if ($ADD==31)
 		{
 
 		echo "<center><br><b>"._QXZ("SURVEY SETTINGS FOR THIS CAMPAIGN").":</b><br>\n";
-		echo "<form action=$PHP_SELF method=POST name=admin_form id=admin_form><center><TABLE width=850 cellspacing=3>\n";
+		echo "<form action=$PHP_SELF method=POST name=admin_form id=admin_form><center><TABLE class=\"".$table_classes_1."\" width=850 cellspacing=3>\n";
 		echo "<tr bgcolor=#$SSstd_row2_background><td align=right><input type=hidden name=ADD value=40A>\n";
 		echo "<input type=hidden name=campaign_id value=\"$campaign_id\">\n";
 
@@ -28906,7 +28906,7 @@ if ($ADD==311)
 		echo "<input type=hidden name=ADD value=411>\n";
 		echo "<input type=hidden name=list_id value=\"$list_id\">\n";
 		echo "<input type=hidden name=old_campaign_id value=\"$campaign_id\">\n";
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("List ID").": </td><td align=left><b>$list_id</b>$NWB#lists-list_id$NWE</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("List Name").": </td><td align=left><input type=text name=list_name size=30 maxlength=30 value=\"$list_name\">$NWB#lists-list_name$NWE</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("List Description").": </td><td align=left><input type=text name=list_description size=30 maxlength=255 value=\"$list_description\">$NWB#lists-list_description$NWE</td></tr>\n";
