@@ -7472,7 +7472,7 @@ if ($ADD=="1")
 		echo "<br>"._QXZ("ADD A NEW USER")."<form action=$PHP_SELF method=POST name=userform id=userform>\n";
 		echo "<input type=hidden name=ADD value=2>\n";
 		echo "<input type=hidden name=user_toggle id=user_toggle value=0>\n";
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		if ($voi_count > 0)
 			{
 			echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("User Number").": </td><td align=left>"._QXZ("Auto-Generated")." <input type=hidden name=user id=user value=\"99999\">$NWB#users-user$NWE</td></tr>\n";
@@ -7536,7 +7536,7 @@ if ($ADD=="1A")
 		echo "<br>"._QXZ("COPY USER")."<form action=$PHP_SELF method=POST name=userform id=userform>\n";
 		echo "<input type=hidden name=ADD value=2A>\n";
 		echo "<input type=hidden name=user_toggle id=user_toggle value=0>\n";
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		if ($voi_count > 0)
 			{
 			echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("User Number").": </td><td align=left>"._QXZ("Auto-Generated")." <input type=hidden name=user id=user value=\"99999\">$NWB#users-user$NWE</td></tr>\n";
@@ -7815,7 +7815,7 @@ if ($ADD==111)
 
 		echo "<br>"._QXZ("ADD A NEW LIST")."<form action=$PHP_SELF method=POST>\n";
 		echo "<input type=hidden name=ADD value=211>\n";
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		if ($voi_count > 0)
 			{
 			echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("List ID").": </td><td align=left>"._QXZ("Auto-Generated")." $NWB#lists-list_id$NWE</td></tr>\n";
@@ -7896,7 +7896,7 @@ if ($ADD==121)
 		$i=0;
 		if ($vdl_ct > 0)
 			{
-			echo "<center><TABLE width=400 cellspacing=0 cellpadding=1>\n";
+			echo "<center><TABLE class=\"".$table_classes_1."\" width=400 cellspacing=0 cellpadding=1>\n";
 			echo "<tr bgcolor=black>";
 			echo "<td><font size=1 color=white align=left><B>"._QXZ("CAMPAIGN")."</B></td>";
 			echo "<td><font size=1 color=white><B>"._QXZ("ACTION")."</B></td>";
@@ -40585,7 +40585,7 @@ if ($ADD==550)
 
 	echo "<br>"._QXZ("SEARCH FOR A USER")."<form action=$PHP_SELF method=POST>\n";
 	echo "<input type=hidden name=ADD value=660>\n";
-	echo "<center><TABLE width=$section_width cellspacing=3>\n";
+	echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 	echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("User Number").": </td><td align=left><input type=text name=user size=20 maxlength=20></td></tr>\n";
 	echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Full Name").": </td><td align=left><input type=text name=full_name size=30 maxlength=30></td></tr>\n";
 	echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("User Level").": </td><td align=left><select size=1 name=user_level><option selected>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select></td></tr>\n";
