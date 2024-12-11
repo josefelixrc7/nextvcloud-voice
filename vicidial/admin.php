@@ -27394,7 +27394,7 @@ if ($ADD==34)
 
 	if ($SUB < 1)
 		{
-		echo "<TABLE><TR><TD>\n";
+		echo "<TABLE class=\"table\"><TR><TD>\n";
 		echo "<FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 		echo "<form action=$PHP_SELF method=POST>\n";
 		echo "<input type=hidden name=ADD value=44>\n";
