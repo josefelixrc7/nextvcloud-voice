@@ -1956,7 +1956,7 @@ if (preg_match("/LIMITED/",$report_display_type))
 ?>
 
 <span class="w-100 h-100 overflow-scroll" tabindex="-1" style="background:rgba(0, 0, 0, 0.5);position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="campaign_select_list">
-    <div class="w-50 mx-auto mt-2">
+    <div class="w-75 mx-auto mt-2">
 
 		<div class="card">
 			<div class="card-header">
