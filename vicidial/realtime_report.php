@@ -876,7 +876,7 @@ $select_list .= "</SELECT>";
 
 $select_list .= "</TD><TD VALIGN=TOP ALIGN=CENTER>";
 $select_list .= "<a href='#' onclick=\\\"hideDiv('campaign_select_list');\\\">"._QXZ("Close Panel")."</a><BR><BR>";
-$select_list .= "<TABLE CELLPADDING=2 CELLSPACING=2 BORDER=0>";
+$select_list .= "<TABLE class=\"".$table_classes_1."\" CELLPADDING=2 CELLSPACING=2 BORDER=0>";
 
 $select_list .= "<TR><TD align=right>";
 $select_list .= _QXZ("Screen Refresh Rate").":  </TD><TD align=left><SELECT SIZE=1 NAME=RR ID=RR>";
@@ -2014,7 +2014,7 @@ else
 	echo "</span>\n";
 	//echo "<span style=\"position:absolute;left:0px;z-index:21;\" id=campaign_select_list>\n";
 	?>
-	
+
 	<span class="w-100 h-100 overflow-scroll" tabindex="-1" style="background:rgba(0, 0, 0, 0.5);position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="campaign_select_list">
 		<div class="w-50 mx-auto mt-2">
 	
