@@ -824,7 +824,7 @@ $NFB = '<b><font size=6 face="courier">';
 $NFE = '</font></b>';
 $F=''; $FG=''; $B=''; $BG='';
 
-$select_list = "<TABLE class='realtime_settings_table' CELLPADDING=5 BGCOLOR='#D9E6FE'><TR><TD VALIGN=TOP>"._QXZ("Select Campaigns").": <BR>";
+$select_list = "<TABLE class='realtime_settings_table table' CELLPADDING=5><TR><TD VALIGN=TOP>"._QXZ("Select Campaigns").": <BR>";
 $select_list .= "<SELECT SIZE=8 NAME=groups[] ID=groups[] multiple>";
 $o=0;
 while ($groups_to_print > $o)
@@ -1239,7 +1239,7 @@ window.onload = startup;
 function startup() 
 	{
 	hideDiv('webphone_content');
-	document.getElementById('campaign_select_list').innerHTML = select_list;
+	document.getElementById('campaign_select_list_1').innerHTML = select_list;
 	hideDiv('campaign_select_list');
 
 	hide_ingroup_info();
@@ -1938,6 +1938,7 @@ if ($DB) {echo "$stmt\n";}
 $row=mysqli_fetch_row($rslt);
 $campaign_allow_inbound = $row[0];
 
+include '../modern-vicidial/admin/head.php';
 echo "<META HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=utf-8\">\n";
 echo "<TITLE>"._QXZ("$report_name").": $group</TITLE></HEAD><BODY BGCOLOR=WHITE marginheight=0 marginwidth=0 leftmargin=0 topmargin=0>\n";
 
@@ -1952,7 +1953,25 @@ if (preg_match("/LIMITED/",$report_display_type))
 	echo "<INPUT TYPE=HIDDEN NAME=cursorX ID=cursorX>\n";
 	echo "<INPUT TYPE=HIDDEN NAME=cursorY ID=cursorY>\n";
 	echo "<span style=\"position:absolute;left:160px;z-index:20;\" id=campaign_select_list_link></span>\n";
-	echo "<span style=\"position:absolute;left:0px;z-index:21;\" id=campaign_select_list></span>\n";
+?>
+
+<span class="w-100 h-100 overflow-scroll" tabindex="-1" style="background:rgba(0, 0, 0, 0.5);position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="campaign_select_list">
+    <div class="w-50 mx-auto mt-2">
+
+		<div class="card">
+			<div class="card-header">
+				<h5 class="d-flex">
+					<span class="w-auto"><?php echo _QXZ("SEARCH RESULTS:"); ?></span>
+					<a class="ms-auto btn btn-close" href="#" onclick="hideDiv('SearcHResultSDisplaYBox');return false;"></a>
+				</h5>
+			</div>
+			<div id="campaign_select_list_1" class="card-body overflow-scroll">
+			</div>
+		</div>
+	</div>
+</span>
+
+<?php
 	echo "<span style=\"position:absolute;left:" . $webphone_left . "px;top:" . $webphone_top . "px;z-index:18;\" id=webphone_content></span>\n";
 	echo "<span style=\"position:absolute;left:10px;top:120px;z-index:14;\" id=agent_ingroup_display></span>\n";
 	echo "<a href=\"#\" onclick=\"update_variables('form_submit','','YES')\"><font class='top_settings_val'>"._QXZ("RELOAD NOW")."</font></a>";
