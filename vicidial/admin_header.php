@@ -2187,27 +2187,25 @@ if ($subcamp_font_size < 4) {$subcamp_font_size='11';}
 		else {$FPGlink = _QXZ("Add FPG Number");}
 		?>
 		<TR <?php echo $listIG_sh ?><?php if ($SSadmin_row_click > 0) {echo " onclick=\"window.document.location='$ADMIN?ADD=1000';\"";} ?>><TD ALIGN=LEFT> &nbsp; 
-		<a href="<?php echo $ADMIN ?>?ADD=1000" STYLE="text-decoration:none;"><img src="images/icon_black_inbound.png" border=0 alt=\"In-Groups\" width=14 height=14 valign=middle> <FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Show In-Groups"); ?> </a>
+		<a href="<?php echo $ADMIN ?>?ADD=1000" STYLE="text-decoration:none;"><FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Show In-Groups"); ?> </a>
 		</TD></TR><TR <?php echo $newIG_sh ?><?php if ($SSadmin_row_click > 0) {echo " onclick=\"window.document.location='$ADMIN?ADD=1111';\"";} ?>><TD ALIGN=LEFT> &nbsp; 
 		<?php if ($add_copy_disabled < 1) { ?>
-		<a href="<?php echo $ADMIN ?>?ADD=1111" STYLE="text-decoration:none;"><img src="images/blank.gif" border=0 alt=\" \" width=14 height=14 valign=middle> <FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Add A New In-Group"); ?> </a>
+		<a href="<?php echo $ADMIN ?>?ADD=1111" STYLE="text-decoration:none;"><FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Add A New In-Group"); ?> </a>
 		</TD></TR><TR <?php echo $copyIG_sh ?><?php if ($SSadmin_row_click > 0) {echo " onclick=\"window.document.location='$ADMIN?ADD=1211';\"";} ?>><TD ALIGN=LEFT> &nbsp; 
-		<a href="<?php echo $ADMIN ?>?ADD=1211" STYLE="text-decoration:none;"><img src="images/blank.gif" border=0 alt=\" \" width=14 height=14 valign=middle> <FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Copy In-Group"); ?> </a>
+		<a href="<?php echo $ADMIN ?>?ADD=1211" STYLE="text-decoration:none;"><FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Copy In-Group"); ?> </a>
 		<?php } ?>
-		<TR WIDTH=160 CLASS="subhead_style"><TD><DIV CLASS="horiz_line_grey"></DIV></TD></TR>
 		<?php
 		if ($SSemail_enabled>0) 
 			{
 		?>
 		<TR <?php echo $listEG_sh ?><?php if ($SSadmin_row_click > 0) {echo " onclick=\"window.document.location='$ADMIN?ADD=1800';\"";} ?>><TD ALIGN=LEFT> &nbsp; 
-		<a href="<?php echo $ADMIN ?>?ADD=1800" STYLE="text-decoration:none;"><img src="images/icon_email.png" border=0 alt=\"Email Groups\" width=14 height=14 valign=middle> <FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Show Email Groups"); ?> </a>
+		<a href="<?php echo $ADMIN ?>?ADD=1800" STYLE="text-decoration:none;"><FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Show Email Groups"); ?> </a>
 		</TD></TR><TR <?php echo $newEG_sh ?><?php if ($SSadmin_row_click > 0) {echo " onclick=\"window.document.location='$ADMIN?ADD=1811';\"";} ?>><TD ALIGN=LEFT> &nbsp; 
 		<?php if ($add_copy_disabled < 1) { ?>
-		<a href="<?php echo $ADMIN ?>?ADD=1811" STYLE="text-decoration:none;"><img src="images/blank.gif" border=0 alt=\" \" width=14 height=14 valign=middle> <FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Add New Email Group"); ?> </a>
+		<a href="<?php echo $ADMIN ?>?ADD=1811" STYLE="text-decoration:none;"><FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Add New Email Group"); ?> </a>
 		</TD></TR><TR <?php echo $copyEG_sh ?><?php if ($SSadmin_row_click > 0) {echo " onclick=\"window.document.location='$ADMIN?ADD=1911';\"";} ?>><TD ALIGN=LEFT> &nbsp; 
-		<a href="<?php echo $ADMIN ?>?ADD=1911" STYLE="text-decoration:none;"><img src="images/blank.gif" border=0 alt=\" \" width=14 height=14 valign=middle> <FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Copy Email Group"); ?> </a>
+		<a href="<?php echo $ADMIN ?>?ADD=1911" STYLE="text-decoration:none;"><FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Copy Email Group"); ?> </a>
 		<?php } ?>
-		<TR WIDTH=160 CLASS="subhead_style"><TD><DIV CLASS="horiz_line_grey"></DIV></TD></TR>
 		<?php
 			}
 		?>
@@ -2216,53 +2214,50 @@ if ($subcamp_font_size < 4) {$subcamp_font_size='11';}
 			{
 		?>
 		<TR <?php echo $listCG_sh ?><?php if ($SSadmin_row_click > 0) {echo " onclick=\"window.document.location='$ADMIN?ADD=1900';\"";} ?>><TD ALIGN=LEFT> &nbsp; 
-		<a href="<?php echo $ADMIN ?>?ADD=1900" STYLE="text-decoration:none;"><img src="images/icon_chat.png" border=0 alt=\" Chat Groups\" width=14 height=14 valign=middle> <FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Show Chat Groups"); ?> </a>
+		<a href="<?php echo $ADMIN ?>?ADD=1900" STYLE="text-decoration:none;"><FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Show Chat Groups"); ?> </a>
 		</TD></TR><TR <?php echo $newCG_sh ?><?php if ($SSadmin_row_click > 0) {echo " onclick=\"window.document.location='$ADMIN?ADD=18111';\"";} ?>><TD ALIGN=LEFT> &nbsp; 
 		<?php if ($add_copy_disabled < 1) { ?>
-		<a href="<?php echo $ADMIN ?>?ADD=18111" STYLE="text-decoration:none;"><img src="images/blank.gif" border=0 alt=\" \" width=14 height=14 valign=middle> <FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Add New Chat Group"); ?> </a>
+		<a href="<?php echo $ADMIN ?>?ADD=18111" STYLE="text-decoration:none;"><FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Add New Chat Group"); ?> </a>
 		</TD></TR><TR <?php echo $copyCG_sh ?><?php if ($SSadmin_row_click > 0) {echo " onclick=\"window.document.location='$ADMIN?ADD=19111';\"";} ?>><TD ALIGN=LEFT> &nbsp; 
-		<a href="<?php echo $ADMIN ?>?ADD=19111" STYLE="text-decoration:none;"><img src="images/blank.gif" border=0 alt=\" \" width=14 height=14 valign=middle> <FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Copy Chat Group"); ?> </a>
+		<a href="<?php echo $ADMIN ?>?ADD=19111" STYLE="text-decoration:none;"><FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Copy Chat Group"); ?> </a>
 		<?php } ?>
-		<TR WIDTH=160 CLASS="subhead_style"><TD><DIV CLASS="horiz_line_grey"></DIV></TD></TR>
 		<?php
 			}
 		?>
 		</TD></TR><TR <?php echo $listDID_sh ?><?php if ($SSadmin_row_click > 0) {echo " onclick=\"window.document.location='$ADMIN?ADD=1300';\"";} ?>><TD ALIGN=LEFT> &nbsp; 
-		<a href="<?php echo $ADMIN ?>?ADD=1300" STYLE="text-decoration:none;"><img src="images/icon_cidgroups.png" border=0 alt=\"DIDs\" width=14 height=14 valign=middle> <FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Show DIDs"); ?> </a>
+		<a href="<?php echo $ADMIN ?>?ADD=1300" STYLE="text-decoration:none;"><FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Show DIDs"); ?> </a>
 		</TD></TR><TR <?php echo $newDID_sh ?><?php if ($SSadmin_row_click > 0) {echo " onclick=\"window.document.location='$ADMIN?ADD=1311';\"";} ?>><TD ALIGN=LEFT> &nbsp; 
 		<?php if ($add_copy_disabled < 1) { ?>
-		<a href="<?php echo $ADMIN ?>?ADD=1311" STYLE="text-decoration:none;"><img src="images/blank.gif" border=0 alt=\" \" width=14 height=14 valign=middle> <FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Add A New DID"); ?> </a>
+		<a href="<?php echo $ADMIN ?>?ADD=1311" STYLE="text-decoration:none;"><FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Add A New DID"); ?> </a>
 		</TD></TR><TR <?php echo $copyDID_sh ?><?php if ($SSadmin_row_click > 0) {echo " onclick=\"window.document.location='$ADMIN?ADD=1411';\"";} ?>><TD ALIGN=LEFT> &nbsp; 
-		<a href="<?php echo $ADMIN ?>?ADD=1411" STYLE="text-decoration:none;"><img src="images/blank.gif" border=0 alt=\" \" width=14 height=14 valign=middle> <FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Copy DID"); ?> </a>
+		<a href="<?php echo $ADMIN ?>?ADD=1411" STYLE="text-decoration:none;"><FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Copy DID"); ?> </a>
 		<?php
 			}
 		if ($SSdid_ra_extensions_enabled > 0)
 			{
 			?>
 			</TD></TR><TR <?php echo $didRA_sh ?><?php if ($SSadmin_row_click > 0) {echo " onclick=\"window.document.location='$ADMIN?ADD=1320';\"";} ?>><TD ALIGN=LEFT> &nbsp; 
-			<a href="<?php echo $ADMIN ?>?ADD=1320" STYLE="text-decoration:none;"><img src="images/blank.gif" border=0 alt=\" \" width=14 height=14 valign=middle> <FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"><?php echo _QXZ("RA Extensions"); ?></a>
+			<a href="<?php echo $ADMIN ?>?ADD=1320" STYLE="text-decoration:none;"><FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"><?php echo _QXZ("RA Extensions"); ?></a>
 			<?php
 			}
 		?>
-		<TR WIDTH=160 CLASS="subhead_style"><TD><DIV CLASS="horiz_line_grey"></DIV></TD></TR>
 		</TD></TR><TR <?php echo $listCM_sh ?><?php if ($SSadmin_row_click > 0) {echo " onclick=\"window.document.location='$ADMIN?ADD=1500';\"";} ?>><TD ALIGN=LEFT> &nbsp; 
-		<a href="<?php echo $ADMIN ?>?ADD=1500" STYLE="text-decoration:none;"><img src="images/icon_callmenu.png" border=0 alt=\"Call Menus\" width=14 height=14 valign=middle> <FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Show Call Menus"); ?> </a>
+		<a href="<?php echo $ADMIN ?>?ADD=1500" STYLE="text-decoration:none;"><FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Show Call Menus"); ?> </a>
 		</TD></TR><TR <?php echo $newCM_sh ?><?php if ($SSadmin_row_click > 0) {echo " onclick=\"window.document.location='$ADMIN?ADD=1511';\"";} ?>><TD ALIGN=LEFT> &nbsp; 
 		<?php if ($add_copy_disabled < 1) { ?>
-		<a href="<?php echo $ADMIN ?>?ADD=1511" STYLE="text-decoration:none;"><img src="images/blank.gif" border=0 alt=\" \" width=14 height=14 valign=middle> <FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Add A New Call Menu"); ?> </a>
+		<a href="<?php echo $ADMIN ?>?ADD=1511" STYLE="text-decoration:none;"><FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Add A New Call Menu"); ?> </a>
 		</TD></TR><TR <?php echo $copyCM_sh ?><?php if ($SSadmin_row_click > 0) {echo " onclick=\"window.document.location='$ADMIN?ADD=1611';\"";} ?>><TD ALIGN=LEFT> &nbsp; 
-		<a href="<?php echo $ADMIN ?>?ADD=1611" STYLE="text-decoration:none;"><img src="images/blank.gif" border=0 alt=\" \" width=14 height=14 valign=middle> <FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Copy Call Menu"); ?> </a>
+		<a href="<?php echo $ADMIN ?>?ADD=1611" STYLE="text-decoration:none;"><FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Copy Call Menu"); ?> </a>
 		<?php } ?>
 
-		<TR WIDTH=160 CLASS="subhead_style"><TD><DIV CLASS="horiz_line_grey"></DIV></TD></TR>
 		</TD></TR><TR <?php echo $listFPG_sh ?><?php if ($SSadmin_row_click > 0) {echo " onclick=\"window.document.location='$ADMIN?ADD=1700';\"";} ?>><TD ALIGN=LEFT> &nbsp; 
-		<a href="<?php echo $ADMIN ?>?ADD=1700" STYLE="text-decoration:none;"><img src="images/icon_filterphonegroup.png" border=0 alt=\"Filter Phone Groups\" width=14 height=14 valign=middle> <FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Filter Phone Groups"); ?> </a>
+		<a href="<?php echo $ADMIN ?>?ADD=1700" STYLE="text-decoration:none;"><FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Filter Phone Groups"); ?> </a>
 		</TD></TR><TR <?php echo $newFPG_sh ?><?php if ($SSadmin_row_click > 0) {echo " onclick=\"window.document.location='$ADMIN?ADD=1711';\"";} ?>><TD ALIGN=LEFT> &nbsp; 
 		<?php if ($add_copy_disabled < 1) { ?>
-		<a href="<?php echo $ADMIN ?>?ADD=1711" STYLE="text-decoration:none;"><img src="images/blank.gif" border=0 alt=\" \" width=14 height=14 valign=middle> <FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Add Filter Phone Group"); ?> </a>
+		<a href="<?php echo $ADMIN ?>?ADD=1711" STYLE="text-decoration:none;"><FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo _QXZ("Add Filter Phone Group"); ?> </a>
 		</TD></TR><TR <?php echo $addFPG_sh ?><?php if ($SSadmin_row_click > 0) {echo " onclick=\"window.document.location='$ADMIN?ADD=171';\"";} ?>><TD ALIGN=LEFT> &nbsp; 
 		<?php } ?>
-		<a href="<?php echo $ADMIN ?>?ADD=171" STYLE="text-decoration:none;"><img src="images/blank.gif" border=0 alt=\" \" width=14 height=14 valign=middle> <FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo $FPGlink ?> </a>
+		<a href="<?php echo $ADMIN ?>?ADD=171" STYLE="text-decoration:none;"><FONT STYLE="font-family:HELVETICA;font-size:<?php echo $subcamp_font_size ?>;"> <?php echo $FPGlink ?> </a>
 		</TD></TR>
 		<?php } 
 		?>
