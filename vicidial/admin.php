@@ -44322,7 +44322,7 @@ if ($ADD==999999)
 
 		if ( ($reports_only_user < 1) and ( (preg_match("/Report Page Servers Summary/",$LOGallowed_reports)) or (preg_match("/ALL REPORTS/",$LOGallowed_reports)) ) )
 			{
-			echo "<PRE><TABLE BORDER=1 CELLPADDING=2 cellspacing=0>\n";
+			echo "<PRE><TABLE class=\"".$table_classes_1."\" BORDER=1 CELLPADDING=2 cellspacing=0>\n";
 
 			if ($stage == 'TIME')
 				{
