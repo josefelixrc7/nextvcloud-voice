@@ -98,9 +98,9 @@ $(function()
         ?>
     </ul>
 
-    <table class="mb-2" border="0" bgcolor="#FFFFFF" height="30px">
+    <!--<table class="mb-2" border="0" bgcolor="#FFFFFF" height="30px">
         <tr valign="top" align="left">
-            <!--
+            
             <td align="left" width="115px" bgcolor="#<?php echo $SSstd_row5_background ?>">
                 <a href="#" onclick="MainPanelToFront('NO','YES');">
                     <img src="/modern-vicidial/images/logo.png" alt="MAIN" height="30px" border="0" />
@@ -156,8 +156,7 @@ $(function()
                         </td>\n";
                 }
             ?>
-            -->
-            <td width="<?php echo $HSwidth ?>px" valign="middle" align="center">
+            <td valign="middle" align="center">
                 <font class="body_tiny">&nbsp;
                     <span id="status"><?php echo _QXZ("LIVE"); ?></span>
                     &nbsp; &nbsp; <?php echo _QXZ("session ID:"); ?>
@@ -172,5 +171,29 @@ $(function()
                 <img src="./images/<?php echo _QXZ("agc_live_call_OFF.gif"); ?>" name="livecall" alt="Live Call" width="109px" height="30px" border="0" />
             </td>
         </tr>
-    </table>
+    </table>-->
 </span>
+
+<div class="row">
+
+    <div class="col">
+        <?php echo _QXZ("STATUS:"); ?>
+        <span id="MainStatuSSpan"></span>
+    </div>
+    <div class="col">
+        <small><?php echo _QXZ("RECORDING FILE:"); ?></small>
+        <small><span id="RecorDingFilename"></span></small>
+        <small>(<?php echo _QXZ("RECORD ID:"); ?></small>
+        <small><span id="RecorDID"></span>)</small>
+    </div>
+    <div class="col">
+        <span id="status"><?php echo _QXZ("LIVE"); ?></span>
+        <?php echo _QXZ("session ID:"); ?>
+        <span id="sessionIDspan"></span>
+        (<span id="AgentStatusCalls"></span>
+        <span id="AgentStatusEmails"></span>)
+    </div>
+    <div class="col">
+        <img src="./images/<?php echo _QXZ("agc_live_call_OFF.gif"); ?>" name="livecall" alt="Live Call" width="109px" height="30px" border="0" />
+    </div>
+</div>

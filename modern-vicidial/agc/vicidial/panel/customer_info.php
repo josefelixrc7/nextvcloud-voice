@@ -22,17 +22,6 @@
         <input type="hidden" name="chat_id" id="chat_id" value="" />
         <input type="hidden" name="customer_chat_id" id="customer_chat_id" value="" />
 
-        <div class="container">
-            <?php echo _QXZ("STATUS:"); ?>
-            <span id="MainStatuSSpan"></span>
-        </div>
-        <div class="container">
-            <small><?php echo _QXZ("RECORDING FILE:"); ?></small>
-            <small><span id="RecorDingFilename"></span></small>
-            <small>(<?php echo _QXZ("RECORD ID:"); ?></small>
-            <small><span id="RecorDID"></span>)</small>
-        </div>
-
         <!-- Informacion principal -->
         <table id="MainTable" class="table">
             <tbody>
