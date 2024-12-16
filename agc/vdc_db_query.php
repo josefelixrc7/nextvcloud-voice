@@ -16811,7 +16811,7 @@ if ($ACTION == 'CALLLOGview')
 	echo "<a class=\"btn btn-secondary\" href=\"#\" onclick=\"VieWCalLLoG('$past_day_date','');return false;\"> < $past_day_date</a> &nbsp; &nbsp; ";
 	if ($NOW_DATE != $date)
 		{echo "<a class=\"btn btn-secondary\" href=\"#\" onclick=\"VieWCalLLoG('$next_day_date','');return false;\"> $next_day_date > </a> &nbsp; &nbsp; ";}
-	echo "<input class=\"form-control d-inline-block\" type=text name=calllogdate id=calllogdate value=\"$date\" size=12 maxlength=10> ";
+	echo "<input class=\"form-control d-inline-block w-auto\" type=text name=calllogdate id=calllogdate value=\"$date\" size=12 maxlength=10> ";
 	echo "<a class=\"btn btn-secondary\" href=\"#\" onclick=\"VieWCalLLoG('','form');return false;\">"._QXZ("GO")."</a> &nbsp;  &nbsp; &nbsp; ";
 	echo "<a class=\"btn btn-secondary\" href=\"#\" onclick=\"hideDiv('CalLLoGDisplaYBox');return false;\"> "._QXZ("close")." </a>";
 	echo "</B></font>\n";
