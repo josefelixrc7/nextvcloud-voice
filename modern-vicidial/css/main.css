@@ -66,3 +66,7 @@
 .btn-primary{
     background: #060e23 !important;
 }
+#sidebarMenu img{
+    max-width: 100%;
+    height: auto;
+}
