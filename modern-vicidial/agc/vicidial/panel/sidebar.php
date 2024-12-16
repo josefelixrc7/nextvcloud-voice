@@ -41,7 +41,7 @@
                                 <div class="">
                                     <span id="DiaLControl">
                                         <a class="btn btn-secondary" href="#" onclick="ManualDialNext('','','','','','0','','','YES');">
-                                            <img class="img-fluid" src="./images/<?php echo _QXZ("vdc_LB_dialnextnumber_OFF.gif"); ?>" border="0" alt="Dial Next Number" />
+                                            <img class="" src="./images/<?php echo _QXZ("vdc_LB_dialnextnumber_OFF.gif"); ?>" border="0" alt="Dial Next Number" />
                                         </a>
                                     </span>
                                 </div>
@@ -83,7 +83,7 @@
                                     <small class="text-white"><span id="RecorDID"></span></small>
                                     <span class="mb-2" id="RecorDControl">
                                         <a href="#" onclick="conf_send_recording('MonitorConf',session_id,'','','','YES');return false;">
-                                            <img class="img-fluid" src="./images/<?php echo _QXZ("$start_recording_GIF"); ?>" border="0" alt="Start Recording" />
+                                            <img class="" src="./images/<?php echo _QXZ("$start_recording_GIF"); ?>" border="0" alt="Start Recording" />
                                         </a>
                                     </span>
                                     <span class="mb-2" id="RecorDMute"></span>
@@ -96,7 +96,7 @@
                                         <li class=\"nav-item\">
                                             <div class=\"\">
                                                 <span class=\"mb-2\" id=\"WebFormSpan\">
-                                                    <img class=\"img-fluid\" src=\"./images/"._QXZ("vdc_LB_webform_OFF.gif")."\" border=\"0\" alt=\"Web Form\" />
+                                                    <img class=\"\" src=\"./images/"._QXZ("vdc_LB_webform_OFF.gif")."\" border=\"0\" alt=\"Web Form\" />
                                                 </span>
                                             </div>
                                         </li>";
@@ -107,7 +107,7 @@
                                         <li class=\"nav-item\">
                                             <div class=\"\">
                                                 <span class=\"mb-2\" id=\"WebFormSpanTwo\">
-                                                    <img class=\"img-fluid\" src=\"./images/"._QXZ("vdc_LB_webform_two_OFF.gif")."\" border=\"0\" alt=\"Web Form 2\" />
+                                                    <img class=\"\" src=\"./images/"._QXZ("vdc_LB_webform_two_OFF.gif")."\" border=\"0\" alt=\"Web Form 2\" />
                                                 </span>
                                             </div>
                                         </li>
@@ -119,7 +119,7 @@
                                         <li class=\"nav-item\">
                                             <div class=\"\">
                                                 <span class=\"mb-2\" id=\"WebFormSpanThree\">
-                                                    <img class=\"img-fluid\" src=\"./images/"._QXZ("vdc_LB_webform_three_OFF.gif")."\" border=\"0\" alt=\"Web Form 3\" />
+                                                    <img class=\"\" src=\"./images/"._QXZ("vdc_LB_webform_three_OFF.gif")."\" border=\"0\" alt=\"Web Form 3\" />
                                                 </span>
                                             </div>
                                         </li>";
@@ -132,14 +132,14 @@
                                 <div class="">
                                     <font class="body_small_bold"><span id="ParkCounterSpan"></span></font>
                                     <span class="mb-2" id="ParkControl">
-                                        <img class="img-fluid" src="./images/<?php echo _QXZ("vdc_LB_parkcall_OFF.gif"); ?>" border="0" alt="Park Call" />
+                                        <img class="" src="./images/<?php echo _QXZ("vdc_LB_parkcall_OFF.gif"); ?>" border="0" alt="Park Call" />
                                     </span>
                                     <?php
                                         if ( ($ivr_park_call=='ENABLED') or ($ivr_park_call=='ENABLED_PARK_ONLY') )
                                         {
                                             echo "
                                                 <span class=\"mb-2\" id=\"ivrParkControl\">
-                                                    <img class=\"img-fluid\" src=\"./images/"._QXZ("vdc_LB_ivrparkcall_OFF.gif")."\" border=\"0\" alt=\"IVR Park Call\" />
+                                                    <img class=\"\" src=\"./images/"._QXZ("vdc_LB_ivrparkcall_OFF.gif")."\" border=\"0\" alt=\"IVR Park Call\" />
                                                 </span>";
                                         }
                                         else
@@ -152,7 +152,7 @@
                             <li class="nav-item">
                                 <div class="">
                                     <span class="mb-2" id="XferControl">
-                                        <img class="img-fluid" src="./images/<?php echo _QXZ("vdc_LB_transferconf_OFF.gif"); ?>" border="0" alt="Transfer - Conference" />
+                                        <img class="" src="./images/<?php echo _QXZ("vdc_LB_transferconf_OFF.gif"); ?>" border="0" alt="Transfer - Conference" />
                                     </span>
                                 </div>
                             </li>
@@ -163,7 +163,7 @@
                                         <li class=\"nav-item\">
                                             <div class=\"\">
                                                 <span class=\"mb-2\" id=\"QuickXfer\">
-                                                    <img class=\"img-fluid\" src=\"./images/"._QXZ("vdc_LB_quickxfer_OFF.gif")."\" border=\"0\" alt=\"Quick Transfer\" />
+                                                    <img class=\"\" src=\"./images/"._QXZ("vdc_LB_quickxfer_OFF.gif")."\" border=\"0\" alt=\"Quick Transfer\" />
                                                 </span>
                                             </div>
                                         </li>";
@@ -174,7 +174,7 @@
                                         <li class=\"nav-item\">
                                             <div class=\"\">
                                                 <span class=\"mb-2\" id=\"CustomXfer\">
-                                                    <img class=\"img-fluid\" src=\"./images/"._QXZ("vdc_LB_customxfer_OFF.gif")."\" border=\"0\" alt=\"Custom Transfer\" />
+                                                    <img class=\"\" src=\"./images/"._QXZ("vdc_LB_customxfer_OFF.gif")."\" border=\"0\" alt=\"Custom Transfer\" />
                                                 </span>
                                             </div>
                                         </li>";
@@ -189,7 +189,7 @@
                             <li class="nav-item">
                                 <div class="">
                                     <span class="mb-2" id="HangupControl">
-                                        <img class="img-fluid" src="./images/<?php echo _QXZ("vdc_LB_hangupcustomer_OFF.gif"); ?>" border="0" alt="Hangup Customer" />
+                                        <img class="" src="./images/<?php echo _QXZ("vdc_LB_hangupcustomer_OFF.gif"); ?>" border="0" alt="Hangup Customer" />
                                     </span>
                                 </div>
                             </li>
@@ -198,7 +198,7 @@
                                     <div class="text_input" id="SendDTMFdiv">
                                         <span id="SendDTMF">
                                             <a href="#" onclick="SendConfDTMF(session_id,'YES');return false;">
-                                                <img class="img-fluid" src="./images/<?php echo _QXZ("vdc_LB_senddtmf.gif"); ?>" border="0" alt="Send DTMF" align="bottom" />
+                                                <img class="" src="./images/<?php echo _QXZ("vdc_LB_senddtmf.gif"); ?>" border="0" alt="Send DTMF" align="bottom" />
                                             </a>
                                             <input class="mt-2 form-control form-control-sm" type="text" size="5" name="conf_dtmf" class="cust_form" value="" maxlength="50" />
                                         </span>
