@@ -707,7 +707,7 @@ if ($agent_display_dialable_leads > 0)
 				<td align="center" valign="top"> &nbsp; &nbsp; &nbsp;
 					<font class="sd_text"><?php echo _QXZ("AGENT CALL LOG:"); ?></font> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 					<font class="sh_text">
-						<a href="#" onclick="CalLLoGVieWClose();return false;"><?php echo _QXZ("close"); ?> [X]</a><br />
+						<a class="btn btn-secondary" href="#" onclick="CalLLoGVieWClose();return false;"><?php echo _QXZ("close"); ?> [X]</a><br />
 						<?php
 						if ($webphone_location == 'bar')
 							{echo "<br /><img src=\"./images/"._QXZ("pixel.gif")."\" width=\"1px\" height=\"".$webphone_height."px\" /><br />\n";}
