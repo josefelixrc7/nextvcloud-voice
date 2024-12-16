@@ -1,6 +1,9 @@
 
 <header class="navbar navbar-dark sticky-top flex-md-nowrap p-0 shadow" style="z-index: 6;background: #060e23 !important;">
-    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Modern Vicidial</a>
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">
+        <img class="me-md-2 me-0" src="../../images/logo.png" width="150px" alt="logo">
+        <span class="d-md-block d-none">NextVCloud Voice</span>
+    </a>
     <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -33,7 +36,7 @@
 
         <main class="col-md-10 ms-sm-auto px-md-4">
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h1 class="h2">Modern Vicidial</h1>
+                <div></div>
 
                 <!-- Barra de botones -->
                 <div class="btn-toolbar mb-2 mb-md-0">
