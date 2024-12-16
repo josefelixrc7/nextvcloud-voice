@@ -1,6 +1,6 @@
 
 <header class="navbar navbar-dark sticky-top flex-md-nowrap p-0 shadow" style="z-index: 6;background: #060e23 !important;">
-    <a class="col-md-3 col-lg-2 me-0 px-3 text-decoration-none" href="#">
+    <a class="col-md-3 col-lg-2 me-0 px-3 text-decoration-none text-white" href="#">
         <img class="me-md-2 me-0" src="/modern-vicidial/images/logo.png" width="32px" alt="logo">
         <span class="d-md-inline-block d-none">NextVCloud Voice</span>
     </a>
