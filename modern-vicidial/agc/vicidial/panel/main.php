@@ -1,7 +1,7 @@
 
 <header class="navbar navbar-dark sticky-top flex-md-nowrap p-0 shadow" style="z-index: 6;background: #060e23 !important;">
-    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">
-        <img class="me-md-2 me-0" src="/modern-vicidial/images/logo.png" width="150px" alt="logo">
+    <a class="col-md-3 col-lg-2 me-0 px-3" href="#">
+        <img class="me-md-2 me-0" src="/modern-vicidial/images/logo.png" width="32px" alt="logo">
         <span class="d-md-inline-block d-none">NextVCloud Voice</span>
     </a>
     <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
