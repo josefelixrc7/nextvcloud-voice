@@ -699,27 +699,24 @@ if ($agent_display_dialable_leads > 0)
 	?>
 </span>
 
-<span class="w-100 h-100" style="background:#eee;position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="CalLLoGDisplaYBox">
-    <div class="text-center mt-5">
 
-		<table class="table" border="0" width="<?php echo $CAwidth ?>px" height="<?php echo $WRheight ?>px">
-			<tr>
-				<td align="center" valign="top"> &nbsp; &nbsp; &nbsp;
-					<font class="sd_text"><?php echo _QXZ("AGENT CALL LOG:"); ?></font>
-					<font class="sh_text">
-						<a class="btn btn-secondary" href="#" onclick="CalLLoGVieWClose();return false;"><?php echo _QXZ("close"); ?></a><br />
-						<?php
-						/*if ($webphone_location == 'bar')
-							{echo "<br /><img src=\"./images/"._QXZ("pixel.gif")."\" width=\"1px\" height=\"".$webphone_height."px\" /><br />\n";}*/
-						?>
-						<div class="scroll_calllog" id="CallLogSpan"> <?php echo _QXZ("Call log List"); ?> </div>
-					</font>
-				</td>
-			</tr>
-		</table>
+<span class="w-100 h-100 overflow-scroll" tabindex="-1" style="background:rgba(0, 0, 0, 0.5);position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="CalLLoGDisplaYBox">
+    <div class="w-50 mx-auto mt-2">
+
+		<div class="card">
+			<div class="card-header">
+				<h5 class="d-flex">
+					<span class="w-auto"><?php echo _QXZ("AGENT CALL LOG:"); ?></span>
+					<a class="btn btn-close ms-auto" href="#" onclick="CalLLoGVieWClose();return false;"></a>
+				</h5>
+			</div>
+			<div class="card-body">
+				<div class="scroll_calllog" id="CallLogSpan"> <?php echo _QXZ("Call log List"); ?> </div>
+			</div>
+		</div>
 
 	</div>
-</span>
+</span>	
 
 <span style="position:absolute;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="AgentTimeDisplayBox">
 	<table border="0" bgcolor="#CCFFCC" width="<?php echo $CAwidth ?>px" height="<?php echo $WRheight ?>px"><tr><td align="center" valign="top">
