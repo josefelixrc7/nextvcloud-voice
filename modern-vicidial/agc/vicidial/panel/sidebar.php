@@ -30,8 +30,8 @@
                                         </b>
                                     </span>
                                     <font class="text-white">
-                                        <?php echo _QXZ("STATUS:"); ?>
-                                        <span id="MainStatuSSpan"></span>
+                                        <!--<?php echo _QXZ("STATUS:"); ?>
+                                        <span id="MainStatuSSpan"></span>-->
                                         <span id=timer_alt_display></span>
                                         <span id=manual_auto_next_display></span>
                                     </font>
@@ -77,10 +77,10 @@
                             </li>
                             <li class="nav-item">
                                 <div class="">
-                                    <small class="text-white"><?php echo _QXZ("RECORDING FILE:"); ?></small>
+                                    <!--<small class="text-white"><?php echo _QXZ("RECORDING FILE:"); ?></small>
                                     <small class="text-white"><span id="RecorDingFilename"></span></small><br>
                                     <small class="text-white"><?php echo _QXZ("RECORD ID:"); ?></small>
-                                    <small class="text-white"><span id="RecorDID"></span></small>
+                                    <small class="text-white"><span id="RecorDID"></span></small>-->
                                     <span class="mb-2" id="RecorDControl">
                                         <a href="#" onclick="conf_send_recording('MonitorConf',session_id,'','','','YES');return false;">
                                             <img class="" src="./images/<?php echo _QXZ("$start_recording_GIF"); ?>" border="0" alt="Start Recording" />

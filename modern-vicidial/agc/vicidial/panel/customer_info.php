@@ -42,6 +42,16 @@
                 </tr>
             </tbody>
         </table>
+        <div class="container">
+            <?php echo _QXZ("STATUS:"); ?>
+            <span id="MainStatuSSpan"></span>
+        </div>
+        <div class="container">
+            <small class="text-white"><?php echo _QXZ("RECORDING FILE:"); ?></small>
+            <small class="text-white"><span id="RecorDingFilename"></span></small><br>
+            <small class="text-white"><?php echo _QXZ("RECORD ID:"); ?></small>
+            <small class="text-white"><span id="RecorDID"></span></small>
+        </div>
 
         <div class="row">
             <!-- Campos -->
