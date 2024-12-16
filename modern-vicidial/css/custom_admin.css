@@ -154,3 +154,11 @@ select{
     -moz-appearance: none;
     appearance: none;
 }
+
+a{
+    padding: .375rem .75rem;
+    border-radius: .25rem;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #6c757d;
+}
