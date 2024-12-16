@@ -27731,7 +27731,7 @@ if ($ADD==34)
 		$rslt=mysql_to_mysqli($stmt, $link);
 		$lists_to_print = mysqli_num_rows($rslt);
 
-		echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
+		echo "<center><TABLE class=\"table mb-2\ width=$section_width cellspacing=0 cellpadding=1>\n";
 		echo "<TR BGCOLOR=BLACK>";
 		echo "<TD><a href=\"$PHP_SELF?ADD=34&campaign_id=$campaign_id&$LISTlink\"><B><FONT FACE=\"Arial,Helvetica\" size=1 color=white>"._QXZ("LIST ID")."</B></a></TD>";
 		echo "<TD><a href=\"$PHP_SELF?ADD=34&campaign_id=$campaign_id&$NAMElink\"><B><FONT FACE=\"Arial,Helvetica\" size=1 color=white>"._QXZ("LIST NAME")."</B></a></TD>";
