@@ -67,7 +67,7 @@
     background: #060e23 !important;
 }
 #sidebarMenu img{
-    max-width: 150px !important;
+    max-width: 100% !important;
     height: auto !important;
 }
 #MainStatuSSpan{
