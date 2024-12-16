@@ -9969,7 +9969,7 @@ function set_length(SLnumber,SLlength_goal,SLdirection)
 					{
 					document.getElementById("DiaLControl").innerHTML = DiaLControl_auto_HTML;
 					}
-				document.getElementById("MainStatuSSpan").style.background = panel_bgcolor;
+				//document.getElementById("MainStatuSSpan").style.background = panel_bgcolor;
 				reselect_alt_dial = 0;
 				}
 			}
