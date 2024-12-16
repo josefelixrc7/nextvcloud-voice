@@ -174,7 +174,7 @@ $(function()
     </table>-->
 </span>
 
-<div class="row">
+<div class="row my-2">
 
     <div class="col">
         <?php echo _QXZ("STATUS:"); ?>
@@ -197,3 +197,4 @@ $(function()
         <img src="./images/<?php echo _QXZ("agc_live_call_OFF.gif"); ?>" name="livecall" alt="Live Call" width="109px" height="30px" border="0" />
     </div>
 </div>
+<hr>
