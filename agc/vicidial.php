@@ -20277,8 +20277,8 @@ function phone_number_format(formatphone) {
 			changeTab('panel');
 		if (MPFclick=='YES')
 			{button_click_log = button_click_log + "" + SQLdate + "-----MainPanelToFront---" + resumevar + "|";}
-		document.getElementById("MainTable").style.backgroundColor="<?php echo $MAIN_COLOR ?>";
-		document.getElementById("MaiNfooter").style.backgroundColor="<?php echo $MAIN_COLOR ?>";
+		//document.getElementById("MainTable").style.backgroundColor="<?php echo $MAIN_COLOR ?>";
+		//document.getElementById("MaiNfooter").style.backgroundColor="<?php echo $MAIN_COLOR ?>";
 		var CBMPheight = '<?php echo $CBheight ?>px';
 		document.getElementById("CallbacksButtons").style.top = CBMPheight;
 		document.getElementById("CallbacksButtons").style.left = '300px';
@@ -20385,9 +20385,9 @@ function phone_number_format(formatphone) {
 		hideDiv('CustomerChatPanel');
 		hideDiv('CustomerChatRefresH');
 		hideDiv('InternalChatPanel');
-		document.getElementById("MainTable").style.backgroundColor="<?php echo $SCRIPT_COLOR ?>";
-		document.getElementById("MaiNfooter").style.backgroundColor="<?php echo $SCRIPT_COLOR ?>";
-		panel_bgcolor='<?php echo $SCRIPT_COLOR ?>';
+		//document.getElementById("MainTable").style.backgroundColor="<?php echo $SCRIPT_COLOR ?>";
+		//document.getElementById("MaiNfooter").style.backgroundColor="<?php echo $SCRIPT_COLOR ?>";
+		//panel_bgcolor='<?php echo $SCRIPT_COLOR ?>';
 	//	document.getElementById("MainStatuSSpan").style.background = panel_bgcolor;
 
 		HidEGenDerPulldown();
@@ -20421,9 +20421,9 @@ function phone_number_format(formatphone) {
 		hideDiv('CustomerChatPanel');
 		hideDiv('CustomerChatRefresH');
 		hideDiv('InternalChatPanel');
-		document.getElementById("MainTable").style.backgroundColor="<?php echo $SCRIPT_COLOR ?>";
+		/*document.getElementById("MainTable").style.backgroundColor="<?php echo $SCRIPT_COLOR ?>";
 		document.getElementById("MaiNfooter").style.backgroundColor="<?php echo $SCRIPT_COLOR ?>";
-		panel_bgcolor='<?php echo $SCRIPT_COLOR ?>';
+		panel_bgcolor='<?php echo $SCRIPT_COLOR ?>';*/
 	//	document.getElementById("MainStatuSSpan").style.background = panel_bgcolor;
 
 		HidEGenDerPulldown();
@@ -20452,9 +20452,9 @@ function phone_number_format(formatphone) {
 		hideDiv('CustomerChatPanel');
 		hideDiv('CustomerChatRefresH');
 		hideDiv('InternalChatPanel');
-		document.getElementById("MainTable").style.backgroundColor="<?php echo $FORM_COLOR ?>";
+		/*document.getElementById("MainTable").style.backgroundColor="<?php echo $FORM_COLOR ?>";
 		document.getElementById("MaiNfooter").style.backgroundColor="<?php echo $FORM_COLOR ?>";
-		panel_bgcolor='<?php echo $FORM_COLOR ?>';
+		panel_bgcolor='<?php echo $FORM_COLOR ?>';*/
 	//	document.getElementById("MainStatuSSpan").style.background = panel_bgcolor;
 
 		HidEGenDerPulldown();
@@ -20482,9 +20482,9 @@ function phone_number_format(formatphone) {
 				{document.vicidial_form.other_tab_comments.value = document.vicidial_form.comments.value}
 			showDiv('OtherTabCommentsSpan');
 			}
-		document.getElementById("MainTable").style.backgroundColor="<?php echo $FORM_COLOR ?>";
+		/*document.getElementById("MainTable").style.backgroundColor="<?php echo $FORM_COLOR ?>";
 		document.getElementById("MaiNfooter").style.backgroundColor="<?php echo $FORM_COLOR ?>";
-		panel_bgcolor='<?php echo $FORM_COLOR ?>';
+		panel_bgcolor='<?php echo $FORM_COLOR ?>';*/
 	//	document.getElementById("MainStatuSSpan").style.background = panel_bgcolor;
 
 		HidEGenDerPulldown();
@@ -20504,9 +20504,9 @@ function phone_number_format(formatphone) {
 		showDiv('CustomerChatPanel');
 		showDiv('CustomerChatRefresH');
 		hideDiv('InternalChatPanel');
-		document.getElementById("MainTable").style.backgroundColor="<?php echo $FORM_COLOR ?>";
+		/*document.getElementById("MainTable").style.backgroundColor="<?php echo $FORM_COLOR ?>";
 		document.getElementById("MaiNfooter").style.backgroundColor="<?php echo $FORM_COLOR ?>";
-		panel_bgcolor='<?php echo $FORM_COLOR ?>';
+		panel_bgcolor='<?php echo $FORM_COLOR ?>';*/
 	//	document.getElementById("MainStatuSSpan").style.background = panel_bgcolor;
 
 		HidEGenDerPulldown();
@@ -20527,9 +20527,9 @@ function phone_number_format(formatphone) {
 		hideDiv('CustomerChatPanel');
 		hideDiv('CustomerChatRefresH');
 		showDiv('InternalChatPanel');
-		document.getElementById("MainTable").style.backgroundColor="<?php echo $FORM_COLOR ?>";
+		/*document.getElementById("MainTable").style.backgroundColor="<?php echo $FORM_COLOR ?>";
 		document.getElementById("MaiNfooter").style.backgroundColor="<?php echo $FORM_COLOR ?>";
-		panel_bgcolor='<?php echo $FORM_COLOR ?>';
+		panel_bgcolor='<?php echo $FORM_COLOR ?>';*/
 	//	document.getElementById("MainStatuSSpan").style.background = panel_bgcolor;
 
 		HidEGenDerPulldown();
