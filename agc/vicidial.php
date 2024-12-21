@@ -19173,7 +19173,7 @@ function phone_number_format(formatphone) {
 				else
 					{
 					NoneInSession();
-					document.getElementById("NoneInSessionLink").innerHTML = "<a href=\"#\" onclick=\"NoneInSessionCalL('LOGIN');return false;\"><?php echo _QXZ("Call Agent Webphone"); ?> -></a>";
+					document.getElementById("NoneInSessionLink").innerHTML = "<a class=\"btn btn-primary\" href=\"#\" onclick=\"NoneInSessionCalL('LOGIN');return false;\"><?php echo _QXZ("Call Agent Webphone"); ?> -></a>";
 					
 					var WebPhonEtarget = 'webphonewindow';
 
