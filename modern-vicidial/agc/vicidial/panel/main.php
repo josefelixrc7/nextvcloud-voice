@@ -118,7 +118,7 @@
                 <?php
                     include '../modern-vicidial/agc/vicidial/panel/actions.php';
                 ?>
-                <footer class="mt-5">
+                <footer class="mt-5 p-2 mb-2">
                     <span id="MaiNfooterspan">
                         <span id="blind_monitor_notice_span">
                             <b>
