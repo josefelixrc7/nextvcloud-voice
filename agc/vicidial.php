@@ -19078,7 +19078,7 @@ function phone_number_format(formatphone) {
 
 			if ( (agent_pause_codes_active=='Y') || (agent_pause_codes_active=='FORCE') )
 				{
-				document.getElementById("PauseCodeLinkSpan").innerHTML = "<a class=\"btn btn-outline-secondary\" href=\"#\" onclick=\"PauseCodeSelectContent_create('YES');return false;\"><?php echo _QXZ("ENTER A PAUSE CODE"); ?></a>";
+				document.getElementById("PauseCodeLinkSpan").innerHTML = "<a class=\"btn btn-sm btn-outline-secondary\" href=\"#\" onclick=\"PauseCodeSelectContent_create('YES');return false;\"><?php echo _QXZ("ENTER A PAUSE CODE"); ?></a>";
 				}
 			if (VICIDiaL_allow_closers < 1)
 				{
