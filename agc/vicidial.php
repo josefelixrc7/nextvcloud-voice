@@ -20273,6 +20273,8 @@ function phone_number_format(formatphone) {
 
 	function MainPanelToFront(resumevar,MPFclick)
 		{
+
+			changeTab('panel');
 		if (MPFclick=='YES')
 			{button_click_log = button_click_log + "" + SQLdate + "-----MainPanelToFront---" + resumevar + "|";}
 		document.getElementById("MainTable").style.backgroundColor="<?php echo $MAIN_COLOR ?>";
@@ -20357,6 +20359,7 @@ function phone_number_format(formatphone) {
 
 	function ScriptPanelToFront(SPFclick)
 		{
+			changeTab('script');
 		if (SPFclick=='YES')
 			{button_click_log = button_click_log + "" + SQLdate + "-----ScriptPanelToFront---" + CalL_ScripT_id + " " + CalL_ScripT_color + "|";}
 		var CBSPheight = '<?php echo $QLheight ?>px';
@@ -20392,6 +20395,7 @@ function phone_number_format(formatphone) {
 
 	function ScriptPanel2ToFront(SPFclick)
 		{
+			changeTab('script2');
 		if (SPFclick=='YES')
 			{button_click_log = button_click_log + "" + SQLdate + "-----ScriptPanel2ToFront---" + CalL_ScripT_id_two + " " + CalL_ScripT_color_two + "|";}
 		var CBSPheight = '<?php echo $QLheight ?>px';
@@ -20427,6 +20431,7 @@ function phone_number_format(formatphone) {
 
 	function FormPanelToFront(FPFclick)
 		{
+			changeTab('form');
 		if (FPFclick=='YES')
 			{button_click_log = button_click_log + "" + SQLdate + "-----FormPanelToFront---|";}
 		var CBFPheight = '<?php echo $QLheight ?>px';
@@ -20456,6 +20461,7 @@ function phone_number_format(formatphone) {
 		}
 	function EmailPanelToFront(EPFclick)
 		{
+			changeTab('email');
 		if (EPFclick=='YES')
 			{button_click_log = button_click_log + "" + SQLdate + "-----EmailPanelToFront---|";}
 		var CBFPheight = '<?php echo $QLheight ?>px';
@@ -20485,6 +20491,7 @@ function phone_number_format(formatphone) {
 		}
 	function CustomerChatPanelToFront(CPFclick)
 		{
+			changeTab('chat_customer');
 		if (CPFclick=='YES')
 			{button_click_log = button_click_log + "" + SQLdate + "-----CustomerChatPanelToFront---|";}
 		var CBFPheight = '<?php echo $QLheight ?>px';
@@ -20507,6 +20514,7 @@ function phone_number_format(formatphone) {
 
 	function InternalChatPanelToFront(IPFclick)
 		{
+			changeTab('chat_internal');
 		if (IPFclick=='YES')
 			{button_click_log = button_click_log + "" + SQLdate + "-----InternalChatPanelToFront---|";}
 		var CBFPheight = '<?php echo $QLheight ?>px';

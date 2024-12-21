@@ -1,26 +1,31 @@
 
 <script>
+function changeTab(current_tab)
+{
+    const tabs = ['panel', 'script', 'script2', 'form', 'email', 'chat_internal', 'chat_customer'];
+    for(let tab of tabs)
+    {
+        if(tab == current_tab)
+        {
+            $(`#Tabs ul li a[tab=${tab}]`).addClass('active');
+            $(`.panel_${tab}`).removeClass('d-none');
+            $(`.panel_${tab}`).addClass('d-block');
+        }
+        else
+        {
+            $(`#Tabs ul li a[tab=${tab}]`).removeClass('active');
+            $(`.panel_${tab}`).removeClass('d-block');
+            $(`.panel_${tab}`).addClass('d-none');
+        }
+    }
+}
+
 $(function()
 {
     $(document).on('click', '#Tabs ul li a.nav-link', (e) =>
     {
         const current_tab = $(e.currentTarget).attr('tab');
-        const tabs = ['panel', 'script', 'script2', 'form', 'email', 'chat_internal', 'chat_customer'];
-        for(let tab of tabs)
-        {
-            if(tab == current_tab)
-            {
-                $(`#Tabs ul li a[tab=${tab}]`).addClass('active');
-                $(`.panel_${tab}`).removeClass('d-none');
-                $(`.panel_${tab}`).addClass('d-block');
-            }
-            else
-            {
-                $(`#Tabs ul li a[tab=${tab}]`).removeClass('active');
-                $(`.panel_${tab}`).removeClass('d-block');
-                $(`.panel_${tab}`).addClass('d-none');
-            }
-        }
+        changeTab(current_tab);
     });
 });
 </script>
