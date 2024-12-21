@@ -433,7 +433,7 @@ if ($agent_display_dialable_leads > 0)
 </span>
 
 <span class="w-100 h-100 bg-white" style="position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="SysteMDisablEBoX">
-	<div class="text-center">
+	<div class="text-center mt-5">
 		<?php echo _QXZ("There is a time synchronization problem with your system, please tell your system administrator"); ?>
 		<a class="btn btn-secondary" href="#" onclick="hideDiv('SysteMDisablEBoX');return false;"><?php echo _QXZ("Go Back"); ?></a>
 	</div>
