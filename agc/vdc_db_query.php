@@ -17871,7 +17871,7 @@ if ($ACTION == 'LEADINFOview')
 			if ($cb_to_print > 0)
 				{
 				$row=mysqli_fetch_row($rslt);
-				echo "<TABLE CELLPADDING=0 CELLSPACING=1 BORDER=0 WIDTH=500>";
+				echo "<TABLE class=\"table\" CELLPADDING=0 CELLSPACING=1 BORDER=0 WIDTH=500>";
 				echo "<tr bgcolor=white><td ALIGN=right><font class='sb_text'>"._QXZ("Callback Status:")." &nbsp; </td><td ALIGN=left><font class='sb_text'>"._QXZ("$row[0]")."</td></tr>";
 				echo "<tr bgcolor=white><td ALIGN=right><font class='sb_text'>"._QXZ("Callback Lead Status:")." &nbsp; </td><td ALIGN=left><font class='sb_text'>$row[7]</td></tr>";
 				echo "<tr bgcolor=white><td ALIGN=right><font class='sb_text'>"._QXZ("Callback Entry Time:")." &nbsp; </td><td ALIGN=left><font class='sb_text'>$row[1]</td></tr>";
@@ -18002,7 +18002,7 @@ if ($ACTION == 'LEADINFOview')
 			}
 		### END find any custom field labels ###
 
-		$INFOout .= "<TABLE CELLPADDING=0 CELLSPACING=1 BORDER=0 WIDTH=500>";
+		$INFOout .= "<TABLE class=\"table table-bordered\" CELLPADDING=0 CELLSPACING=1 BORDER=0 WIDTH=500>";
 
 		$stmt="SELECT status,vendor_lead_code,list_id,gmt_offset_now,called_since_last_reset,phone_code,phone_number,title,first_name,middle_initial,last_name,address1,address2,address3,city,state,province,postal_code,country_code,gender,alt_phone,email,security_phrase,comments,called_count,last_local_call_time,rank,owner,entry_list_id from vicidial_list where lead_id='$lead_id' limit 1;";
 		$rslt=mysql_to_mysqli($stmt, $link);
@@ -18328,7 +18328,7 @@ if ($ACTION == 'LEADINFOview')
 			{
 			if ($search != 'logfirst')
 				{$NOTESout .= "<CENTER>"._QXZ("CALL LOG FOR THIS LEAD:")."<br>\n";}
-			$NOTESout .= "<TABLE CELLPADDING=0 CELLSPACING=1 BORDER=0 WIDTH=$stage>";
+			$NOTESout .= "<TABLE class=\"table table-bordered\">";
 			$NOTESout .= "<TR>";
 			$NOTESout .= "<TD BGCOLOR=\"#CCCCCC\"><font style=\"font-size:10px;font-family:sans-serif;\"><B> &nbsp; # &nbsp; </font></TD>";
 			$NOTESout .= "<TD BGCOLOR=\"#CCCCCC\"><font style=\"font-size:11px;font-family:sans-serif;\"><B> &nbsp; "._QXZ("DATE/TIME")." &nbsp; </font></TD>";
@@ -18493,7 +18493,7 @@ if ($ACTION == 'LEADINFOview')
 					{$phone_number_display = 'XXXXXXXXXX';}
 
 				$u++;
-				$NOTESout .= "<tr $bgcolor>";
+				$NOTESout .= "<tr>";
 				$NOTESout .= "<td><font size=1>$u</td>";
 				$NOTESout .= "<td align=right><font class='sb_text'>$ALLcall_date[$i]</td>";
 				$NOTESout .= "<td align=right><font class='sb_text'> $ALLuser[$i]</td>\n";
@@ -18506,7 +18506,7 @@ if ($ACTION == 'LEADINFOview')
 				$NOTESout .= "<td align=right><font class='sb_text'> "._QXZ("$ALLhangup_reason[$i]")." </td>\n";
 				$NOTESout .= "</TR><TR>";
 				$NOTESout .= "<td></td>";
-				$NOTESout .= "<TD $bgcolor COLSPAN=9 align=left><font style=\"font-size:11px;font-family:sans-serif;\"> $Allcall_notes[$i] </font></TD>";
+				$NOTESout .= "<TD><font style=\"font-size:11px;font-family:sans-serif;\"> $Allcall_notes[$i] </font></TD>";
 				$NOTESout .= "</tr>\n";
 				}
 
