@@ -133,7 +133,7 @@
                                     <?php echo _QXZ("VERSION:"); ?>
                                     <?php echo $version ?> &nbsp; <?php echo _QXZ("BUILD:"); ?>
                                     <?php echo $build ?> &nbsp; <?php echo _QXZ("Server:"); ?>
-                                    <?php echo $server_ip ?>
+                                    <?php echo $server_ip ?><br>
                                     
                                     <span id="busycallsdisplay">
                                         <a class="btn btn-sm btn-outline-secondary" href="#"  onclick="conf_channels_detail('SHOW');">
