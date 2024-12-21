@@ -136,7 +136,7 @@
                                     <?php echo $server_ip ?>
                                     
                                     <span id="busycallsdisplay">
-                                        <a class=\"btn btn-sm btn-outline-secondary\" href="#"  onclick="conf_channels_detail('SHOW');">
+                                        <a class="btn btn-sm btn-outline-secondary" href="#"  onclick="conf_channels_detail('SHOW');">
                                             <?php echo _QXZ("Show conference call channel information"); ?>
                                         </a>
                                     </span>

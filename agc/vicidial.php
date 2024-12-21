@@ -20079,14 +20079,14 @@ function phone_number_format(formatphone) {
 		if (divvar == 'SHOW')
 			{
 			conf_channels_xtra_display = 1;
-			document.getElementById("busycallsdisplay").innerHTML = "<a href=\"#\"  onclick=\"conf_channels_detail('HIDE');\"><?php echo _QXZ("Hide conference call channel information"); ?></a>";
+			document.getElementById("busycallsdisplay").innerHTML = "<a class=\"btn btn-sm btn-outline-secondary\" href=\"#\"  onclick=\"conf_channels_detail('HIDE');\"><?php echo _QXZ("Hide conference call channel information"); ?></a>";
 			LMAe[0]=''; LMAe[1]=''; LMAe[2]=''; LMAe[3]=''; LMAe[4]=''; LMAe[5]=''; 
 			LMAcount=0;
 			}
 		else
 			{
 			conf_channels_xtra_display = 0;
-            document.getElementById("busycallsdisplay").innerHTML = "<a href=\"#\" onclick=\"conf_channels_detail('SHOW');\"><?php echo _QXZ("Show conference call channel information"); ?></a><br /><br />&nbsp;";
+            document.getElementById("busycallsdisplay").innerHTML = "<a class=\"btn btn-sm btn-outline-secondary\" href=\"#\" onclick=\"conf_channels_detail('SHOW');\"><?php echo _QXZ("Show conference call channel information"); ?></a><br /><br />&nbsp;";
 			document.getElementById("outboundcallsspan").innerHTML = '';
 			LMAe[0]=''; LMAe[1]=''; LMAe[2]=''; LMAe[3]=''; LMAe[4]=''; LMAe[5]=''; 
 			LMAcount=0;
