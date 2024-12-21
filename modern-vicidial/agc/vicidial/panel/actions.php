@@ -944,19 +944,26 @@ if ($agent_display_dialable_leads > 0)
 	</td></tr></table>
 </span>
 
-<span style="position:absolute;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="LeaDInfOBox">
-	<table border="0" bgcolor="#CCFFCC" width="<?php echo $CAwidth ?>px" height="<?php echo $WRheight ?>px"><tr><td align="center" valign="top"> &nbsp; &nbsp; &nbsp; <font class="sd_text"><?php echo _QXZ("Customer Information:"); ?></font> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <font class="sh_text"><a href="#" onclick="hideDiv('LeaDInfOBox');return false;"><?php echo _QXZ("close"); ?> [X]</a>
-	<br />
-	<?php
-	if ($webphone_location == 'bar')
-		{echo "<br /><img src=\"./images/"._QXZ("pixel.gif")."\" width=\"1px\" height=\"".$webphone_height."px\" /><br />\n";}
-	?>
-	<span id="LeaDInfOSpan"> <?php echo _QXZ("Lead Info"); ?> </span>
-	<br /><br /> &nbsp;
-	<a href="#" onclick="hideDiv('LeaDInfOBox');return false;"><?php echo _QXZ("Close Info Box"); ?></a>
-	</font>
-	</td></tr></table>
-</span>
+<span class="w-100 h-100 overflow-scroll" tabindex="-1" style="background:rgba(0, 0, 0, 0.5);position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="LeaDInfOBox">
+    <div class="w-100 mx-auto mt-2">
+
+		<div class="card">
+			<div class="card-header">
+				<h5 class="d-flex">
+					<span class="w-auto"><?php echo _QXZ("Customer Information:"); ?></span>
+					<a class="btn btn-close ms-auto" href="#" onclick="hideDiv('LeaDInfOBox');return false;"></a>
+				</h5>
+			</div>
+			<div class="card-body">
+				<span id="LeaDInfOSpan"> <?php echo _QXZ("Lead Info"); ?> </span>
+			</div>
+			<div class="card-footer">
+				<a class="btn btn-secondary" href="#" onclick="hideDiv('LeaDInfOBox');return false;"><?php echo _QXZ("Close Info Box"); ?></a>	
+			</div>
+		</div>
+
+	</div>
+</span>	
 
 <?php
 	include 'parts/pause_code_select_box.php'
