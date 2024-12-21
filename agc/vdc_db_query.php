@@ -16930,9 +16930,9 @@ if ($ACTION == 'CALLLOGview')
 		$i = $sort_split[1];
 
 		if (preg_match("/1$|3$|5$|7$|9$/i", $u))
-			{$bgcolor='bgcolor="#B9CBFD"';} 
+			{$bgcolor='bgcolor="#FFF"';} 
 		else
-			{$bgcolor='bgcolor="#9BB9FB"';}
+			{$bgcolor='bgcolor="#EEE"';}
 
 		$phone_number_display = $ALLphone_number[$i];
 		if ($disable_alter_custphone == 'HIDE')
