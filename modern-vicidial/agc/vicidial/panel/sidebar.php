@@ -60,18 +60,17 @@
                                             <?php echo _QXZ(" ALT PHONE DIAL"); ?><br />
                                         </font>
                                     </span>
-                                    <font class="skb_text">
-                                        <span id="NexTCalLPausE">
-                                            <a href="#" onclick="next_call_pause_click();return false;"><?php echo _QXZ("Next Call Pause"); ?></a>
-                                        </span>
-                                    </font>
 
                                     <!--
                                     <?php
                                     if ( ($manual_dial_preview) and ($auto_dial_level==0) )
-                                    {echo "<font class=\"\"> <input class=\"form-check-input\" type=\"checkbox\" name=\"LeadPreview\" size=\"1\" value=\"0\" /> LEAD PREVIEW<br /></font>";}
+                                    {
+                                        echo "<input class=\"form-check-input\" type=\"checkbox\" name=\"LeadPreview\" size=\"1\" value=\"0\" /> LEAD PREVIEW<br />";
+                                    }
                                     if ( ($alt_phone_dialing) and ($auto_dial_level==0) )
-                                    {echo "<font class=\"\"> <input class=\"form-check-input\" type=\"checkbox\" name=\"DiaLAltPhonE\" size=\"1\" value=\"0\" /> ALT PHONE DIAL<br /></font>";}
+                                    {
+                                        echo "<input class=\"form-check-input\" type=\"checkbox\" name=\"DiaLAltPhonE\" size=\"1\" value=\"0\" /> ALT PHONE DIAL<br /></font>";
+                                    }
                                     ?> -->
                                 </div>
                             </li>

@@ -36,11 +36,13 @@
 
         <main class="col-md-10 ms-sm-auto px-md-4">
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <div></div>
-
+                
                 <!-- Barra de botones -->
                 <div class="btn-toolbar mb-2 mb-md-0">
 
+                    <span id="NexTCalLPausE">
+                        <a class="btn btn-sm btn-outline-secondary" href="#" onclick="next_call_pause_click();return false;"><?php echo _QXZ("Next Call Pause"); ?></a>
+                    </span>
                     <!--DiaLlOgButtonspan-->
                     <span id="DiaLlOgButtonspan">
                         <span id="ManuaLDiaLButtons">
