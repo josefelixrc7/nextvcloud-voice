@@ -93,6 +93,20 @@
                         <span id="VolumeUpSpan"><img src="./images/<?php echo _QXZ("vdc_volume_up_off.gif"); ?>" border="0" /></span>
                         <span id="VolumeDownSpan"><img src="./images/<?php echo _QXZ("vdc_volume_down_off.gif"); ?>" border="0" /></span>
                     </span>
+                    <?php 
+                        if ($is_webphone=='Y')
+                        { 
+                    ?>
+                        <span id="webphoneLinkSpan">
+                            <span id="webphoneLink">
+                                <a class="btn btn-sm btn-outline-secondary me-2" href="#" onclick="webphoneOpen('webphoneSpan','close');return false;">
+                                    <?php echo _QXZ("WebPhone View -"); ?>
+                                </a>
+                            </span>
+                        </span>
+                    <?php 
+                        }
+                    ?>
                 </div>
             </div>
             <!-- Barra de botones -->

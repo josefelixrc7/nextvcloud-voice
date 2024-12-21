@@ -17702,12 +17702,12 @@ function phone_number_format(formatphone) {
 		button_click_log = button_click_log + "" + SQLdate + "-----webphoneOpen---" + WVlocation + " " + WVoperation + "|";
 		if (WVoperation=='open')
 			{
-			document.getElementById("webphoneLink").innerHTML = " &nbsp; <a href=\"#\" onclick=\"webphoneOpen('webphoneSpan','close');return false;\"><?php echo _QXZ("WebPhone View"); ?> -</a>";
+			document.getElementById("webphoneLink").innerHTML = "<a class=\"btn btn-sm btn-outline-secondary me-2\" href=\"#\" onclick=\"webphoneOpen('webphoneSpan','close');return false;\"><?php echo _QXZ("WebPhone View"); ?> -</a>";
 			showDiv(WVlocation);
 			}
 		else
 			{
-			document.getElementById("webphoneLink").innerHTML = " &nbsp; <a href=\"#\" onclick=\"webphoneOpen('webphoneSpan','open');return false;\"><?php echo _QXZ("WebPhone View"); ?> +</a>";
+			document.getElementById("webphoneLink").innerHTML = "<a class=\"btn btn-sm btn-outline-secondary me-2\" href=\"#\" onclick=\"webphoneOpen('webphoneSpan','open');return false;\"><?php echo _QXZ("WebPhone View"); ?> +</a>";
 			hideDiv(WVlocation);
 			}
 		}

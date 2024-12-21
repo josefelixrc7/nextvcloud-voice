@@ -103,18 +103,6 @@ else
 	}
 ?>
 
-
-<?php 
-if ($is_webphone=='Y')
-	{ 
-	?>
-
-    <span id="webphoneLinkSpan"><table cellpadding="0" cellspacing="0" border="0" width="120px"><tr><td align="right"><font class="body_small"><span id="webphoneLink"> &nbsp; <a href="#" onclick="webphoneOpen('webphoneSpan','close');return false;"><?php echo _QXZ("WebPhone View -"); ?></a></span></font></td></tr></table></span>
-
-	<?php 
-	}
-?>
-
 <font class="body_small"><span id="dialableleadsspan">
 <?php 
 if ($agent_display_dialable_leads > 0)
