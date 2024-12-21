@@ -44,18 +44,16 @@
                     <!--DiaLlOgButtonspan-->
                     <span id="DiaLlOgButtonspan">
                         <span id="ManuaLDiaLButtons">
-                            <font class="body_text">
-                                <span id="MDstatusSpan">
-                                    <a class="btn btn-sm btn-outline-secondary me-2" href="#" onclick="NeWManuaLDiaLCalL('NO','','','','','YES','YES');return false;">
-                                        <?php echo _QXZ("MANUAL DIAL"); ?>
-                                    </a>
-                                </span>
-                                <?php if ($agentcall_manual == '1') { ?>
-                                    <a class="btn btn-sm btn-outline-secondary me-2" href="#" onclick="NeWManuaLDiaLCalL('FAST','','','','','YES','YES');return false;">
-                                        <?php echo _QXZ("FAST DIAL"); ?>
-                                    </a>
-                                <?php } ?>
-                            </font>
+                            <span id="MDstatusSpan">
+                                <a class="btn btn-sm btn-outline-secondary me-2" href="#" onclick="NeWManuaLDiaLCalL('NO','','','','','YES','YES');return false;">
+                                    <?php echo _QXZ("MANUAL DIAL"); ?>
+                                </a>
+                            </span>
+                            <?php if ($agentcall_manual == '1') { ?>
+                                <a class="btn btn-sm btn-outline-secondary me-2" href="#" onclick="NeWManuaLDiaLCalL('FAST','','','','','YES','YES');return false;">
+                                    <?php echo _QXZ("FAST DIAL"); ?>
+                                </a>
+                            <?php } ?>
                         </span>
                         <span id="CallLogButtons">
                             <font class="body_text">
@@ -85,6 +83,13 @@
                     <!--AgentTimeSpan-->
                     <span id="AgentTimeSpan">
                         <a class="btn btn-sm btn-outline-secondary me-2" href="#" onclick="AgentTimeReport('open');return false;"><?php echo _QXZ("AGENT TIME"); ?></a>
+                    </span>
+                    <span id="PauseCodeButtons">
+                        <span id="PauseCodeLinkSpan"></span>
+                    </span>
+                    <span id="VolumeControlSpan">
+                        <span id="VolumeUpSpan"><img src="./images/<?php echo _QXZ("vdc_volume_up_off.gif"); ?>" border="0" /></span>
+                        <span id="VolumeDownSpan"><img src="./images/<?php echo _QXZ("vdc_volume_down_off.gif"); ?>" border="0" /></span>
                     </span>
                 </div>
             </div>

@@ -5591,6 +5591,7 @@ if ($user_auth > 0)
 		echo"<TITLE>"._QXZ("Admin Redirect")."</TITLE>\n";
 		echo"<META HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=iso-8859-1\">\n";
 		echo"<META HTTP-EQUIV=Refresh CONTENT=\"0; URL=$VUuser_admin_redirect_url\">\n";
+		include '../modern-vicidial/head.php';
 		echo"</HEAD>\n";
 		echo"<BODY BGCOLOR=#FFFFFF marginheight=0 marginwidth=0 leftmargin=0 topmargin=0>\n";
 		echo"<a href=\"$VUuser_admin_redirect_url\">"._QXZ("click here to continue").". . .</a>\n";

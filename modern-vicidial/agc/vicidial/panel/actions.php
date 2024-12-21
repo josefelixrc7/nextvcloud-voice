@@ -1,17 +1,6 @@
 
 <span style="visibility:hidden;display:none;" id="debugbottomspan"></span>
 
-<span id="PauseCodeButtons">
-	<font class="body_text">
-		<span id="PauseCodeLinkSpan"></span> <br />
-	</font>
-</span>
-
-<span id="VolumeControlSpan">
-	<span id="VolumeUpSpan"><img src="./images/<?php echo _QXZ("vdc_volume_up_off.gif"); ?>" border="0" /></span><br />
-	<span id="VolumeDownSpan"><img src="./images/<?php echo _QXZ("vdc_volume_down_off.gif"); ?>" border="0" /></span>
-</span>
-<br>
 <span id="AgentStatusSpan">
 	<font class="body_text">
 		<?php echo _QXZ("Your Status:"); ?> <span id="AgentStatusStatus"></span> <br />
