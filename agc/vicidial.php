@@ -19004,6 +19004,7 @@ function phone_number_format(formatphone) {
 			hideDiv('InvalidOpenerSpan');
 			hideDiv('OtherTabCommentsSpan');
 			hideDiv('AgentTimeDisplayBox');
+			hideDiv('MaiNfooterspan');
 			if (launch_scb_force_dial < 1)
 				{hideDiv('SCForceDialBox');}
 			else
