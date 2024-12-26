@@ -90,19 +90,6 @@ if ($view_calls_in_queue > 0)
 	</table>
 </span>
 
-<?php
-$zi++;
-if ($webphone_location == 'bar')
-	{
-	echo "<span id=\"webphoneSpan\"><span id=\"webphonecontent\" style=\"overflow:hidden;\">$webphone_content</span></span>\n";
-	}
-else
-	{
-    echo "<span id=\"webphoneSpan\"><table cellpadding=\"$webphone_pad\" cellspacing=\"0\" border=\"0\"><tr><td width=\"5px\" rowspan=\"2\">&nbsp;</td><td align=\"center\"><font class=\"body_text\">
-    "._QXZ("Web Phone").": &nbsp; </font></td></tr><tr><td align=\"center\"><span id=\"webphonecontent\">$webphone_content</span></td></tr></table></span>\n";
-	}
-?>
-
 <font class="body_small"><span id="dialableleadsspan">
 <?php 
 if ($agent_display_dialable_leads > 0)

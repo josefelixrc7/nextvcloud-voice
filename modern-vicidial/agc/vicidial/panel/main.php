@@ -114,24 +114,47 @@
             <!-- Contents section -->
             <section>
 
-                <!-- ZZZZZZZZZZZZ  tabs -->
-                <?php
-                    include 'tabs.php';
-                ?>
+                <main class="row">
 
-                <span style="position:absolute;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="WelcomeBoxA">
-                    <table border="0" bgcolor="#FFFFFF" width="<?php echo $CAwidth ?>px" height="<?php echo $HKwidth ?>px"><tr><td align="center"><br /><span id="WelcomeBoxAt"><?php echo _QXZ("Agent Screen"); ?></span></td></tr></table>
-                </span>
+                    <section class="col-md-8">
+                        <!-- ZZZZZZZZZZZZ  tabs -->
+                        <?php
+                            include 'tabs.php';
+                        ?>
 
-                <!-- ZZZZZZZZZZZZ  customer info -->
-                <?php
-                    include '../modern-vicidial/agc/vicidial/panel/customer_info.php';
-                ?>
+                        <span style="position:absolute;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="WelcomeBoxA">
+                            <table border="0" bgcolor="#FFFFFF" width="<?php echo $CAwidth ?>px" height="<?php echo $HKwidth ?>px"><tr><td align="center"><br /><span id="WelcomeBoxAt"><?php echo _QXZ("Agent Screen"); ?></span></td></tr></table>
+                        </span>
 
-                <!-- ZZZZZZZZZZZZ  action links -->
-                <?php
-                    include '../modern-vicidial/agc/vicidial/panel/actions.php';
-                ?>
+                        <!-- ZZZZZZZZZZZZ  customer info -->
+                        <?php
+                            include '../modern-vicidial/agc/vicidial/panel/customer_info.php';
+                        ?>
+
+                        <!-- ZZZZZZZZZZZZ  action links -->
+                        <?php
+                            include '../modern-vicidial/agc/vicidial/panel/actions.php';
+                        ?>
+                    </section>
+                    <section class="col-md-4">
+
+                        <?php
+                        $zi++;
+                        if ($webphone_location == 'bar')
+                        {
+                            echo "<span id=\"webphoneSpan\"><span id=\"webphonecontent\" style=\"overflow:hidden;\">$webphone_content</span></span>\n";
+                        }
+                        else
+                        {
+                            echo "<span id=\"webphoneSpan\"><table cellpadding=\"$webphone_pad\" cellspacing=\"0\" border=\"0\"><tr><td width=\"5px\" rowspan=\"2\">&nbsp;</td><td align=\"center\"><font class=\"body_text\">
+                            "._QXZ("Web Phone").": &nbsp; </font></td></tr><tr><td align=\"center\"><span id=\"webphonecontent\">$webphone_content</span></td></tr></table></span>\n";
+                        }
+                        ?>
+
+                    </section>
+
+                </main>
+
                 <footer class="mt-5 p-2 mb-2">
                     <span id="MaiNfooterspan">
                         <span id="blind_monitor_notice_span">
