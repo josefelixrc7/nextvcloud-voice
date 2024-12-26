@@ -20,10 +20,10 @@ include '../../../modern-vicidial/agc/vicidial/main_head.php';
                             <input class="form-control mb-2 w-100" type="text" value="Unregistered" id="reg_status" readonly>
                         </div>
                         <div class="col-3">
-                            <button class="btn btn-primary w-100" id="register"><img id="reg_icon" src="images/wp_register_inactive.gif" alt="register"></button>
+                            <button class="btn btn-primary w-100" id="register"><img id="reg_icon" src="/agc/webphone/viciphone/images/wp_register_inactive.gif" alt="register"></button>
                         </div>
                         <div class="col-3">
-                            <button class="btn btn-primary w-100" id="unregister"><img id="unreg_icon" src="images/wp_unregister_inactive.gif" alt="register"></button>
+                            <button class="btn btn-primary w-100" id="unregister"><img id="unreg_icon" src="/agc/webphone/viciphone/images/wp_unregister_inactive.gif" alt="register"></button>
                         </div>
                     </div>
                 </section>
@@ -33,20 +33,20 @@ include '../../../modern-vicidial/agc/vicidial/main_head.php';
                             <input class="form-control" type="text" name="digits" value="" id="digits"/>
                         </div>
                         <div class="col-4">
-                            <button class="btn btn-primary w-100" id="dial"><img id="dial_icon" src="images/wp_dial.gif" alt="register"></button>
+                            <button class="btn btn-primary w-100" id="dial"><img id="dial_icon" src="/agc/webphone/viciphone/images/wp_dial.gif" alt="register"></button>
                         </div>
                     </div>
                 </section>
                 <section class="mb-2" id="audio_control">
                     <div class="row">
                         <div class="col-4">
-                            <button class="btn btn-primary w-100" id="mic_mute"><img id="mute_icon" src="images/wp_mic_on.gif" alt="mute"></button>
+                            <button class="btn btn-primary w-100" id="mic_mute"><img id="mute_icon" src="/agc/webphone/viciphone/images/wp_mic_on.gif" alt="mute"></button>
                         </div>
                         <div class="col-4">
-                            <button class="btn btn-primary w-100" id="vol_up"><img id="vol_up_icon" src="images/wp_speaker_up.gif" alt="register"></button>
+                            <button class="btn btn-primary w-100" id="vol_up"><img id="vol_up_icon" src="/agc/webphone/viciphone/images/wp_speaker_up.gif" alt="register"></button>
                         </div>
                         <div class="col-4">
-                            <button class="btn btn-primary w-100" id="vol_down"><img id="vol_down_icon" src="images/wp_speaker_down.gif" alt="register"></button>
+                            <button class="btn btn-primary w-100" id="vol_down"><img id="vol_down_icon" src="/agc/webphone/viciphone/images/wp_speaker_down.gif" alt="register"></button>
                         </div>
                     </div>
                 </section>
@@ -187,8 +187,8 @@ include '../../../modern-vicidial/agc/vicidial/main_head.php';
     <!--<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script> -->
 
     <!-- SIP.js library -->
-    <script  type="text/javascript" src="js/sip.js"></script>
+    <script  type="text/javascript" src="/agc/webphone/viciphone/js/sip.js"></script>
 
     <!-- Our Java Script Code -->
-    <script  type="text/javascript" src="js/vici_phone.js"></script>
+    <script  type="text/javascript" src="/agc/webphone/viciphone/js/vici_phone.js"></script>
 </div>
