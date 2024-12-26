@@ -83,7 +83,7 @@ var uiElements = {
 };
 
 // Array of DTMF audio tones
-let address = '/agc/webphone/viciphone/';
+var address = '/agc/webphone/viciphone/';
 var audioPlayback = {
 	dtmfZero	: new Audio(address + 'sounds/0.wav'),
 	dtmfOne	 	: new Audio(address + 'sounds/1.wav'),
@@ -733,7 +733,7 @@ function configureAudio( ) {
 	}, false);
 
 	if ( region ) {
-		var progressFile = 'sounds/progress-' + region + '.mp3';
+		var progressFile = address + 'sounds/progress-' + region + '.mp3';
 		debugOut( 'progress audio = ' + progressFile );
 		audioPlayback.progress = new Audio(progressFile);
 	}
