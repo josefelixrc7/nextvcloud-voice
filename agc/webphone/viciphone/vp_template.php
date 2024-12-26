@@ -20,10 +20,10 @@ include '../../../modern-vicidial/agc/vicidial/main_head.php';
                             <input class="form-control mb-2 w-100" type="text" value="Unregistered" id="reg_status" readonly>
                         </div>
                         <div class="col-3">
-                            <button class="btn btn-primary w-100" id="register"><img width="20px" height="27px" id="reg_icon" src="/agc/webphone/viciphone/images/wp_register_inactive.gif" alt="register"></button>
+                            <button class="btn btn-primary w-100" id="register"><img id="reg_icon" src="/agc/webphone/viciphone/images/wp_register_inactive.gif" alt="register"></button>
                         </div>
                         <div class="col-3">
-                            <button class="btn btn-primary w-100" id="unregister"><img width="20px" height="27px" id="unreg_icon" src="/agc/webphone/viciphone/images/wp_unregister_inactive.gif" alt="register"></button>
+                            <button class="btn btn-primary w-100" id="unregister"><img id="unreg_icon" src="/agc/webphone/viciphone/images/wp_unregister_inactive.gif" alt="register"></button>
                         </div>
                     </div>
                 </section>
