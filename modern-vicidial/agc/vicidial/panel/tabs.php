@@ -178,28 +178,3 @@ $(function()
         </tr>
     </table>-->
 </span>
-
-<div class="row my-2">
-
-    <div class="col">
-        <?php echo _QXZ("STATUS:"); ?>
-        <span id="MainStatuSSpan"></span>
-    </div>
-    <div class="col">
-        <small><?php echo _QXZ("RECORDING FILE:"); ?></small>
-        <small><span id="RecorDingFilename"></span></small>
-        <small>(<?php echo _QXZ("RECORD ID:"); ?></small>
-        <small><span id="RecorDID"></span>)</small>
-    </div>
-    <div class="col">
-        <span id="status"><?php echo _QXZ("LIVE"); ?></span>
-        <?php echo _QXZ("session ID:"); ?>
-        <span id="sessionIDspan"></span>
-        (<span id="AgentStatusCalls"></span>
-        <span id="AgentStatusEmails"></span>)
-    </div>
-    <div class="col">
-        <img src="./images/<?php echo _QXZ("agc_live_call_OFF.gif"); ?>" name="livecall" alt="Live Call" width="109px" height="30px" border="0" />
-    </div>
-</div>
-<hr>

@@ -10,7 +10,7 @@
 				<?php
 					if ($logged_in_refresh_link > 0)
 					{
-						echo "<a href=\"#\" onclick=\"start_all_refresh();\"><span>"._QXZ("Logged in as User")."</span></a>";
+						echo "<a class=\"btn btn-secondary btn-sm\" href=\"#\" onclick=\"start_all_refresh();\"><span>"._QXZ("Logged in as User")."</span></a>";
 					}
 					else
 					{
@@ -19,7 +19,7 @@
 					echo _QXZ(": %1s on Phone: %2s",0,'',$VD_login,$SIP_user); 
 					if ($on_hook_agent == 'Y')
 					{
-						echo "(<a href=\"#\" onclick=\"NoneInSessionCalL();return false;\">"._QXZ("ring")."</a>)";
+						echo "(<a class=\"btn btn-secondary btn-sm\" href=\"#\" onclick=\"NoneInSessionCalL();return false;\">"._QXZ("ring")."</a>)";
 					}
 					echo "&nbsp; "._QXZ("to campaign").": $VD_campaign&nbsp; "; 
 				?>
@@ -28,8 +28,8 @@
 		</li>
 		<li class="nav-item">
 			<font class="body_text">
-				<?php if ($territoryCT > 0) {echo "<a href=\"#\" onclick=\"OpeNTerritorYSelectioN();return false;\">"._QXZ("TERRITORIES")."</a> &nbsp; &nbsp; \n";} ?>
-				<?php if ($INgrpCT > 0) {echo "<a href=\"#\" onclick=\"OpeNGrouPSelectioN();return false;\">"._QXZ("GROUPS")."</a> &nbsp; &nbsp; \n";} ?>
+				<?php if ($territoryCT > 0) {echo "<a class=\"btn btn-secondary btn-sm\" href=\"#\" onclick=\"OpeNTerritorYSelectioN();return false;\">"._QXZ("TERRITORIES")."</a> &nbsp; &nbsp; \n";} ?>
+				<?php if ($INgrpCT > 0) {echo "<a class=\"btn btn-secondary btn-sm\" href=\"#\" onclick=\"OpeNGrouPSelectioN();return false;\">"._QXZ("GROUPS")."</a> &nbsp; &nbsp; \n";} ?>
 				<?php	/*echo "<a class=\"btn btn-secondary btn-sm\" href=\"#\" onclick=\"NormalLogout();return false;needToConfirmExit = false;\">"._QXZ("LOGOUT")."</a>\n"; */?>
 			</font>
 		</li>
