@@ -97,7 +97,7 @@
                         if ($is_webphone=='Y')
                         { 
                     ?>
-                        <span id="webphoneLinkSpan">
+                        <span id="webphoneLinkSpan" class="d-none">
                             <span id="webphoneLink">
                                 <a class="btn btn-sm btn-outline-secondary me-2" href="#" onclick="webphoneOpen('webphoneSpan','close');return false;">
                                     <?php echo _QXZ("WebPhone View -"); ?>
