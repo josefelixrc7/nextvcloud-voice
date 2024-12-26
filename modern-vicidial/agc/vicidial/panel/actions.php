@@ -355,17 +355,27 @@ if ($agent_display_dialable_leads > 0)
 
 <span style="position:absolute;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="FSCREENWrapupBox"><table border="0" bgcolor="#FFFFFF" width="<?php echo $CAwidth ?>px" height="<?php echo $WRheight ?>px" cellpadding="0" cellspacing="0"><tr><td><span id="FSCREENWrapupMessage"><?php echo $wrapup_message ?></span></td></tr></table></span>
 
-<span style="position:absolute;left:200px;top:150px;z-index:<?php $zi++; echo $zi ?>;" id="TimerSpan">
-    <table border="0" bgcolor="#CCFFCC" width="400px" height="200px"><tr><td align="center">
-    <br /><font class="sh_text"><span id="TimerContentSpan"></span></font><br /><br />
-	<font class="sh_text"><a href="#" onclick="hideDiv('TimerSpan');return false;"><?php echo _QXZ("Close Message"); ?></a></font>
-    </td></tr></table>
-</span>
+<span class="w-100 h-100 overflow-scroll" tabindex="-1" style="background:rgba(0, 0, 0, 0.5);position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="TimerSpan">
+    <div class="w-100 mx-auto mt-2">
 
-<span style="position:absolute;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="AgenTDisablEBoX">
-    <table border="0" bgcolor="#FFFFFF" width="<?php echo $CAwidth ?>px" height="<?php echo $WRheight ?>px"><tr><td align="center"><font class="sd_text"><?php echo _QXZ("Your session has been disabled"); ?><br /><a href="#" onclick="LogouT('DISABLED','');return false;"><?php echo _QXZ("CLICK HERE TO RESET YOUR SESSION"); ?></a></font><br /><br /><!--<a href="#" onclick="hideDiv('AgenTDisablEBoX');return false;">Go Back</a>-->
-    </td></tr></table>
-</span>
+		<div class="card">
+			<div class="card-header">
+				<h5 class="d-flex">
+					<span class="w-auto"><?php echo _QXZ("Timer:"); ?></span>
+					<a class="btn btn-close ms-auto" href="#" onclick="hideDiv('TimerSpan');return false;"></a>
+				</h5>
+			</div>
+			<div class="card-body">
+				<span id="TimerContentSpan"></span>
+			</div>
+			<div class="card-footer">
+				<a href="#" onclick="hideDiv('TimerSpan');return false;"><?php echo _QXZ("Close Message"); ?></a>
+			</div>
+			
+		</div>
+
+	</div>
+</span>	
 
 <span class="w-100 h-100 bg-white" style="position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="SysteMDisablEBoX">
 	<div class="text-center mt-5">
