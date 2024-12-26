@@ -1,4 +1,7 @@
 
+<?php
+include '../../../modern-vicidial/agc/vicidial/main_head.php';
+?>
 <div class="text-center mx-auto" style="max-width:500px;">
     <!-- Container -->
     <div id="container">
