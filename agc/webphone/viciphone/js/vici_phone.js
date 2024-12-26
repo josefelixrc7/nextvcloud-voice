@@ -83,21 +83,22 @@ var uiElements = {
 };
 
 // Array of DTMF audio tones
+let address = '/agc/webphone/viciphone/';
 var audioPlayback = {
-	dtmfZero	: new Audio('sounds/0.wav'),
-	dtmfOne	 	: new Audio('sounds/1.wav'),
-	dtmfTwo	 	: new Audio('sounds/2.wav'),
-	dtmfThree       : new Audio('sounds/3.wav'),
-	dtmfFour	: new Audio('sounds/4.wav'),
-	dtmfFive	: new Audio('sounds/5.wav'),
-	dtmfSeven       : new Audio('sounds/7.wav'),
-	dtmfEight       : new Audio('sounds/8.wav'),
-	dtmfNine	: new Audio('sounds/9.wav'),
-	dtmfSix	 	: new Audio('sounds/6.wav'),
-	dtmfHash	: new Audio('sounds/hash.wav'),
-	dtmfStar	: new Audio('sounds/star.wav'),
-	ring	    	: new Audio('sounds/ringing.mp3'),
-	progress	: new Audio('sounds/progress-na.mp3'),
+	dtmfZero	: new Audio(address + 'sounds/0.wav'),
+	dtmfOne	 	: new Audio(address + 'sounds/1.wav'),
+	dtmfTwo	 	: new Audio(address + 'sounds/2.wav'),
+	dtmfThree       : new Audio(address + 'sounds/3.wav'),
+	dtmfFour	: new Audio(address + 'sounds/4.wav'),
+	dtmfFive	: new Audio(address + 'sounds/5.wav'),
+	dtmfSeven       : new Audio(address + 'sounds/7.wav'),
+	dtmfEight       : new Audio(address + 'sounds/8.wav'),
+	dtmfNine	: new Audio(address + 'sounds/9.wav'),
+	dtmfSix	 	: new Audio(address + 'sounds/6.wav'),
+	dtmfHash	: new Audio(address + 'sounds/hash.wav'),
+	dtmfStar	: new Audio(address + 'sounds/star.wav'),
+	ring	    	: new Audio(address + 'sounds/ringing.mp3'),
+	progress	: new Audio(address + 'sounds/progress-na.mp3'),
 };
 
 // Array of default phrases used when a phrase is not initialized
@@ -256,14 +257,14 @@ function initLanguage() {
 
 function onConnect() {
 	uiElements.reg_status.value = lang.connected;
-	uiElements.reg_icon.src = 'images/wp_register_inactive.gif';
-	uiElements.unreg_icon.src = 'images/wp_unregister_active.gif';
+	uiElements.reg_icon.src = address + 'images/wp_register_inactive.gif';
+	uiElements.unreg_icon.src = address + 'images/wp_unregister_active.gif';
 }
 
 function onDisconnect(error) {
 	uiElements.reg_status.value = lang.disconnected;
-	uiElements.reg_icon.src = 'images/wp_register_inactive.gif';
-	uiElements.unreg_icon.src = 'images/wp_unregister_active.gif';
+	uiElements.reg_icon.src = address + 'images/wp_register_inactive.gif';
+	uiElements.unreg_icon.src = address + 'images/wp_unregister_active.gif';
 	if (!error) { debugOut( "User agent stopped" ); }
 	else { debugOut( error.message ); }
 }
@@ -324,7 +325,7 @@ function onInvite(invitation) {
 		if ( auto_answer ) {
 			//incall = true;
 			debugOut( 'Auto-Answered Call' );
-			uiElements.dial_icon.src = 'images/wp_hangup.gif';
+			uiElements.dial_icon.src = address + 'images/wp_hangup.gif';
 
 			options =  {
 				sessionDescriptionHandlerOptions: {
@@ -553,14 +554,14 @@ function handleSessionTerminated() {
 
 //	if ( myRegisterer.state == "Registered" ) {
 //		uiElements.reg_status.value = lang.registered;
-//		uiElements.reg_icon.src = 'images/wp_register_active.gif';
-//		uiElements.unreg_icon.src = 'images/wp_unregister_inactive.gif';
-//		uiElements.dial_icon.src = 'images/wp_dial.gif';
+//		uiElements.reg_icon.src = address + 'images/wp_register_active.gif';
+//		uiElements.unreg_icon.src = address + 'images/wp_unregister_inactive.gif';
+//		uiElements.dial_icon.src = address + 'images/wp_dial.gif';
 //	} else {
 //		uiElements.reg_status.value = lang.unregistered;
-//		uiElements.reg_icon.src = 'images/wp_register_inactive.gif';
-//		uiElements.unreg_icon.src = 'images/wp_unregister_active.gif';
-//		uiElements.dial_icon.src = 'images/wp_dial.gif';
+//		uiElements.reg_icon.src = address + 'images/wp_register_inactive.gif';
+//		uiElements.unreg_icon.src = address + 'images/wp_unregister_active.gif';
+//		uiElements.dial_icon.src = address + 'images/wp_dial.gif';
 //	}
 
 	if ( ringing ) {
@@ -619,8 +620,8 @@ function handleSubscription(subscription) {
 function handleRegRegistered() {
 	if ( incall == false ) {
 		uiElements.reg_status.value = lang.registered;
-		uiElements.reg_icon.src = 'images/wp_register_active.gif';
-		uiElements.unreg_icon.src = 'images/wp_unregister_inactive.gif';
+		uiElements.reg_icon.src = address + 'images/wp_register_active.gif';
+		uiElements.unreg_icon.src = address + 'images/wp_unregister_inactive.gif';
 	
 		// check if we should call an extension upon registration
 		if (( dial_reg_exten == 1 ) && ( reg_exten != '' )) {
@@ -633,47 +634,47 @@ function handleRegRegistered() {
 // called when RegistererState changes to Unregistered
 function handleRegUnregistered() {
 	uiElements.reg_status.value = lang.unregistered;
-	uiElements.reg_icon.src = 'images/wp_register_inactive.gif';
-	uiElements.unreg_icon.src = 'images/wp_unregister_active.gif';
+	uiElements.reg_icon.src = address + 'images/wp_register_inactive.gif';
+	uiElements.unreg_icon.src = address + 'images/wp_unregister_active.gif';
 }
 
 // called when RegistererState changes to Terminated
 function handleRegTerminated() {
 	uiElements.reg_status.value = lang.unregistered;
-	uiElements.reg_icon.src = 'images/wp_register_inactive.gif';
-	uiElements.unreg_icon.src = 'images/wp_unregister_active.gif';
+	uiElements.reg_icon.src = address + 'images/wp_register_inactive.gif';
+	uiElements.unreg_icon.src = address + 'images/wp_unregister_active.gif';
 	debugOut( "Registration Terminated" );
 }
 
 // called when a registration request is sent
 function handleRegRegistering(request) {
 	uiElements.reg_status.value = lang.registering;
-	uiElements.reg_icon.src = 'images/wp_register_inactive.gif';
-	uiElements.unreg_icon.src = 'images/wp_unregister_active.gif';
+	uiElements.reg_icon.src = address + 'images/wp_register_inactive.gif';
+	uiElements.unreg_icon.src = address + 'images/wp_unregister_active.gif';
 	debugOut( "Register Request Sent: <br />&nbsp;&nbsp;" + request.message );
 }
 
 // called when a registration request fails
 function handleRegFailed(error) {
 	uiElements.reg_status.value = lang.regFailed;
-	uiElements.reg_icon.src = 'images/wp_register_inactive.gif';
-	uiElements.unreg_icon.src = 'images/wp_unregister_active.gif';
+	uiElements.reg_icon.src = address + 'images/wp_register_inactive.gif';
+	uiElements.unreg_icon.src = address + 'images/wp_unregister_active.gif';
 	debugOut( "Got Registration Error: " + error.message );
 }
 
 // called when a registration request is sent
 function handleRegUnregistering(request) {
 	uiElements.reg_status.value = lang.unregistering;
-	uiElements.reg_icon.src = 'images/wp_register_inactive.gif';
-	uiElements.unreg_icon.src = 'images/wp_unregister_active.gif';
+	uiElements.reg_icon.src = address + 'images/wp_register_inactive.gif';
+	uiElements.unreg_icon.src = address + 'images/wp_unregister_active.gif';
 	debugOut( "Un-Register Request Sent: <br />&nbsp;&nbsp;" + request.message );
 }
 
 // called when a registration request fails
 function handleRegUnregFailed(error) {
 	uiElements.reg_status.value = lang.unregFailed;
-	uiElements.reg_icon.src = 'images/wp_register_inactive.gif';
-	uiElements.unreg_icon.src = 'images/wp_unregister_active.gif';
+	uiElements.reg_icon.src = address + 'images/wp_register_inactive.gif';
+	uiElements.unreg_icon.src = address + 'images/wp_unregister_active.gif';
 	debugOut( "Got Un-Registration Error: " + error.message );
 }
 
@@ -748,7 +749,7 @@ function configureAudio( ) {
 
 // called to make the reg_status element blink
 function startBlink( ) {
-	uiElements.reg_status.style.backgroundImage = "url('images/reg_status_blink.gif')";
+	uiElements.reg_status.style.backgroundImage = "url(address + 'images/reg_status_blink.gif')";
 	return true;
 }
 
@@ -909,7 +910,7 @@ function dialButton() {
 	if ( incall ) {
 		// we are so they hung up the call
 		debugOut( 'Hangup Button Pressed' );
-		uiElements.dial_icon.src = 'images/wp_dial.gif';
+		uiElements.dial_icon.src = address + 'images/wp_dial.gif';
 		hangupCall();
 	} else {
 		// we are not
@@ -925,7 +926,7 @@ function dialButton() {
 
 			//incall = true;
 			debugOut( 'Answered Call' );
-			uiElements.dial_icon.src = 'images/wp_hangup.gif';
+			uiElements.dial_icon.src = address + 'images/wp_hangup.gif';
 
 			options =  {
 				sessionDescriptionHandlerOptions: {
@@ -947,7 +948,7 @@ function dialButton() {
 			debugOut( 'Dial Button Pressed' );
 			// make sure the dial box is not hidden
 			if ( !hide_dialbox ) {
-				uiElements.dial_icon.src = 'images/wp_hangup.gif';
+				uiElements.dial_icon.src = address + 'images/wp_hangup.gif';
 				dialNumber();
 			}
 		}
@@ -969,13 +970,13 @@ function muteButton() {
 			// unmute it
 			muted = false;
 			debugOut( 'Un-Mute Button Pressed' );
-			uiElements.mute_icon.src = 'images/wp_mic_on.gif';
+			uiElements.mute_icon.src = address + 'images/wp_mic_on.gif';
 		} else {
 			// call is not muted
 			// mute it
 			muted = true;
 			debugOut( 'Mute Button Pressed' );
-			uiElements.mute_icon.src = 'images/wp_mic_off.gif';
+			uiElements.mute_icon.src = address + 'images/wp_mic_off.gif';
 		}
 
 		// find all the tracks and toggle them.
@@ -1006,7 +1007,7 @@ function muteButton() {
 
 	} else {
 		debugOut( 'Mute Button Pressed But Not In Call' );
-		uiElements.mute_icon.src = 'images/wp_mic_on.gif';
+		uiElements.mute_icon.src = address + 'images/wp_mic_on.gif';
 		muted = false;
 	}
 
@@ -1073,14 +1074,14 @@ function hangupCall() {
 		audioPlayback.progress.currentTime = 0;
 		if ( myRegisterer.state == "Registered" ) {
 			uiElements.reg_status.value = lang.registered;
-			uiElements.reg_icon.src = 'images/wp_register_active.gif';
-			uiElements.unreg_icon.src = 'images/wp_unregister_inactive.gif';
-			uiElements.dial_icon.src = 'images/wp_dial.gif';
+			uiElements.reg_icon.src = address + 'images/wp_register_active.gif';
+			uiElements.unreg_icon.src = address + 'images/wp_unregister_inactive.gif';
+			uiElements.dial_icon.src = address + 'images/wp_dial.gif';
 		} else {
 			uiElements.reg_status.value = lang.unregistered;
-			uiElements.reg_icon.src = 'images/wp_register_inactive.gif';
-			uiElements.unreg_icon.src = 'images/wp_unregister_active.gif';
-			uiElements.dial_icon.src = 'images/wp_dial.gif';
+			uiElements.reg_icon.src = address + 'images/wp_register_inactive.gif';
+			uiElements.unreg_icon.src = address + 'images/wp_unregister_active.gif';
+			uiElements.dial_icon.src = address + 'images/wp_dial.gif';
 		}
 	} else {
 		debugOut( 'Attempt to hang up non-existant call' );
