@@ -32,7 +32,7 @@
 			include '../../../modern-vicidial/agc/vicidial/main_head.php';
 		?>
 	</head>
-	<body>
+	<body class="text-center" style="max-width:300px;">
 		<!-- Container -->
 		<div id="container">
 
@@ -44,48 +44,66 @@
 
 				<!-- Controls -->
 				<section id="controls">
-					<section id="registration_control">
-						<input class="form-control" type="text" value="Unregistered" id="reg_status" readonly>
-						<button class="btn btn-primary" id="register"><img id="reg_icon" src="images/wp_register_inactive.gif" alt="register"></button>
-						<button class="btn btn-primary" id="unregister"><img id="unreg_icon" src="images/wp_unregister_inactive.gif" alt="register"></button>
+					<section class="mb-2" id="registration_control">
+						<div class="row">
+							<div class="col-10">
+								<input class="form-control mb-2 w-100" type="text" value="Unregistered" id="reg_status" readonly>
+							</div>
+							<div class="col-2">
+								<button class="btn btn-primary" id="register"><img id="reg_icon" src="images/wp_register_inactive.gif" alt="register"></button>
+								<button class="btn btn-primary" id="unregister"><img id="unreg_icon" src="images/wp_unregister_inactive.gif" alt="register"></button>
+							</div>
+						</div>
 					</section>
-					<section id="dial_control">
-						<input class="form-control" type="text" name="digits" value="" id="digits"/>
-						<button class="btn btn-primary" id="dial"><img id="dial_icon" src="images/wp_dial.gif" alt="register"></button>
+					<section class="mb-2" id="dial_control">
+						<div class="row">
+							<div class="col-10">
+								<input class="form-control" type="text" name="digits" value="" id="digits"/>
+							</div>
+							<div class="col-2">
+								<button class="btn btn-primary" id="dial"><img id="dial_icon" src="images/wp_dial.gif" alt="register"></button>
+							</div>
+						</div>
 					</section>
-					<section id="audio_control">
-						<button class="button" id="mic_mute"><img id="mute_icon" src="images/wp_mic_on.gif" alt="mute"></button>
-						<button class="button" id="vol_up"><img id="vol_up_icon" src="images/wp_speaker_up.gif" alt="register"></button>
-						<button class="button" id="vol_down"><img id="vol_down_icon" src="images/wp_speaker_down.gif" alt="register"></button>
+					<section class="mb-2" id="audio_control">
+						<button class="btn btn-primary" id="mic_mute"><img id="mute_icon" src="images/wp_mic_on.gif" alt="mute"></button>
+						<button class="btn btn-primary" id="vol_up"><img id="vol_up_icon" src="images/wp_speaker_up.gif" alt="register"></button>
+						<button class="btn btn-primary" id="vol_down"><img id="vol_down_icon" src="images/wp_speaker_down.gif" alt="register"></button>
 					</section>
 				</section>
 				<!-- End Controls -->
 
 				<!-- Dialpad -->
-				<section id="dialpad">
+				<section class="mb-2" id="dialpad">
 					<section id="dial_row1">
-					<button class="dialpad_button" id="one">1</button>
-					<button class="dialpad_button" id="two">2</button>
-					<button class="dialpad_button" id="three">3</button>
+						<button class="btn btn-primary" id="one">1</button>
+						<button class="btn btn-primary" id="two">2</button>
+						<button class="btn btn-primary" id="three">3</button>
 					</section>
 					<section id="dial_row2">
-					<button class="dialpad_button" id="four">4</button>
-					<button class="dialpad_button" id="five">5</button>
-					<button class="dialpad_button" id="six">6</button>
+						<button class="btn btn-primary" id="four">4</button>
+						<button class="btn btn-primary" id="five">5</button>
+						<button class="btn btn-primary" id="six">6</button>
 					</section>
 					<section id="dial_row3">
-					<button class="dialpad_button" id="seven">7</button>
-					<button class="dialpad_button" id="eight">8</button>
-					<button class="dialpad_button" id="nine">9</button>
+						<button class="btn btn-primary" id="seven">7</button>
+						<button class="btn btn-primary" id="eight">8</button>
+						<button class="btn btn-primary" id="nine">9</button>
 					</section>
 					<section id="dial_row4">
-					<button class="dialpad_button" id="star">*</button>
-					<button class="dialpad_button" id="zero">0</button>
-					<button class="dialpad_button" id="pound">#</button>
+						<button class="btn btn-primary" id="star">*</button>
+						<button class="btn btn-primary" id="zero">0</button>
+						<button class="btn btn-primary" id="pound">#</button>
 					</section>
-					<section id="dial_dtmf">
-					<input type="text" name="dtmf_digits" value="" id="dtmf_digits"/>
-					<button class="button" id="send_dtmf">Send</button>
+					<section class="mt-2" id="dial_dtmf">
+						<div class="row">
+							<div class="col-10">
+						</div>
+						<input class="form-control" type="text" name="dtmf_digits" value="" id="dtmf_digits"/>
+							</div>
+							<div class="col-2">
+								<button class="btn btn-primary" id="send_dtmf">Send</button>
+							</div>
 					</section>
 				</section>
 				<!-- End Dialpad -->
