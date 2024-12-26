@@ -427,6 +427,7 @@
                 if ($label_gender == '---HIDE---')
                 {
                     echo "<span id=\"GENDERhideFORie\"><input type=\"hidden\" name=\"gender_list\" id=\"gender_list\" value=\"\" /></span>";
+                    echo '<span id="GENDERhideFORieALT"></span>';
                 }
                 else
                 {
@@ -441,6 +442,7 @@
                                         <option value=\"F\">"._QXZ("F - Female")."</option>
                                     </select>
                                 </span>
+                                <span id=\"GENDERhideFORieALT\"></span>
                             </div>
                         </div>
                     ";

@@ -1045,4 +1045,3 @@ if ($agent_display_dialable_leads > 0)
 
 
 
-<span style="position:absolute;left:0px;top:<?php echo $GHheight ?>px;z-index:<?php $zi++; echo $zi ?>;" id="GENDERhideFORieALT"></span>
