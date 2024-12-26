@@ -32,7 +32,7 @@ $(function()
 
 <div class="row my-2">
 
-    <div class="col" style="border-left:1px solid #ddd;">
+    <div class="col">
         <?php echo _QXZ("STATUS:"); ?>
         <span id="MainStatuSSpan"></span>
     </div>
