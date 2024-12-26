@@ -47,10 +47,10 @@
 							<div class="col-6">
 								<input class="form-control mb-2 w-100" type="text" value="Unregistered" id="reg_status" readonly>
 							</div>
-							<div class="col-4">
+							<div class="col-3">
 								<button class="btn btn-primary w-100" id="register"><img id="reg_icon" src="images/wp_register_inactive.gif" alt="register"></button>
 							</div>
-							<div class="col-4">
+							<div class="col-3">
 								<button class="btn btn-primary w-100" id="unregister"><img id="unreg_icon" src="images/wp_unregister_inactive.gif" alt="register"></button>
 							</div>
 						</div>
