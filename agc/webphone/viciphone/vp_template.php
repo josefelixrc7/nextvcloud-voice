@@ -30,7 +30,7 @@
 			include '../../../modern-vicidial/agc/vicidial/main_head.php';
 		?>
 	</head>
-	<body class="text-center" style="max-width:500px;">
+	<body class="text-center mx-auto" style="max-width:500px;">
 		<!-- Container -->
 		<div id="container">
 
@@ -44,13 +44,13 @@
 				<section id="controls">
 					<section class="mb-2" id="registration_control">
 						<div class="row">
-							<div class="col-8">
+							<div class="col-6">
 								<input class="form-control mb-2 w-100" type="text" value="Unregistered" id="reg_status" readonly>
 							</div>
-							<div class="col-2">
+							<div class="col-4">
 								<button class="btn btn-primary w-100" id="register"><img id="reg_icon" src="images/wp_register_inactive.gif" alt="register"></button>
 							</div>
-							<div class="col-2">
+							<div class="col-4">
 								<button class="btn btn-primary w-100" id="unregister"><img id="unreg_icon" src="images/wp_unregister_inactive.gif" alt="register"></button>
 							</div>
 						</div>
@@ -71,7 +71,7 @@
 								<button class="btn btn-primary w-100" id="mic_mute"><img id="mute_icon" src="images/wp_mic_on.gif" alt="mute"></button>
 							</div>
 							<div class="col-4">
-								<button class="btn btn-primaryw-100" id="vol_up"><img id="vol_up_icon" src="images/wp_speaker_up.gif" alt="register"></button>
+								<button class="btn btn-primary w-100" id="vol_up"><img id="vol_up_icon" src="images/wp_speaker_up.gif" alt="register"></button>
 							</div>
 							<div class="col-4">
 								<button class="btn btn-primary w-100" id="vol_down"><img id="vol_down_icon" src="images/wp_speaker_down.gif" alt="register"></button>
@@ -84,31 +84,63 @@
 				<!-- Dialpad -->
 				<section class="mb-2" id="dialpad">
 					<section class="mb-1" id="dial_row1">
-						<button class="btn btn-primary" id="one">1</button>
-						<button class="btn btn-primary" id="two">2</button>
-						<button class="btn btn-primary" id="three">3</button>
+						<div class="row">
+							<div class="col-4">
+								<button class="btn btn-primary w-100" id="one">1</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-primary w-100" id="two">2</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-primary w-100" id="three">3</button>
+							</div>
+						</div>
 					</section>
 					<section class="mb-1" id="dial_row2">
-						<button class="btn btn-primary" id="four">4</button>
-						<button class="btn btn-primary" id="five">5</button>
-						<button class="btn btn-primary" id="six">6</button>
+						<div class="row">
+							<div class="col-4">
+								<button class="btn btn-primary w-100" id="four">4</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-primary w-100" id="five">5</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-primary w-100" id="six">6</button>
+							</div>
+						</div>
 					</section>
 					<section class="mb-1" id="dial_row3">
-						<button class="btn btn-primary" id="seven">7</button>
-						<button class="btn btn-primary" id="eight">8</button>
-						<button class="btn btn-primary" id="nine">9</button>
+						<div class="row">
+							<div class="col-4">
+								<button class="btn btn-primary w-100" id="seven">7</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-primary w-100" id="eight">8</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-primary w-100" id="nine">9</button>
+							</div>
+						</div>
 					</section>
 					<section class="mb-1" id="dial_row4">
-						<button class="btn btn-primary" id="star">*</button>
-						<button class="btn btn-primary" id="zero">0</button>
-						<button class="btn btn-primary" id="pound">#</button>
+						<div class="row">
+							<div class="col-4">
+								<button class="btn btn-primary w-100" id="star">*</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-primary w-100" id="zero">0</button>
+							</div>
+							<div class="col-4">
+								<button class="btn btn-primary w-100" id="pound">#</button>
+							</div>
+						</div>
 					</section>
 					<section class="mt-2" id="dial_dtmf">
 						<div class="row">
-							<div class="col-10">
+							<div class="col-8">
 								<input class="form-control" type="text" name="dtmf_digits" value="" id="dtmf_digits"/>
 							</div>
-							<div class="col-2">
+							<div class="col-4">
 								<button class="btn btn-primary w-100" id="send_dtmf">Send</button>
 							</div>
 					</section>
