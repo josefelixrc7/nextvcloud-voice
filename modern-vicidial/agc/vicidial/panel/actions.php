@@ -356,7 +356,7 @@ if ($agent_display_dialable_leads > 0)
 <span style="position:absolute;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="FSCREENWrapupBox"><table border="0" bgcolor="#FFFFFF" width="<?php echo $CAwidth ?>px" height="<?php echo $WRheight ?>px" cellpadding="0" cellspacing="0"><tr><td><span id="FSCREENWrapupMessage"><?php echo $wrapup_message ?></span></td></tr></table></span>
 
 <span class="w-100 h-100 overflow-scroll" tabindex="-1" style="background:rgba(0, 0, 0, 0.5);position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="TimerSpan">
-    <div class="w-100 mx-auto mt-2">
+    <div class="w-50 mx-auto mt-2">
 
 		<div class="card">
 			<div class="card-header">
@@ -369,7 +369,7 @@ if ($agent_display_dialable_leads > 0)
 				<span id="TimerContentSpan"></span>
 			</div>
 			<div class="card-footer">
-				<a href="#" onclick="hideDiv('TimerSpan');return false;"><?php echo _QXZ("Close Message"); ?></a>
+				<a class="btn btn-secondary" href="#" onclick="hideDiv('TimerSpan');return false;"><?php echo _QXZ("Close Message"); ?></a>
 			</div>
 			
 		</div>
