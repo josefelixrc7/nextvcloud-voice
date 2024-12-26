@@ -28,6 +28,9 @@
 		<meta http-equiv="Pragma" content="no-cache">
 		<meta http-equiv="Expires" content="-1">
 		<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+		<?php
+			include '/modern-vicidial/agc/vicidial/main_head.php';
+		?>
 	</head>
 	<body>
 		<!-- Container -->
@@ -39,22 +42,16 @@
 				<audio autoplay width='0' hieght='0' id="audio"></audio>
 				<!--<video width='0' hieght='0' id="audio"></video>-->
 
-				<!-- Logo -->
-				<section id="logo">
-					<img id="logo_img" src="images/wp_logo.png">
-				</section>
-				<!-- End Logo -->
-
 				<!-- Controls -->
 				<section id="controls">
 					<section id="registration_control">
-						<input type="text" value="Unregistered" id="reg_status" readonly>
-						<button class="button" id="register"><img id="reg_icon" src="images/wp_register_inactive.gif" alt="register"></button>
-						<button class="button" id="unregister"><img id="unreg_icon" src="images/wp_unregister_inactive.gif" alt="register"></button>
+						<input class="form-control" type="text" value="Unregistered" id="reg_status" readonly>
+						<button class="btn btn-primary" id="register"><img id="reg_icon" src="images/wp_register_inactive.gif" alt="register"></button>
+						<button class="btn btn-primary" id="unregister"><img id="unreg_icon" src="images/wp_unregister_inactive.gif" alt="register"></button>
 					</section>
 					<section id="dial_control">
-						<input type="text" name="digits" value="" id="digits"/>
-						<button class="button" id="dial"><img id="dial_icon" src="images/wp_dial.gif" alt="register"></button>
+						<input class="form-control" type="text" name="digits" value="" id="digits"/>
+						<button class="btn btn-primary" id="dial"><img id="dial_icon" src="images/wp_dial.gif" alt="register"></button>
 					</section>
 					<section id="audio_control">
 						<button class="button" id="mic_mute"><img id="mute_icon" src="images/wp_mic_on.gif" alt="mute"></button>
