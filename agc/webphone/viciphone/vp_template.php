@@ -57,10 +57,10 @@
 					</section>
 					<section class="mb-2" id="dial_control">
 						<div class="row">
-							<div class="col-10">
+							<div class="col-8">
 								<input class="form-control" type="text" name="digits" value="" id="digits"/>
 							</div>
-							<div class="col-2">
+							<div class="col-4">
 								<button class="btn btn-primary w-100" id="dial"><img id="dial_icon" src="images/wp_dial.gif" alt="register"></button>
 							</div>
 						</div>
