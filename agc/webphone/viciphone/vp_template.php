@@ -29,7 +29,7 @@
 		<meta http-equiv="Expires" content="-1">
 		<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
 		<?php
-			include '/modern-vicidial/agc/vicidial/main_head.php';
+			include '../../../modern-vicidial/agc/vicidial/main_head.php';
 		?>
 	</head>
 	<body>
