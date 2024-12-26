@@ -105,70 +105,54 @@ if ($agent_display_dialable_leads > 0)
 <!-- Panels tabs -->
 
 <span id="ScriptPanel" class="panel_script">
-	<?php
-	if ($webphone_location == 'bar')
-        {echo "<img src=\"./images/"._QXZ("pixel.gif")."\" width=\"1px\" height=\"".$webphone_height."px\" /><br />\n";}
-	?>
-    <table border="0" bgcolor="<?php echo $SCRIPT_COLOR ?>" width="<?php echo $SSwidth ?>px" height="<?php echo $SSheight ?>px"><tr><td align="left" valign="top"><font class="sb_text"><div class="noscroll_script" id="ScriptContents"><?php echo _QXZ("AGENT SCRIPT"); ?></div></font></td></tr></table>
+    <div class="noscroll_script" id="ScriptContents"><?php echo _QXZ("AGENT SCRIPT"); ?></div>
 
-	<span id="ScriptRefresH">
-		<a class="btn btn-sm btn-outline-secondary" href="#" onclick="RefresHScript('','YES')"><font class="body_small"><?php echo _QXZ("refresh"); ?></font></a>
+	<span id="ScriptRefresH" class="mt-2">
+		<a class="btn btn-sm btn-outline-secondary" href="#" onclick="RefresHScript('','YES')"><?php echo _QXZ("refresh"); ?></a>
 	</span>
 </span>
 
 <span id="Script2Panel" class="panel_script2">
-	<?php
-	if ($webphone_location == 'bar')
-        {echo "<img src=\"./images/"._QXZ("pixel.gif")."\" width=\"1px\" height=\"".$webphone_height."px\" /><br />\n";}
-	?>
-    <table border="0" bgcolor="<?php echo $SCRIPT_COLOR ?>" width="<?php echo $SSwidth ?>px" height="<?php echo $SSheight ?>px"><tr><td align="left" valign="top"><font class="sb_text"><div class="noscroll_script" id="Script2Contents"><?php echo _QXZ("AGENT SCRIPT 2"); ?></div></font></td></tr></table>
+    <div class="noscroll_script" id="Script2Contents"><?php echo _QXZ("AGENT SCRIPT 2"); ?></div>
 
-	<span id="Script2RefresH">
-		<a class="btn btn-sm btn-outline-secondary" href="#" onclick="RefresHScript2('','YES')"><font class="body_small"><?php echo _QXZ("refresh"); ?></font></a>
+	<span id="Script2RefresH" class="mt-2">
+		<a class="btn btn-sm btn-outline-secondary" href="#" onclick="RefresHScript2('','YES')"><?php echo _QXZ("refresh"); ?></a>
 	</span>
 </span>
 
 
 <span id="FormPanel" class="panel_form">
-	<?php
-	if ($webphone_location == 'bar')
-        {echo "<img src=\"./images/"._QXZ("pixel.gif")."\" width=\"1px\" height=\"".$webphone_height."px\" /><br />\n";}
-	?>
-    <table border="0" bgcolor="<?php echo $SCRIPT_COLOR ?>" width="<?php echo $SSwidth ?>px" height="<?php echo $SSheight ?>px"><tr><td align="left" valign="top"><font class="sb_text"><div class="noscroll_script" id="FormContents"><iframe src="./vdc_form_display.php?lead_id=&list_id=&stage=WELCOME" style="background-color:transparent;" scrolling="auto" frameborder="0" allowtransparency="true" id="vcFormIFrame" name="vcFormIFrame" width="<?php echo $SDwidth ?>px" height="<?php echo $SSheight ?>px" STYLE="z-index:<?php $zi++; echo $zi ?>"> </iframe></div></font></td></tr></table>
+    <div class="noscroll_script" id="FormContents">
+		<iframe src="./vdc_form_display.php?lead_id=&list_id=&stage=WELCOME" style="background-color:transparent;" scrolling="auto" frameborder="0" allowtransparency="true" id="vcFormIFrame" name="vcFormIFrame" width="<?php echo $SDwidth ?>px" height="<?php echo $SSheight ?>px" STYLE="z-index:<?php $zi++; echo $zi ?>"> </iframe>
+	</div>
 
-	<span id="FormRefresH">
-		<a class="btn btn-sm btn-outline-secondary" href="#" onclick="FormContentsLoad('YES')"><font class="body_small"><?php echo _QXZ("reset form"); ?></font></a>
+	<span id="FormRefresH" class="mt-2">
+		<a class="btn btn-sm btn-outline-secondary" href="#" onclick="FormContentsLoad('YES')"><?php echo _QXZ("reset form"); ?></a>
 	</span>
 
 </span>
 
 <span id="EmailPanel" class="panel_email">
-	<?php
-	if ($webphone_location == 'bar')
-        {echo "<img src=\"./images/"._QXZ("pixel.gif")."\" width=\"1px\" height=\"".$webphone_height."px\" /><br />\n";}
-	?>
-    <table border="0" bgcolor="<?php echo $SCRIPT_COLOR ?>" width="<?php echo $SSwidth ?>px" height="<?php echo $SSheight ?>px"><tr><td align="left" valign="top"><font class="sb_text"><div class="noscroll_script" id="EmailContents"><iframe src="./vdc_email_display.php?lead_id=&list_id=&stage=WELCOME" style="background-color:transparent;" scrolling="auto" frameborder="0" allowtransparency="true" id="vcEmailIFrame" name="vcEmailIFrame" width="<?php echo $SDwidth ?>px" height="<?php echo $SSheight ?>px" STYLE="z-index:<?php $zi++; echo $zi ?>"> </iframe></div></font></td></tr></table>
+    <div class="noscroll_script" id="EmailContents">
+		<iframe src="./vdc_email_display.php?lead_id=&list_id=&stage=WELCOME" style="background-color:transparent;" scrolling="auto" frameborder="0" allowtransparency="true" id="vcEmailIFrame" name="vcEmailIFrame" width="<?php echo $SDwidth ?>px" height="<?php echo $SSheight ?>px" STYLE="z-index:<?php $zi++; echo $zi ?>"> </iframe>
+	</div>
 
-	<span id="EmailRefresH">
+	<span id="EmailRefresH" class="mt-2">
 		<a class="btn btn-sm btn-outline-secondary" href="#" onclick="EmailContentsLoad('YES')"><font class="body_small"><?php echo _QXZ("refresh"); ?></font></a>
 	</span>
 
 </span>
 
 <span id="CustomerChatPanel" class="panel_chat_customer">
-	<?php
-	if ($webphone_location == 'bar')
-        {echo "<img src=\"./images/"._QXZ("pixel.gif")."\" width=\"1px\" height=\"".$webphone_height."px\" /><br />\n";}
-	?>
-    <table border="0" bgcolor="<?php echo $SCRIPT_COLOR ?>" width="<?php echo $SSwidth ?>px" height="<?php echo $SSheight ?>px"><tr><td align="left" valign="top"><font class="sb_text"><div class="noscroll_script" id="ChatContents"><iframe src="./vdc_chat_display.php?lead_id=&list_id=&dial_method=<?php echo $dial_method; ?>&stage=WELCOME&server_ip=<?php echo $server_ip; ?>&user=<?php echo $VD_login.$VARchatgroupsURL ?>" style="background-color:transparent;" scrolling="auto" frameborder="0" allowtransparency="true" id="CustomerChatIFrame" name="CustomerChatIFrame" width="<?php echo $SDwidth ?>px" height="<?php echo $SSheight ?>px" STYLE="z-index:<?php $zi++; echo $zi ?>"> </iframe></div></font></td></tr></table>
+    <div class="noscroll_script" id="ChatContents">
+		<iframe src="./vdc_chat_display.php?lead_id=&list_id=&dial_method=<?php echo $dial_method; ?>&stage=WELCOME&server_ip=<?php echo $server_ip; ?>&user=<?php echo $VD_login.$VARchatgroupsURL ?>" style="background-color:transparent;" scrolling="auto" frameborder="0" allowtransparency="true" id="CustomerChatIFrame" name="CustomerChatIFrame" width="<?php echo $SDwidth ?>px" height="<?php echo $SSheight ?>px" STYLE="z-index:<?php $zi++; echo $zi ?>"> </iframe>
+	</div>
 </span>
 
 <span id="InternalChatPanel" class="panel_chat_internal">
-	<?php
-	if ($webphone_location == 'bar')
-        {echo "<img src=\"./images/"._QXZ("pixel.gif")."\" width=\"1px\" height=\"".$webphone_height."px\" /><br />\n";}
-	?>
-    <table border="0" bgcolor="<?php echo $SCRIPT_COLOR ?>" width="<?php echo $SSwidth ?>px" height="<?php echo $SSheight ?>px"><tr><td align="left" valign="top"><font class="sb_text"><div class="noscroll_script" id="InternalChatContents"><iframe src="./agc_agent_manager_chat_interface.php?user=<?php echo $VD_login; ?>&pass=<?php echo $VD_pass; ?>" style="background-color:transparent;" scrolling="auto" frameborder="0" allowtransparency="true" id="InternalChatIFrame" name="InternalChatIFrame" width="<?php echo $SDwidth ?>px" height="<?php echo $SSheight ?>px" STYLE="z-index:<?php $zi++; echo $zi ?>"> </iframe></div></font></td></tr></table>
+    <div class="noscroll_script" id="InternalChatContents">
+		<iframe src="./agc_agent_manager_chat_interface.php?user=<?php echo $VD_login; ?>&pass=<?php echo $VD_pass; ?>" style="background-color:transparent;" scrolling="auto" frameborder="0" allowtransparency="true" id="InternalChatIFrame" name="InternalChatIFrame" width="<?php echo $SDwidth ?>px" height="<?php echo $SSheight ?>px" STYLE="z-index:<?php $zi++; echo $zi ?>"> </iframe>
+	</div>
 </span>
 
 <!-- /Panels tabs -->
