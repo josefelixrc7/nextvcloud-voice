@@ -47,8 +47,10 @@
 							<div class="col-10">
 								<input class="form-control mb-2 w-100" type="text" value="Unregistered" id="reg_status" readonly>
 							</div>
-							<div class="col-2">
+							<div class="col-1">
 								<button class="btn btn-primary" id="register"><img id="reg_icon" src="images/wp_register_inactive.gif" alt="register"></button>
+							</div>
+							<div class="col-1">
 								<button class="btn btn-primary" id="unregister"><img id="unreg_icon" src="images/wp_unregister_inactive.gif" alt="register"></button>
 							</div>
 						</div>
@@ -73,22 +75,22 @@
 
 				<!-- Dialpad -->
 				<section class="mb-2" id="dialpad">
-					<section id="dial_row1">
+					<section class="mb-1" id="dial_row1">
 						<button class="btn btn-primary" id="one">1</button>
 						<button class="btn btn-primary" id="two">2</button>
 						<button class="btn btn-primary" id="three">3</button>
 					</section>
-					<section id="dial_row2">
+					<section class="mb-1" id="dial_row2">
 						<button class="btn btn-primary" id="four">4</button>
 						<button class="btn btn-primary" id="five">5</button>
 						<button class="btn btn-primary" id="six">6</button>
 					</section>
-					<section id="dial_row3">
+					<section class="mb-1" id="dial_row3">
 						<button class="btn btn-primary" id="seven">7</button>
 						<button class="btn btn-primary" id="eight">8</button>
 						<button class="btn btn-primary" id="nine">9</button>
 					</section>
-					<section id="dial_row4">
+					<section class="mb-1" id="dial_row4">
 						<button class="btn btn-primary" id="star">*</button>
 						<button class="btn btn-primary" id="zero">0</button>
 						<button class="btn btn-primary" id="pound">#</button>
@@ -96,8 +98,7 @@
 					<section class="mt-2" id="dial_dtmf">
 						<div class="row">
 							<div class="col-10">
-						</div>
-						<input class="form-control" type="text" name="dtmf_digits" value="" id="dtmf_digits"/>
+								<input class="form-control" type="text" name="dtmf_digits" value="" id="dtmf_digits"/>
 							</div>
 							<div class="col-2">
 								<button class="btn btn-primary" id="send_dtmf">Send</button>
