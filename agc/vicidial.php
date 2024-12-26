@@ -18942,7 +18942,7 @@ function phone_number_format(formatphone) {
 			{
 			hideDiv('NothingBox');
 			hideDiv('AlertBox');
-		//	hideDiv('NothingBox2');
+			hideDiv('NothingBox2');
 			hideDiv('ScriptTopBGspan');
 			hideDiv('ManualValidateBox');
 			hideDiv('CBcommentsBox');
@@ -20616,7 +20616,7 @@ $zi=2;
 
 <form name="inert_form" id="inert_form" onsubmit="return false;">
 
-<span style="position:absolute;left:0px;top:400px;z-index:1;display:none;" id="NothingBox2">
+<span style="position:absolute;left:0px;top:400px;z-index:1;" id="NothingBox2">
 <!--  <BUTTON Type=button name="inert_button" id="inert_button" onclick="return false;"><img src="./images/<?php echo _QXZ("blank.gif"); ?>" /></BUTTON> -->
 <input type="checkbox" name="inert_button" id="inert_button" size="1" value="0" onclick="return false;" />
 </span>
