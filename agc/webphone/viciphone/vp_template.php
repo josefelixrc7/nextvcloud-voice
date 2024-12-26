@@ -23,8 +23,6 @@
 -->
 <html manifest="viciphone.appcache">
 	<head>
-		<title>Vicidial Web Phone</title>
-		<link rel="stylesheet" href="<?php echo $layout; ?>" />
 		<meta http-equiv="Pragma" content="no-cache">
 		<meta http-equiv="Expires" content="-1">
 		<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
