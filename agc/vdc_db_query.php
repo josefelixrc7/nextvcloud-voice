@@ -16949,9 +16949,9 @@ if ($ACTION == 'CALLLOGview')
 		echo "<td align=right><font class='sb_text'> "._QXZ("$ALLin_out[$i]")." </td>\n";
 		echo "<td align=right><font class='sb_text'> "._QXZ("$ALLalt_dial[$i]")." </td>\n";
 		echo "<td align=right><font class='sb_text'> "._QXZ("$ALLhangup_reason[$i]")." </td>\n";
-		echo "<td align=right><font class='sb_text'> <a href=\"#\" onclick=\"VieWLeaDInfO($ALLlead_id[$i]);return false;\"> "._QXZ("INFO")."</A> </td>\n";
+		echo "<td align=right><font class='sb_text'> <a class=\"btn btn-outline-secondary btn-sm\" href=\"#\" onclick=\"VieWLeaDInfO($ALLlead_id[$i]);return false;\"> "._QXZ("INFO")."</A> </td>\n";
 		if ($manual_dial_filter > 0)
-			{echo "<td align=right><font class='sb_text'> <a href=\"#\" onclick=\"NeWManuaLDiaLCalL('CALLLOG','$ALLphone_code[$i]','$ALLphone_number[$i]','$ALLlead_id[$i]','','YES','NO');return false;\"> "._QXZ("DIAL")." </A> </td>\n";}
+			{echo "<td align=right><font class='sb_text'> <a class=\"btn btn-outline-secondary btn-sm\" href=\"#\" onclick=\"NeWManuaLDiaLCalL('CALLLOG','$ALLphone_code[$i]','$ALLphone_number[$i]','$ALLlead_id[$i]','','YES','NO');return false;\"> "._QXZ("DIAL")." </A> </td>\n";}
 		else
 			{echo "<td align=right><font class='sb_text'> "._QXZ("DIAL")." </td>\n";}
 		echo "</tr>\n";
