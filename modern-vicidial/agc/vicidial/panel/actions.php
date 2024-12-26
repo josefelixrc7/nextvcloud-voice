@@ -92,7 +92,7 @@ if ($agent_display_dialable_leads > 0)
 <!-- Panels tabs -->
 
 <span id="ScriptPanel" class="panel_script">
-    <div class="noscroll_script" id="ScriptContents"><?php echo _QXZ("AGENT SCRIPT"); ?></div>
+    <div class="overflow-scroll bg-white" id="ScriptContents"><?php echo _QXZ("AGENT SCRIPT"); ?></div>
 
 	<span id="ScriptRefresH" class="mt-2">
 		<a class="btn btn-sm btn-outline-secondary" href="#" onclick="RefresHScript('','YES')"><?php echo _QXZ("refresh"); ?></a>
@@ -100,7 +100,7 @@ if ($agent_display_dialable_leads > 0)
 </span>
 
 <span id="Script2Panel" class="panel_script2">
-    <div class="noscroll_script" id="Script2Contents"><?php echo _QXZ("AGENT SCRIPT 2"); ?></div>
+    <div class="overflow-scroll bg-white" id="Script2Contents"><?php echo _QXZ("AGENT SCRIPT 2"); ?></div>
 
 	<span id="Script2RefresH" class="mt-2">
 		<a class="btn btn-sm btn-outline-secondary" href="#" onclick="RefresHScript2('','YES')"><?php echo _QXZ("refresh"); ?></a>
@@ -109,7 +109,7 @@ if ($agent_display_dialable_leads > 0)
 
 
 <span id="FormPanel" class="panel_form">
-    <div class="noscroll_script" id="FormContents">
+    <div class="overflow-scroll bg-white" id="FormContents">
 		<iframe src="./vdc_form_display.php?lead_id=&list_id=&stage=WELCOME" style="background-color:transparent;" scrolling="auto" frameborder="0" allowtransparency="true" id="vcFormIFrame" name="vcFormIFrame" width="<?php echo $SDwidth ?>px" height="<?php echo $SSheight ?>px" STYLE="z-index:<?php $zi++; echo $zi ?>"> </iframe>
 	</div>
 
@@ -120,7 +120,7 @@ if ($agent_display_dialable_leads > 0)
 </span>
 
 <span id="EmailPanel" class="panel_email">
-    <div class="noscroll_script" id="EmailContents">
+    <div class="overflow-scroll bg-white" id="EmailContents">
 		<iframe src="./vdc_email_display.php?lead_id=&list_id=&stage=WELCOME" style="background-color:transparent;" scrolling="auto" frameborder="0" allowtransparency="true" id="vcEmailIFrame" name="vcEmailIFrame" width="<?php echo $SDwidth ?>px" height="<?php echo $SSheight ?>px" STYLE="z-index:<?php $zi++; echo $zi ?>"> </iframe>
 	</div>
 
@@ -131,13 +131,13 @@ if ($agent_display_dialable_leads > 0)
 </span>
 
 <span id="CustomerChatPanel" class="panel_chat_customer">
-    <div class="noscroll_script" id="ChatContents">
+    <div class="overflow-scroll bg-white" id="ChatContents">
 		<iframe src="./vdc_chat_display.php?lead_id=&list_id=&dial_method=<?php echo $dial_method; ?>&stage=WELCOME&server_ip=<?php echo $server_ip; ?>&user=<?php echo $VD_login.$VARchatgroupsURL ?>" style="background-color:transparent;" scrolling="auto" frameborder="0" allowtransparency="true" id="CustomerChatIFrame" name="CustomerChatIFrame" width="<?php echo $SDwidth ?>px" height="<?php echo $SSheight ?>px" STYLE="z-index:<?php $zi++; echo $zi ?>"> </iframe>
 	</div>
 </span>
 
 <span id="InternalChatPanel" class="panel_chat_internal">
-    <div class="noscroll_script" id="InternalChatContents">
+    <div class="overflow-scroll bg-white" id="InternalChatContents">
 		<iframe src="./agc_agent_manager_chat_interface.php?user=<?php echo $VD_login; ?>&pass=<?php echo $VD_pass; ?>" style="background-color:transparent;" scrolling="auto" frameborder="0" allowtransparency="true" id="InternalChatIFrame" name="InternalChatIFrame" width="<?php echo $SDwidth ?>px" height="<?php echo $SSheight ?>px" STYLE="z-index:<?php $zi++; echo $zi ?>"> </iframe>
 	</div>
 </span>
