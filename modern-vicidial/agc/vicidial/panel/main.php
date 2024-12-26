@@ -107,6 +107,15 @@
                     <?php 
                         }
                     ?>
+                    <span id="AgentMuteANDPreseTDiaL">
+                        <?php
+                        if ($PreseT_DiaL_LinKs)
+                        {
+                            echo "<a class=\"btn btn-sm btn-outline-secondary me-2\" href=\"#\" onclick=\"DtMf_PreSet_a_DiaL('NO','YES');return false;\">"._QXZ("D1 - DIAL")."</a>\n";
+                            echo "<a class=\"btn btn-sm btn-outline-secondary me-2\" href=\"#\" onclick=\"DtMf_PreSet_b_DiaL('NO','YES');return false;\">"._QXZ("D2 - DIAL")."</a>\n";
+                        }
+                        ?>
+                    </span>                    
                 </div>
             </div>
             <!-- Barra de botones -->

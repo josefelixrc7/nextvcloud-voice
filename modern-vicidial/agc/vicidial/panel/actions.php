@@ -8,19 +8,6 @@
 	</font>
 </span>
 
-<span id="AgentMuteANDPreseTDiaL"><font class="body_text">
-	<?php
-	if ($PreseT_DiaL_LinKs)
-		{
-		echo "<a href=\"#\" onclick=\"DtMf_PreSet_a_DiaL('NO','YES');return false;\"><font class=\"body_tiny\">"._QXZ("D1 - DIAL")."</font></a>\n";
-        echo " &nbsp; \n";
-		echo "<a href=\"#\" onclick=\"DtMf_PreSet_b_DiaL('NO','YES');return false;\"><font class=\"body_tiny\">"._QXZ("D2 - DIAL")."</font></a>\n";
-		}
-    else {echo "<br />\n";}
-	?>
-    <br /><br /> &nbsp; <br />
-</font></span>
-
 <span id="callsinqueuedisplay">
 	<table cellpadding="0" cellspacing="0" border="0">
 		<tr>
