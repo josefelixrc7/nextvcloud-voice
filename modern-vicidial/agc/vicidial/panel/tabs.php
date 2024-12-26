@@ -30,6 +30,31 @@ $(function()
 });
 </script>
 
+<div class="row my-2">
+
+    <div class="col" style="border-left:1px solid #ddd;">
+        <?php echo _QXZ("STATUS:"); ?>
+        <span id="MainStatuSSpan"></span>
+    </div>
+    <div class="col" style="border-left:1px solid #ddd;">
+        <small><?php echo _QXZ("RECORDING FILE:"); ?></small>
+        <small><span id="RecorDingFilename"></span></small>
+        <small>(<?php echo _QXZ("RECORD ID:"); ?></small>
+        <small><span id="RecorDID"></span>)</small>
+    </div>
+    <div class="col" style="border-left:1px solid #ddd;">
+        <span id="status"><?php echo _QXZ("LIVE"); ?></span>
+        <?php echo _QXZ("session ID:"); ?>
+        <span id="sessionIDspan"></span>
+        (<span id="AgentStatusCalls"></span>
+        <span id="AgentStatusEmails"></span>)
+    </div>
+    <div class="col" style="border-left:1px solid #ddd;">
+        <img src="./images/<?php echo _QXZ("agc_live_call_OFF.gif"); ?>" name="livecall" alt="Live Call" width="109px" height="30px" border="0" />
+    </div>
+</div>
+<hr>
+
 <span id="Tabs">
     <ul class="nav nav-tabs mb-4">
         <li class="nav-item">
@@ -102,79 +127,4 @@ $(function()
             }
         ?>
     </ul>
-
-    <!--<table class="mb-2" border="0" bgcolor="#FFFFFF" height="30px">
-        <tr valign="top" align="left">
-            
-            <td align="left" width="115px" bgcolor="#<?php echo $SSstd_row5_background ?>">
-                <a href="#" onclick="MainPanelToFront('NO','YES');">
-                    <img src="/modern-vicidial/images/logo.png" alt="MAIN" height="30px" border="0" />
-                </a>
-            </td>
-            <td align="left" width="67px">
-                <a href="#" onclick="ScriptPanelToFront('YES');">
-                    <img src="./images/<?php echo _QXZ("vdc_tab_script.gif"); ?>" alt="SCRIPT" width="67px" height="30px" border="0" />
-                </a>
-            </td>
-            <?php
-                //if ($SSenable_second_script > 0)
-                if (true)
-                {
-                    echo "
-                        <td align=\"left\" width=\"67px\">
-                            <a href=\"#\" onclick=\"ScriptPanel2ToFront('YES');\">
-                                <img src=\"./images/"._QXZ("vdc_tab_script2.gif")."\" alt=\"SCRIPT 2\" width=\"67px\" height=\"30px\" border=\"0\" />
-                            </a>
-                        </td>\n";
-                }
-            ?>
-            <?php
-                //if ($custom_fields_enabled > 0)
-                if (true)
-                {
-                    echo "
-                        <td align=\"left\" width=\"67px\">
-                            <a href=\"#\" onclick=\"FormPanelToFront('YES');\">
-                                <img src=\"./images/"._QXZ("vdc_tab_form.gif")."\" alt=\"FORM\" width=\"67px\" height=\"30px\" border=\"0\" />
-                            </a>
-                        </td>\n";
-                }
-            ?>
-            <?php
-                //if ($chat_enabled > 0)
-                if (true)
-                {
-                    # INTERNAL CHAT
-                    echo "
-                        <td align=\"left\" width=\"67px\">
-                            <a href=\"#\" onclick=\"InternalChatContentsLoad('YES');\">
-                                <img src=\"./images/"._QXZ("vdc_tab_chat_internal.gif")."\" name='InternalChatImg' alt=\"CHAT\" width=\"67px\" height=\"30px\" border=\"0\"/>
-                            </a>
-                        </td>\n";
-
-                    # CUSTOMER CHAT
-                    echo "
-                        <td align=\"left\" width=\"67px\">
-                            <a href=\"#\" onclick=\"CustomerChatPanelToFront('1', 'YES');\">
-                                <img src=\"./images/"._QXZ("vdc_tab_chat_customer.gif")."\" name='CustomerChatImg' alt=\"CHAT\" width=\"67px\" height=\"30px\" border=\"0\"/>
-                            </a>
-                        </td>\n";
-                }
-            ?>
-            <td valign="middle" align="center">
-                <font class="body_tiny">&nbsp;
-                    <span id="status"><?php echo _QXZ("LIVE"); ?></span>
-                    &nbsp; &nbsp; <?php echo _QXZ("session ID:"); ?>
-                    <span id="sessionIDspan"></span>
-                </font><br>
-                <font class="body_text">&nbsp; &nbsp;
-                    <span id="AgentStatusCalls"></span>&nbsp; &nbsp;
-                    <span id="AgentStatusEmails"></span>
-                </font>
-            </td>
-            <td width="109px">
-                <img src="./images/<?php echo _QXZ("agc_live_call_OFF.gif"); ?>" name="livecall" alt="Live Call" width="109px" height="30px" border="0" />
-            </td>
-        </tr>
-    </table>-->
 </span>
