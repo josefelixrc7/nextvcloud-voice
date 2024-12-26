@@ -116,7 +116,7 @@
 
                 <main class="row">
 
-                    <section class="col-md-8">
+                    <section class="col-md-9">
                         <!-- ZZZZZZZZZZZZ  tabs -->
                         <?php
                             include 'tabs.php';
@@ -136,7 +136,7 @@
                             include '../modern-vicidial/agc/vicidial/panel/actions.php';
                         ?>
                     </section>
-                    <section class="col-md-4">
+                    <section class="col-md-3" style="border-left: 1px solid #dee2e6;">
 
                         <span id="webphoneSpan">
                             <span id="webphonecontent" style="overflow:hidden;">
