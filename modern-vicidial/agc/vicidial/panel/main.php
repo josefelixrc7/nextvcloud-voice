@@ -138,8 +138,15 @@
                     </section>
                     <section class="col-md-4">
 
+                        <span id="webphoneSpan">
+                            <span id="webphonecontent" style="overflow:hidden;">
+                                <?php
+                                    include '../../../../agc/webphone/viciphone/viciphone.php';
+                                ?>
+                            </span>
+                        </span>
                         <?php
-                        $zi++;
+                        /*$zi++;
                         if ($webphone_location == 'bar')
                         {
                             echo "<span id=\"webphoneSpan\"><span id=\"webphonecontent\" style=\"overflow:hidden;\">$webphone_content</span></span>\n";
@@ -148,7 +155,7 @@
                         {
                             echo "<span id=\"webphoneSpan\"><table cellpadding=\"$webphone_pad\" cellspacing=\"0\" border=\"0\"><tr><td width=\"5px\" rowspan=\"2\">&nbsp;</td><td align=\"center\"><font class=\"body_text\">
                             "._QXZ("Web Phone").": &nbsp; </font></td></tr><tr><td align=\"center\"><span id=\"webphonecontent\">$webphone_content</span></td></tr></table></span>\n";
-                        }
+                        }*/
                         ?>
 
                     </section>
