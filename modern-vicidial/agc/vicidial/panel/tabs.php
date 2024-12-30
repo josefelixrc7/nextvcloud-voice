@@ -50,7 +50,9 @@ $(function()
         <span id="AgentStatusEmails"></span>)
     </div>
     <div class="col" style="border-left:1px solid #ddd;">
-        <img src="./images/<?php echo _QXZ("agc_live_call_OFF.gif"); ?>" name="livecall" alt="Live Call" width="109px" height="30px" border="0" />
+        <div class="text-center">
+            <img src="./images/<?php echo _QXZ("agc_live_call_OFF.gif"); ?>" name="livecall" alt="Live Call" width="109px" height="30px" border="0" />
+        </div>
     </div>
 </div>
 <hr>
