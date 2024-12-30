@@ -4,7 +4,7 @@ include '../../../modern-vicidial/agc/vicidial/main_head.php';
 ?>
 <div class="text-center mx-auto" style="max-width:500px;">
     <!-- Container -->
-    <div id="container" class="p-2" style="background:#060e23;">
+    <div id="container" class="p-3 rounded" style="background:#DDD;">
 
         <!-- Main -->
         <div id="main">
