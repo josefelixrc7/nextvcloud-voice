@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-#gender_list, #VD_campaign{
+#gender_list, #VD_campaign, #VD_language{
     display: block;
     width: 100%;
     padding: .375rem 2.25rem .375rem .75rem;
