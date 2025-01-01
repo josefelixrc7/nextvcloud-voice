@@ -896,7 +896,7 @@ if ($agent_display_dialable_leads > 0)
 </span>
 
 <span class="w-100 h-100 overflow-scroll" tabindex="-1" style="background:rgba(0, 0, 0, 0.5);position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="LeaDInfOBox">
-    <div class="w-100 mx-auto mt-2">
+    <div class="w-50 mx-auto mt-2">
 
 		<div class="card">
 			<div class="card-header">
