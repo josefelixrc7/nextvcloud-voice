@@ -1701,8 +1701,8 @@ if ($action == "LIST")
 		}
 
 	echo "<br>"._QXZ("LIST LISTINGS WITH CUSTOM FIELDS COUNT").":\n";
-	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
-	echo "<TR BGCOLOR=BLACK>";
+	echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=0 cellpadding=1>\n";
+	echo "<TR BGCOLOR=\"#333\">";
 	echo "<TD align=right><B><FONT FACE=\"Arial,Helvetica\" size=1 color=white>"._QXZ("LIST ID")."</B></TD>";
 	echo "<TD align=right><B><FONT FACE=\"Arial,Helvetica\" size=1 color=white>"._QXZ("LIST NAME")."</B></TD>";
 	echo "<TD align=right><B><FONT FACE=\"Arial,Helvetica\" size=1 color=white>"._QXZ("ACTIVE")."</B></TD>";
