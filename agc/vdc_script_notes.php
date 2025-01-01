@@ -350,7 +350,6 @@ echo "<head>\n";
 echo "<!-- VERSION: $version     BUILD: $build    USER: $user   server_ip: $server_ip-->\n";
 echo "<title>"._QXZ("ViciDial Notes");
 echo "</title>\n";
-include '../modern-vicidial/agc/vicidial/main_head.php';
 echo "<script language=\"JavaScript\" src=\"calendar_db.js\"></script>\n";
 echo "<link rel=\"stylesheet\" href=\"calendar.css\">\n";
 ?>
@@ -422,39 +421,39 @@ $URLsubmit = $URLarray[0];
 <input type=hidden name=owner id=owner value="<?php echo $owner ?>">
 </TD></TR>
 
-<!-- <TR >
-<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA">Vendor ID: </TD><TD ALIGN=LEFT><input type=text class="form-control" name=vendor_id id=vendor_id size=20 maxlength=20 value="<?php echo $vendor_id ?>"></TD>
+<!-- <TR BGCOLOR="#E6E6E6">
+<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA">Vendor ID: </TD><TD ALIGN=LEFT><input type=text name=vendor_id id=vendor_id size=20 maxlength=20 value="<?php echo $vendor_id ?>"></TD>
 </TR> -->
-<!-- <TR >
+<!-- <TR BGCOLOR="#E6E6E6">
 <TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA">Source ID: </TD><TD ALIGN=LEFT>$source_id<input type=hidden name=source_id id=source_id value="<?php echo $source_id ?>"></TD>
 </TR> -->
-<!-- <TR >
-<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA">Title: </TD><TD ALIGN=LEFT><input type=text class="form-control" name=title id=title size=5 maxlength=4 value="<?php echo $title ?>"></TD>
+<!-- <TR BGCOLOR="#E6E6E6">
+<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA">Title: </TD><TD ALIGN=LEFT><input type=text name=title id=title size=5 maxlength=4 value="<?php echo $title ?>"></TD>
 </TR> -->
-<TR >
-<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA"><?php echo $label_first_name ?>: </TD><TD ALIGN=LEFT><input type=text class="form-control" name=first_name id=first_name size=30 maxlength=30 value="<?php echo $first_name ?>"> *</TD>
+<TR BGCOLOR="#E6E6E6">
+<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA"><?php echo $label_first_name ?>: </TD><TD ALIGN=LEFT><input type=text name=first_name id=first_name size=30 maxlength=30 value="<?php echo $first_name ?>"> *</TD>
 </TR>
-<!-- <TR >
-<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA">Middle Initial: </TD><TD ALIGN=LEFT><input type=text class="form-control" name=middle_initial id=middle_initial size=2 maxlength=1 value="<?php echo $middle_initial ?>"></TD>
+<!-- <TR BGCOLOR="#E6E6E6">
+<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA">Middle Initial: </TD><TD ALIGN=LEFT><input type=text name=middle_initial id=middle_initial size=2 maxlength=1 value="<?php echo $middle_initial ?>"></TD>
 </TR> -->
-<TR >
-<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA"><?php echo $label_last_name ?>: </TD><TD ALIGN=LEFT><input type=text class="form-control" name=last_name id=last_name size=30 maxlength=30 value="<?php echo $last_name ?>"> *</TD>
+<TR BGCOLOR="#E6E6E6">
+<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA"><?php echo $label_last_name ?>: </TD><TD ALIGN=LEFT><input type=text name=last_name id=last_name size=30 maxlength=30 value="<?php echo $last_name ?>"> *</TD>
 </TR>
-<TR >
-<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA"><?php echo $label_address1 ?>: </TD><TD ALIGN=LEFT><input type=text class="form-control" name=address1 id=address1 size=30 maxlength=100 value="<?php echo $address1 ?>"> *</TD>
+<TR BGCOLOR="#E6E6E6">
+<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA"><?php echo $label_address1 ?>: </TD><TD ALIGN=LEFT><input type=text name=address1 id=address1 size=30 maxlength=100 value="<?php echo $address1 ?>"> *</TD>
 </TR>
-<TR >
-<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA"><?php echo $label_address2 ?>: </TD><TD ALIGN=LEFT><input type=text class="form-control" name=address2 id=address2 size=30 maxlength=100 value="<?php echo $address2 ?>"></TD>
+<TR BGCOLOR="#E6E6E6">
+<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA"><?php echo $label_address2 ?>: </TD><TD ALIGN=LEFT><input type=text name=address2 id=address2 size=30 maxlength=100 value="<?php echo $address2 ?>"></TD>
 </TR>
-<TR >
-<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA"><?php echo $label_address3 ?>: </TD><TD ALIGN=LEFT><input type=text class="form-control" name=address3 id=address3 size=30 maxlength=100 value="<?php echo $address3 ?>"></TD>
+<TR BGCOLOR="#E6E6E6">
+<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA"><?php echo $label_address3 ?>: </TD><TD ALIGN=LEFT><input type=text name=address3 id=address3 size=30 maxlength=100 value="<?php echo $address3 ?>"></TD>
 </TR>
-<TR >
-<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA"><?php echo $label_city ?>: </TD><TD ALIGN=LEFT><input type=text class="form-control" name=city id=city size=30 maxlength=50 value="<?php echo $city ?>"> *</TD>
+<TR BGCOLOR="#E6E6E6">
+<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA"><?php echo $label_city ?>: </TD><TD ALIGN=LEFT><input type=text name=city id=city size=30 maxlength=50 value="<?php echo $city ?>"> *</TD>
 </TR>
-<TR >
+<TR BGCOLOR="#E6E6E6">
 <TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA"><?php echo $label_state ?>: </TD><TD ALIGN=LEFT>
-<SELECT class="form-select" name="state" id=state>
+<SELECT name="state" id=state>
 <OPTION value="<?php echo $state ?>" selected><?php echo $state ?></OPTION>
 <OPTGROUP label="United States"> 
 <OPTION value="AL">Alabama</OPTION>
@@ -528,49 +527,49 @@ $URLsubmit = $URLarray[0];
 -->
 </SELECT> *</TD>
 </TR>
-<!-- <TR >
-<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA">Province: </TD><TD ALIGN=LEFT><input type=text class="form-control" name=province id=province size=20 maxlength=50 value="<?php echo $province ?>"></TD>
+<!-- <TR BGCOLOR="#E6E6E6">
+<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA">Province: </TD><TD ALIGN=LEFT><input type=text name=province id=province size=20 maxlength=50 value="<?php echo $province ?>"></TD>
 </TR> -->
-<TR >
-<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA"><?php echo $label_postal_code ?>: </TD><TD ALIGN=LEFT><input type=text class="form-control" name=postal_code id=postal_code size=6 maxlength=5 value="<?php echo $postal_code ?>"> *</TD>
+<TR BGCOLOR="#E6E6E6">
+<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA"><?php echo $label_postal_code ?>: </TD><TD ALIGN=LEFT><input type=text name=postal_code id=postal_code size=6 maxlength=5 value="<?php echo $postal_code ?>"> *</TD>
 </TR>
-<!-- <TR >
-<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA">Phone Code: </TD><TD ALIGN=LEFT><input type=text class="form-control" name=phone_code id=phone_code size=10 maxlength=10 value="<?php echo $phone_code ?>"></TD>
+<!-- <TR BGCOLOR="#E6E6E6">
+<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA">Phone Code: </TD><TD ALIGN=LEFT><input type=text name=phone_code id=phone_code size=10 maxlength=10 value="<?php echo $phone_code ?>"></TD>
 </TR> -->
-<TR >
-<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA"><?php echo $label_phone_number ?>: </TD><TD ALIGN=LEFT><input type=text class="form-control" name=phone_number id=phone_number size=18 maxlength=18 value="<?php echo $phone_number ?>"> *</TD>
+<TR BGCOLOR="#E6E6E6">
+<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA"><?php echo $label_phone_number ?>: </TD><TD ALIGN=LEFT><input type=text name=phone_number id=phone_number size=18 maxlength=18 value="<?php echo $phone_number ?>"> *</TD>
 </TR>
-<!-- <TR >
-<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA">Gender: </TD><TD ALIGN=LEFT><input type=text class="form-control" name=gender id=gender size=2 maxlength=1 value="<?php echo $gender ?>"></TD>
+<!-- <TR BGCOLOR="#E6E6E6">
+<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA">Gender: </TD><TD ALIGN=LEFT><input type=text name=gender id=gender size=2 maxlength=1 value="<?php echo $gender ?>"></TD>
 </TR> -->
-<!-- <TR >
-<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA">Date of Birth: </TD><TD ALIGN=LEFT><input type=text class="form-control" name=date_if_birth id=date_if_birth size=12 maxlength=12 value="<?php echo $date_of_birth ?>"></TD>
+<!-- <TR BGCOLOR="#E6E6E6">
+<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA">Date of Birth: </TD><TD ALIGN=LEFT><input type=text name=date_if_birth id=date_if_birth size=12 maxlength=12 value="<?php echo $date_of_birth ?>"></TD>
 </TR> -->
-<!-- <TR >
-<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA">Alt. Phone: </TD><TD ALIGN=LEFT><input type=text class="form-control" name=alt_phone id=alt_phone size=12 maxlength=12 value="<?php echo $alt_phone ?>"> *</TD>
+<!-- <TR BGCOLOR="#E6E6E6">
+<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA">Alt. Phone: </TD><TD ALIGN=LEFT><input type=text name=alt_phone id=alt_phone size=12 maxlength=12 value="<?php echo $alt_phone ?>"> *</TD>
 </TR> -->
-<!-- <TR >
-<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA">Email: </TD><TD ALIGN=LEFT><input type=text class="form-control" name=email id=email size=30 maxlength=70 value="<?php echo $email ?>"> *</TD>
+<!-- <TR BGCOLOR="#E6E6E6">
+<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA">Email: </TD><TD ALIGN=LEFT><input type=text name=email id=email size=30 maxlength=70 value="<?php echo $email ?>"> *</TD>
 </TR> -->
-<!-- <TR >
-<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA">Show: </TD><TD ALIGN=LEFT><input type=text class="form-control" name=security_phrase id=security_phrase size=30 maxlength=100 value="<?php echo $security_phrase ?>"> *</TD>
+<!-- <TR BGCOLOR="#E6E6E6">
+<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA">Show: </TD><TD ALIGN=LEFT><input type=text name=security_phrase id=security_phrase size=30 maxlength=100 value="<?php echo $security_phrase ?>"> *</TD>
 </TR> -->
-<!-- <TR >
-<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA">Comments: </TD><TD ALIGN=LEFT><input type=text class="form-control" name=comments id=comments size=40 maxlength=255 value="<?php echo $comments ?>"> *</TD>
+<!-- <TR BGCOLOR="#E6E6E6">
+<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA">Comments: </TD><TD ALIGN=LEFT><input type=text name=comments id=comments size=40 maxlength=255 value="<?php echo $comments ?>"> *</TD>
 </TR> -->
-<!-- <TR >
-<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA">Rank: </TD><TD ALIGN=LEFT><input type=text class="form-control" name=rank id=rank size=5 maxlength=5 value="<?php echo $rank ?>"> *</TD>
+<!-- <TR BGCOLOR="#E6E6E6">
+<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA">Rank: </TD><TD ALIGN=LEFT><input type=text name=rank id=rank size=5 maxlength=5 value="<?php echo $rank ?>"> *</TD>
 </TR> -->
-<!-- <TR >
-<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA">Owner: </TD><TD ALIGN=LEFT><input type=text class="form-control" name=owner id=owner size=20 maxlength=20 value="<?php echo $owner ?>"> *</TD>
+<!-- <TR BGCOLOR="#E6E6E6">
+<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA">Owner: </TD><TD ALIGN=LEFT><input type=text name=owner id=owner size=20 maxlength=20 value="<?php echo $owner ?>"> *</TD>
 </TR> -->
 
-<TR >
-<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA"><?php echo _QXZ("Order ID:"); ?> </TD><TD ALIGN=LEFT><input type=text class="form-control" name=order_id id=order_id size=20 maxlength=20 value="<?php echo $order_id ?>"></TD>
+<TR BGCOLOR="#E6E6E6">
+<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA"><?php echo _QXZ("Order ID:"); ?> </TD><TD ALIGN=LEFT><input type=text name=order_id id=order_id size=20 maxlength=20 value="<?php echo $order_id ?>"></TD>
 </TR>
 
-<TR >
-<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA"><?php echo _QXZ("Appointment Date/Time:"); ?> </TD><TD ALIGN=LEFT><input type=text class="form-control" name=appointment_date id=appointment_date size=10 maxlength=10 value="<?php echo $appointment_date ?>">
+<TR BGCOLOR="#E6E6E6">
+<TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA"><?php echo _QXZ("Appointment Date/Time:"); ?> </TD><TD ALIGN=LEFT><input type=text name=appointment_date id=appointment_date size=10 maxlength=10 value="<?php echo $appointment_date ?>">
 
 <script language="JavaScript">
 var o_cal = new tcal ({
@@ -584,7 +583,7 @@ o_cal.a_tpl.yearscroll = false;
 </script>
 
 <input type=hidden name=appointment_time id=appointment_time value="<?php echo $appointment_time ?>">
-<SELECT class="form-select" name=appointment_hour id=appointment_hour>
+<SELECT name=appointment_hour id=appointment_hour>
 <option>00</option>
 <option>01</option>
 <option>02</option>
@@ -611,7 +610,7 @@ o_cal.a_tpl.yearscroll = false;
 <option>23</option>
 <OPTION value="<?php echo $appointment_hour ?>" selected><?php echo $appointment_hour ?></OPTION>
 </SELECT>
-<SELECT class="form-select" name=appointment_min id=appointment_min>
+<SELECT name=appointment_min id=appointment_min>
 <option>00</option>
 <option>05</option>
 <option>10</option>
@@ -631,12 +630,12 @@ o_cal.a_tpl.yearscroll = false;
 </TR>
 
 
-<TR >
+<TR BGCOLOR="#E6E6E6">
 <TD ALIGN=CENTER COLSPAN=2><FONT FACE="ARIAL,HELVETICA" size=2><?php echo _QXZ("Appointment Notes:"); ?><BR><TEXTAREA NAME=call_notes ID=call_notes ROWS=5 COLS=50><?php echo $call_notes ?></TEXTAREA></font><br>
 </TD>
 </TR>
 
-<TR >
+<TR BGCOLOR="#E6E6E6">
 <TD ALIGN=CENTER COLSPAN=2><FONT FACE="ARIAL,HELVETICA" size=1><?php echo _QXZ("Please click SUBMIT to commit the changes"); ?>, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; * <?php echo _QXZ("denotes required fields"); ?></font><br>
 </TD>
 </TR>
