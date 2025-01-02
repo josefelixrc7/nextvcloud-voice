@@ -614,7 +614,7 @@ function custom_list_fields_values($lead_id,$list_id,$uniqueid,$user,$DB,$call_i
 									{
 									if ($A_field_default[$o] == "$field_options_value_array[0]") {$field_selected = 'CHECKED';}
 									}
-								$field_HTML .= "<input class=\"form-control\" type=$A_field_type[$o] name=$A_field_label[$o][] id=$A_field_label[$o][] value=\"$field_options_value_array[0]\" $field_selected> "._QXZ("$field_options_value_array[1]")."\n";
+								$field_HTML .= "<input type=$A_field_type[$o] name=$A_field_label[$o][] id=$A_field_label[$o][] value=\"$field_options_value_array[0]\" $field_selected> "._QXZ("$field_options_value_array[1]")."\n";
 								if ($A_multi_position[$o]=='VERTICAL') 
 									{$field_HTML .= "<BR>\n";}
 								$te_printed++;
@@ -722,7 +722,7 @@ function custom_list_fields_values($lead_id,$list_id,$uniqueid,$user,$DB,$call_i
 
 					if ($A_field_default[$o]=='NULL') {$A_field_default[$o]='';}
 					if (strlen($A_field_value[$o]) < 1) {$A_field_value[$o] = $A_field_default[$o];}
-					$field_HTML .= "<input type=text size=$A_field_size[$o] maxlength=$A_field_max[$o] name=$A_field_label[$o] id=$A_field_label[$o] value=\""._QXZ("$A_field_value[$o]")."\" $change_trigger>\n";
+					$field_HTML .= "<input class=\"form-control\" type=text size=$A_field_size[$o] maxlength=$A_field_max[$o] name=$A_field_label[$o] id=$A_field_label[$o] value=\""._QXZ("$A_field_value[$o]")."\" $change_trigger>\n";
 					if ( ($A_field_required[$o] == 'Y') or ( ($A_field_required[$o] == 'INBOUND_ONLY') and (preg_match("/^Y\d\d\d\d\d\d\d/",$call_id)) ) )
 						{$custom_required_fields .= "$A_field_label[$o]|";}
 					}
@@ -794,7 +794,7 @@ function custom_list_fields_values($lead_id,$list_id,$uniqueid,$user,$DB,$call_i
 						$default_minute = $time_field_value[1];
 						}
 					$field_HTML .= "<input type=hidden name=$A_field_label[$o] id=$A_field_label[$o] value=\"$default_time\">";
-					$field_HTML .= "<SELECT name=HOUR_$A_field_label[$o] id=HOUR_$A_field_label[$o]>";
+					$field_HTML .= "<SELECT class=\"form-select\" name=HOUR_$A_field_label[$o] id=HOUR_$A_field_label[$o]>";
 					$field_HTML .= "<option>00</option>";
 					$field_HTML .= "<option>01</option>";
 					$field_HTML .= "<option>02</option>";
@@ -821,7 +821,7 @@ function custom_list_fields_values($lead_id,$list_id,$uniqueid,$user,$DB,$call_i
 					$field_HTML .= "<option>23</option>";
 					$field_HTML .= "<OPTION value=\"$default_hour\" selected>$default_hour</OPTION>";
 					$field_HTML .= "</SELECT>";
-					$field_HTML .= "<SELECT name=MINUTE_$A_field_label[$o] id=MINUTE_$A_field_label[$o]>";
+					$field_HTML .= "<SELECT class=\"form-select\" name=MINUTE_$A_field_label[$o] id=MINUTE_$A_field_label[$o]>";
 					$field_HTML .= "<option>00</option>";
 					$field_HTML .= "<option>05</option>";
 					$field_HTML .= "<option>10</option>";
