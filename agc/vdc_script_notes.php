@@ -632,7 +632,7 @@ o_cal.a_tpl.yearscroll = false;
 
 
 <TR >
-<TD ALIGN=CENTER COLSPAN=2><FONT FACE="ARIAL,HELVETICA" size=2><?php echo _QXZ("Appointment Notes:"); ?><BR><TEXTAREA NAME=call_notes ID=call_notes ROWS=5 COLS=50><?php echo $call_notes ?></TEXTAREA></font><br>
+<TD ALIGN=CENTER COLSPAN=2><FONT FACE="ARIAL,HELVETICA" size=2><?php echo _QXZ("Appointment Notes:"); ?><BR><TEXTAREA class="form-control" NAME=call_notes ID=call_notes ROWS=5 COLS=50><?php echo $call_notes ?></TEXTAREA></font><br>
 </TD>
 </TR>
 
