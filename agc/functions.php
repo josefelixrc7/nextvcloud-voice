@@ -722,7 +722,7 @@ function custom_list_fields_values($lead_id,$list_id,$uniqueid,$user,$DB,$call_i
 
 					if ($A_field_default[$o]=='NULL') {$A_field_default[$o]='';}
 					if (strlen($A_field_value[$o]) < 1) {$A_field_value[$o] = $A_field_default[$o];}
-					$field_HTML .= "<input class=\"form-control\" type=text size=$A_field_size[$o] maxlength=$A_field_max[$o] name=$A_field_label[$o] id=$A_field_label[$o] value=\""._QXZ("$A_field_value[$o]")."\" $change_trigger>\n";
+					$field_HTML .= "<input class=\"form-control mb-2\" type=text size=$A_field_size[$o] maxlength=$A_field_max[$o] name=$A_field_label[$o] id=$A_field_label[$o] value=\""._QXZ("$A_field_value[$o]")."\" $change_trigger>\n";
 					if ( ($A_field_required[$o] == 'Y') or ( ($A_field_required[$o] == 'INBOUND_ONLY') and (preg_match("/^Y\d\d\d\d\d\d\d/",$call_id)) ) )
 						{$custom_required_fields .= "$A_field_label[$o]|";}
 					}
