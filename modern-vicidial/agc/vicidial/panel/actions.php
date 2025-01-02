@@ -660,40 +660,60 @@ if ($agent_display_dialable_leads > 0)
 	</div>
 </span>	
 
-<span style="position:absolute;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="AgentTimeDisplayBox">
-	<table border="0" bgcolor="#CCFFCC" width="<?php echo $CAwidth ?>px" height="<?php echo $WRheight ?>px"><tr><td align="center" valign="top">
-	<?php
-	if (preg_match("/RANGE/",$agent_screen_time_display))
-		{
-		echo " &nbsp; &nbsp; &nbsp; <font class=\"sd_text\">"._QXZ("AGENT TIME REPORT")." : &nbsp; <br />";
-		echo " <input type=text name=ATstart_date id=ATstart_date value=\"$NOW_DATE\" size=12 maxlength=10>";
-		echo "<script language=\"JavaScript\">\n";
-		echo "var o_cal = new tcal ({\n";
-		echo "	'formname': 'vicidial_form',\n";
-		echo "	'controlname': 'ATstart_date'});\n";
-		echo "o_cal.a_tpl.yearscroll = false;\n";
-		echo "</script>\n";
-		echo " &nbsp; "._QXZ("to");
-		echo " &nbsp; <input type=text name=ATend_date id=ATend_date value=\"$NOW_DATE\" size=12 maxlength=10>";
-		echo "<script language=\"JavaScript\">\n";
-		echo "var o_cal = new tcal ({\n";
-		echo "	'formname': 'vicidial_form',\n";
-		echo "	'controlname': 'ATend_date'});\n";
-		echo "o_cal.a_tpl.yearscroll = false;\n";
-		echo "</script>\n";
-		echo " &nbsp; <a href=\"#\" onclick=\"LaunchAgentTimeReport('');return false;\">"._QXZ("GO")."</a></font> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ";
-		echo "<font class=\"sh_text\"><a href=\"#\" onclick=\"AgentTimeReport('close');return false;\">"._QXZ("close")." [X]</a><br />";
-		}
-	else
-		{
-		echo "<input type=hidden name=ATstart_date id=ATstart_date value=\"$NOW_DATE\">\n";
-		echo "<input type=hidden name=ATend_date id=ATend_date value=\"$NOW_DATE\">\n";
-		}
-	?>
-	<div class="scroll_calllog" id="AgentTimeDisplaySpan"> <?php echo _QXZ("Agent Time Report"); ?> </div>
-	<br /><br /> &nbsp;</font>
-	</td></tr></table>
-</span>
+<span class="w-100 h-100 overflow-scroll" tabindex="-1" style="background:rgba(0, 0, 0, 0.5);position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="AgentTimeDisplayBox">
+    <div class="w-100 mx-auto mt-2">
+
+		<div class="card">
+			<div class="card-header">
+				<h5 class="d-flex">
+					<span class="w-auto"><?php echo _QXZ("AGENT TIME REPORT:"); ?></span>
+					<a class="btn btn-close ms-auto" href="#" onclick="AgentTimeReport('close');return false;"></a>
+				</h5>
+			</div>
+			<div class="card-body">
+				
+				<table><tr><td>
+				<?php
+				if (preg_match("/RANGE/",$agent_screen_time_display))
+					{
+					echo " &nbsp; &nbsp; &nbsp; <font class=\"sd_text\">"._QXZ("AGENT TIME REPORT")." : &nbsp; <br />";
+					echo " <input type=text name=ATstart_date id=ATstart_date value=\"$NOW_DATE\" size=12 maxlength=10>";
+					echo "<script language=\"JavaScript\">\n";
+					echo "var o_cal = new tcal ({\n";
+					echo "	'formname': 'vicidial_form',\n";
+					echo "	'controlname': 'ATstart_date'});\n";
+					echo "o_cal.a_tpl.yearscroll = false;\n";
+					echo "</script>\n";
+					echo " &nbsp; "._QXZ("to");
+					echo " &nbsp; <input type=text name=ATend_date id=ATend_date value=\"$NOW_DATE\" size=12 maxlength=10>";
+					echo "<script language=\"JavaScript\">\n";
+					echo "var o_cal = new tcal ({\n";
+					echo "	'formname': 'vicidial_form',\n";
+					echo "	'controlname': 'ATend_date'});\n";
+					echo "o_cal.a_tpl.yearscroll = false;\n";
+					echo "</script>\n";
+					echo " &nbsp; <a class=\"btn btn-primary\" href=\"#\" onclick=\"LaunchAgentTimeReport('');return false;\">"._QXZ("GO")."</a></font> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ";
+					//echo "<font class=\"sh_text\"><a href=\"#\" onclick=\"AgentTimeReport('close');return false;\">"._QXZ("close")." [X]</a><br />";
+					}
+				else
+					{
+					echo "<input type=hidden name=ATstart_date id=ATstart_date value=\"$NOW_DATE\">\n";
+					echo "<input type=hidden name=ATend_date id=ATend_date value=\"$NOW_DATE\">\n";
+					}
+				?>
+				<div class="scroll_calllog" id="AgentTimeDisplaySpan"> <?php echo _QXZ("Agent Time Report"); ?> </div>
+				<br /><br /> &nbsp;</font>
+				</td></tr></table>
+
+			</div>
+			<div class="card-footer">
+				
+			</div>
+			
+		</div>
+
+	</div>
+</span>	
 
 <span style="position:absolute;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="SearcHContactsDisplaYBox">
 	<table border="0" bgcolor="#CCFFFF" width="<?php echo $CAwidth ?>px" height="<?php echo $WRheight ?>px"><tr><td align="center" valign="top"> &nbsp; &nbsp; &nbsp; <font class="sd_text"><?php echo _QXZ("SEARCH FOR A CONTACT:"); ?></font> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <font class="sh_text"><a href="#" onclick="ContactSearcHVieWClose();return false;">close [X]</a><br />
