@@ -150,7 +150,8 @@
                         <span id="webphoneSpan">
                             <span id="webphonecontent" style="overflow:hidden;">
                                 <?php
-                                    include '../agc/webphone/viciphone/viciphone.php';
+                                    // include '../agc/webphone/viciphone/viciphone.php';
+                                    echo $webphone_content;
                                 ?>
                             </span>
                         </span>
