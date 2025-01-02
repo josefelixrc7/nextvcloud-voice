@@ -770,7 +770,7 @@ function custom_list_fields_values($lead_id,$list_id,$uniqueid,$user,$DB,$call_i
 					$default_date = date("Y-m-d", mktime(date("H"),date("i"),date("s"),date("m"),date("d")+$day_diff,date("Y")));
 					if (strlen($A_field_value[$o]) > 0) {$default_date = $A_field_value[$o];}
 
-					$field_HTML .= "<input type=text size=11 maxlength=10 name=$A_field_label[$o] id=$A_field_label[$o] value=\"$default_date\" onclick=\"f_tcalToggle()\">\n";
+					$field_HTML .= "<input class=\"form-control\" type=text size=11 maxlength=10 name=$A_field_label[$o] id=$A_field_label[$o] value=\"$default_date\" onclick=\"f_tcalToggle()\">\n";
 					$field_HTML .= "<script language=\"JavaScript\">\n";
 					$field_HTML .= "var o_cal = new tcal ({\n";
 					$field_HTML .= "	'formname': 'form_custom_fields',\n";
@@ -794,7 +794,7 @@ function custom_list_fields_values($lead_id,$list_id,$uniqueid,$user,$DB,$call_i
 						$default_minute = $time_field_value[1];
 						}
 					$field_HTML .= "<input type=hidden name=$A_field_label[$o] id=$A_field_label[$o] value=\"$default_time\">";
-					$field_HTML .= "<SELECT name=HOUR_$A_field_label[$o] id=HOUR_$A_field_label[$o]>";
+					$field_HTML .= "<SELECT class=\"form-select\" name=HOUR_$A_field_label[$o] id=HOUR_$A_field_label[$o]>";
 					$field_HTML .= "<option>00</option>";
 					$field_HTML .= "<option>01</option>";
 					$field_HTML .= "<option>02</option>";

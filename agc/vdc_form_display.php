@@ -577,6 +577,7 @@ if ($SUBMIT_only < 1)
 	echo "<!-- VERSION: $version     BUILD: $build    USER: $user   server_ip: $server_ip-->\n";
 	echo "<title>". _QXZ("Agent Form Display Script");
 	echo "</title>\n";
+	include '../modern-vicidial/agc/vicidial/main_head.php';
 
 	echo "<script language=\"JavaScript\" src=\"calendar_db.js\"></script>\n";
 	echo "	<link rel=\"stylesheet\" href=\"calendar.css\">\n";
