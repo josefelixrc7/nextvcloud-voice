@@ -614,7 +614,7 @@ function custom_list_fields_values($lead_id,$list_id,$uniqueid,$user,$DB,$call_i
 									{
 									if ($A_field_default[$o] == "$field_options_value_array[0]") {$field_selected = 'CHECKED';}
 									}
-								$field_HTML .= "<input type=$A_field_type[$o] name=$A_field_label[$o][] id=$A_field_label[$o][] value=\"$field_options_value_array[0]\" $field_selected> "._QXZ("$field_options_value_array[1]")."\n";
+								$field_HTML .= "<input class=\"form-control\" type=$A_field_type[$o] name=$A_field_label[$o][] id=$A_field_label[$o][] value=\"$field_options_value_array[0]\" $field_selected> "._QXZ("$field_options_value_array[1]")."\n";
 								if ($A_multi_position[$o]=='VERTICAL') 
 									{$field_HTML .= "<BR>\n";}
 								$te_printed++;
