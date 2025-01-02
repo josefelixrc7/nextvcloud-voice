@@ -660,7 +660,7 @@ function submit_form()
 
 </SCRIPT>
 
-<input type=button value="<?php echo _QXZ("SUBMIT"); ?>" name=smt id=smt onClick="submit_form()">
+<input class="btn btn-primary" type=button value="<?php echo _QXZ("SUBMIT"); ?>" name=smt id=smt onClick="submit_form()">
 </TD>
 </TR>
 
