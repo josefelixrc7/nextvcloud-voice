@@ -304,7 +304,7 @@ if($short_header)
 		{
 		?>
 		<div class="p-2" style="background-color:#<?=$SSmenu_background?>"><TABLE CELLPADDING=0 CELLSPACING=0 BGCOLOR=#<?php echo "$SSmenu_background" ?>><TR>
-		<TD><A HREF="./admin.php"><IMG SRC="<?php echo $selected_small_logo; ?>" WIDTH=71 HEIGHT=22 BORDER=0 ALT="System logo"></A> &nbsp; </TD>
+		<TD><A HREF="./admin.php"><IMG SRC="<?php echo $selected_small_logo; ?>" HEIGHT=22 BORDER=0 ALT="System logo"></A> &nbsp; </TD>
 		<?php 
 		if ( ($reports_only_user < 1) and ($qc_only_user < 1) )
 			{
@@ -364,7 +364,7 @@ else if ($android_header)
 	{
 	?>
 	<TABLE CELLPADDING=0 CELLSPACING=0 BGCOLOR=#<?php echo "$SSmenu_background" ?> width='100%'><TR>
-	<TD><A HREF="./admin_mobile.php"><IMG SRC="<?php echo $selected_small_logo; ?>" WIDTH=71 HEIGHT=22 BORDER=0 ALT="System logo"></A> &nbsp; </TD>
+	<TD><A HREF="./admin_mobile.php"><IMG SRC="<?php echo $selected_small_logo; ?>" HEIGHT=22 BORDER=0 ALT="System logo"></A> &nbsp; </TD>
 	<TD align='left'> &nbsp; <A HREF="admin_mobile.php?ADD=999990" ALT="Admin" STYLE="text-decoration:none;"><?php echo $admin_icon ?> <FONT FACE="ARIAL,HELVETICA" COLOR=WHITE SIZE=2><B><?php echo _QXZ("Admin"); ?></B></FONT></A> &nbsp; </TD>
 	</TR>
 	</TABLE>

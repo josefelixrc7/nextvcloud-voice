@@ -35991,7 +35991,7 @@ if ($ADD==311111111)
 			$modify_url = "$PHP_SELF?ADD=311111111&call_time_id=$call_time_id";
 			$modify_footer_refresh=1;
 			}
-		echo "<TABLE><TR><TD>\n";
+		echo "<TABLE class=\"".$table_classes_1."\"><TR><TD>\n";
 		echo "<FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 		$stmt="SELECT call_time_id,call_time_name,call_time_comments,ct_default_start,ct_default_stop,ct_sunday_start,ct_sunday_stop,ct_monday_start,ct_monday_stop,ct_tuesday_start,ct_tuesday_stop,ct_wednesday_start,ct_wednesday_stop,ct_thursday_start,ct_thursday_stop,ct_friday_start,ct_friday_stop,ct_saturday_start,ct_saturday_stop,ct_state_call_times,default_afterhours_filename_override,sunday_afterhours_filename_override,monday_afterhours_filename_override,tuesday_afterhours_filename_override,wednesday_afterhours_filename_override,thursday_afterhours_filename_override,friday_afterhours_filename_override,saturday_afterhours_filename_override,user_group,ct_holidays from vicidial_call_times where call_time_id='$call_time_id' $LOGadmin_viewable_groupsSQL;";
@@ -36515,7 +36515,7 @@ if ($ADD==331111111)
 			$modify_url = "$PHP_SELF?ADD=331111111&shift_id=$shift_id";
 			$modify_footer_refresh=1;
 			}
-		echo "<TABLE><TR><TD>\n";
+		echo "<TABLE class=\"".$table_classes_1."\"><TR><TD>\n";
 		echo "<FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 		$stmt="SELECT shift_id,shift_name,shift_start_time,shift_length,shift_weekdays,report_option,user_group,report_rank from vicidial_shifts where shift_id='$shift_id' $LOGadmin_viewable_groupsSQL;";
@@ -36649,7 +36649,7 @@ if ($ADD==31111111111)
 			$modify_url = "$PHP_SELF?ADD=31111111111&extension=$extension&server_ip=$server_ip";
 			$modify_footer_refresh=1;
 			}
-		echo "<TABLE><TR><TD>\n";
+		echo "<TABLE class=\"".$table_classes_1."\"><TR><TD>\n";
 		echo "<FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 		$stmt="SELECT extension,dialplan_number,voicemail_id,phone_ip,computer_ip,server_ip,login,pass,status,active,phone_type,fullname,company,picture,messages,old_messages,protocol,local_gmt,ASTmgrUSERNAME,ASTmgrSECRET,login_user,login_pass,login_campaign,park_on_extension,conf_on_extension,VICIDIAL_park_on_extension,VICIDIAL_park_on_filename,monitor_prefix,recording_exten,voicemail_exten,voicemail_dump_exten,ext_context,dtmf_send_extension,call_out_number_group,client_browser,install_directory,local_web_callerID_URL,VICIDIAL_web_URL,AGI_call_logging_enabled,user_switching_enabled,conferencing_enabled,admin_hangup_enabled,admin_hijack_enabled,admin_monitor_enabled,call_parking_enabled,updater_check_enabled,AFLogging_enabled,QUEUE_ACTION_enabled,CallerID_popup_enabled,voicemail_button_enabled,enable_fast_refresh,fast_refresh_rate,enable_persistant_mysql,auto_dial_next_number,VDstop_rec_after_each_call,DBX_server,DBX_database,DBX_user,DBX_pass,DBX_port,DBY_server,DBY_database,DBY_user,DBY_pass,DBY_port,outbound_cid,enable_sipsak_messages,email,template_id,conf_override,phone_context,phone_ring_timeout,conf_secret,delete_vm_after_email,is_webphone,use_external_server_ip,codecs_list,codecs_with_template,webphone_dialpad,on_hook_agent,webphone_auto_answer,voicemail_timezone,voicemail_options,user_group,voicemail_greeting,voicemail_dump_exten_no_inst,voicemail_instructions,on_login_report,unavail_dialplan_fwd_exten,unavail_dialplan_fwd_context,nva_call_url,nva_search_method,nva_error_filename,nva_new_list_id,nva_new_phone_code,nva_new_status,webphone_dialbox,webphone_mute,webphone_volume,webphone_debug,outbound_alt_cid,conf_qualify,webphone_layout from phones where extension='$extension' and server_ip='$server_ip' $LOGadmin_viewable_groupsSQL;";
@@ -36981,7 +36981,7 @@ if ($ADD==311111111111)
 			$modify_url = "$PHP_SELF?ADD=311111111111&server_id=$server_id&server_ip=$server_ip";
 			$modify_footer_refresh=1;
 			}
-		echo "<TABLE><TR><TD>\n";
+		echo "<TABLE class=\"".$table_classes_1."\"><TR><TD>\n";
 		echo "<FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 		$stmt="SELECT server_id,server_description,server_ip,active,asterisk_version,max_vicidial_trunks,telnet_host,telnet_port,ASTmgrUSERNAME,ASTmgrSECRET,ASTmgrUSERNAMEupdate,ASTmgrUSERNAMElisten,ASTmgrUSERNAMEsend,local_gmt,voicemail_dump_exten,answer_transfer_agent,ext_context,sys_perf_log,vd_server_logs,agi_output,vicidial_balance_active,balance_trunks_offlimits,recording_web_link,alt_server_ip,active_asterisk_server,generate_vicidial_conf,rebuild_conf_files,outbound_calls_per_second,sysload,channels_total,cpu_idle_percent,disk_usage,sounds_update,vicidial_recording_limit,carrier_logging_active,vicidial_balance_rank,rebuild_music_on_hold,active_agent_login_server,conf_secret,external_server_ip,custom_dialplan_entry,active_twin_server_ip,user_group,system_uptime,auto_restart_asterisk,asterisk_temp_no_restart,voicemail_dump_exten_no_inst,gather_asterisk_output,web_socket_url,conf_qualify,routing_prefix,external_web_socket_url from servers where ( (server_id='$server_id') or (server_ip='$server_ip') ) $LOGadmin_viewable_groupsSQL;";
@@ -37350,7 +37350,7 @@ if ($ADD==331111111111)
 			$modify_url = "$PHP_SELF?ADD=331111111111&template_id=$template_id";
 			$modify_footer_refresh=1;
 			}
-		echo "<TABLE><TR><TD>\n";
+		echo "<TABLE class=\"".$table_classes_1."\"><TR><TD>\n";
 		echo "<FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 		$stmt="SELECT template_id,template_name,template_contents,user_group from vicidial_conf_templates where template_id='$template_id' $LOGadmin_viewable_groupsSQL;";
@@ -37471,7 +37471,7 @@ if ($ADD==341111111111)
 			$modify_url = "$PHP_SELF?ADD=341111111111&carrier_id=$carrier_id";
 			$modify_footer_refresh=1;
 			}
-		echo "<TABLE><TR><TD>\n";
+		echo "<TABLE class=\"".$table_classes_1."\"><TR><TD>\n";
 		echo "<FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 		$stmt="SELECT carrier_id,carrier_name,registration_string,template_id,account_entry,protocol,globals_string,dialplan_entry,server_ip,active,carrier_description,user_group from vicidial_server_carriers where carrier_id='$carrier_id' $LOGadmin_viewable_groupsSQL;";
@@ -38298,7 +38298,7 @@ if ($ADD==392111111111)
 			$modify_url = "$PHP_SELF?ADD=392111111111&container_id=$container_id";
 			$modify_footer_refresh=1;
 			}
-		echo "<TABLE><TR><TD>\n";
+		echo "<TABLE class=\"".$table_classes_1."\"><TR><TD>\n";
 		echo "<FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 		$stmt="SELECT container_notes,container_type,user_group,container_entry from vicidial_settings_containers where container_id='$container_id' $LOGadmin_viewable_groupsSQL;";
@@ -39171,7 +39171,7 @@ if ($ADD==3111111111111)
 			$modify_url = "$PHP_SELF?ADD=3111111111111&conf_exten=$conf_exten&server_ip=$server_ip";
 			$modify_footer_refresh=1;
 			}
-		echo "<TABLE><TR><TD>\n";
+		echo "<TABLE class=\"".$table_classes_1."\"><TR><TD>\n";
 		echo "<FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 		$stmt="SELECT conf_exten,server_ip,extension from conferences where conf_exten='$conf_exten' and server_ip='$server_ip';";
@@ -39271,7 +39271,7 @@ if ($ADD==311111111111111)
 			$modify_url = "$PHP_SELF?ADD=311111111111111";
 			$modify_footer_refresh=1;
 			}
-		echo "<TABLE><TR><TD>\n";
+		echo "<TABLE class=\"".$table_classes_1."\"><TR><TD>\n";
 		echo "<img src=\"images/icon_settings.png\" width=42 height=42 align=left> <FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 		$stmt="SELECT count(*) from vicidial_phone_codes;";
