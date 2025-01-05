@@ -990,12 +990,12 @@ echo "<!-- IFRAME$IFRAME -->\n";
 echo "<!-- $script_id -->\n";
 if ( ( ($IFRAME < 1) and ($ScrollDIV > 0) ) or (preg_match("/IGNORENOSCROLL/i",$script_text)) )
 	{
-	echo "<TABLE WIDTH=$script_width border=0><TR><TD>";
+	echo "<TABLE WIDTH=\"100%\" border=0><TR><TD>";
 	echo "<div class=\"scroll_script\" id=\"NewScriptContents\">";
 	}
 else
 	{
-	echo "<TABLE WIDTH=$script_width border=0 cellpadding=0 cellspacing=0><TR><TD>";
+	echo "<TABLE WIDTH=\"100%\" border=0 cellpadding=0 cellspacing=0><TR><TD>";
 	}
 
 if (strlen($script_override)< 1)

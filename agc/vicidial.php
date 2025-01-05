@@ -3873,11 +3873,11 @@ else
 				{
 					if ($webphone_location == 'bar')
 					{
-						$webphone_content = "<iframe src=\"$WebPhonEurl\" style=\"height:" . $webphone_height . "px;background-color:transparent;z-index:17;\" scrolling=\"no\" frameborder=\"0\" allowtransparency=\"true\" id=\"webphone\" name=\"webphone\" height=\"" . $webphone_height . "px\" allow=\"microphone *; speakers *;\"> </iframe>";
+						$webphone_content = "<iframe src=\"$WebPhonEurl\" style=\"height:" . $webphone_height . "px;background-color:transparent;z-index:17;\" scrolling=\"no\" frameborder=\"0\" allowtransparency=\"true\" id=\"webphone\" name=\"webphone\" width=\"100%\" height=\"" . $webphone_height . "px\" allow=\"microphone *; speakers *;\"> </iframe>";
 					}
 					else
 					{
-						$webphone_content = "<iframe src=\"$WebPhonEurl\" style=\"height:" . $webphone_height . "px;background-color:transparent;z-index:17;\" scrolling=\"auto\" frameborder=\"0\" allowtransparency=\"true\" id=\"webphone\" name=\"webphone\" height=\"" . $webphone_height . "px\" allow=\"microphone *; speakers *;\"> </iframe>";
+						$webphone_content = "<iframe src=\"$WebPhonEurl\" style=\"height:" . $webphone_height . "px;background-color:transparent;z-index:17;\" scrolling=\"auto\" frameborder=\"0\" allowtransparency=\"true\" id=\"webphone\" name=\"webphone\" width=\"100%\" height=\"" . $webphone_height . "px\" allow=\"microphone *; speakers *;\"> </iframe>";
 					}
 				}
 			}
@@ -19139,7 +19139,7 @@ function phone_number_format(formatphone) {
 				}
 			if ( (VtigeRLogiNScripT == 'Y') && (VtigeREnableD > 0) )
 				{
-				document.getElementById("ScriptContents").innerHTML = "<iframe src=\"" + VtigeRurl + "/index.php?module=Users&action=Authenticate&return_module=Users&return_action=Login&user_name=" + user + "&user_password=" + orig_pass + "&login_theme=softed&login_language=en_us\" style=\"background-color:transparent;z-index:17;\" scrolling=\"auto\" frameborder=\"0\" allowtransparency=\"true\" id=\"popupFrame\" name=\"popupFrame\" width=\"" + script_width + "px\" height=\"700px\"> </iframe> ";
+				document.getElementById("ScriptContents").innerHTML = "<iframe src=\"" + VtigeRurl + "/index.php?module=Users&action=Authenticate&return_module=Users&return_action=Login&user_name=" + user + "&user_password=" + orig_pass + "&login_theme=softed&login_language=en_us\" style=\"background-color:transparent;z-index:17;\" scrolling=\"auto\" frameborder=\"0\" allowtransparency=\"true\" id=\"popupFrame\" name=\"popupFrame\" width=\"100%\" height=\"1000px\"> </iframe> ";
 				}
 			if ( (VtigeRLogiNScripT == 'NEW_WINDOW') && (VtigeREnableD > 0) )
 				{
