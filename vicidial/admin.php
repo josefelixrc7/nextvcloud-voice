@@ -36033,7 +36033,7 @@ if ($ADD==311111111)
 		echo "<input type=hidden name=ADD value=411111111>\n";
 		echo "<input type=hidden name=DB value=\"$DB\">\n";
 		echo "<input type=hidden name=call_time_id value=\"$call_time_id\">\n";
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Call Time ID").": </td><td align=left colspan=3><B>$call_time_id</B>$NWB#call_times-call_time_id$NWE</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Call Time Name").": </td><td align=left colspan=3><input type=text name=call_time_name size=40 maxlength=50 value=\"$call_time_name\"> ("._QXZ("short description of the call time").")$NWB#call_times-call_time_name$NWE</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Call Time Comments").": </td><td align=left colspan=3><input type=text name=call_time_comments size=50 maxlength=255 value=\"$call_time_comments\"> $NWB#call_times-call_time_comments$NWE</td></tr>\n";
@@ -36554,7 +36554,7 @@ if ($ADD==331111111)
 		echo "<input type=hidden name=ADD value=431111111>\n";
 		echo "<input type=hidden name=DB value=\"$DB\">\n";
 		echo "<input type=hidden name=shift_id value=\"$shift_id\">\n";
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Shift ID").": </td><td align=left><B>$shift_id</B></td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Shift Name").": </td><td align=left><input type=text name=shift_name size=50 maxlength=50 value=\"$shift_name\"> ("._QXZ("short description of the shift").")$NWB#shifts-shift_name$NWE</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Admin User Group").": </td><td align=left><select size=1 name=user_group>\n";
@@ -36663,7 +36663,7 @@ if ($ADD==31111111111)
 		echo "<input type=hidden name=client_browser value=\"$row[34]\">\n";
 		echo "<input type=hidden name=install_directory value=\"$row[35]\">\n";
 
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Phone Extension").": </td><td align=left><input type=text name=extension size=20 maxlength=100 value=\"$row[0]\">$NWB#phones-extension$NWE <i></i></td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Dial Plan Number").": </td><td align=left><input type=text name=dialplan_number size=15 maxlength=20 value=\"$row[1]\"> ("._QXZ("digits only").")$NWB#phones-dialplan_number$NWE</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Voicemail Box").": </td><td align=left><input type=text name=voicemail_id size=10 maxlength=10 value=\"$row[2]\"> ("._QXZ("digits only").")$NWB#phones-voicemail_id$NWE</td></tr>\n";
@@ -37055,7 +37055,7 @@ if ($ADD==311111111111)
 		echo "<input type=hidden name=old_server_id value=\"$server_id\">\n";
 		echo "<input type=hidden name=old_server_ip value=\"$server_ip\">\n";
 		echo "<input type=hidden name=DB value=$DB>\n";
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Server ID").": </td><td align=left><input type=text name=server_id size=10 maxlength=10 value=\"$server_id\">$NWB#servers-server_id$NWE</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Server Description").": </td><td align=left><input type=text name=server_description size=30 maxlength=255 value=\"$server_description\">$NWB#servers-server_description$NWE</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Server IP Address").": </td><td align=left><input type=text name=server_ip size=20 maxlength=15 value=\"$server_ip\">$NWB#servers-server_ip$NWE</td></tr>\n";
@@ -37365,7 +37365,7 @@ if ($ADD==331111111111)
 		echo "<input type=hidden name=ADD value=431111111111>\n";
 		echo "<input type=hidden name=template_id value=\"$template_id\">\n";
 
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Template ID").": </td><td align=left><B>$template_id</B></td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Template Name").": </td><td align=left><input type=text name=template_name size=40 maxlength=50 value=\"$template_name\">$NWB#conf_templates-template_name$NWE</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Admin User Group").": </td><td align=left><select size=1 name=user_group>\n";
@@ -37494,7 +37494,7 @@ if ($ADD==341111111111)
 		echo "<input type=hidden name=ADD value=441111111111>\n";
 		echo "<input type=hidden name=carrier_id value=\"$carrier_id\">\n";
 
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Carrier ID").": </td><td align=left><B>$carrier_id</B></td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Carrier Name").": </td><td align=left><input type=text name=carrier_name size=40 maxlength=50 value=\"$carrier_name\">$NWB#server_carriers-carrier_name$NWE</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Carrier Description").": </td><td align=left><input type=text name=carrier_description size=70 maxlength=255 value=\"$carrier_description\">$NWB#server_carriers-carrier_description$NWE</td></tr>\n";
@@ -38313,7 +38313,7 @@ if ($ADD==392111111111)
 		echo "<input type=hidden name=ADD value=492111111111>\n";
 		echo "<input type=hidden name=container_id value=\"$container_id\">\n";
 
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Container ID").": </td><td align=left><B>$container_id</B></td></tr>\n";
 
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Container Notes").": </td><td align=left><input type=text name=container_notes size=50 maxlength=255 value=\"$container_notes\">$NWB#settings_containers-container_notes$NWE</td></tr>\n";
@@ -39184,7 +39184,7 @@ if ($ADD==3111111111111)
 		echo "<input type=hidden name=ADD value=4111111111111>\n";
 		echo "<input type=hidden name=old_conf_exten value=\"$row[0]\">\n";
 		echo "<input type=hidden name=old_server_ip value=\"$row[1]\">\n";
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Conference").": </td><td align=left><input type=text name=conf_exten size=10 maxlength=7 value=\"$row[0]\">$NWB#conferences-conf_exten$NWE</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right><a href=\"$PHP_SELF?ADD=311111111111&server_ip=$row[1]\">"._QXZ("Server IP")."</a>: </td><td align=left><select size=1 name=server_ip>\n";
 
@@ -39556,7 +39556,7 @@ if ($ADD==311111111111111)
 		echo "<br>"._QXZ("MODIFY SYSTEM SETTINGS")."<form action=$PHP_SELF method=POST>\n";
 		echo "<input type=hidden name=ADD value=411111111111111>\n";
 		echo "<input type=hidden name=sounds_web_directory value=\"$sounds_web_directory\">\n";
-		echo "<center><TABLE width=900 cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=900 cellspacing=3>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Version").": </td><td align=left> $version</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("SVN Version").": </td><td align=left> <a href=\"$PHP_SELF?ADD=999991\">$svn_revision</a></td></tr>\n";
 
