@@ -519,8 +519,8 @@ if ($action=="RefreshActiveChatView" && $user) {
 }
 
 if ($action=="ReloadAgentNewChatSpan" && $user) {
-	echo "<table width='600' border='0' cellpadding='5' cellspacing='0'>\n";
-	echo "<TR BGCOLOR='#E6E6E6' valign='top'>\n";
+	echo "<table width='100%' border='0' cellpadding='5' cellspacing='0'>\n";
+	echo "<TR BGCOLOR='#FFF' valign='top'>\n";
 	echo "<td width='*'><font class='arial'>"._QXZ("Select a live agent").":</font><BR>\n";
 
 	$stmt="SELECT user_group from vicidial_users where user='$user';";
@@ -583,7 +583,7 @@ if ($action=="ReloadAgentNewChatSpan" && $user) {
 	echo "<textarea class='small_arial' rows='5' cols='36' name='agent_message' id='agent_message'></textarea>";
 	echo "</td></TR>\n";
 
-	echo "<TR BGCOLOR='#E6E6E6'>\n";
+	echo "<TR BGCOLOR='#FFF'>\n";
 	echo "<td><BR><input class='red_btn' type='button' style='width:200px' value='"._QXZ("BACK TO CHAT SCREEN")."' onClick=\"document.getElementById('AgentChatSpan').style.display='block'; document.getElementById('AgentNewChatSpan').style.display='none';\"></td>\n";
 	echo "<td align='center'><BR><input class='green_btn' type='button' style='width:200px' value='"._QXZ("START CHAT")."' onClick=\"CreateAgentToAgentChat()\">\n</td></TR>\n";
 	echo "</table>";
