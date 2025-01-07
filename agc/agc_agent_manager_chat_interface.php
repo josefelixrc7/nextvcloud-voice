@@ -729,7 +729,7 @@ echo "</TR>";
 echo "<TR BGCOLOR='#FFF'>\n";
 echo "<TD align='left' colspan='2' valign='top' width='380'>\n";
 echo "\t<div class='scrolling_transcript' id='ActiveManagerChatTranscript'></div><BR>\n";
-echo "\t<div id='AllowAgentReplies' align='center' style='display:none;'>\n";
+echo "\t<div id='AllowAgentReplies' style='display:none;'>\n";
 echo "\t<textarea class='small_arial' rows='2' cols='65' name='manager_message' id='manager_message' onkeypress='if (event.keyCode == 13) {SendMgrChatMessage();}'></textarea><BR><input class='blue_btn' type='button' style='width:200px' value='"._QXZ("SEND MESSAGE")."' onClick=\"SendMgrChatMessage()\">\n";
 echo "\t</div>\n";
 echo "</TD>\n";
@@ -786,7 +786,7 @@ echo "</form>";
 </span>
 <span id='AgentNewChatSpan' name='AgentNewChatSpan' style='display: none;'>
 <?php
-echo "<table width='600' border='0' cellpadding='5' cellspacing='0'>\n";
+echo "<table width='100%' border='0' cellpadding='5' cellspacing='0'>\n";
 echo "<TR BGCOLOR='#FFF' valign='top'>\n";
 echo "<td width='*'><font class='arial'>"._QXZ("Select a live agent").":</font><BR>\n";
 
