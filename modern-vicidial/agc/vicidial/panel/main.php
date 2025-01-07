@@ -41,7 +41,7 @@
                 <div class="btn-toolbar mb-2 mb-md-0">
 
                     <span id="NexTCalLPausE">
-                        <a class="btn btn-sm btn-outline-secondary" href="#" onclick="next_call_pause_click();return false;"><?php echo _QXZ("Next Call Pause"); ?></a>
+                        <a class="btn btn-sm btn-outline-secondary me-2" href="#" onclick="next_call_pause_click();return false;"><?php echo _QXZ("Next Call Pause"); ?></a>
                     </span>
                     <!--DiaLlOgButtonspan-->
                     <span id="DiaLlOgButtonspan">
