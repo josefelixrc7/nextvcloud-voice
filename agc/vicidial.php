@@ -15154,7 +15154,7 @@ function set_length(SLnumber,SLlength_goal,SLdirection)
 					document.getElementById("DispoSelectHAspan").innerHTML = "<a href=\"#\" onclick=\"DispoHanguPAgaiN()\"><?php echo _QXZ("Hangup Again"); ?></a>";
 					if (pause_after_next_call == 'ENABLED')
 					{
-						document.getElementById("NexTCalLPausE").innerHTML = "<a class=\"btn btn-sm btn-outline-secondary\" href=\"#\" onclick=\"next_call_pause_click();return false;\"><?php echo _QXZ("Next Call Pause"); ?></a>";
+						document.getElementById("NexTCalLPausE").innerHTML = "<a class=\"btn btn-sm btn-outline-secondary me-2\" href=\"#\" onclick=\"next_call_pause_click();return false;\"><?php echo _QXZ("Next Call Pause"); ?></a>";
 					}
 					CBcommentsBoxhide();
 					EAcommentsBoxhide();
