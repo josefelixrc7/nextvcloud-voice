@@ -190,6 +190,9 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
 </head>
 <link rel="stylesheet" href="css/vicidial_stylesheet.css">
 <link rel="stylesheet" href="css/simpletree.css">
+<?php
+	include '../modern-vicidial/agc/vicidial/main_head.php';
+?>
 <script language="JavaScript">
 
 // ################################################################################
@@ -730,7 +733,7 @@ echo "<TR BGCOLOR='#FFF'>\n";
 echo "<TD align='left' colspan='2' valign='top' width='380'>\n";
 echo "\t<div class='scrolling_transcript' id='ActiveManagerChatTranscript'></div><BR>\n";
 echo "\t<div id='AllowAgentReplies' style='display:none;'>\n";
-echo "\t<textarea class='small_arial' rows='2' cols='65' name='manager_message' id='manager_message' onkeypress='if (event.keyCode == 13) {SendMgrChatMessage();}'></textarea><BR><input class='blue_btn' type='button' style='width:200px' value='"._QXZ("SEND MESSAGE")."' onClick=\"SendMgrChatMessage()\">\n";
+echo "\t<textarea class='small_arial' rows='2' cols='65' name='manager_message' id='manager_message' onkeypress='if (event.keyCode == 13) {SendMgrChatMessage();}'></textarea><BR><input class='btn btn-primary' type='button' style='width:200px' value='"._QXZ("SEND MESSAGE")."' onClick=\"SendMgrChatMessage()\">\n";
 echo "\t</div>\n";
 echo "</TD>\n";
 echo "<TD align='left' rowspan='2' valign='top' width='210'>\n";
@@ -761,10 +764,10 @@ echo "<div class='scrolling_chat_display' id='AllActiveChats'>\n";
 	}
 	echo "</ul>\n";
 echo "\t</div>\n";
-echo "<font class='small_arial_bold'>("._QXZ("bolded chats = unread messages").")<BR><input type='checkbox' id='MuteChatAlert' name='MuteChatAlert'>"._QXZ("Mute alert sound")."</font>\n";
-echo "\t<BR><input class='green_btn' type='button' style='width:200px' value='"._QXZ("CHAT WITH LIVE AGENT")."' onClick=\"document.getElementById('AgentChatSpan').style.display='none'; document.getElementById('AgentNewChatSpan').style.display='block'; ReloadAgentNewChatSpan('$user');\">\n";
-echo "\t<span id='AgentEndChatSpan' style='display: none;'><div align='left'><BR><input class='red_btn' type='button' style='width:200px' value='"._QXZ("END CHAT")."' onClick='EndAgentToAgentChat()'></div></span>";
-echo "\t<span id='AgentAddChatSpan' style='display: none;'><BR><input class='blue_btn' type='button' style='width:200px' value='"._QXZ("ADD AGENT TO CURRENT CHAT")."' onClick=\"LoadAvailableAgentsForChat('AllLiveNonChatAgents', 'agent_to_add'); ToggleSpan('AllLiveNonChatAgents');\"></span>\n";
+echo "<font class='small_arial_bold'>("._QXZ("bolded chats = unread messages").")<BR><input class='form-control-check' type='checkbox' id='MuteChatAlert' name='MuteChatAlert'>"._QXZ("Mute alert sound")."</font>\n";
+echo "\t<BR><input class='btn btn-secondary' type='button' style='width:200px' value='"._QXZ("CHAT WITH LIVE AGENT")."' onClick=\"document.getElementById('AgentChatSpan').style.display='none'; document.getElementById('AgentNewChatSpan').style.display='block'; ReloadAgentNewChatSpan('$user');\">\n";
+echo "\t<span id='AgentEndChatSpan' style='display: none;'><div align='left'><BR><input class='btn btn-danger' type='button' style='width:200px' value='"._QXZ("END CHAT")."' onClick='EndAgentToAgentChat()'></div></span>";
+echo "\t<span id='AgentAddChatSpan' style='display: none;'><BR><input class='btn btn-primary' type='button' style='width:200px' value='"._QXZ("ADD AGENT TO CURRENT CHAT")."' onClick=\"LoadAvailableAgentsForChat('AllLiveNonChatAgents', 'agent_to_add'); ToggleSpan('AllLiveNonChatAgents');\"></span>\n";
 echo "<BR><div id='AllLiveNonChatAgents' align='center' style='display: none;'></div></span>";
 
 echo "</TD>\n";
@@ -853,8 +856,8 @@ echo "<textarea class='small_arial' rows='5' style='width:200px; name='agent_mes
 echo "</td></TR>\n";
 
 echo "<TR BGCOLOR='#FFF'>\n";
-echo "<td><BR><input class='red_btn' type='button' style='width:200px' value='"._QXZ("BACK TO CHAT SCREEN")."' onClick=\"document.getElementById('AgentChatSpan').style.display='block'; document.getElementById('AgentNewChatSpan').style.display='none';\"></td>\n";
-echo "<td align='center'><BR><input class='green_btn' type='button' style='width:200px' value='"._QXZ("START CHAT")."' onClick=\"CreateAgentToAgentChat()\">\n</td></TR>\n";
+echo "<td><BR><input class='btn btn-secondary' type='button' style='width:200px' value='"._QXZ("BACK TO CHAT SCREEN")."' onClick=\"document.getElementById('AgentChatSpan').style.display='block'; document.getElementById('AgentNewChatSpan').style.display='none';\"></td>\n";
+echo "<td align='center'><BR><input class='btn btn-primary' type='button' style='width:200px' value='"._QXZ("START CHAT")."' onClick=\"CreateAgentToAgentChat()\">\n</td></TR>\n";
 echo "</table>";
 ?>
 </span>
