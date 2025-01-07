@@ -579,7 +579,7 @@ if ($action=="ReloadAgentNewChatSpan" && $user) {
 	echo "</select>";
 
 	echo "</td>\n";
-	echo "<td width='100%'><font class='arial'>"._QXZ("Message").":</font><BR>\n";
+	echo "<td width='100%' class='p-2'><font class='arial'>"._QXZ("Message").":</font><BR>\n";
 	echo "<textarea class='form-control' rows='5' cols='36' name='agent_message' id='agent_message'></textarea>";
 	echo "</td></TR>\n";
 
