@@ -521,7 +521,7 @@ if ($action=="RefreshActiveChatView" && $user) {
 if ($action=="ReloadAgentNewChatSpan" && $user) {
 	echo "<table width='100%' border='0' cellpadding='5' cellspacing='0'>\n";
 	echo "<TR BGCOLOR='#FFF' valign='top'>\n";
-	echo "<td width='*'><font class='arial'>"._QXZ("Select a live agent").":</font><BR>\n";
+	echo "<td class='p-2' width='*'><font class='arial'>"._QXZ("Select a live agent").":</font><BR>\n";
 
 	$stmt="SELECT user_group from vicidial_users where user='$user';";
 	if ($non_latin > 0) {$rslt=mysql_to_mysqli("SET NAMES 'UTF8'", $link);}
@@ -568,7 +568,7 @@ if ($action=="ReloadAgentNewChatSpan" && $user) {
 	$rslt=mysql_to_mysqli($stmt, $link);
 	if ($rslt) {$agents_count = mysqli_num_rows($rslt);}
 	$loop_count=0;
-	echo "<select name='agent' id='agent'>\n";
+	echo "<select class='form-select' name='agent' id='agent'>\n";
 	echo "<option value=''>"._QXZ("Available agents")."</option>\n";
 	while ($agents_count > $loop_count)
 		{
@@ -579,13 +579,13 @@ if ($action=="ReloadAgentNewChatSpan" && $user) {
 	echo "</select>";
 
 	echo "</td>\n";
-	echo "<td width='200'><font class='arial'>"._QXZ("Message").":</font><BR>\n";
-	echo "<textarea class='small_arial' rows='5' cols='36' name='agent_message' id='agent_message'></textarea>";
+	echo "<td width='100%'><font class='arial'>"._QXZ("Message").":</font><BR>\n";
+	echo "<textarea class='form-control' rows='5' cols='36' name='agent_message' id='agent_message'></textarea>";
 	echo "</td></TR>\n";
 
 	echo "<TR BGCOLOR='#FFF'>\n";
-	echo "<td><BR><input class='red_btn' type='button' style='width:200px' value='"._QXZ("BACK TO CHAT SCREEN")."' onClick=\"document.getElementById('AgentChatSpan').style.display='block'; document.getElementById('AgentNewChatSpan').style.display='none';\"></td>\n";
-	echo "<td align='center'><BR><input class='green_btn' type='button' style='width:200px' value='"._QXZ("START CHAT")."' onClick=\"CreateAgentToAgentChat()\">\n</td></TR>\n";
+	echo "<td><BR><input class='btn btn-secondary' type='button' style='width:200px' value='"._QXZ("BACK TO CHAT SCREEN")."' onClick=\"document.getElementById('AgentChatSpan').style.display='block'; document.getElementById('AgentNewChatSpan').style.display='none';\"></td>\n";
+	echo "<td align='center'><BR><input class='btn btn-primary' type='button' style='width:200px' value='"._QXZ("START CHAT")."' onClick=\"CreateAgentToAgentChat()\">\n</td></TR>\n";
 	echo "</table>";
 
 }

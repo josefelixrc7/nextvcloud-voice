@@ -737,7 +737,7 @@ echo "\t<textarea class='small_arial form-control w-100' rows='2' cols='65' name
 echo "\t</div>\n";
 echo "</TD>\n";
 echo "<TD class='p-2' valign='top' width='100%'>\n";
-echo "<div class='scrolling_chat_display p-2' id='AllActiveChats'>\n";
+echo "<div class='scrolling_chat_display p-2 w-100' id='AllActiveChats'>\n";
 	echo "<ul class='chatview'>";
 	if (empty($chat_managers_array)) {
 		echo "\t<li class='arial_bold'>"._QXZ("NO OPEN CHATS")."</li>\n";
