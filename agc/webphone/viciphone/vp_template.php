@@ -7,7 +7,7 @@ include '../../../modern-vicidial/agc/vicidial/main_head.php';
     <div id="container" class="p-3 rounded" style="background:#DDD;">
 
         <!-- Main -->
-        <div id="main">
+        <div id="main" class="w-100">
             <!-- Video element to handle audio -->
             <audio autoplay width='0' hieght='0' id="audio"></audio>
             <!--<video width='0' hieght='0' id="audio"></video>-->
