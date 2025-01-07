@@ -19060,7 +19060,7 @@ if ($ACTION == 'AGENTtimeREPORT')
 		echo "<BR><BR>\n";
 		echo "<B>" . _QXZ("ERROR: this feature is disabled for this campaign") . "</B>\n";
 		echo "<BR><BR>\n";
-		echo "<a href=\"#\" onclick=\"AgentTimeReport('close');return false;\">"._QXZ("Close Agent Time Report")."</a>";
+		echo "<a class='btn btn-secondary' href=\"#\" onclick=\"AgentTimeReport('close');return false;\">"._QXZ("Close Agent Time Report")."</a>";
 		}
 	else
 		{
@@ -19121,7 +19121,7 @@ if ($ACTION == 'AGENTtimeREPORT')
 				echo "<BR><BR>\n";
 				echo "<B>" . _QXZ("ERROR: you must select a date range to use this feature")."</B>\n";
 				echo "<BR><BR>\n";
-				echo "<a href=\"#\" onclick=\"AgentTimeReport('close');return false;\">"._QXZ("Close Agent Time Report")."</a>";
+				echo "<a class='btn btn-secondary' href=\"#\" onclick=\"AgentTimeReport('close');return false;\">"._QXZ("Close Agent Time Report")."</a>";
 				}
 			else
 				{
@@ -19130,7 +19130,7 @@ if ($ACTION == 'AGENTtimeREPORT')
 				echo "<BR><BR>\n";
 				if (preg_match("/ENABLED_BASIC/",$stage))
 					{
-					echo "<TABLE CELLPADDING=2 CELLSPACING=2 BORDER=0 WIDTH=400 BGCOLOR='#999999'>";
+					echo "<TABLE CELLPADDING=2 CELLSPACING=2 BORDER=0>";
 					echo "<TR>";
 					echo "<TD BGCOLOR='white'><font style=\"font-size:14px;font-family:sans-serif;\"><B> &nbsp; "._QXZ("DATE")." &nbsp; </font></TD>";
 					echo "<TD BGCOLOR='white'><font style=\"font-size:14px;font-family:sans-serif;\"><B> &nbsp; "._QXZ("TOTAL LOGGED IN TIME")." &nbsp; </font></TD>";
@@ -19138,7 +19138,7 @@ if ($ACTION == 'AGENTtimeREPORT')
 					}
 				if (preg_match("/ENABLED_FULL/",$stage))
 					{
-					echo "<TABLE CELLPADDING=2 CELLSPACING=2 BORDER=0 WIDTH=800 BGCOLOR='#999999'>";
+					echo "<TABLE CELLPADDING=2 CELLSPACING=2 BORDER=0 class='w-100'>";
 					echo "<TR>";
 					echo "<TD BGCOLOR='white'><font style=\"font-size:14px;font-family:sans-serif;\"><B> &nbsp; "._QXZ("DATE")." &nbsp; </font></TD>";
 					echo "<TD BGCOLOR='white'><font style=\"font-size:14px;font-family:sans-serif;\"><B> &nbsp; "._QXZ("TOTAL LOGGED IN")." &nbsp; </font></TD>";
@@ -19399,7 +19399,7 @@ if ($ACTION == 'AGENTtimeREPORT')
 
 			echo "<CENTER> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \n";
 			echo "<font style=\"font-size:14px;font-family:sans-serif;\"><B>"._QXZ("AGENT TIME REPORT FOR TODAY").":</B></font> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \n";
-			echo "<font class=\"sh_text\"><a href=\"#\" onclick=\"AgentTimeReport('close');return false;\">"._QXZ("close")." [X]</a><br />\n";
+			echo "<font class=\"sh_text\"><a class='btn btn-secondary' href=\"#\" onclick=\"AgentTimeReport('close');return false;\">"._QXZ("close")." [X]</a><br />\n";
 			echo "<BR><BR>\n";
 			if ($stage == 'ENABLED_BASIC')
 				{
@@ -19447,7 +19447,7 @@ if ($ACTION == 'AGENTtimeREPORT')
 				}
 			}
 		echo "<BR>";
-		echo "<a href=\"#\" onclick=\"AgentTimeReport('close');return false;\">"._QXZ("Close Agent Time Report")."</a>";
+		echo "<a class='btn btn-secondary' href=\"#\" onclick=\"AgentTimeReport('close');return false;\">"._QXZ("Close Agent Time Report")."</a>";
 		echo "</CENTER>";
 		}
 	}
