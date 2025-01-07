@@ -730,13 +730,13 @@ echo "<td align='left' width='*' valign='bottom'><font class='arial'>"._QXZ("You
 echo "</TR>";
 
 echo "<TR BGCOLOR='#FFF'>\n";
-echo "<TD align='left' colspan='2' valign='top' width='380'>\n";
+echo "<TD class='p-2' valign='top' width='100%'>\n";
 echo "\t<div class='scrolling_transcript w-100' id='ActiveManagerChatTranscript'></div><BR>\n";
 echo "\t<div id='AllowAgentReplies' style='display:none;'>\n";
 echo "\t<textarea class='small_arial form-control w-100' rows='2' cols='65' name='manager_message' id='manager_message' onkeypress='if (event.keyCode == 13) {SendMgrChatMessage();}'></textarea><BR><input class='btn btn-primary' type='button' style='width:200px' value='"._QXZ("SEND MESSAGE")."' onClick=\"SendMgrChatMessage()\">\n";
 echo "\t</div>\n";
 echo "</TD>\n";
-echo "<TD class='p-2' width='100%'>\n";
+echo "<TD class='p-2' valign='top' width='100%'>\n";
 echo "<div class='scrolling_chat_display p-2' id='AllActiveChats'>\n";
 	echo "<ul class='chatview'>";
 	if (empty($chat_managers_array)) {
