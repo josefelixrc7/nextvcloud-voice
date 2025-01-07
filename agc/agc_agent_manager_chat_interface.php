@@ -719,14 +719,14 @@ function MgrAgentAutoRefresh() {
 <span id="AgentChatSpan" name="AgentChatSpan" style="display: block;">
 <?php
 echo "<form name='agent_manager_chat_form' id='agent_manager_chat_form'>";
-echo "<table width='620' border='0' cellpadding='5' cellspacing='0'>";
-echo "<TR BGCOLOR='#E6E6E6'>\n";
+echo "<table width='100%' border='0' cellpadding='5' cellspacing='0'>";
+echo "<TR BGCOLOR='#FFF'>\n";
 echo "<td align='left' width='190' valign='top'><font class='arial'>"._QXZ("Chatting with").": </font><BR><span class='arial_bold' id='ActiveChatManager'>".$chat_managers_array[$priority_chat]."</span></td>";
 echo "<td align='right' width='190' valign='top'><font class='arial'>"._QXZ("Chat started").": </font><BR><span class='arial_bold' id='ActiveChatStartDate'>".$chat_start_date_array[$priority_chat]."</span></td>";
 echo "<td align='left' width='*' valign='bottom'><font class='arial'>"._QXZ("Your active chats").":</font></td>";
 echo "</TR>";
 
-echo "<TR BGCOLOR='#E6E6E6'>\n";
+echo "<TR BGCOLOR='#FFF'>\n";
 echo "<TD align='left' colspan='2' valign='top' width='380'>\n";
 echo "\t<div class='scrolling_transcript' id='ActiveManagerChatTranscript'></div><BR>\n";
 echo "\t<div id='AllowAgentReplies' align='center' style='display:none;'>\n";
@@ -770,7 +770,7 @@ echo "<BR><div id='AllLiveNonChatAgents' align='center' style='display: none;'><
 echo "</TD>\n";
 echo "</TR>\n";
 
-#echo "<TR BGCOLOR='#E6E6E6'>\n";
+#echo "<TR BGCOLOR='#FFF'>\n";
 #echo "<TD align='center' colspan='2'>&nbsp;\n";
 #echo "</TD>\n";
 #echo "</TR>\n";
@@ -787,7 +787,7 @@ echo "</form>";
 <span id='AgentNewChatSpan' name='AgentNewChatSpan' style='display: none;'>
 <?php
 echo "<table width='600' border='0' cellpadding='5' cellspacing='0'>\n";
-echo "<TR BGCOLOR='#E6E6E6' valign='top'>\n";
+echo "<TR BGCOLOR='#FFF' valign='top'>\n";
 echo "<td width='*'><font class='arial'>"._QXZ("Select a live agent").":</font><BR>\n";
 
 $stmt="SELECT user_group from vicidial_users where user='$user';";
@@ -852,7 +852,7 @@ echo "<td width='200'><font class='arial'>"._QXZ("Message").":</font><BR>\n";
 echo "<textarea class='small_arial' rows='5' style='width:200px; name='agent_message' id='agent_message'></textarea>";
 echo "</td></TR>\n";
 
-echo "<TR BGCOLOR='#E6E6E6'>\n";
+echo "<TR BGCOLOR='#FFF'>\n";
 echo "<td><BR><input class='red_btn' type='button' style='width:200px' value='"._QXZ("BACK TO CHAT SCREEN")."' onClick=\"document.getElementById('AgentChatSpan').style.display='block'; document.getElementById('AgentNewChatSpan').style.display='none';\"></td>\n";
 echo "<td align='center'><BR><input class='green_btn' type='button' style='width:200px' value='"._QXZ("START CHAT")."' onClick=\"CreateAgentToAgentChat()\">\n</td></TR>\n";
 echo "</table>";
