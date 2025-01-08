@@ -70,8 +70,8 @@ $(function()
             </a>
         </li>
         <?php
-            //if ($SSenable_second_script > 0)
-            if (true)
+            if ($SSenable_second_script > 0)
+            //if (true)
             {
         ?>
                 <li class="nav-item">
@@ -83,8 +83,8 @@ $(function()
             }
         ?>
         <?php
-            //if ($custom_fields_enabled > 0)
-            if (true)
+            if ($custom_fields_enabled > 0)
+            //if (true)
             {
         ?>
                 <li class="nav-item">
@@ -96,8 +96,8 @@ $(function()
             }
         ?>
         <?php
-            //if ($email_enabled > 0)
-            if (true)
+            if ($email_enabled > 0)
+            //if (true)
             {
         ?>
                 <li class="nav-item">
@@ -109,8 +109,8 @@ $(function()
             }
         ?>
         <?php
-            //if ($chat_enabled > 0)
-            if (true)
+            if ($chat_enabled > 0)
+            //if (true)
             {
         ?>
                 <li class="nav-item">
