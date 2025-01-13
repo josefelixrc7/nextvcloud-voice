@@ -868,10 +868,10 @@ if($child_window) {
 		</tr>
 		<tr>
 			<td align='left' class='chat_message' valign='top'>
-				<input class='btn btn-primary' type='button' style="width:100px" value="<?php echo _QXZ("SEND MESSAGE"); ?>" onClick="SendMessage(this.form.chat_id.value, this.form.user.value, this.form.chat_message.value)"><BR><BR><input type='checkbox' id='MuteCustomerChatAlert' name='MuteCustomerChatAlert'><?php echo _QXZ("Mute alert sound"); ?>
+				<input class='btn btn-primary' type='button' value="<?php echo _QXZ("SEND MESSAGE"); ?>" onClick="SendMessage(this.form.chat_id.value, this.form.user.value, this.form.chat_message.value)"><BR><BR><input type='checkbox' id='MuteCustomerChatAlert' name='MuteCustomerChatAlert'><?php echo _QXZ("Mute alert sound"); ?>
 			</td>
 			<td align='right' class='chat_message' valign='top'>
-				<input class='btn btn-danger' type='button' style="width:100px" value="<?php echo _QXZ("CLEAR"); ?>" onClick="document.getElementById('chat_message').value=''"><BR><BR>
+				<input class='btn btn-danger' type='button' value="<?php echo _QXZ("CLEAR"); ?>" onClick="document.getElementById('chat_message').value=''"><BR><BR>
 			<?php
 			if ($user_level) {
 				echo "<input type='checkbox' name='private_message' id='private_message' value='1'>"._QXZ("Privacy ON");
@@ -879,7 +879,7 @@ if($child_window) {
 			?>
 			</td>
 			<td align='right' class='chat_message' valign='top'>
-				<input class='btn btn-secondary' type='button' style="width:100px" value="<?php echo _QXZ("TRANSFER"); ?>"  onClick="ToggleSpan('ChatConsoleSpan'); ToggleSpan('XferConsoleSpan'); LoadXferOptions();"><BR><BR>
+				<input class='btn btn-secondary' type='button' value="<?php echo _QXZ("TRANSFER"); ?>"  onClick="ToggleSpan('ChatConsoleSpan'); ToggleSpan('XferConsoleSpan'); LoadXferOptions();"><BR><BR>
 			</td>
 		</tr>
 		<tr>
@@ -896,11 +896,11 @@ if($child_window) {
 		<tr>
 			<td align='right' class='chat_message'><?php echo _QXZ("Chat group"); ?>:</td>
 			<td align='left'>
-				<select name='ChatXferGroups' id='ChatXferGroups' onChange="document.getElementById('ChatXferAgents').selectedIndex='0'" class='form-select' style="width:240px">
+				<select name='ChatXferGroups' id='ChatXferGroups' onChange="document.getElementById('ChatXferAgents').selectedIndex='0'" class='form-select'>
 					<option value=''><?php echo _QXZ("-- Select a group to transfer to --"); ?></option>
 				</select>
 			</td>
-			<td align='center' valign='middle' rowspan='2' width='*'><input class='btn btn-primary' type='button' style="width:100px" value="<?php echo _QXZ("TRANSFER CHAT"); ?>" onClick="SendChatXferSpan(document.getElementById('ChatXferGroups').selectedIndex, document.getElementById('ChatXferAgents').selectedIndex)"></td>
+			<td align='center' valign='middle' rowspan='2' width='*'><input class='btn btn-primary' type='button' value="<?php echo _QXZ("TRANSFER CHAT"); ?>" onClick="SendChatXferSpan(document.getElementById('ChatXferGroups').selectedIndex, document.getElementById('ChatXferAgents').selectedIndex)"></td>
 		</tr>
 		<tr>
 			<td align='right' class='chat_message'><?php echo _QXZ("Agents"); ?>:</td>
@@ -911,7 +911,7 @@ if($child_window) {
 			</td>
 		</tr>
 		<tr>
-			<td align='center' colspan='3'><BR><input class='btn btn-secondary' type='button' style="width:100px" value="<?php echo _QXZ("CANCEL"); ?>" onClick="ToggleSpan('ChatConsoleSpan'); ToggleSpan('XferConsoleSpan');"></td>
+			<td align='center' colspan='3'><BR><input class='btn btn-secondary' type='button' value="<?php echo _QXZ("CANCEL"); ?>" onClick="ToggleSpan('ChatConsoleSpan'); ToggleSpan('XferConsoleSpan');"></td>
 		</tr>
 	</table>
 	</span>
