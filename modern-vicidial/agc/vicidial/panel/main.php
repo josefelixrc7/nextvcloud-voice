@@ -175,6 +175,20 @@
                         }*/
                         ?>
 
+                        <span id="AgentViewSpan">
+                            <table class="table">
+                                <tr>
+                                    <td></td>
+                                    <td align="center">
+                                        <font class="body_text"><?php echo _QXZ("Other Agents Status:"); ?> &nbsp; </font>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center"><span id="AgentViewStatus"></span></td>
+                                </tr>
+                            </table>
+                        </span>
+
                     </section>
 
                 </main>

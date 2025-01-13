@@ -63,20 +63,6 @@ if ($view_calls_in_queue > 0)
 ?>
 </span>
 
-<span id="AgentViewSpan">
-	<table cellpadding="0" cellspacing="0" border="0">
-		<tr>
-			<td width="5px" rowspan="2">&nbsp;</td>
-			<td align="center">
-				<font class="body_text"><?php echo _QXZ("Other Agents Status:"); ?> &nbsp; </font>
-			</td>
-		</tr>
-		<tr>
-			<td align="center"><span id="AgentViewStatus">&nbsp;</span></td>
-		</tr>
-	</table>
-</span>
-
 <font class="body_small"><span id="dialableleadsspan">
 <?php 
 if ($agent_display_dialable_leads > 0)
