@@ -198,7 +198,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
 <script type="text/javascript" src="simpletreemenu.js">
 
 /***********************************************
-* Simple Tree Menu- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* Simple Tree Menu- ï¿½ Dynamic Drive DHTML code library (www.dynamicdrive.com)
 * This notice MUST stay intact for legal use
 * Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
 ***********************************************/
@@ -206,6 +206,10 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
 </script>
 
 <link rel="stylesheet" type="text/css" href="css/simpletree.css" />
+
+<?php
+	include '../modern-vicidial/agc/vicidial/main_head.php';
+?>
 
 <script language="Javascript">
 var clickMute=<?php echo $clickmute; ?>;
@@ -843,12 +847,12 @@ if($child_window) {
 <form name='chat_form' action='<?php echo $PHP_SELF; ?>'>
 <table width='100%' border='0'>
 <tr>
-	<td class='chat_window' height='300' width='*'>
+	<td class='chat_window' height='300' width='70%'>
 	<span id='ChatDisplay' name='ChatDisplay' style="display:block;height:300px;overflow-y:auto;overflow-x:none;z-index:0;">
 	</span>
 <!--	<span style="display:block;top:280px;right:25px;z-index:1"><img border="0" src="images/VICIchat_powered_logo.gif" width="123" height="30"></span> //-->
 	</td>
-	<td width='200' valign='top'>
+	<td width='30%' valign='top'>
 	<span id='ActiveChats' name='ActiveChats' style="overflow-y:auto; overflow-x:none;">
 	</span>
 	</td>
@@ -856,23 +860,26 @@ if($child_window) {
 <tr>
 	<td align='center'>
 	<span id="ChatConsoleSpan" name="ChatConsoleSpan" style="display: block;">
-	<table width='400' align='center' border='0' cellpadding='0' cellspacing='0'>
+	<table width='100%' align='center' border='0' cellpadding='0' cellspacing='0'>
 		<tr>
 			<td colspan='3' align='center'>
-				<textarea border='1' name='chat_message' id='chat_message' class='chat_window' cols='100' rows='4' onkeypress="if (event.keyCode==13 && !event.shiftKey) {SendMessage(this.form.chat_id.value, this.form.user.value, this.form.chat_message.value); return false;}"></textarea>
+				<textarea name='chat_message' id='chat_message' class='form-control' cols='100' rows='4' onkeypress="if (event.keyCode==13 && !event.shiftKey) {SendMessage(this.form.chat_id.value, this.form.user.value, this.form.chat_message.value); return false;}"></textarea>
 			</td>
 		</tr>
 		<tr>
-			<td align='left' class='chat_message' valign='top'><input class='blue_btn' type='button' style="width:100px" value="<?php echo _QXZ("SEND MESSAGE"); ?>" onClick="SendMessage(this.form.chat_id.value, this.form.user.value, this.form.chat_message.value)"><BR><BR><input type='checkbox' id='MuteCustomerChatAlert' name='MuteCustomerChatAlert'><?php echo _QXZ("Mute alert sound"); ?>
+			<td align='left' class='chat_message' valign='top'>
+				<input class='btn btn-primary' type='button' style="width:100px" value="<?php echo _QXZ("SEND MESSAGE"); ?>" onClick="SendMessage(this.form.chat_id.value, this.form.user.value, this.form.chat_message.value)"><BR><BR><input type='checkbox' id='MuteCustomerChatAlert' name='MuteCustomerChatAlert'><?php echo _QXZ("Mute alert sound"); ?>
 			</td>
-			<td align='right' class='chat_message' valign='top'><input class='blue_btn' type='button' style="width:100px" value="<?php echo _QXZ("CLEAR"); ?>" onClick="document.getElementById('chat_message').value=''"><BR><BR>
+			<td align='right' class='chat_message' valign='top'>
+				<input class='btn btn-danger' type='button' style="width:100px" value="<?php echo _QXZ("CLEAR"); ?>" onClick="document.getElementById('chat_message').value=''"><BR><BR>
 			<?php
 			if ($user_level) {
 				echo "<input type='checkbox' name='private_message' id='private_message' value='1'>"._QXZ("Privacy ON");
 			}
 			?>
 			</td>
-			<td align='right' class='chat_message' valign='top'><input class='red_btn' type='button' style="width:100px" value="<?php echo _QXZ("TRANSFER"); ?>"  onClick="ToggleSpan('ChatConsoleSpan'); ToggleSpan('XferConsoleSpan'); LoadXferOptions();"><BR><BR>
+			<td align='right' class='chat_message' valign='top'>
+				<input class='btn btn-secondary' type='button' style="width:100px" value="<?php echo _QXZ("TRANSFER"); ?>"  onClick="ToggleSpan('ChatConsoleSpan'); ToggleSpan('XferConsoleSpan'); LoadXferOptions();"><BR><BR>
 			</td>
 		</tr>
 		<tr>
@@ -885,39 +892,39 @@ if($child_window) {
 	</table>
 	</span>
 	<span id="XferConsoleSpan" name="XferConsoleSpan" style="display: none;">
-	<table width='450' align='center' border='0' cellpadding='3' cellspacing='0'>
+	<table width='100%' align='center' border='0' cellpadding='3' cellspacing='0'>
 		<tr>
-			<td align='right' width='100' class='chat_message'><?php echo _QXZ("Chat group"); ?>:</td>
-			<td align='left' width='240'>
-				<select name='ChatXferGroups' id='ChatXferGroups' onChange="document.getElementById('ChatXferAgents').selectedIndex='0'" class='chat_window' style="width:240px">
+			<td align='right' class='chat_message'><?php echo _QXZ("Chat group"); ?>:</td>
+			<td align='left'>
+				<select name='ChatXferGroups' id='ChatXferGroups' onChange="document.getElementById('ChatXferAgents').selectedIndex='0'" class='form-select' style="width:240px">
 					<option value=''><?php echo _QXZ("-- Select a group to transfer to --"); ?></option>
 				</select>
 			</td>
-			<td align='center' valign='middle' rowspan='2' width='*'><input class='blue_btn' type='button' style="width:100px" value="<?php echo _QXZ("TRANSFER CHAT"); ?>" onClick="SendChatXferSpan(document.getElementById('ChatXferGroups').selectedIndex, document.getElementById('ChatXferAgents').selectedIndex)"></td>
+			<td align='center' valign='middle' rowspan='2' width='*'><input class='btn btn-primary' type='button' style="width:100px" value="<?php echo _QXZ("TRANSFER CHAT"); ?>" onClick="SendChatXferSpan(document.getElementById('ChatXferGroups').selectedIndex, document.getElementById('ChatXferAgents').selectedIndex)"></td>
 		</tr>
 		<tr>
 			<td align='right' class='chat_message'><?php echo _QXZ("Agents"); ?>:</td>
 			<td align='left'>
-				<select name='ChatXferAgents' id='ChatXferAgents' onChange="document.getElementById('ChatXferGroups').selectedIndex='0'" class='chat_window' style="width:240px">
+				<select name='ChatXferAgents' id='ChatXferAgents' onChange="document.getElementById('ChatXferGroups').selectedIndex='0'" class='form-select'>
 					<option value=''><?php echo _QXZ("-- Select an agent to transfer to --"); ?></option>
 				</select>
 			</td>
 		</tr>
 		<tr>
-			<td align='center' colspan='3'><BR><input class='red_btn' type='button' style="width:100px" value="<?php echo _QXZ("CANCEL"); ?>" onClick="ToggleSpan('ChatConsoleSpan'); ToggleSpan('XferConsoleSpan');"></td>
+			<td align='center' colspan='3'><BR><input class='btn btn-secondary' type='button' style="width:100px" value="<?php echo _QXZ("CANCEL"); ?>" onClick="ToggleSpan('ChatConsoleSpan'); ToggleSpan('XferConsoleSpan');"></td>
 		</tr>
 	</table>
 	</span>
 	</td>
-	<td valign='middle' align='center' width='200' rowspan='2'>
+	<td valign='middle' align='center' rowspan='2'>
 	<?php
 
 	if ($full_name) {
 		echo "<span id='chat_creator_console' name='chat_creator_console'>";
 		if (!$chat_id) {
-			echo "<BR/><BR/><input class='green_btn' type='button' style=\"width:150px\" value=\""._QXZ("START CHAT")."\" onClick=\"StartChat()\">";
+			echo "<BR/><BR/><input class='btn btn-primary' type='button' style=\"width:150px\" value=\""._QXZ("START CHAT")."\" onClick=\"StartChat()\">";
 
-			echo "<BR/><BR/><select name='startchat_group_id' id='startchat_group_id' class='chat_window' onChange=\"document.getElementById('chat_group_id').value=this.value\">\n"; 
+			echo "<BR/><BR/><select class='form-select' name='startchat_group_id' id='startchat_group_id' class='chat_window' onChange=\"document.getElementById('chat_group_id').value=this.value\">\n"; 
 			echo "<option value='' selected>--"._QXZ("SELECT A CHAT GROUP")."--</option>\n";
 			# CREATE LIST OF GroUP IDS to select
 			if (count($chat_group_ids)>0) {
@@ -950,9 +957,9 @@ if($child_window) {
 		}
 		if ($chat_creator && $chat_creator==$user) {
 			if (!$email_invite_lead_id) { # Flag from sending an invite - this page reloads as a result and this below INVITE button must be prevented from being loaded
-				echo "<BR/><BR/><input class='blue_btn' type='button' style=\"width:150px\" value=\""._QXZ("INVITE")."\" onClick=\"javascript:document.getElementById('email_window').style.display='block'\">";
+				echo "<BR/><BR/><input class='btn btn-secondary' type='button' style=\"width:150px\" value=\""._QXZ("INVITE")."\" onClick=\"javascript:document.getElementById('email_window').style.display='block'\">";
 			}
-			echo "<BR/><BR/><input class='red_btn' type='button' style=\"width:150px\" value=\""._QXZ("END CHAT")."\" onClick=\"EndChat()\">";
+			echo "<BR/><BR/><input class='btn btn-danger' type='button' style=\"width:150px\" value=\""._QXZ("END CHAT")."\" onClick=\"EndChat()\">";
 		}
 		echo "</span>";
 	}
@@ -965,9 +972,9 @@ if($child_window) {
 		<span id="email_window" style="display: none">
 		<table width='90%'>
 			<tr>
-				<td align='left' class='chat_message'><?php echo _QXZ("Enter email address of guest"); ?>: <input type='text' name='email_invite' id='email_invite'  onkeypress="if (event.keyCode==13 &amp;&amp; !event.shiftKey) {SendInvite(); return false;}"></td>
-				<td align='left'><input class='green_btn' type='button' style="width:150px" value="<?php echo _QXZ("SEND"); ?>" onClick="SendInvite()"></td>
-				<td align='center'><input class='red_btn' type='button' style="width:150px" value="<?php echo _QXZ("HIDE"); ?>" onClick="javascript:document.getElementById('email_window').style.display='none'"></td>
+				<td align='left' class='chat_message'><?php echo _QXZ("Enter email address of guest"); ?>: <input class='form-control' type='text' name='email_invite' id='email_invite'  onkeypress="if (event.keyCode==13 &amp;&amp; !event.shiftKey) {SendInvite(); return false;}"></td>
+				<td align='left'><input class='btn btn-primary' type='button' style="width:150px" value="<?php echo _QXZ("SEND"); ?>" onClick="SendInvite()"></td>
+				<td align='center'><input class='btn btn-secondary' type='button' style="width:150px" value="<?php echo _QXZ("HIDE"); ?>" onClick="javascript:document.getElementById('email_window').style.display='none'"></td>
 			</tr>
 		</table>
 		</span>
