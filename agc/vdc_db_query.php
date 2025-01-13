@@ -16422,7 +16422,7 @@ if ($ACTION == 'AGENTSview')
 		}
 
 
-	echo "<TABLE CELLPADDING=0 CELLSPACING=1>";
+	echo "<TABLE class=\"table\">";
 	### Gather agents data and statuses
 	$agentviewlistSQL='';
 	$j=0;

@@ -178,13 +178,13 @@
                         <span id="AgentViewSpan">
                             <table class="table">
                                 <tr>
-                                    <td></td>
+                                    <td width="5px" rowspan="2">&nbsp;</td>
                                     <td align="center">
                                         <font class="body_text"><?php echo _QXZ("Other Agents Status:"); ?> &nbsp; </font>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td align="center"><span id="AgentViewStatus"></span></td>
+                                    <td align="center"><span id="AgentViewStatus">&nbsp;</span></td>
                                 </tr>
                             </table>
                         </span>
