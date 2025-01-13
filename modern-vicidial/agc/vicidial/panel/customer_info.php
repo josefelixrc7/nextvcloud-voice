@@ -594,8 +594,14 @@
                 
                 if ($per_call_notes == 'ENABLED')
                 {
-                    echo _QXZ("Call Notes: ");
-                    echo "<textarea name=\"call_notes\" id=\"call_notes\" rows=\"2\" cols=\"85\" class=\"cust_form_text\" value=\"\"></textarea>\n";
+                    echo "
+                        <div class=\"col-12 col-md-3\">
+                            <div>
+                                "._QXZ("Call Notes: ")."
+                                <textarea class=\"form-control\" name=\"call_notes\" id=\"call_notes\" rows=\"2\" cols=\"85\" class=\"cust_form_text\" value=\"\"></textarea>
+                            </div>
+                        </div>
+                    ";
                 }
                 else
                 {
