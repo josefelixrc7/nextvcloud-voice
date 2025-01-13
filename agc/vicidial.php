@@ -14169,7 +14169,7 @@ function set_length(SLnumber,SLlength_goal,SLdirection)
 				var test_notes = document.vicidial_form.call_notes_dispo.value;
 				if (test_notes.length > 0)
 					{document.vicidial_form.call_notes.value = document.vicidial_form.call_notes_dispo.value}
-				document.getElementById("PerCallNotesContent").innerHTML = "<br /><b><font size=\"3\"><?php echo _QXZ("Call Notes:"); ?> </font></b><br /><textarea name=\"call_notes_dispo\" id=\"call_notes_dispo\" rows=\"2\" cols=\"100\" class=\"cust_form_text\" value=\"\">" + document.vicidial_form.call_notes.value + "</textarea>";
+				document.getElementById("PerCallNotesContent").innerHTML = "<br /><b><font size=\"3\"><?php echo _QXZ("Call Notes:"); ?> </font></b><br /><textarea class=\"form-control\" name=\"call_notes_dispo\" id=\"call_notes_dispo\" rows=\"2\" cols=\"100\" class=\"cust_form_text\" value=\"\">" + document.vicidial_form.call_notes.value + "</textarea>";
 				}
 			else
 				{
