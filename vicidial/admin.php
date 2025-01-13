@@ -37644,7 +37644,7 @@ if ($ADD==361111111111)
 		echo "<input type=hidden name=ADD value=461111111111>\n";
 		echo "<input type=hidden name=moh_id value=\"$moh_id\">\n";
 
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Music On Hold ID").": </td><td align=left><B>$moh_id</B></td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Music On Hold Name").": </td><td align=left><input type=text name=moh_name size=50 maxlength=100 value=\"$moh_name\">$NWB#music_on_hold-moh_name$NWE</td></tr>\n";
 
@@ -37863,7 +37863,7 @@ if ($ADD==371111111111)
 		echo "<input type=hidden name=DB value=$DB>\n";
 		echo "<input type=hidden name=voicemail_id value=\"$voicemail_id\">\n";
 
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Voicemail ID").": </td><td align=left><B>$voicemail_id</B></td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Password").": </td><td align=left><input type=text name=pass size=12 maxlength=10 value=\"$pass\">$NWB#voicemail-pass$NWE</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Name").": </td><td align=left><input type=text name=fullname size=50 maxlength=100 value=\"$fullname\">$NWB#voicemail-fullname$NWE</td></tr>\n";
@@ -37974,7 +37974,7 @@ if ($ADD==381111111111)
 		echo "<input type=hidden name=ADD value=481111111111>\n";
 		echo "<input type=hidden name=label_id value=\"$label_id\">\n";
 
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Label ID").": </td><td align=left><B>$label_id</B></td></tr>\n";
 
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Label Name").": </td><td align=left><input type=text name=label_name size=50 maxlength=100 value=\"$label_name\">$NWB#screen_labels-label_name$NWE</td></tr>\n";
@@ -38105,7 +38105,7 @@ if ($ADD==382111111111)
 		echo "<input type=hidden name=ADD value=482111111111>\n";
 		echo "<input type=hidden name=colors_id value=\"$colors_id\">\n";
 
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Colors ID").": </td><td align=left colspan=2><B>$colors_id</B></td></tr>\n";
 
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Colors Name").": </td><td align=left colspan=2><input type=text name=colors_name size=50 maxlength=100 value=\"$colors_name\">$NWB#screen_colors-colors_name$NWE</td></tr>\n";
@@ -38400,7 +38400,7 @@ if ($ADD==393111111111)
 		echo "<input type=hidden name=ADD value=493111111111>\n";
 		echo "<input type=hidden name=status_group_id value=\"$status_group_id\">\n";
 
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Status Group ID").": </td><td align=left><B>$status_group_id</B></td></tr>\n";
 
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Status Group Notes").": </td><td align=left><input type=text name=status_group_notes size=50 maxlength=255 value=\"$status_group_notes\">$NWB#status_groups$NWE</td></tr>\n";
@@ -38645,7 +38645,7 @@ if ($ADD==394111111111)
 		echo "<input type=hidden name=ADD value=494111111111>\n";
 		echo "<input type=hidden name=DB value=\"$DB\">\n";
 		echo "<input type=hidden name=report_id value=\"$report_id\">\n";
-		echo "<center><TABLE width=980 cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=980 cellspacing=3>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Report ID").": </td><td align=left><B>$report_id</B></td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Last Run Time").": </td><td align=left><B>$report_last_run</B> &nbsp; <font size=1>($report_last_length "._QXZ("seconds").")</font></td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Report Name").": </td><td align=left><input type=text name=report_name size=60 maxlength=100 value=\"$report_name\"> $NWB#auto_reports-report_name$NWE</td></tr>\n";
@@ -38884,7 +38884,7 @@ if ($ADD==395111111111)
 			echo "<input type=hidden name=ADD value=395111111111>\n";
 			echo "<input type=hidden name=ip_list_id value=\"$ip_list_id\">\n";
 			echo "<input type=hidden name=DB value=\"$DB\">\n";
-			echo "<center><TABLE width=800 cellspacing=3>\n";
+			echo "<center><TABLE class=\"".$table_classes_1."\" width=800 cellspacing=3>\n";
 			echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("IP List").": </td><td align=left><b>$ip_list_id</b></td></tr>\n";
 			echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("IP List Name").": </td><td align=left><input type=text name=ip_list_name size=60 maxlength=100 value=\"$ip_list_name\"> $NWB#ip_lists-ip_list_name$NWE</td></tr>\n";
 			echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Active").": </td><td align=left><select size=1 name=active>\n";
@@ -42578,7 +42578,7 @@ if ($ADD==150000000000)
 	$tts_to_print = mysqli_num_rows($rslt);
 
 	echo "<br>"._QXZ("TEXT-TO-SPEECH(TTS) LISTINGS").":\n";
-	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
+	echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=0 cellpadding=1>\n";
 	echo "<tr bgcolor=black>";
 	echo "<td><font size=1 color=white align=left><B>"._QXZ("TTS ID")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("TTS Name")."</B></td>";
