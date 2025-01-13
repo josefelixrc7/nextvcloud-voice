@@ -595,8 +595,6 @@
                 if ($per_call_notes == 'ENABLED')
                 {
                     echo _QXZ("Call Notes: ");
-                    if ($agent_call_log_view == '1')
-                        {echo "<br /><span id=\"CallNotesButtons\"><a href=\"#\" onclick=\"VieWNotesLoG();return false;\">"._QXZ("view notes")."</a></span> ";}
                     echo "<textarea name=\"call_notes\" id=\"call_notes\" rows=\"2\" cols=\"85\" class=\"cust_form_text\" value=\"\"></textarea>\n";
                 }
                 else

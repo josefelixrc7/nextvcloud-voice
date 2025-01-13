@@ -40,6 +40,13 @@
                 <!-- Barra de botones -->
                 <div class="btn-toolbar mb-2 mb-md-0">
 
+                    <?php
+                    if ($agent_call_log_view == '1')
+                    {
+                        echo "<span id=\"CallNotesButtons\"><a class=\"btn btn-sm btn-outline-secondary me-2\" href=\"#\" onclick=\"VieWNotesLoG();return false;\">"._QXZ("view notes")."</a></span> ";
+                    }
+                    ?>
+
                     <span id="NexTCalLPausE">
                         <a class="btn btn-sm btn-outline-secondary me-2" href="#" onclick="next_call_pause_click();return false;"><?php echo _QXZ("Next Call Pause"); ?></a>
                     </span>
