@@ -288,8 +288,8 @@ if ($agent_display_dialable_leads > 0)
 </span>
 
 <?php
-	include 'parts/dispo_select_box.php'
-	include 'parts/transfer_main.php'
+	include 'parts/dispo_select_box.php';
+	include 'parts/transfer_main.php';
 ?>
 
 <span style="position:absolute;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="CallBackSelectBox">
