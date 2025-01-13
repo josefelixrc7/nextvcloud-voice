@@ -42579,7 +42579,7 @@ if ($ADD==150000000000)
 
 	echo "<br>"._QXZ("TEXT-TO-SPEECH(TTS) LISTINGS").":\n";
 	echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=0 cellpadding=1>\n";
-	echo "<tr bgcolor=black>";
+	echo "<tr bgcolor=\"#333\">";
 	echo "<td><font size=1 color=white align=left><B>"._QXZ("TTS ID")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("TTS Name")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("Active")."</B></td>";

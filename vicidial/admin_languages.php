@@ -1389,7 +1389,7 @@ if ($ADD==363111111111)
 		echo "<input type=hidden name=action value=\"$action\">\n";
 		echo "<input type=hidden name=language_id value=\"$language_id\">\n";
 
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Language ID").": </td><td align=left><B>$language_id</B></td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Last Modified").": </td><td align=left>$modify_date</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right nowrap>"._QXZ("Language Description").": </td><td align=left nowrap><input type=text name=language_description size=70 maxlength=255 value=\"$language_description\">$NWB#languages-language_description$NWE</td></tr>\n";
@@ -1475,7 +1475,7 @@ if ($ADD==163000000000)
 	$lang_to_print = mysqli_num_rows($rslt);
 
 	echo "<br>"._QXZ("LANGUAGE LISTINGS").":\n";
-	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
+	echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=0 cellpadding=1>\n";
 	echo "<tr bgcolor=black>";
 	echo "<td><font size=1 color=white align=left><B>"._QXZ("LANGUAGE ID")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("Description")."</B></td>";
