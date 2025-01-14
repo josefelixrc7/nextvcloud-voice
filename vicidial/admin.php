@@ -10091,7 +10091,7 @@ if ($ADD==181111111111)
 
 		echo "<br>"._QXZ("ADD NEW SCREEN LABEL")."<form action=$PHP_SELF method=POST>\n";
 		echo "<input type=hidden name=ADD value=281111111111>\n";
-		echo "<center><TABLE class=\"table\" width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Screen Label ID").": </td><td align=left><input type=text name=label_id size=21 maxlength=20>$NWB#screen_labels-label_id$NWE</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Screen Label Name").": </td><td align=left><input type=text name=label_name size=70 maxlength=100>$NWB#screen_labels-label_name$NWE</td></tr>\n";
