@@ -35023,7 +35023,7 @@ if ($ADD==311111)
 			echo "<input type=hidden name=ADD value=411111>\n";
 			echo "<input type=hidden name=OLDuser_group value=\"$user_group\">\n";
 			echo "<input type=hidden name=user_group value=\"$user_group\">\n";
-			echo "<center><TABLE width=$section_width cellspacing=3>\n";
+			echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 			echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Group").": </td><td align=left>$user_group $NWB#user_groups-user_group$NWE</td></tr>\n";
 			echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Description").": </td><td align=left><input type=text name=group_name size=40 maxlength=40 value=\"$group_name\"> ("._QXZ("description of group").")$NWB#user_groups-group_name$NWE</td></tr>\n";
 
