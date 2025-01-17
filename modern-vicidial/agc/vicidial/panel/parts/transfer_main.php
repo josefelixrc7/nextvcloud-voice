@@ -11,9 +11,9 @@
 			</div>
 			<div class="card-body">
                     
-                <table class="table">
+                <table class="">
                     <tr valign="top">
-                        <td align="left" height="30px">
+                        <td align="left">
                             <span class="text_input" id="TransferMaindiv">
                                 <font class="body_text">
                                     <!--<img src="./images/<?php echo _QXZ("vdc_XB_header.gif"); ?>" border="0" alt="Transfer - Conference" style="vertical-align:middle" />-->
@@ -71,8 +71,9 @@
                                         </tr>
                                         <tr>
                                             <td align="left" colspan="2">
-                                                <img src="./images/<?php echo _QXZ("vdc_XB_number.gif"); ?>" border="0" alt="Number to call" style="vertical-align:middle" />
-                                                &nbsp; 
+                                                <!--<img src="./images/<?php echo _QXZ("vdc_XB_number.gif"); ?>" border="0" alt="Number to call" style="vertical-align:middle" />-->
+                                                
+                                                <?php echo _QXZ("Number to Call"); ?>
                                                 <?php
                                                 if ($hide_xfer_number_to_dial=='ENABLED')
                                                 {
@@ -116,19 +117,16 @@
                                                 <span style="background-color: <?php echo $MAIN_COLOR ?>" id="DialBlindTransfer">
                                                     <img src="./images/<?php echo _QXZ("vdc_XB_blindtransfer_OFF.gif"); ?>" border="0" alt="Dial Blind Transfer" style="vertical-align:middle" />
                                                 </span>
-                                                &nbsp;
                                                 <span style="background-color: <?php echo $MAIN_COLOR ?>" id="DialWithCustomer">
                                                     <a href="#" onclick="SendManualDial('YES','YES');return false;">
                                                         <img src="./images/<?php echo _QXZ("vdc_XB_dialwithcustomer.gif"); ?>" border="0" alt="Dial With Customer" style="vertical-align:middle" />
                                                     </a>
                                                 </span>
-                                                &nbsp;
                                                 <span style="background-color: <?php echo $MAIN_COLOR ?>" id="ParkCustomerDial">
                                                     <a href="#" onclick="xfer_park_dial('YES');return false;">
                                                         <img src="./images/<?php echo _QXZ("vdc_XB_parkcustomerdial.gif"); ?>" border="0" alt="Park Customer Dial" style="vertical-align:middle" />
                                                     </a>
                                                 </span>
-                                                &nbsp;
                                                 <?php
                                                 if ($enable_xfer_presets=='ENABLED')
                                                 {
@@ -155,7 +153,7 @@
                                                     else
                                                     {
                                                         ?>
-                                                            <div class="mt-2">
+                                                            <div class="my-2">
                                                                 <a class="btn btn-secondary btn-sm" href="#" onclick="DtMf_PreSet_a();return false;">D1</a> 
                                                                 <a class="btn btn-secondary btn-sm" href="#" onclick="DtMf_PreSet_b();return false;">D2</a>
                                                                 <a class="btn btn-secondary btn-sm" href="#" onclick="DtMf_PreSet_c();return false;">D3</a>
