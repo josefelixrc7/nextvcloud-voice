@@ -16579,7 +16579,7 @@ if ($ACTION == 'AGENTSview')
 		}
 
 	echo "</TABLE><BR>\n";
-	echo "<font style=\"font-size:10px;font-family:sans-serif;\"><font style=\"background-color:#ADD8E6;\"> &nbsp; &nbsp;</font>-"._QXZ("READY")." &nbsp; <font style=\"background-color:#D8BFD8;\">&nbsp; &nbsp;</font>-"._QXZ("INCALL")." &nbsp; <font style=\"background-color:#F0E68C;\"> &nbsp; &nbsp;</font>-"._QXZ("PAUSED")." &nbsp;\n";
+	echo "<font style=\"font-size:10px;font-family:sans-serif;\"><font style=\"background-color:#0d6efd;\"> &nbsp; &nbsp;</font>-"._QXZ("READY")." &nbsp; <font style=\"background-color:#54c248;\">&nbsp; &nbsp;</font>-"._QXZ("INCALL")." &nbsp; <font style=\"background-color:#e8b756;\"> &nbsp; &nbsp;</font>-"._QXZ("PAUSED")." &nbsp;\n";
 	if (preg_match("/NOT-LOGGED-IN-AGENTS/",$agent_status_viewable_groups))
 		{echo "<font style=\"background-color:#FFFFFF;\"> &nbsp; &nbsp;</font>"._QXZ("-LOGGED-OUT")." &nbsp;\n";}
 
