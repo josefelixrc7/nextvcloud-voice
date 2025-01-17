@@ -62,7 +62,11 @@
                                                 </span>
                                             </td>
                                             <td align="left">
-                                                <span id="HangupBothLines"><a href="#" onclick="bothcall_send_hangup('YES');return false;"><img src="./images/<?php echo _QXZ("vdc_XB_hangupbothlines.gif"); ?>" border="0" alt="Hangup Both Lines" style="vertical-align:middle" /></a></span>
+                                                <span id="HangupBothLines">
+                                                    <a href="#" onclick="bothcall_send_hangup('YES');return false;">
+                                                        <img src="./images/<?php echo _QXZ("vdc_XB_hangupbothlines.gif"); ?>" border="0" alt="Hangup Both Lines" style="vertical-align:middle" />
+                                                    </a>
+                                                </span>
                                             </td>
                                         </tr>
                                         <tr>
