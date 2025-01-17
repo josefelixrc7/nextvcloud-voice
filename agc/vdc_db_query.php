@@ -16449,17 +16449,17 @@ if ($ACTION == 'AGENTSview')
 
 		if ( ($status=='READY') or ($status=='CLOSER') ) 
 			{
-			$statuscolor='#ADD8E6';
+			$statuscolor='#0d6efd';
 			$call_time = ($StarTtime - $state_change);
 			}
 		if ( ($status=='QUEUE') or ($status=='INCALL') ) 
 			{
-			$statuscolor='#D8BFD8';
+			$statuscolor='#54c248';
 			$call_time = ($StarTtime - $state_change);
 			}
 		if ($status=='PAUSED') 
 			{
-			$statuscolor='#F0E68C';
+			$statuscolor='#e8b756';
 			$call_time = ($StarTtime - $state_change);
 			}
 
