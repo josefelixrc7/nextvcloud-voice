@@ -29,6 +29,8 @@
                                                         <option>-- <?php echo _QXZ("SELECT A GROUP TO SEND YOUR CALL TO"); ?> --</option>
                                                     </select>
                                                 </span>
+                                            </td>
+                                            <td>
                                                 <span id="LocalCloser">
                                                     <img src="./images/<?php echo _QXZ("vdc_XB_localcloser_OFF.gif"); ?>" border="0" alt="LOCAL CLOSER" style="vertical-align:middle" />
                                                 </span>
@@ -37,9 +39,10 @@
                                                 <span id="HangupXferLine">
                                                     <img src="./images/<?php echo _QXZ("vdc_XB_hangupxferline_OFF.gif"); ?>" border="0" alt="Hangup Xfer Line" style="vertical-align:middle" />
                                                 </span>
-                                                &nbsp; 
+                                            </td>
+                                            <td>
                                                 <span id="ParkXferLine">
-                                                    <a class="btn btn-secondary">
+                                                    <a class="">
                                                         <img src="./images/<?php echo _QXZ("vdc_XB_parkxferline_OFF.gif"); ?>" border="0" alt="Park Xfer Line" style="vertical-align:middle" />
                                                     </a>
                                                 </span>
@@ -164,7 +167,6 @@
                                                     }
                                                 }
                                                 ?>
-                                                &nbsp;
                                                 <span style="background-color: <?php echo $MAIN_COLOR ?>" id="DialBlindVMail">
                                                     <img src="./images/<?php echo _QXZ("vdc_XB_ammessage_OFF.gif"); ?>" border="0" alt="Blind Transfer VMail Message" style="vertical-align:middle" />
                                                 </span>
