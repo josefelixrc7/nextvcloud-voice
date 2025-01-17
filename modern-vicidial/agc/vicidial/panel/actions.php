@@ -402,20 +402,29 @@ if ($agent_display_dialable_leads > 0)
 
 <span style="position:absolute;left:560px;top:20px;z-index:<?php $zi++; echo $zi ?>;" id="SBC_timezone_span"><?php echo _QXZ("Loading"); ?>...</span>
 
-<?php //AUDIT COMMENTS ADDED BY POUNDTEAM // ?>
-<span id="ViewCommentsBox">
-    <TABLE>
-	<TR bgcolor="#FFEEBB">
-       <TD valign=top height=20><font class="sh_text"> <?php echo _QXZ("View Comment History:"); ?> </font> &nbsp; <font class="sk_text"><span id="ViewCommentsShowHide"><a href="#" onclick="ViewComments('OFF','','','YES');return false;"><?php echo _QXZ("hide comment history"); ?></a></span></font></td>
-    </TR>
-    <TR>
-       <TD bgcolor=white valign=top height=200><PRE><font size=1><span id="audit_comments"></span></font></PRE>
-	   <input type="hidden" class="cust_form_text" id="audit_comments_button" name="audit_comments_button" value="0" />
-	   </TD>
-	</TR>
-    </TABLE>
-</span>
-<?php //end AUDIT COMMENTS ADDED BY POUNDTEAM // ?>
+
+<span class="w-100 h-100 overflow-scroll" tabindex="-1" style="background:rgba(0, 0, 0, 0.5);position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="ViewCommentsBox">
+    <div class="w-100 mx-auto mt-2">
+
+		<div class="card">
+			<div class="card-header">
+				<h5 class="d-flex">
+					<span class="w-auto"><?php echo _QXZ("View Comment History:"); ?></span>
+					<a class="btn btn-close ms-auto" href="#" onclick="ViewComments('OFF','','','YES');return false;"></a>
+				</h5>
+			</div>
+			<div class="card-body">
+				
+				<span id="audit_comments"></span>
+				<input type="hidden" class="cust_form_text" id="audit_comments_button" name="audit_comments_button" value="0" />
+
+			</div>
+
+		</div>
+
+	</div>
+</span>	
+
 <span style="position:absolute;left:5px;top:<?php echo $HTheight ?>px;z-index:<?php $zi++; echo $zi ?>;" id="CBcommentsBox">
     <table border="0" bgcolor="#FFFFCC" width="<?php echo $HCwidth ?>px" height="70px">
     <tr bgcolor="#FFFF66">
