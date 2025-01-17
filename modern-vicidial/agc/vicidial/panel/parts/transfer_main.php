@@ -16,38 +16,43 @@
                         <td align="left" height="30px">
                             <span class="text_input" id="TransferMaindiv">
                                 <font class="body_text">
-                                    <img src="./images/<?php echo _QXZ("vdc_XB_header.gif"); ?>" border="0" alt="Transfer - Conference" style="vertical-align:middle" /> &nbsp; &nbsp; &nbsp; &nbsp; 
+                                    <!--<img src="./images/<?php echo _QXZ("vdc_XB_header.gif"); ?>" border="0" alt="Transfer - Conference" style="vertical-align:middle" />-->
+                                    <span><?php echo _QXZ("Transfer conference functions"); ?></span>
                                     <span id="XfeRDiaLGrouPSelecteD"></span> &nbsp; &nbsp;
                                     <span id="XfeRCID"></span><br />
                                     
-                                    <table cellpadding="0" cellspacing="1" border="0">
+                                    <table class="table table-striped">
                                         <tr>
-                                            <td align="left" colspan="3">
+                                            <td align="left">
                                                 <span id="XfeRGrouPLisT">
                                                     <select size="1" name="XfeRGrouP" id="XfeRGrouP" class="form-select" onChange="XferAgentSelectLink();return false;">
                                                         <option>-- <?php echo _QXZ("SELECT A GROUP TO SEND YOUR CALL TO"); ?> --</option>
                                                     </select>
                                                 </span>
-                                                <span style="background-color: <?php echo $MAIN_COLOR ?>" id="LocalCloser">
+                                                <span id="LocalCloser">
                                                     <img src="./images/<?php echo _QXZ("vdc_XB_localcloser_OFF.gif"); ?>" border="0" alt="LOCAL CLOSER" style="vertical-align:middle" />
-                                                </span> &nbsp; &nbsp;
+                                                </span>
                                             </td>
                                             <td align="left">
-                                                <span style="background-color: <?php echo $MAIN_COLOR ?>" id="HangupXferLine">
+                                                <span id="HangupXferLine">
                                                     <img src="./images/<?php echo _QXZ("vdc_XB_hangupxferline_OFF.gif"); ?>" border="0" alt="Hangup Xfer Line" style="vertical-align:middle" />
                                                 </span>
                                                 &nbsp; 
-                                                <span style="background-color: <?php echo $MAIN_COLOR ?>" id="ParkXferLine">
-                                                    <img src="./images/<?php echo _QXZ("vdc_XB_parkxferline_OFF.gif"); ?>" border="0" alt="Park Xfer Line" style="vertical-align:middle" />
+                                                <span id="ParkXferLine">
+                                                    <a class="btn btn-secondary">
+                                                        <img src="./images/<?php echo _QXZ("vdc_XB_parkxferline_OFF.gif"); ?>" border="0" alt="Park Xfer Line" style="vertical-align:middle" />
+                                                    </a>
                                                 </span>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td align="left" colspan="2">
-                                                <img src="./images/<?php echo _QXZ("vdc_XB_seconds.gif"); ?>" border="0" alt="seconds" style="vertical-align:middle" />
+                                                <!--<img src="./images/<?php echo _QXZ("vdc_XB_seconds.gif"); ?>" border="0" alt="seconds" style="vertical-align:middle" />-->
+                                                <span><?php echo _QXZ("Seconds"); ?></span>
                                                 <input type="text" size="2" name="xferlength" id="xferlength" maxlength="4" class="form-control" readonly="readonly" />
                                                 &nbsp; 
-                                                <img src="./images/<?php echo _QXZ("vdc_XB_channel.gif"); ?>" border="0" alt="channel" style="vertical-align:middle" />
+                                                <!--<img src="./images/<?php echo _QXZ("vdc_XB_channel.gif"); ?>" border="0" alt="channel" style="vertical-align:middle" />-->
+                                                <span><?php echo _QXZ("Channel"); ?></span>
                                                 <input type="text" size="12" name="xferchannel" id="xferchannel" maxlength="200" class="form-control" readonly="readonly" />
                                             </td>
                                             <td align="left">
@@ -57,7 +62,7 @@
                                                 </span>
                                             </td>
                                             <td align="left">
-                                                <span style="background-color: <?php echo $MAIN_COLOR ?>" id="HangupBothLines"><a href="#" onclick="bothcall_send_hangup('YES');return false;"><img src="./images/<?php echo _QXZ("vdc_XB_hangupbothlines.gif"); ?>" border="0" alt="Hangup Both Lines" style="vertical-align:middle" /></a></span>
+                                                <span id="HangupBothLines"><a href="#" onclick="bothcall_send_hangup('YES');return false;"><img src="./images/<?php echo _QXZ("vdc_XB_hangupbothlines.gif"); ?>" border="0" alt="Hangup Both Lines" style="vertical-align:middle" /></a></span>
                                             </td>
                                         </tr>
                                         <tr>
@@ -95,7 +100,7 @@
                                             </td>
                                             <td align="left">
                                                 <span style="background-color: <?php echo $MAIN_COLOR ?>" id="Leave3WayCall">
-                                                    <a class="btn btn-primary"  href="#" onclick="leave_3way_call('FIRST','YES');return false;">
+                                                    <a  href="#" onclick="leave_3way_call('FIRST','YES');return false;">
                                                         <img src="./images/<?php echo _QXZ("vdc_XB_leave3waycall.gif"); ?>" border="0" alt="LEAVE 3-WAY CALL" style="vertical-align:middle" />
                                                     </a>
                                                 </span>
@@ -109,13 +114,13 @@
                                                 </span>
                                                 &nbsp;
                                                 <span style="background-color: <?php echo $MAIN_COLOR ?>" id="DialWithCustomer">
-                                                    <a class="btn btn-primary" href="#" onclick="SendManualDial('YES','YES');return false;">
+                                                    <a href="#" onclick="SendManualDial('YES','YES');return false;">
                                                         <img src="./images/<?php echo _QXZ("vdc_XB_dialwithcustomer.gif"); ?>" border="0" alt="Dial With Customer" style="vertical-align:middle" />
                                                     </a>
                                                 </span>
                                                 &nbsp;
                                                 <span style="background-color: <?php echo $MAIN_COLOR ?>" id="ParkCustomerDial">
-                                                    <a class="btn btn-primary" href="#" onclick="xfer_park_dial('YES');return false;">
+                                                    <a href="#" onclick="xfer_park_dial('YES');return false;">
                                                         <img src="./images/<?php echo _QXZ("vdc_XB_parkcustomerdial.gif"); ?>" border="0" alt="Park Customer Dial" style="vertical-align:middle" />
                                                     </a>
                                                 </span>
@@ -125,7 +130,9 @@
                                                 {
                                                     ?>
                                                     <span style="background-color: <?php echo $MAIN_COLOR ?>" id="PresetPullDown">
-                                                        <a class="btn btn-primary"  href="#" onclick="generate_presets_pulldown('YES');return false;"><img src="./images/<?php echo _QXZ("vdc_XB_presetsbutton.gif"); ?>" border="0" alt="Presets Button" style="vertical-align:middle" /></a>
+                                                        <a href="#" onclick="generate_presets_pulldown('YES');return false;">
+                                                            <img src="./images/<?php echo _QXZ("vdc_XB_presetsbutton.gif"); ?>" border="0" alt="Presets Button" style="vertical-align:middle" />
+                                                        </a>
                                                     </span>
                                                     <?php
                                                 }
@@ -135,20 +142,22 @@
                                                     {
                                                         ?>
                                                         <span style="background-color: <?php echo $MAIN_COLOR ?>" id="ContactPullDown">
-                                                            <a class="btn btn-primary"  href="#" onclick="generate_contacts_search('YES');return false;"><img src="./images/<?php echo _QXZ("vdc_XB_contactsbutton.gif"); ?>" border="0" alt="Contacts Button" style="vertical-align:middle" /></a>
+                                                            <a href="#" onclick="generate_contacts_search('YES');return false;">
+                                                                <img src="./images/<?php echo _QXZ("vdc_XB_contactsbutton.gif"); ?>" border="0" alt="Contacts Button" style="vertical-align:middle" />
+                                                            </a>
                                                         </span>
                                                         <?php
                                                     }
                                                     else
                                                     {
                                                         ?>
-                                                        <font class="body_tiny">
-                                                        <a class="btn btn-secondary" href="#" onclick="DtMf_PreSet_a();return false;">D1</a> 
-                                                        <a class="btn btn-secondary" href="#" onclick="DtMf_PreSet_b();return false;">D2</a>
-                                                        <a class="btn btn-secondary" href="#" onclick="DtMf_PreSet_c();return false;">D3</a>
-                                                        <a class="btn btn-secondary" href="#" onclick="DtMf_PreSet_d();return false;">D4</a>
-                                                        <a class="btn btn-secondary" href="#" onclick="DtMf_PreSet_e();return false;">D5</a>
-                                                        </font>
+                                                            <div class="mt-2">
+                                                                <a class="btn btn-secondary btn-sm" href="#" onclick="DtMf_PreSet_a();return false;">D1</a> 
+                                                                <a class="btn btn-secondary btn-sm" href="#" onclick="DtMf_PreSet_b();return false;">D2</a>
+                                                                <a class="btn btn-secondary btn-sm" href="#" onclick="DtMf_PreSet_c();return false;">D3</a>
+                                                                <a class="btn btn-secondary btn-sm" href="#" onclick="DtMf_PreSet_d();return false;">D4</a>
+                                                                <a class="btn btn-secondary btn-sm" href="#" onclick="DtMf_PreSet_e();return false;">D5</a>
+                                                            </div>
                                                         <?php
                                                     }
                                                 }
