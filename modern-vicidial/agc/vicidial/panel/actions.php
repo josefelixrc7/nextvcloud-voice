@@ -404,7 +404,7 @@ if ($agent_display_dialable_leads > 0)
 
 
 <span class="w-100 h-100 overflow-scroll" tabindex="-1" style="background:rgba(0, 0, 0, 0.5);position:fixed;left:0px;top:0px;z-index:<?php $zi++; echo $zi ?>;" id="ViewCommentsBox">
-    <div class="w-100 mx-auto mt-2">
+    <div class="w-50 mx-auto mt-2">
 
 		<div class="card">
 			<div class="card-header">
@@ -414,7 +414,7 @@ if ($agent_display_dialable_leads > 0)
 				</h5>
 			</div>
 			<div class="card-body">
-				
+
 				<span id="audit_comments"></span>
 				<input type="hidden" class="cust_form_text" id="audit_comments_button" name="audit_comments_button" value="0" />
 
