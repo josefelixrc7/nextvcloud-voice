@@ -7605,7 +7605,7 @@ if ($ADD==11)
 		echo "<br>"._QXZ("ADD A NEW CAMPAIGN")."<form action=$PHP_SELF method=POST>\n";
 		echo "<input type=hidden name=ADD value=21>\n";
 		echo "<input type=hidden name=park_ext value=''>\n";
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		if ($voi_count > 0)
 			{
 			echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Campaign ID").": </td><td align=left>"._QXZ("Auto-Generated")." $NWB#campaigns-campaign_id$NWE</td></tr>\n";
@@ -7753,7 +7753,7 @@ if ($ADD==12)
 		echo "<br>"._QXZ("COPY A CAMPAIGN")."<form action=$PHP_SELF method=POST>\n";
 		echo "<input type=hidden name=ADD value=20>\n";
 		echo "<input type=hidden name=DB value=\"$DB\">\n";
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		if ($voi_count > 0)
 			{
 			echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Campaign ID").": </td><td align=left>"._QXZ("Auto-Generated")." $NWB#campaigns-campaign_id$NWE</td></tr>\n";
@@ -26501,7 +26501,7 @@ if ($ADD==31)
 		echo "<center>\n";
 		echo "<br><b>"._QXZ("CUSTOM STATUSES WITHIN THIS CAMPAIGN").": &nbsp; $NWB#campaign_statuses$NWE</b> &nbsp; $sgo_message<br>\n";
 
-		echo "<TABLE width=700 cellspacing=3>\n";
+		echo "<TABLE class=\"".$table_classes_1."\" width=700 cellspacing=3>\n";
 		echo "<tr height='250'><td align=center valign=bottom><font size=2><b>"._QXZ("STATUS")."</b></font></td>\n";
 		echo "<td align=center valign=bottom><font size=2><b>"._QXZ("DESCRIPTION")."</td>\n";
 		echo "<td align=center valign=bottom><font size=2><b>"._QXZ("CATEGORY")."</td>\n";
@@ -26624,7 +26624,7 @@ if ($ADD==31)
 	if ($SUB==23)
 		{
 		echo "<br><b>"._QXZ("CUSTOM HOT KEYS WITHIN THIS CAMPAIGN").": &nbsp; $NWB#campaign_hotkeys$NWE</b><br>\n";
-		echo "<TABLE width=400 cellspacing=3>\n";
+		echo "<TABLE class=\"".$table_classes_1."\" width=400 cellspacing=3>\n";
 		echo "<tr><td>"._QXZ("HOT KEY")."</td><td>"._QXZ("STATUS")."</td><td>"._QXZ("DESCRIPTION")."</td><td>"._QXZ("DELETE")."</td></tr>\n";
 
 		$stmt="SELECT status,hotkey,status_name,selectable,campaign_id from vicidial_campaign_hotkeys where campaign_id='$campaign_id' $LOGallowed_campaignsSQL order by hotkey;";
@@ -26719,7 +26719,7 @@ if ($ADD==31)
 		$o=0;
 
 		echo "<br><br><b>"._QXZ("LEAD RECYCLING WITHIN THIS CAMPAIGN").": &nbsp; $NWB#lead_recycle$NWE</b><br>\n";
-		echo "<TABLE width=700 cellspacing=3>\n";
+		echo "<TABLE class=\"".$table_classes_1."\" width=700 cellspacing=3>\n";
 		echo "<tr><td>"._QXZ("STATUS")."</td><td>"._QXZ("ATTEMPT DELAY")."</td><td>"._QXZ("ATTEMPT MAXIMUM")."</td><td>"._QXZ("LEADS AT LIMIT")."</td><td>"._QXZ("ACTIVE")."</td><td> </td><td>"._QXZ("DELETE")."</td></tr>\n";
 
 		while ($recycle_to_print > $o) 
@@ -26778,7 +26778,7 @@ if ($ADD==31)
 	if ($SUB==26)
 		{
 		echo "<br><br><b>"._QXZ("AUTO ALT NUMBER DIALING FOR THIS CAMPAIGN").": &nbsp; $NWB#auto_alt_dial_statuses$NWE</b><br>\n";
-		echo "<TABLE width=500 cellspacing=3>\n";
+		echo "<TABLE class=\"".$table_classes_1."\" width=500 cellspacing=3>\n";
 		echo "<tr><td>"._QXZ("STATUSES")."</td><td>"._QXZ("DELETE")."</td></tr>\n";
 
 		$auto_alt_dial_statuses = preg_replace("/ -$/","",$auto_alt_dial_statuses);
@@ -26815,7 +26815,7 @@ if ($ADD==31)
 	if ($SUB==27)
 		{
 		echo "<br><br><b>"._QXZ("AGENT PAUSE CODES FOR THIS CAMPAIGN").": &nbsp; $NWB#pause_codes$NWE</b><br>\n";
-		echo "<TABLE width=700 cellspacing=3>\n";
+		echo "<TABLE class=\"".$table_classes_1."\" width=700 cellspacing=3>\n";
 		echo "<tr><td>"._QXZ("PAUSE CODES")."</td><td>"._QXZ("BILLABLE")."</td>";
 		if ($SSenable_pause_code_limits > 0)
 			{
@@ -26928,7 +26928,7 @@ if ($ADD==31)
 			}
 
 		echo "<br><br><b>"._QXZ("QC SETTINGS FOR THIS CAMPAIGN").":</b><br>\n";
-		echo "<form action=$PHP_SELF method=POST><center><TABLE width=700 cellspacing=3>\n";
+		echo "<form action=$PHP_SELF method=POST><center><TABLE class=\"".$table_classes_1."\" width=700 cellspacing=3>\n";
 		echo "<tr bgcolor=#$SSstd_row2_background><td align=right><input type=hidden name=ADD value=48>\n";
 		echo "<input type=hidden name=campaign_id value=\"$campaign_id\">\n";
 		echo _QXZ("QC Enabled").": </td><td><select size=1 name=qc_enabled><option value='Y'>"._QXZ("Y")."</option><option value='N'>"._QXZ("N")."</option><option value='$qc_enabled' SELECTED>"._QXZ("$qc_enabled")."</option></select> $NWB#campaigns-qc_enabled$NWE</td></tr>\n";
@@ -28058,7 +28058,7 @@ if ( ($ADD==34) or ($ADD==31) )
 				}
 			echo "<a name=\"LINK_$vcl_id\"><BR>\n";
 			echo "<span id=\"LISTMIX$US$vcl_id$US$o\">";
-			echo "<TABLE width=740 cellspacing=3 $tablecolor>\n";
+			echo "<TABLE class=\"".$table_classes_1."\" width=740 cellspacing=3 $tablecolor>\n";
 			echo "<tr><td colspan=6>\n";
 			echo "<form action=\"$PHP_SELF#LINK_$vcl_id\" method=POST name=$vcl_id id=$vcl_id>\n";
 			echo "<input type=hidden name=ADD value=49>\n";
@@ -28251,12 +28251,12 @@ if ($ADD==32)
 		echo "<FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 
 	echo "<br>"._QXZ("CUSTOM CAMPAIGN STATUSES LISTINGS").":\n";
-	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
-	echo "<tr>\n";
-	echo "<td><B>"._QXZ("CAMPAIGN")."</B></td>\n";
-	echo "<td><B>"._QXZ("NAME")."</B></td>\n";
-	echo "<td><B>"._QXZ("STATUSES")."</B></td>\n";
-	echo "<td><B>"._QXZ("MODIFY")."</B></td>\n";
+	echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=0 cellpadding=1>\n";
+	echo "<tr bgcolor=\"#333\" style=\"color:#fff\">\n";
+	echo "<td>"._QXZ("CAMPAIGN")."</td>\n";
+	echo "<td>"._QXZ("NAME")."</td>\n";
+	echo "<td>"._QXZ("STATUSES")."</td>\n";
+	echo "<td>"._QXZ("MODIFY")."</td>\n";
 	echo "</tr>\n";
 
 		$stmt="SELECT campaign_id,campaign_name from vicidial_campaigns $whereLOGallowed_campaignsSQL order by campaign_id;";
