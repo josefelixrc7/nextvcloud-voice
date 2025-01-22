@@ -433,7 +433,7 @@ if ($action == "COPY_FIELDS_FORM")
 	echo "<br>"._QXZ("Copy Fields to Another List")."<form action=$PHP_SELF method=POST>\n";
 	echo "<input type=hidden name=DB value=\"$DB\">\n";
 	echo "<input type=hidden name=action value=COPY_FIELDS_SUBMIT>\n";
-	echo "<center><TABLE width=$section_width cellspacing=3>\n";
+	echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 	echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("List ID to Copy Fields From").": </td><td align=left><select size=1 name=source_list_id>\n";
 	echo "$lists_list";
 	echo "</select></td></tr>\n";
@@ -1063,7 +1063,7 @@ if ( ($action == "MODIFY_CUSTOM_FIELDS") and ($list_id > 99) )
 	echo "<FONT FACE=\"ARIAL,HELVETICA\" COLOR=BLACK SIZE=2>";
 	echo "<br>"._QXZ("Modify Custom Fields: List ID")." $list_id - $list_name  &nbsp; &nbsp; &nbsp; &nbsp; ";
 	echo _QXZ("Records in this custom table").": $custom_records_count<br>\n";
-	echo "<center><TABLE width=$section_width cellspacing=3>\n";
+	echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 
 	$stmt="SELECT field_id,field_label,field_name,field_description,field_rank,field_help,field_type,field_options,field_size,field_max,field_default,field_cost,field_required,multi_position,name_position,field_order,field_encrypt,field_show_hide,field_duplicate from vicidial_lists_fields where list_id='$list_id' order by field_rank,field_order,field_label;";
 	$rslt=mysql_to_mysqli($stmt, $link);
