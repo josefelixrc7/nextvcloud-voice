@@ -43613,7 +43613,7 @@ if ($ADD==720000000000000)
 		$logs_to_print = mysqli_num_rows($rslt);
 
 		echo "<br>"._QXZ("ADMIN CHANGE LOG: Section Records")." - $category - $stage\n";
-		echo "<center><TABLE width=980 cellspacing=0 cellpadding=1>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=980 cellspacing=0 cellpadding=1>\n";
 		echo "<TR BGCOLOR=BLACK>";
 		echo "<TD><B><FONT FACE=\"Arial,Helvetica\" size=1 color=white>"._QXZ("ID")."</B></TD>";
 		echo "<TD><B><FONT FACE=\"Arial,Helvetica\" size=1 color=white>"._QXZ("DATE TIME")."</B></TD>";
