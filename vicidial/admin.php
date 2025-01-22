@@ -8390,7 +8390,7 @@ if ($ADD==171)
 	else
 		{echo "<br>"._QXZ("ADD NUMBERS TO THE FILTER PHONE GROUP LIST")."<form action=$PHP_SELF method=POST>\n";}
 	echo "<input type=hidden name=ADD value=171>\n";
-	echo "<center><TABLE width=$section_width cellspacing=3>\n";
+	echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 	echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Filter Phone Group").": </td><td align=left><select size=1 name=filter_phone_group_id>\n";
 	echo "$vfpg_list";
 	echo "</select></td></tr>\n";
@@ -8576,7 +8576,7 @@ if ($ADD==1111)
 
 		echo "<br>"._QXZ("ADD A NEW INBOUND GROUP")."<form action=$PHP_SELF method=POST>\n";
 		echo "<input type=hidden name=ADD value=2111>\n";
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		if ($voi_count > 0)
 			{
 			echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Group ID").": </td><td align=left>"._QXZ("Auto-Generated")." $NWB#inbound_groups-group_id$NWE</td></tr>\n";
@@ -8827,7 +8827,7 @@ if ($ADD==1211)
 
 		echo "<br>"._QXZ("COPY INBOUND GROUP")."<form action=$PHP_SELF method=POST>\n";
 		echo "<input type=hidden name=ADD value=2011>\n";
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		if ($voi_count > 0)
 			{
 			echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Group ID").": </td><td align=left>"._QXZ("Auto-Generated")." $NWB#inbound_groups-group_id$NWE</td></tr>\n";
@@ -9002,7 +9002,7 @@ if ($ADD==1311)
 
 		echo "<img src=\"images/icon_cidgroups.png\" alt=\"DIDs\" width=42 height=42> "._QXZ("ADD A NEW DID")."<form action=$PHP_SELF method=POST>\n";
 		echo "<input type=hidden name=ADD value=2311>\n";
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("DID Extension").": </td><td align=left><input type=text name=did_pattern size=20 maxlength=50> ("._QXZ("no spaces or dashes").")$NWB#inbound_dids-did_pattern$NWE</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("DID Description").": </td><td align=left><input type=text name=did_description size=40 maxlength=50>$NWB#inbound_dids-did_description$NWE</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Admin User Group").": </td><td align=left><select size=1 name=user_group>\n";
@@ -9032,7 +9032,7 @@ if ($ADD==1411)
 
 		echo "<img src=\"images/icon_cidgroups.png\" alt=\"DIDs\" width=42 height=42> "._QXZ("COPY DID")."<form action=$PHP_SELF method=POST>\n";
 		echo "<input type=hidden name=ADD value=2411>\n";
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("DID Extension").": </td><td align=left><input type=text name=did_pattern size=20 maxlength=50> ("._QXZ("no spaces or dashes").")$NWB#inbound_dids-did_pattern$NWE</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("DID Description").": </td><td align=left><input type=text name=did_description size=40 maxlength=50>$NWB#inbound_dids-did_description$NWE</td></tr>\n";
 
@@ -9087,7 +9087,7 @@ if ($ADD==1511)
 
 		echo "<img src=\"images/icon_callmenu.png\" alt=\"Call Menus\" width=42 height=42> "._QXZ("ADD A NEW CALL MENU")."<form action=$PHP_SELF method=POST>\n";
 		echo "<input type=hidden name=ADD value=2511>\n";
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		if ($voi_count > 0)
 			{
 			echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Menu ID").": </td><td align=left>"._QXZ("Auto-Generated")." $NWB#call_menu-menu_id$NWE</td></tr>\n";
@@ -9135,7 +9135,7 @@ if ($ADD==1611)
 
 		echo "<img src=\"images/icon_callmenu.png\" alt=\"Call Menus\" width=42 height=42> "._QXZ("COPY CALL MENU")."<form action=$PHP_SELF method=POST>\n";
 		echo "<input type=hidden name=ADD value=2611>\n";
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		if ($voi_count > 0)
 			{
 			echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Menu ID").": </td><td align=left>"._QXZ("Auto-Generated")." $NWB#call_menu-menu_id$NWE</td></tr>\n";
@@ -9186,7 +9186,7 @@ if ($ADD==1711)
 
 		echo "<img src=\"images/icon_filterphonegroup.png\" alt=\"Filter Phone Groups\" width=42 height=42> "._QXZ("Add Filter Phone Group")."<form action=$PHP_SELF method=POST>\n";
 		echo "<input type=hidden name=ADD value=2711>\n";
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Filter Phone Group ID").": </td><td align=left><input type=text name=filter_phone_group_id size=20 maxlength=20> ("._QXZ("no spaces or special characters").")$NWB#filter_phone_groups-filter_phone_group_id$NWE</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Filter Phone Group Name").": </td><td align=left><input type=text name=filter_phone_group_name size=40 maxlength=40>$NWB#filter_phone_groups-filter_phone_group_name$NWE</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Filter Phone Group Description").": </td><td align=left><input type=text name=filter_phone_group_description size=60 maxlength=100>$NWB#filter_phone_groups-filter_phone_group_description$NWE</td></tr>\n";
@@ -9217,7 +9217,7 @@ if ($ADD==11111)
 
 		echo "<br>"._QXZ("ADD NEW REMOTE AGENTS")."<form action=$PHP_SELF method=POST>\n";
 		echo "<input type=hidden name=ADD value=21111>\n";
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("User ID Start").": </td><td align=left><input type=text name=user_start size=9 maxlength=9> ("._QXZ("numbers only, incremented, must be an existing vicidial user").")$NWB#remote_agents-user_start$NWE</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Number of Lines").": </td><td align=left><input type=text name=number_of_lines size=3 maxlength=3> ("._QXZ("numbers only").")$NWB#remote_agents-number_of_lines$NWE</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Server IP").": </td><td align=left><select size=1 name=server_ip>\n";
@@ -9255,7 +9255,7 @@ if ($ADD==12111)
 
 		echo "<br>"._QXZ("Add Extension Group Entry")."<form action=$PHP_SELF method=POST>\n";
 		echo "<input type=hidden name=ADD value=22111>\n";
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Extension Group").": </td><td align=left><input type=text name=extension_group_id size=20 maxlength=20> ("._QXZ("no spaces").")$NWB#extension_groups-extension_group_id$NWE</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Extension").": </td><td align=left><input type=text name=extension size=18 maxlength=18> ("._QXZ("numbers only").")$NWB#extension_groups-extension$NWE</td></tr>\n";
 
@@ -9305,7 +9305,7 @@ if ($ADD==111111)
 
 		echo "<br>"._QXZ("ADD NEW USERS GROUP")."<form action=$PHP_SELF method=POST>\n";
 		echo "<input type=hidden name=ADD value=211111>\n";
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		if ($voi_count > 0)
 			{
 			echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Group").": </td><td align=left>"._QXZ("Auto-Generated")." $NWB#user_groups-user_group$NWE</td></tr>\n";
@@ -30589,7 +30589,7 @@ if ($ADD==3111)
 		echo "<input type=hidden name=group_id value=\"$query_group_id\">\n";
 		echo "<input type=hidden name=DB value=\"$DB\">\n";
 		echo "<input type=hidden name=stage value=\"SUBMIT\">\n";
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Group ID").": </td><td align=left><b>$query_group_id</b>$NWB#inbound_groups-group_id$NWE $allowed_campaigns_warning</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Group Name").": </td><td align=left><input type=text name=group_name size=30 maxlength=30 value=\"$group_name\">$NWB#inbound_groups-group_name$NWE</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Group Color").": </td><td align=left bgcolor=\"$group_color\" id=\"group_color_td\"><input type=text name=group_color size=7 maxlength=7 value=\"$group_color\">$NWB#inbound_groups-group_color$NWE</td></tr>\n";
@@ -33644,7 +33644,7 @@ if ($ADD==3311)
 		echo "<input type=hidden name=ADD value=4311>\n";
 		echo "<input type=hidden name=did_id value=\"$did_id\">\n";
 		echo "<input type=hidden name=did_pattern value=\"$did_pattern\">\n";
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 	#	echo "<tr bgcolor=#$SSstd_row4_background><td align=right>DID Extension: </td><td align=left><input type=text name=did_pattern size=30 maxlength=50 value=\"$did_pattern\">$NWB#inbound_dids-did_pattern$NWE</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("DID Extension").": </td><td align=left>$did_pattern $NWB#inbound_dids-did_pattern$NWE</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("DID Description").": </td><td align=left><input type=text name=did_description size=40 maxlength=50 value=\"$did_description\">$NWB#inbound_dids-did_description$NWE</td></tr>\n";
@@ -34300,7 +34300,7 @@ if ($ADD==3511)
 		echo "<br>"._QXZ("MODIFY A CALL MENU RECORD").": $menu_id<form action=$PHP_SELF method=POST name=admin_form id=admin_form>\n";
 		echo "<input type=hidden name=ADD value=4511>\n";
 		echo "<input type=hidden name=menu_id value=\"$menu_id\">\n";
-		echo "<center><TABLE width=$temp_section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$temp_section_width cellspacing=3>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Menu ID").": </td><td align=left>$menu_id $NWB#call_menu-menu_id$NWE</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Menu Name").": </td><td align=left><input type=text name=menu_name size=40 maxlength=50 value=\"$menu_name\">$NWB#call_menu-menu_name$NWE</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Admin User Group").": </td><td align=left><select size=1 name=user_group>\n";
@@ -41268,7 +41268,7 @@ if ($ADD==1001)
 	echo "<TD ALIGN=LEFT VALIGN=TOP WIDTH=100>&nbsp;\n";
 	echo "</TD>\n";
 	echo "<TD ALIGN=LEFT VALIGN=TOP WIDTH=220>\n";
-	echo "<TABLE BORDER=0 CELLPADDING=5 CELLSPACING=5 WIDTH=100%>\n";
+	echo "<TABLE class=\"".$table_classes_1."\" BORDER=0 CELLPADDING=5 CELLSPACING=5 WIDTH=100%>\n";
 	echo "<TR CLASS=\"adminmenu_style_selected\""; if ($SSadmin_row_click > 0) {echo " onclick=\"window.document.location='$PHP_SELF?ADD=1000';\"";} echo ">\n";
 	echo "<TD><a href=\"$PHP_SELF?ADD=1000\"><img src=\"images/icon_black_inbound.png\" border=0 width=42 height=42 valign=middle> </a></TD>\n";
 	echo "<TD><a href=\"$PHP_SELF?ADD=1000\" STYLE=\"text-decoration:none;\"><SPAN $subhead_font> "._QXZ("Inbound Groups")." </SPAN></a></TD>\n";
@@ -41334,7 +41334,7 @@ if ($ADD==1000)
 	$ingroups_to_print = mysqli_num_rows($rslt);
 
 	echo "<img src=\"images/icon_black_inbound.png\" alt=\"Inbound Groups\" width=42 height=42> "._QXZ("INBOUND GROUP LISTINGS").":\n";
-	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
+	echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=0 cellpadding=1>\n";
 	echo "<TR BGCOLOR=BLACK>";
 	echo "<TD><font size=1 color=white>"._QXZ("IN-GROUP")."</TD>";
 	echo "<TD><font size=1 color=white>"._QXZ("NAME")."</TD>";
@@ -41624,7 +41624,7 @@ if ($ADD==1300)
 	echo "<img src=\"images/icon_cidgroups.png\" alt=\"Inbound DIDs\" width=42 height=42> "._QXZ("INBOUND DID LISTINGS").":\n";
 	if (strlen($next_prev_HTML) > 10)
 		{echo "<br><b> &nbsp; $next_prev_HTML</b><br>";}
-	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
+	echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=0 cellpadding=1>\n";
 	echo "<TR BGCOLOR=BLACK>";
 	echo "<TD><font size=1 color=white>#</TD>";
 	echo "<TD><a href=\"$PHP_SELF?ADD=1300&$DIDlink\"><font size=1 color=white><B>"._QXZ("DID")."</B></a></TD>";
@@ -41687,7 +41687,7 @@ if ($ADD==1500)
 	$menus_to_print = mysqli_num_rows($rslt);
 
 	echo "<img src=\"images/icon_callmenu.png\" alt=\"Call Menus\" width=42 height=42> "._QXZ("CALL MENU LISTINGS").":\n";
-	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
+	echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=0 cellpadding=1>\n";
 	echo "<TR BGCOLOR=BLACK>";
 	echo "<TD><font size=1 color=white>"._QXZ("MENU ID")."</TD>";
 	echo "<TD><font size=1 color=white>"._QXZ("NAME")."</TD>";
@@ -41753,7 +41753,7 @@ if ($ADD==1700)
 	$lists_to_print = mysqli_num_rows($rslt);
 
 	echo "<img src=\"images/icon_filterphonegroup.png\" alt=\"Filter Phone Groups\" width=42 height=42> "._QXZ("FILTER PHONE GROUP LISTINGS").":\n";
-	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
+	echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=0 cellpadding=1>\n";
 	echo "<TR BGCOLOR=BLACK>";
 	echo "<TD><B><FONT FACE=\"Arial,Helvetica\" size=1 color=white>"._QXZ("FPG ID")."</B></a></TD>";
 	echo "<TD><B><FONT FACE=\"Arial,Helvetica\" size=1 color=white>"._QXZ("FPG NAME")."</B></TD>";
@@ -41887,7 +41887,7 @@ if ($ADD==12000)
 	$extensiongroups_to_print = mysqli_num_rows($rslt);
 
 	echo "<br>"._QXZ("EXTENSION GROUP LISTINGS").":\n";
-	echo "<center><TABLE width=$section_width cellspacing=0 cellpadding=1>\n";
+	echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=0 cellpadding=1>\n";
 	echo "<tr bgcolor=black>";
 	echo "<td><font size=1 color=white><B>"._QXZ("GROUP")."</B></td>";
 	echo "<td><font size=1 color=white><B>"._QXZ("EXTENSION")."</B></td>";

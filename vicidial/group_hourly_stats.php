@@ -312,7 +312,7 @@ echo "<br><center>\n";
 
 echo "<B>"._QXZ("TSR HOUR COUNTS").": <a href=\"./admin.php?ADD=3111&group_id=$group\">$group</a> | $status | $date_with_hour | $date_no_hour</B>\n";
 
-echo "<center><TABLE width=600 cellspacing=0 cellpadding=1>\n";
+echo "<center><TABLE class=\"".$table_classes_1."\" width=600 cellspacing=0 cellpadding=1>\n";
 echo "<tr><td><font size=2>"._QXZ("TSR")." </td><td align=left><font size=2>"._QXZ("ID")." </td><td align=right><font size=2> &nbsp; $status</td><td align=right><font size=2> &nbsp; "._QXZ("TOTAL CALLS")."</td><td align=right><font size=2> &nbsp; $status "._QXZ("DAY")."</td><td align=right><font size=2> &nbsp; &nbsp; </td></tr>\n";
 
 	$day_calls=0;
