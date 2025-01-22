@@ -9350,7 +9350,7 @@ if ($ADD==1111111)
 		echo "<br>"._QXZ("ADD NEW SCRIPT")."<form name=scriptForm action=$PHP_SELF method=POST>\n";
 		echo "<input type=hidden name=ADD value=2111111>\n";
 		echo "<input type=hidden name=DB value=\"$DB\">\n";
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		if ($voi_count > 0)
 			{
 			echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Script ID").": </td><td align=left>"._QXZ("Auto-Generated")." $NWB#scripts-script_id$NWE</td></tr>\n";
@@ -9483,7 +9483,7 @@ if ($ADD==11111111)
 
 		echo "<br>"._QXZ("ADD NEW FILTER")."<form action=$PHP_SELF method=POST>\n";
 		echo "<input type=hidden name=ADD value=21111111>\n";
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		if ($voi_count > 0)
 			{
 			echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Filter ID").": </td><td align=left>"._QXZ("Auto-Generated")." $NWB#lead_filters-lead_filter_id$NWE</td></tr>\n";
@@ -35494,7 +35494,7 @@ if ($ADD==3111111)
 		echo "<input type=hidden name=ADD value=4111111>\n";
 		echo "<input type=hidden name=DB value=\"$DB\">\n";
 		echo "<input type=hidden name=script_id value=\"$script_id\">\n";
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Script ID").": </td><td align=left><B>$script_id</B>$NWB#scripts-script_name$NWE</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Script Name").": </td><td align=left><input type=text name=script_name size=40 maxlength=50 value=\"$script_name\"> ("._QXZ("title of the script").")$NWB#scripts-script_name$NWE</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Script Comments").": </td><td align=left><input type=text name=script_comments size=50 maxlength=255 value=\"$script_comments\"> $NWB#scripts-script_comments$NWE</td></tr>\n";
@@ -35711,7 +35711,7 @@ if ($ADD==31111111)
 		echo "<input type=hidden name=ADD value=41111111>\n";
 		echo "<input type=hidden name=DB value=\"$DB\">\n";
 		echo "<input type=hidden name=lead_filter_id value=\"$lead_filter_id\">\n";
-		echo "<center><TABLE width=$section_width cellspacing=3>\n";
+		echo "<center><TABLE class=\"".$table_classes_1."\" width=$section_width cellspacing=3>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Filter ID").": </td><td align=left><B>$lead_filter_id</B>$NWB#lead_filters-lead_filter_id$NWE</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Filter Name").": </td><td align=left><input type=text name=lead_filter_name size=40 maxlength=50 value=\"$lead_filter_name\"> ("._QXZ("short description of the filter").")$NWB#lead_filters-lead_filter_name$NWE</td></tr>\n";
 		echo "<tr bgcolor=#$SSstd_row4_background><td align=right>"._QXZ("Filter Comments").": </td><td align=left><input type=text name=lead_filter_comments size=50 maxlength=255 value=\"$lead_filter_comments\"> $NWB#lead_filters-lead_filter_comments$NWE</td></tr>\n";
