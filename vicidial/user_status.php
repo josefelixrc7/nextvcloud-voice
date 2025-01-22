@@ -428,7 +428,7 @@ require("admin_header.php");
 
 
 ?>
-<TABLE WIDTH=<?php echo $page_width ?> BGCOLOR=#<?php echo $SSframe_background; ?> cellpadding=2 cellspacing=0><TR BGCOLOR=#<?php echo $SSframe_background; ?>><TD ALIGN=LEFT><FONT FACE="ARIAL,HELVETICA" SIZE=2><B> &nbsp; <?php echo _QXZ("User Status for"); ?> <?php echo $user ?></TD><TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA" SIZE=2><B> &nbsp; </TD></TR>
+<TABLE class="<?=$table_classes_1?>" WIDTH=<?php echo $page_width ?> BGCOLOR=#<?php echo $SSframe_background; ?> cellpadding=2 cellspacing=0><TR BGCOLOR=#<?php echo $SSframe_background; ?>><TD ALIGN=LEFT><FONT FACE="ARIAL,HELVETICA" SIZE=2><B> &nbsp; <?php echo _QXZ("User Status for"); ?> <?php echo $user ?></TD><TD ALIGN=RIGHT><FONT FACE="ARIAL,HELVETICA" SIZE=2><B> &nbsp; </TD></TR>
 
 
 
@@ -928,7 +928,7 @@ if ($agents_to_print > 0)
 	echo "$user - $full_name \n";
 	echo " &nbsp; &nbsp; &nbsp; "._QXZ("GROUP").": $user_group <BR>\n";
 
-	echo "<TABLE CELLPADDING=0 CELLSPACING=0>";
+	echo "<TABLE class=\"".$table_classes_1."\" CELLPADDING=0 CELLSPACING=0>";
 	echo "<TR><TD ALIGN=RIGHT>"._QXZ("Agent Logged in at server").":</TD><TD ALIGN=LEFT> &nbsp; $Aserver_ip</TD></TR>\n";
 	echo "<TR><TD ALIGN=RIGHT>"._QXZ("in session").":</TD><TD ALIGN=LEFT> &nbsp; $Asession_id</TD></TR>\n";
 	echo "<TR><TD ALIGN=RIGHT>"._QXZ("from phone").":</TD><TD ALIGN=LEFT> &nbsp; $Aextension</TD></TR>\n";
@@ -980,7 +980,7 @@ else
 if ($SSallow_chats > 0)
 	{
 	echo "<BR>\n";
-	echo "<TABLE CELLPADDING=0 CELLSPACING=0>";
+	echo "<TABLE class=\"".$table_classes_1."\" CELLPADDING=0 CELLSPACING=0>";
 	echo "<TR><TD ALIGN=RIGHT>"._QXZ("Currently active in chats").":</TD><TD ALIGN=LEFT> &nbsp; $Achats</TD></TR>\n";
 	echo "</TABLE>\n<BR>\n";
 	}
